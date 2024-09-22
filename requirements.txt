@@ -13,4 +13,4 @@ regex==2020.10.15
 pyyaml
 typed-ast==1.4.1
 typing-extensions==3.7.4.3
-Werkzeug==1.0.1
+Werkzeug==3.0.3

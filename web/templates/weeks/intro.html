@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Introduction</h2>
+<p>
+
+
+ 
+
+<h3>Readings and Resources</h3>
+
+
+<p> Slides: <a href="{{ url_for('static', filename='pdf/Asia before Colonial Times.pdf')}}">Asia before Colonial Times</a>,  František Kratochvíl (2021)
+  
+<ul>
+  <li>Alexander R. Coupe, František Kratochvíl (2020). Asia before English. In K. Bolton, W. Botha, & A. Kirkpatrick (Eds.), <i>The Handbook of Asian Englishes</i> (pp. 31-59). 
+ {{doi('10.1002/9781118791882.ch2')}}
+  </li>
+  <li>Robbeets, M., Bouckaert, R., Conte, M. et al.
+    <a href="{{ url_for('static', filename='pdf/s41586-021-04108-8.pdf')}}">Triangulation supports agricultural spread of the Transeurasian languages</a>. <i>Nature 599</i>, 616–621 (2021).  {{doi('10.1038/s41586-021-04108-8')}}
+
+</ul>   
+
+  {% endblock %}

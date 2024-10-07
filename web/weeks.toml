@@ -14,28 +14,37 @@ other = "Guest Lecture: Lian Hee Wee (Hong Kong Baptist)"
 [weeks.family]
 key = "family"
 title = "Language families, multilingualism, official languages"
-date = "2024-09-30"
+date = "2024-19-07"
+
+[weeks.words]
+key = "words"
+title = "Vocabulary"
+date = "2024-10-14"
+
 
 [weeks.features]
 key = "features"
 title = "Characteristic features of the languages of East and Southeast Asia"
-date = "2024-10-07"
+date = "2024-10-21"
+other = 'Next week is a holiday'
+
 
 [weeks.minority]
 key = "minority"
 title = "Minority languages of Southeast and East Asia"
-date = "2024-10-14"
+date = "2024-11-04"
 
-[weeks.oral]
-key = "oral"
-title = "Oral literature and traditions"
-date = "2024-10-21"
-other = 'Next week is a holiday'
+
+# [weeks.oral]
+# key = "oral"
+# title = "Oral literature and traditions"
+# date = "2024-11-04"
+
 
 [weeks.contact]
 key = "contact"
 title = "Language contact in SE and V Asia"
-date = "2024-11-04"
+date = "2024-11-11"
 
 # [weeks.sound]
 # key = "sound"

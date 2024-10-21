@@ -46,7 +46,7 @@
     <tbody>
         {% for key, week in weeks.items() %}
         <tr>
-            <td>Week {{ loop.index }}</td>
+            <td>{{ loop.index }}</td>
             <td>{{ week.date }}</td>
             <td><a href="{{ url_for('week', week_key=key) }}">{{ week.title }}</a></td>
             <td>{{ week.other if week.other else '' }}</td>

@@ -5,6 +5,7 @@
 \newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
 \usetheme{Madrid}
 \usecolortheme{crane}
+\newfontfamily{\silipa}{Noto Serif}
 
 \usepackage{mygb4e}
 \renewcommand{\eachwordtwo}{\Libertine}
@@ -188,25 +189,25 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Common Classifier Examples}
-\begin{table}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Language} & \textbf{Classifier} \\
-\hline
-Thai & \textit{tua} (animals) \\
-Mandarin & \textit{gè} (general) \\
-Vietnamese & \textit{cái} (general) \\
-Malay & \textit{orang} (people) \\
-\hline
-\end{tabular}
-\caption{Common Classifiers in Asian Languages}
-\end{table}
-\begin{itemize}
-    \item Some classifiers are specialized, while others are general (used for many objects).
-    \item General classifiers are used when object specifics are unknown.
-\end{itemize}
-\end{frame}
+% \begin{frame}{Common Classifier Examples}
+% \begin{table}
+% \begin{tabular}{|l|l|}
+% \hline
+% \textbf{Language} & \textbf{Classifier} \\
+% \hline
+% Thai & \textit{tua} (animals) \\
+% Mandarin & \textit{gè} (general) \\
+% Vietnamese & \textit{cái} (general) \\
+% Malay & \textit{orang} (people) \\
+% \hline
+% \end{tabular}
+% \caption{Common Classifiers in Asian Languages}
+% \end{table}
+% \begin{itemize}
+%     \item Some classifiers are specialized, while others are general (used for many objects).
+%     \item General classifiers are used when object specifics are unknown.
+% \end{itemize}
+% \end{frame}
 
 \begin{frame}{Repeater Constructions}
 \begin{itemize}
@@ -285,8 +286,7 @@ Malay & \textit{orang} (people) \\
   \glc 3-CL.message-of letter//
  \glft 3 letters           //%  \com{direct}
   \endgl
-\xe
-\ex
+\xe\ex
   \begingl
 \gla  3-\cll{mai}-no tegami //
 \glb  3-\cll{chang}-ui phyenci (Korean)//
@@ -294,7 +294,7 @@ Malay & \textit{orang} (people) \\
 \glft \{a 3 \cll{page} letter/$^*$3 letters\}  //%\com{indirect}
   \endgl
   \xe
-
+\citep{Bond:1997b}
 \end{frame}
 
 \begin{frame}{Conclusion}
@@ -339,13 +339,17 @@ Malay & \textit{orang} (people) \\
 \end{frame}
 
 \begin{frame}{Types of Imperfective Aspect}
-\begin{itemize}
-    \item \txx{Progressive}: Ongoing action (e.g., "She is running").
-    \item \txx{Iterative}: Repeated actions (e.g., "The light is flashing").
-    \item \txx{Durative}: Actions that take time (e.g., "He was sitting").
-    \item \txx{Habitual}: Regularly occurring actions (e.g., "She runs every morning").
-    \item Imperfective aspects provide detailed temporal structure.
-\end{itemize}
+
+  \begin{center}
+\begin{tabular}{lll}
+\txx{Progressive} & Ongoing action & \eng{She is running} \\
+\txx{Iterative} & Repeated actions & \eng{The light is flashing} \\
+\txx{Durative} & Actions that take time & \eng{He was sitting} \\
+\txx{Habitual} & Regularly occurring actions & \eng{She runs every morning} \\
+\end{tabular}
+\end{center}
+
+Imperfective aspects provide detailed temporal structure.
 \end{frame}
 
 \begin{frame}{Aspect in Sinitic Languages: Overview}
@@ -355,14 +359,16 @@ Malay & \textit{orang} (people) \\
     \item Aspect marking is independent of tense (past, present, future).
     \end{itemize}
     \begin{table}
-\begin{tabular}{lll}
+\begin{tabular}{lllll}
+
+\textbf{Aspect Type} & \textbf{Mandarin} &  & \textbf{Cantonese} & \\
 \hline
-\textbf{Aspect Type} & \textbf{Mandarin} & \textbf{Cantonese} \\
-\hline
-Perfective & le & jo \\
-Progressive & zai & gan \\
-Continuous & zhe & jyuh \\
-Experiential & guo & gwo \\
+Perfective   & V-le   & 了   & V-jo2   & 咗 \\
+Progressive  & zai-V  & 在   & V-gan2  & 緊 \\
+Continuous   & V-zhe  & 着   & V-jyuh6 & 住 \\
+  Experiential & V-guo  & 过   & V-gwo3  & 過 \\
+  Delimitative	& V-yı̄-V &一 & V-haa5  & 吓 \\
+ Habitual	& & & V-hoi1 & 開 \\
 \hline
 \end{tabular}
 \caption{Aspect markers in Mandarin and Cantonese}
@@ -586,14 +592,14 @@ Experiential & guo & gwo \\
 \end{itemize}
 \ex
 \begingl
-\gla nang1 tii$^3$ lanaat$^4$. //
+\gla nang$^1$ tii$^3$ lanaat$^4$. //
 \glb sit beat lanaat //
 \glft Play the lanaat sitting. //
 \endgl
 \xe
 \ex
 \begingl
-\gla nòòn2 tii$^3$ lanaat$^4$. //
+\gla nòòn$^2$ tii$^3$ lanaat$^4$. //
 \glb lie beat lanaat //
 \glft Play the lanaat lying down. //
 \endgl
@@ -612,14 +618,14 @@ Experiential & guo & gwo \\
 \end{itemize}
 \ex
 \begingl
-\gla Khǎw klàp maa lÉEw. //
+\gla Khǎw klàp maa {\silipa lɛέw}. //
 \glb 3sg return hither(come) perf //
 \glft ‘She came back already.’ //
 \endgl
 \xe
 \ex
 \begingl
-\gla Khǎw klàp pay lÉEw. //
+\gla Khǎw klàp pay  {\silipa lɛέw}. //
 \glb 3sg return away(go) perf //
 \glft ‘She went back already.’ //
 \endgl
@@ -907,25 +913,27 @@ Experiential & guo & gwo \\
     \item Function like English intonation but more explicit.
     \item Rich particle usage typical of Southeast Asian languages.
   \end{itemize}
-\end{frame}
+ \end{frame}
 
 \begin{frame}{Examples of Cantonese Particles}
   \begin{table}[h]
     \centering
-    \begin{tabular}{ll}
-      \hline
-      Particle & Meaning \\ \hline
-      ā & lively statement, question \\ 
-      áh & seeking confirmation \\ 
-      ak & abrupt disagreement \\ 
-      lā & requesting, seeking agreement \\ 
-      lo & emphasizing current situation \\ 
-      mē & expressing surprise \\
-      wo & informative, noteworthy \\ 
-      bo & exclamatory \\ 
-      la & current relevance, advice \\ 
-      ja & cheeky, intimate \\ 
-    \end{tabular}
+\begin{tabular}{lll}
+  \hline
+   \multicolumn{2}{c}{Particle} & \textbf{Meaning} \\
+  \hline
+  呀 & ā & lively statement, question \\ 
+  呀 & áh & seeking confirmation \\ 
+  噏 & ak & abrupt disagreement \\ 
+  啦 & lā & requesting, seeking agreement \\ 
+  囉 & lo & emphasizing current situation \\ 
+  咩 & mē & expressing surprise \\
+  喎 & wo & informative, noteworthy \\ 
+  噃 & bo & exclamatory \\ 
+  喇 & la & current relevance, advice \\ 
+  咋 & ja & cheeky, intimate \\ 
+  \hline
+\end{tabular}
   \end{table}
 \end{frame}
 

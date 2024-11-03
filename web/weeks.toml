@@ -45,10 +45,10 @@ date = "11-04"
 # date = "11-04"
 
 
-[weeks.contact]
-key = "contact"
-title = "Language contact in SE and V Asia"
-date = "11-11"
+# [weeks.contact]
+# key = "contact"
+# title = "Language contact in SE and V Asia"
+# date = "11-11"
 
 # [weeks.sound]
 # key = "sound"
@@ -58,18 +58,24 @@ date = "11-11"
 [weeks.writing]
 key = "writing"
 title = "Writing, its origin, spread and adaptation"
-date = "11-18"
-
-[weeks.politeness]
-key = "politeness"
-title = "Politeness in Asian languages"
-date = "11-25"
-other = ""
+date = "11-11"
 
 [weeks.arts]
 key = "arts"
 title = "Language Arts and Literature"
+date = "11-18"
+
+[weeks.presentation1]
+key = "present1"
+title = "Presentation on Minority Languages"
+date = "11-25"
+other = "Presentation! 🗣"
+
+[weeks.politeness]
+key = "politeness"
+title = "Politeness in Asian languages"
 date = "12-02"
+other = ""
 
 [weeks.english]
 key = "english"
@@ -80,3 +86,4 @@ date = "12-09"
 key = "presentation"
 title = "Presentation of seminar work"
 date = "12-16"
+other = "Presentation!  🗣"

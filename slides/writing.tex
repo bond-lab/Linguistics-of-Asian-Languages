@@ -35,11 +35,10 @@
 % \newfontfamily\textthai[Script=Thai]{Noto Sans Thai} % Thai font
 % \newcomand{\textarabic}[1]{\begin{RTL}\fontarabic\selectfont #1\end{RTL}}
 
-
 \usepackage{mygb4e}
-\newcommand{\yue}[1]{{\yuefontsf\selectfont #1}}
-\renewcommand{\eachwordone}{\yue}
-\renewcommand{\eachwordtwo}{\yue}
+\newcommand{\yueb}[1]{\yuefontsf\selectfont #1}
+\renewcommand{\eachwordone}{\yueb}
+\renewcommand{\eachwordtwo}{\yueb}
 \usepackage[e,f]{mtg2e}
 \usepackage{xcolor}
 \renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
@@ -49,7 +48,7 @@
 \newcommand{\zh}{\mtciteform}
 \newcommand{\jpn}{\mtciteform}
 \newcommand{\ar}{\mtciteform}
-
+\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
 
 \title{Writing Systems in East and Southeast Asia}
 \author[Francis Bond]{Francis Bond \\ based on Goddard Chapter 6}
@@ -279,7 +278,7 @@ Images from Wikipedia (2024)
         Coronal & \textkorean{ㄴ}  (\IPA{n})& \textkorean{ㄷ} (\IPA{t}) & \textkorean{ㅌ} (\IPA{tʰ}) & \textkorean{ㄸ} (\IPA{t͈}) \\
       Bilabial & \textkorean{ㅁ}  (\IPA{m})& \textkorean{ㅂ} (\IPA{p}) & \textkorean{ㅍ} (\IPA{pʰ}) & \textkorean{ㅃ} (\IPA{p͈}) \\
       \hline
-      Dorsal & ㅇ (\IPA{'}) & ㅇ (\IPA{ŋ}) &  ㅎ (\IPA{h}) \\
+      Dorsal & \textkorean{ㅇ} (\IPA{'}) & \textkorean{ㅇ} (\IPA{ŋ}) &  \textkorean{ㅎ} (\IPA{h}) \\
     \end{tabular}
   \end{center}
 
@@ -484,7 +483,43 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
 
 \end{frame}
 
+\begin{frame}{Extending Hiragana and Katakana}
 
+  \begin{itemize}
+    \item \txx{Dakuon} (\textjapanese{濁音: ゛}): voicing
+     \begin{itemize}
+     \item        \textjapanese{か} (ka) → \textjapanese{が} (ga);
+     \item       \textjapanese{さ} (sa) → \textjapanese{ざ} (za);
+     \item       \textjapanese{た} (ta) → \textjapanese{だ} (da);
+     \item      \textjapanese{ハ} (ha) → \textjapanese{バ} (ba)
+     \end{itemize}
+   \item \txx{Handakuten} (\textjapanese{半濁点: ゜}) plosive
+      \begin{itemize}
+      \item \textjapanese{は} (ha) → \textjapanese{ぱ} (pa)
+    \end{itemize}
+ \item \txx{Yōon} (\textjapanese{拗音}): palatized
+   \begin{itemize}
+   \item Consonant + 'i' combines with small "ya," "yu," or "yo"
+      (\textjapanese{ゃ}, \textjapanese{ゅ}, \textjapanese{ょ}).
+     \begin{itemize}
+     \item      \textjapanese{き} (ki) + \textjapanese{ゃ} (xya) → \textjapanese{きゃ} (kya); 
+     \item \textjapanese{し} (shi) + \textjapanese{ょ} (xyo) → \textjapanese{しょ} (sho); \ldots
+     \end{itemize}
+     %   %     % \item In katakana: \textjapanese{キ} (ki) + \textjapanese{ャ} forms 
+  % \\    \textjapanese{キャ} (kya); \textjapanese{シ} (shi) + \textjapanese{ョ} forms \textjapanese{ショ} (sho).
+   \end{itemize}
+ \item \txx{GōYōon} (\textjapanese{合拗音 }): labialized (now only in Okinawan)
+    \begin{itemize}
+    \item  \textjapanese{くゎ} (kwa),　 \textjapanese{くゐ} (kwi),
+      \textjapanese{くゑ} (kwe),　 \textjapanese{くを} (kwo)
+   \end{itemize}
+ \item \txx{Sokuon} (\textjapanese{促音}):
+   \begin{itemize}
+   \item Small \textjapanese{っ} marks a geminate consonant
+     \\ normally transliterated by doubling \textjapanese{さっか} \jpn{sakka}
+   \end{itemize}
+ \end{itemize}
+\end{frame}
 
 
 \begin{frame}{Kanji and Mixed System Writing}
@@ -545,14 +580,18 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
 \begin{itemize}
     \item Many kanji represented concepts that already had native Japanese words.
     \item To adapt, kanji were assigned \textbf{kun’yomi} (\textjapanese{訓読み}), or native Japanese readings.
-    \item Example: \textjapanese{山} can also be read as \textjapanese{やま} ("yama"), the native Japanese word for "mountain."
+    \item Example: \textjapanese{明} can be read as \textjapanese{あか} in  the native Japanese word  明るい \jpn[bright]{akarui}.
     \item Kun’yomi is often used when kanji stand alone or in names.
     \item This creates another layer of readings that are essential for native vocabulary.
+    \item Many characters also have readings normally only used in names \textbf{nanori} (\textjapanese{名乗り})
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Multiple Chinese Influences: Go-on, Kan-on, Tō-on}
 \begin{itemize}
+
+    \item Kanji were imported from China starting in the 5th century, with Chinese pronunciations.
+    \item \textbf{On’yomi} (\textjapanese{音読み}) readings were derived from Chinese pronunciations.
     \item Kanji were borrowed in waves, reflecting different Chinese dynasties and regions:
     \begin{itemize}
         \item \textbf{Go-on} (\textjapanese{呉音}): Earlier readings from the Wu region.
@@ -563,6 +602,22 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
     \item Example: \textjapanese{明} has readings like \textjapanese{めい} ("mei") and \textjapanese{みょう} ("myō") based on context.
 \end{itemize}
 \end{frame}
+
+\begin{frame}{\textjapanese{明}}
+
+  According to Kanjidic this character has the following readings:
+  \begin{itemize}
+  \item ON:  \textjapanese{メイ ミョウ ミン}
+  \item KUN: \textjapanese{あ.かり あか.るい あか.るむ あか.らむ あき.らか あ.ける -あ.け あ.く あ.くる あ.かす}
+  \item Names: \textjapanese{あきら あけ あす きら け さや さやか とし はる み め} 
+  \end{itemize}
+  
+  \url{https://www.edrdg.org/cgi-bin/wwwjdic/wwwjdic?1B}
+
+  Chinese and Korean have one reading each \zh{ming2} and \ko{myeong}
+  
+\end{frame}
+
 
 % \begin{frame}{Compound Words and Contextual Adaptations}
 % \begin{itemize}
@@ -646,6 +701,20 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
 \begin{center}
 \includegraphics[height=0.5\textheight]{pics/jawi-calligraphy.jpeg}
 \end{center}
+\end{frame}
+
+\begin{frame}{Arabic calligraphy in Diwani style}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{pics/Diwani_Izzet_al_Karkuki.jpg} \\
+\textarabic{يَا أَيُّهَا النَّبِيُّ إِنَّا أَرْسَلْنَاكَ شَاهِدًا وَمُبَشِّرًا وَنَذِيرًا وَدَاعِيًا إِلَى اللَّهِ} \\
+"O Prophet, indeed We have sent you as a witness and a bringer of good tidings and a warner, and as one who invites to Allah." \\ 
+
+
+Mehmet Izzet al-Karkuki (1841-1904)
+\end{center}
+
+\href{https://en.wikipedia.org/wiki/Diwani}{Diwani} is a calligraphic variety of Arabic script, developed during the reign of the early Ottoman Turks (16th century - early 17th century).
 \end{frame}
 
 

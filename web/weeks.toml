@@ -62,7 +62,7 @@ date = "11-11"
 
 [weeks.arts]
 key = "arts"
-title = "Language Arts and Literature"
+title = "Communication and Culture"
 date = "11-18"
 
 [weeks.presentation1]
@@ -71,16 +71,17 @@ title = "Presentation on Minority Languages"
 date = "11-25"
 other = "Presentation! 🗣"
 
-[weeks.politeness]
-key = "politeness"
-title = "Politeness in Asian languages"
-date = "12-02"
-other = ""
-
 [weeks.english]
 key = "english"
 title = "Asian Englishes"
+date = "12-02"
+
+[weeks.politeness]
+key = "politeness"
+title = "Politeness in Asian languages"
 date = "12-09"
+other = ""
+
 
 [weeks.presentation]
 key = "presentation"

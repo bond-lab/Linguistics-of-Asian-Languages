@@ -71,16 +71,22 @@ title = "Presentation on Minority Languages"
 date = "11-25"
 other = "Presentation! 🗣"
 
+[weeks.metaphor]
+key = "metaphor"
+title = "Metaphors across Languages"
+date = "12-09"
+other = ""
+
 [weeks.english]
 key = "english"
 title = "Asian Englishes"
-date = "12-02"
-
-[weeks.politeness]
-key = "politeness"
-title = "Politeness in Asian languages"
 date = "12-09"
-other = ""
+
+# [weeks.politeness]
+# key = "politeness"
+# title = "Politeness in Asian languages"
+# date = "12-09"
+# other = ""
 
 
 [weeks.presentation]

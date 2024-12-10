@@ -3,6 +3,8 @@ from flask import current_app as app
 from flask import render_template, g
 import os
 import toml
+from datetime import datetime, timedelta
+
 
 # Load the weeks data from the TOML file
 toml_path = os.path.join(app.root_path, 'weeks.toml')
@@ -14,13 +16,22 @@ def before_request():
     # Make weeks_data available in all templates
     g.weeks = weeks_data
 
+def calculate_n_weeks_later(date_string, n):
+    # Parse the date assuming current year
+    current_year = datetime.now().year
+    parsed_date = datetime.strptime(f"{current_year}-{date_string}", "%Y-%m-%d")
+    
+    # Add 8 weeks (56 days)
+    n_weeks_later = parsed_date + timedelta(weeks=n)
+    return n_weeks_later.date().isoformat() 
     
 @app.route('/')
 def index():
     # Render the index page with the weeks data
     return render_template('index.html',
                            week='index',
-                           weeks=g.weeks)
+                           weeks=g.weeks,
+                           calculate_date=calculate_n_weeks_later)
 
 @app.route('/week/<week_key>/')
 def week(week_key):

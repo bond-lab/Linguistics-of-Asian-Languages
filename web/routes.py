@@ -29,9 +29,13 @@ def index():
 def week(week_key):
     if week_key in g.weeks:
         # Pass the data for the specific week to the template
-        week_info = weeks_data[week_key]
+        return render_template(f'weeks/{week_key}.html',
+                               weeks=g.weeks,
+                               week=week_key)
+    elif week_key == 'tones':
         return render_template(f'weeks/{week_key}.html',
                                weeks=g.weeks,
                                week=week_key)
     else:
         return "Week not found", 404
+

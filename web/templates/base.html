@@ -27,7 +27,7 @@
                   <!--   </li> -->
                     {% for key, tweek in weeks.items() %}
                         <li class="nav-item">
-                            <a class="nav-link {% if week  == key %}active{% endif %}" title= "{{tweek.title}}" href="{{ url_for('week', week_key=key) }}">{{ key.title() }}</a>
+                            <a class="nav-link {% if week  == key %}active{% endif %}" title= "{{tweek.title}}" href="{{ url_for('week', week_key=key) }}">{{ tweek.key.title() }}</a>
                         </li>
                     {% endfor %}
                 </ul>

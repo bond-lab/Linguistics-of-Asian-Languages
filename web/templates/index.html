@@ -13,11 +13,11 @@
   <ruby>
     <rb><b>Bond</b></rb>
     <rp>(</rp><rt>凡土</rt><rp>)</rp>
-</ruby></a>:  <strong>2024</strong> (DAS 5LAJ/6LAJ)
+</ruby></a>: 2024, <strong>2025</strong> (DAS 5LAJ/6LAJ)
 
-<p>Monday
-  13:15-14:45,
-  <a href='https://mapy.upol.cz/en?prac=64'>Room 2.404 tř. Svobody 26,
+<p>Wednesday
+  15:00-16:30,
+  <a href='https://mapy.upol.cz/en?prac=64'>Room 2.39 tř. Svobody 26,
   779 00 Olomouc</a>
 
 
@@ -45,7 +45,7 @@
     </thead>
     <tbody>
         {% for key, week in weeks.items() %}
-        <tr>
+	<tr class="{{ 'table-success' if key in ['holiday', 'reading'] else '' }}">
             <td>{{ loop.index }}</td>
             <td>{{ week.date }}</td>
             <td><a href="{{ url_for('week', week_key=key) }}">{{ week.title }}</a></td>
@@ -90,6 +90,8 @@ ISBN: 9780199248605
  <li>Yu Li (2019). <i>The Chinese Writing System in Asia: An Interdisciplinary Perspective (1st ed.)</i>. Routledge. {{doi('10.4324/9780429345333')}}
  </ul>
 
+<p>Guest lecture in 2024 on <a href='http://127.0.0.1:5000/week/tones/'>Tone in Asian Languages</a> by 
+Lian-Hee Wee (Hong Kong Baptist, University)
 
 <h3>Assessment</h3>
 
@@ -105,8 +107,10 @@ ISBN: 9780199248605
 
 <h3>Acknowledgements</h3>
 
+<ul>
 <li> Course is inspired by materials from František Kratochvíl and the book The <i>Languages of East and Southeast Asia: An Introduction</i>  (Goddard, 2005).
 <li> Favicon Icon <a href="https://www.freepik.com/search">by UIcons</a>
+</ul>
 
 <hr>
   

@@ -1,0 +1,648 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{crane}
+
+\usepackage{fontspec, xeCJK}
+\usefonttheme{professionalfonts}
+\setsansfont{Andika}[Renderer=Harfbuzz]
+\setCJKmainfont{Noto Sans CJK SC}[Renderer=Harfbuzz]
+% \usefonttheme{professionalfonts}\usefonttheme{serif}
+% \setmainfont{Gentium Plus}
+% \setCJKmainfont{Noto Sans CJK SC}
+
+
+% \setmainfont{Linux Libertine O}[
+%   Mapping=tex-text,
+%   Renderer=Harfbuzz,
+%   FallbackFonts = {
+%     { Name = Charis SIL,
+%       Range = {
+%         "IPA Extensions",
+%         "Phonetic Extensions",
+%         "Phonetic Extensions Supplement",
+%         "Spacing Modifier Letters",
+%         "Latin Extended-B",
+%         "Latin Extended Additional"
+%       }
+%     }
+%   }
+% ]
+
+\usepackage{gb4e}
+
+% NOTE: Add your preferred fonts here, e.g.
+% \setsansfont{TeX Gyre Heros}
+% \setmainfont{TeX Gyre Termes}
+
+\title{Soundscapes of East and Southeast Asia}
+\author{Francis Bond}
+\date{}
+
+\newcommand{\booksrc}[1]{\hfill {\tiny [#1]}}
+%\newcommand{\booksrc}[1]{}
+
+\begin{document}
+\frame{\titlepage}
+
+% ======================================================
+% Section 1: What the chapter covers
+% ======================================================
+
+\begin{frame}{Chapter Map}
+\begin{itemize}
+\item Phoneme systems: size, contrasts, analytic controversies \booksrc{5.1}
+\item Word shapes (phonotactics) across regions \booksrc{5.2}
+\item Tones and allotones; tone sandhi typology \booksrc{5.3}
+\item Shifting sounds (morphophonemics) \booksrc{5.4}
+\item Pitch-accent in Japanese \booksrc{5.5}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A Word of Caution: Counting Phonemes}
+\begin{itemize}
+\item Identifying phonemes is often non-trivial \booksrc{5.1}
+\item Analysts disagree on how many phonemes a language has \booksrc{5.1}
+\item Same sound, different symbols across traditions \booksrc{5.1}
+\item Orthography vs. IPA: frequent mismatches \booksrc{5.1}
+\item Balance between phonetic detail and phonological economy \booksrc{5.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regional Big Picture}
+\begin{itemize}
+\item Insular SE Asia: smaller systems, many disyllables \booksrc{5.1.1, 5.2.1}
+\item Mainland SE Asia: larger systems, aspiration contrasts \booksrc{5.1.2}
+\item Sinitic: rich initials/finals, tone, restricted codas \booksrc{5.2.2}
+\item Korean/Japanese: special laryngeal or prosodic systems \booksrc{5.1.3, 5.5}
+\item Tone vs. pitch-accent: different organizing principles \booksrc{5.3, 5.5}
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 2: Insular Southeast Asia (Austronesian)
+% ======================================================
+
+\begin{frame}{Malay Consonants (Indigenous Set)}
+\begin{tabular}{lllll}
+ & Labial & Alveolar & Palatal & Velar \\
+\hline
+Stops & p, b & t, d & c, j & k, g \\
+Nasals & m & n & ny [ɲ] & ng [ŋ] \\
+Fricatives & s &  &  &  \\
+Glottal &  &  &  & [ʔ] (alloph.) \\
+Lateral &  & l &  &  \\
+Trill &  & r &  &  \\
+Semivowels & w & y [j] &  &  \\
+\end{tabular}
+\begin{itemize}
+\item 18 indigenous consonants; [ʔ] historically an allophone of /k/ \booksrc{5.1.1}
+\item Loans add f, v, z, sy[ʃ], kh[x] (educated speech) \booksrc{5.1.1}
+\item Digraphs = single phonemes (ny, ng, sy, kh) \booksrc{5.1.1}
+\item Orthography ≠ IPA in some cases \booksrc{5.1.1}
+\item % illustration: table with Malay orthography vs IPA
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Malay: Glottal Stop vs. /k/ in Loans}
+\begin{exe}
+\ex kakak [kakaʔ] \quad ‘older sister’ \\
+\ex rakyat [raʔjat] \quad ‘citizenry’ \\
+\ex fisik [fisik] \quad vs.\ bisik [bisiʔ] \\
+\trans allophonic [ʔ] vs. emergent contrast in loans
+\end{exe}
+\begin{itemize}
+\item Word-final /k/ → [ʔ] (traditional/village Malay) \booksrc{5.1.1}
+\item Educated speech: contrast with [ʔ] in loans \booksrc{5.1.1}
+\item Orthography keeps “k” for both, masking contrast \booksrc{5.1.1}
+\item Pathway: allophone → phoneme through borrowing \booksrc{5.1.1}
+\item % illustration: waveform/spectrogram of [k] vs [ʔ]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tagalog vs. Malay: Vowel Systems}
+\begin{tabular}{lll}
+Tagalog & Malay & Notes \\
+\hline
+i, u & i, u & high vowels \\
+e, o & e, o & mid vowels \\
+a & a & low vowel \\
+--- & ə (or ɨ/ɜ) & central vowel (Malay) \\
+\end{tabular}
+\begin{itemize}
+\item Tagalog: 5 vowels; Malay: 6 (tense central vowel) \booksrc{5.1.1}
+\item Symbol choice debated: ə/ɨ/ɜ/ɘ for Malay central vowel \booksrc{5.1.1, 5.1.1 tbls.}
+\item Total phonemes (incl. loans) still < 30 \booksrc{5.1.1}
+\item Austronesian systems often compact \booksrc{5.1.1}
+\item % illustration: vowel chart overlay (Tagalog vs. Malay)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Acehnese Vowels (Sumatra)}
+\begin{tabular}{lll}
+Front & Back-central (unrounded) & Back (rounded) \\
+\hline
+i & ɯ & u \\
+e & ə & o \\
+ɛ & ʊ & ɔ \\
+a &  &  \\
+\end{tabular}
+\begin{itemize}
+\item Ten simple vowels + diphthongs \booksrc{5.1.1}
+\item Typologically closer to Mon-Khmer \booksrc{5.1.1}
+\item Shows diversity within Austronesian \booksrc{5.1.1}
+\item Suggests contact/areal effects in vowel space \booksrc{5.1.1}
+\item % illustration: Acehnese vowel trapezoid
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Insular SE Asia: Word Shapes (CVCV Bias)}
+\begin{itemize}
+\item Western side (Malay/Tagalog): many disyllabic lexemes \booksrc{5.2.1}
+\item Template: (C)V\textsubscript{1}(C)(C)V\textsubscript{2}(C) (idealized) \booksrc{5.2.1}
+\item Monosyllables: mostly exclamations/clippings \booksrc{5.2.1}
+\item Polysyllables: compounds/derivations; some loans \booksrc{5.2.1}
+\item East Indonesia: simpler CVCV roots preferred \booksrc{5.2.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Insular SE Asia: V\textsubscript{2} Neutralizations}
+\begin{itemize}
+\item In Malay: final open syllables prefer high vowels \booksrc{5.2.1}
+\item Closed finals prefer mid vowels (e/o) \booksrc{5.2.1}
+\item Some dialects: final continuants lost; only [ʔ] as obstruent \booksrc{5.2.1}
+\item Final nasals neutralized to [ŋ] or nasalization \booksrc{5.2.1}
+\item % illustration: dialectal maps of Peninsular Malay finals
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 3: Mainland Southeast Asia
+% ======================================================
+
+\begin{frame}{Mainland SE Asia: Segmental Profiles}
+\begin{itemize}
+\item Typically 30–40+ phonemes \booksrc{5.1.2}
+\item Voicing often non-distinctive; aspiration is \booksrc{5.1.2}
+\item Two (or three) stop series; stiff/creaky series occur \booksrc{5.1.2, 5.3.1}
+\item Vowels: larger systems (Mon-Khmer especially) \booksrc{5.1.2}
+\item Tone often linked to earlier consonant distinctions (tonogenesis) \booksrc{5.3.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thai Consonants (Hudak 1987)}
+\begin{tabular}{lllll}
+ & Labial & Alveolar & Palatal & Velar \\
+\hline
+Stops (UA) & p & t & c & k \\
+Stops (A) & ph & th & ch & kh \\
+Stops (V) & b & d &  &  \\
+Nasals & m & n &  & ŋ \\
+Fricatives & f & s &  & h \\
+Rhotic & r &  &  &  \\
+Lateral & l &  &  &  \\
+Semivowels & w & y &  &  \\
+\end{tabular}
+\begin{itemize}
+\item 20 consonant phonemes \booksrc{5.1.2 tbl.}
+\item Aspiration contrasts; ‘‘voiced’’ often stiff-voiced \booksrc{5.1.2}
+\item Common romanization ≠ strict IPA \booksrc{5.1.2}
+\item Unrounded back vowels in the system \booksrc{5.1.2}
+\item % illustration: Thai script–IPA–romanization alignment
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thai Vowels (Hudak 1987)}
+\begin{tabular}{lll}
+Front & Central & Back \\
+\hline
+i, e, ɛ & a, ə & ɯ, u, o, ɔ \\
+\end{tabular}
+\begin{itemize}
+\item ~9 vowels; length contrasts important \booksrc{5.1.2}
+\item Some symbols used non-IPA in romanization \booksrc{5.1.2}
+\item Dense mid space; phonotactic distributional limits \booksrc{5.3.2}
+\item Contours avoid short vowels (timing) \booksrc{5.3.2}
+\item % illustration: Thai vowel chart with length marks
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Vietnamese Overview}
+\begin{itemize}
+\item ~23 consonants; 12 vowels \booksrc{5.1.2}
+\item Voiced fricatives distinctive; retroflexes present \booksrc{5.1.2}
+\item Extra low front-central vowels \booksrc{5.1.2}
+\item Tone system: multiple contours; rich diacritics \booksrc{5.3}
+\item Phonotactics: (C)(w)V(V)(C); limited codas \booksrc{5.2.2}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Burmese Consonants (Large Set)}
+\begin{itemize}
+\item ~34 consonants (3 marginal) \booksrc{5.1.2}
+\item Three stop series: plain, aspirated, voiced \booksrc{5.1.2}
+\item Voiceless nasals (hm, hn, hŋ) \booksrc{5.1.2}
+\item Voiceless approximants (hw, hl) \booksrc{5.1.2}
+\item Sesquisyllabic: C\textsubscript{1}ə – C\textsubscript{1}(w/y)V(C\textsubscript{2}) \booksrc{5.2.2}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lahu and Related Tibeto-Burman}
+\begin{itemize}
+\item Lahu: lacks voiceless nasals; adds post-velar stops \booksrc{5.1.2}
+\item Strikingly lacks /s/ \booksrc{5.1.2}
+\item Considerable variation across TB languages \booksrc{5.1.2}
+\item Tone present; sandhi patterns vary \booksrc{5.3}
+\item % illustration: feature inventory heatmap
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Khmer and Mon-Khmer Vowels}
+\begin{itemize}
+\item Khmer (Battambang): 27 vocalic nuclei \booksrc{5.1.2}
+\item Length, diphthongs, register remnants \booksrc{5.1.2}
+\item Bru reported: up to 68 vocalic nuclei \booksrc{5.1.2}
+\item Neutralization patterns in minor syllables \booksrc{5.2.2}
+\item % illustration: Khmer register → length diachrony
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hmong-Mien: Very Large Inventories}
+\begin{itemize}
+\item Four stop series (plain/prenasalized × unasp/asp) \booksrc{5.1.2}
+\item Six places of articulation; many affricates \booksrc{5.1.2}
+\item Voiced/voiceless nasals; lateral releases \booksrc{5.1.2}
+\item Inventory size among world’s largest \booksrc{5.1.2}
+\item Tone contrasts layered atop segmental richness \booksrc{5.3}
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 4: Sinitic Languages
+% ======================================================
+
+\begin{frame}{Mandarin: Initials and Finals}
+\begin{itemize}
+\item 20 consonant initials; aspiration contrasts \booksrc{5.1.3}
+\item Retroflex fricatives/affricates; palatals allophonic \booksrc{5.1.3}
+\item Finals (rhymes) include many diphthongs/triphthongs \booksrc{5.2.2}
+\item Only /n, ŋ/ as codas; no clusters \booksrc{5.2.2}
+\item Pinyin standard for romanization \booksrc{5.1.3}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mandarin Finals (Beijing)}
+\begin{itemize}
+\item Rich set of rhymes: i, u, ü; -ai, -ei, -ao, -ou; -an, -en, -ang, -eng; -ong \booksrc{5.2.2}
+\item Triphthongs like -iao, -ian, -iong \booksrc{5.2.2}
+\item Only nasals as codas; no clusters after triphthongs \booksrc{5.2.2}
+\item Neutral tone in weak syllables (e.g., \emph{de}) \booksrc{5.3.2}
+\item % illustration: Mandarin initial–final chart
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cantonese: Initials and Tones}
+\begin{tabular}{lllll}
+ & Labial & Dental/Alv. & Palatal & Velar \\
+\hline
+Stops UA & b & d &  & g \\
+Stops A & pʰ & tʰ & tsʰ & kʰ \\
+Affricates & ts & tsʰ &  &  \\
+Fricatives & f & s &  & h \\
+Nasals & m & n &  & ŋ \\
+Glide & w & j &  &  \\
+\end{tabular}
+\begin{itemize}
+\item 6 lexical tones; sometimes “9” including checked \booksrc{5.1.3, 5.3.2}
+\item Checked tones are allotones (shortened level tones) \booksrc{5.3.2}
+\item No tone sandhi proper (phonological) \booksrc{5.3.3}
+\item Tone-bearing unit: syllable/morpheme (E/SEA style) \booksrc{5.3.4}
+\item % illustration: Cantonese level vs. checked tone contours
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 5: Korean & Japanese
+% ======================================================
+
+\begin{frame}{Korean: Laryngeal Three-way Stops}
+\begin{itemize}
+\item Aspirated, lax, tense series \booksrc{5.1.3}
+\item Tense: glottalized/high muscular tension \booksrc{5.1.3}
+\item Lax: voiceless unaspirated (often perceived as voiced) \booksrc{5.1.3}
+\item Neutralization and allophony (e.g., /r/ ~ [l]/[r]) \booksrc{5.1.3}
+\item Morphophonemics: many alternations \booksrc{5.4.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Korean Vowels (Simple Set)}
+\begin{tabular}{lll}
+Front & Central & Back \\
+\hline
+i, e, ae & ʌ & ɯ, u, o, a \\
+\end{tabular}
+\begin{itemize}
+\item ~8 simple vowels (front rounded often diphthongs) \booksrc{5.1.3}
+\item High back unrounded [ɯ] notable \booksrc{5.1.3}
+\item High vowels often devoiced between voiceless Cs \booksrc{5.1.3}
+\item Complex vowels arise in suffixation contexts \booksrc{5.1.3, 5.4.1}
+\item % illustration: devoicing spectrogram (ki̥tsɯ)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Japanese: Small Segmental System}
+\begin{itemize}
+\item 5-vowel system (Tagalog-like configuration) \booksrc{5.1.3}
+\item Simple consonant inventory; few places of articulation \booksrc{5.1.3}
+\item High vowels devoiced in voiceless environments \booksrc{5.1.3}
+\item Mora as rhythmic unit (N and Q as moraic consonants) \booksrc{5.2.2, 5.4.3}
+\item Pitch-accent organizes lexical contrasts \booksrc{5.5}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Japanese Mora in Examples}
+\begin{exe}
+\ex hachimaki \quad ha--chi--ma--ki (4 moras) \\
+\ex shinbun \quad shi--N--bu--N (4 moras) \\
+\ex yappari \quad ya--Q--pa--ri (4 moras)
+\end{exe}
+\begin{itemize}
+\item Mora ≈ timing unit; poetry and kana reflect moraic counts \booksrc{5.2.2}
+\item N = moraic nasal; Q = underspecified moraic obstruent \booksrc{5.2.2}
+\item Geminate clusters: first consonant counts as a mora \booksrc{5.4.3}
+\item Place-assimilatory realization of N before obstruents \booksrc{5.2.2}
+\item % illustration: mora timing diagram
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 6: Phonotactics (Comparative)
+% ======================================================
+
+\begin{frame}{Mainland vs. Insular: Macro-Contrast}
+\begin{itemize}
+\item Mainland: monosyllables; sesquisyllables (Mon-Khmer) \booksrc{5.2.2}
+\item Insular: disyllabic roots; CVCV preference eastward \booksrc{5.2.1}
+\item Sinitic: initial + rhyme (“final”); restricted codas \booksrc{5.2.2}
+\item Korean: clusters allowed; simplifications final \booksrc{5.2.2}
+\item Japanese: strict CV; only N and Q codas \booksrc{5.2.2}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mon-Khmer Sesquisyllables}
+\begin{itemize}
+\item ‘‘One-and-a-half’’ syllables: minor + major \booksrc{5.2.2}
+\item Minor: unstressed; reduced vowel inventory \booksrc{5.2.2}
+\item Khmer: C(r)V\textsubscript{1}(N) – C(C)V\textsubscript{2}(C) \booksrc{5.2.2}
+\item Rich clusters in major syllables; unusual onsets \booksrc{5.2.2}
+\item Burmese adopted sesquisyllabic pattern historically \booksrc{5.2.2}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Chinese Syllable Structure (Mandarin)}
+\begin{itemize}
+\item Template: (C)(V)V(V/N) \booksrc{5.2.2}
+\item Diphthongs/triphthongs common in nucleus \booksrc{5.2.2}
+\item Only /n, ŋ/ codas; no clusters \booksrc{5.2.2}
+\item Analysis by “finals” (rhymes) traditional \booksrc{5.2.2}
+\item % illustration: Initials × Finals grid
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Vietnamese Syllable Template}
+\begin{itemize}
+\item (C)(w)V(V)(C) \booksrc{5.2.2}
+\item Codas: nasal or voiceless stop \booksrc{5.2.2}
+\item On-glides (w) frequent; many VV combinations \booksrc{5.2.2}
+\item Tone interacts with syllable type \booksrc{5.3.2}
+\item % illustration: Vietnamese vowel sequences with allowable codas
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Korean vs. Japanese: Final Restrictions}
+\begin{itemize}
+\item Korean allows codas/clusters but neutralizes \booksrc{5.2.2}
+\item Cluster simplification in morphological contexts \booksrc{5.4.1}
+\item Japanese: only N or first half of geminate allowed \booksrc{5.2.2, 5.4.3}
+\item Heavy adaptation of complex-loan syllables \booksrc{5.2.2}
+\item % illustration: loanword adaptation flow (EN→JA)
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 7: Tone, Allotone, Sandhi
+% ======================================================
+
+\begin{frame}{Phonetic Foundations of Tone}
+\begin{itemize}
+\item Pitch = perceptual correlate of F0 \booksrc{5.3.1}
+\item Controlled via laryngeal tension + airflow \booksrc{5.3.1}
+\item Voice qualities: stiff, creaky, breathy co-vary with tone \booksrc{5.3.1}
+\item Stiff/creaky often with low tones (e.g., Cantonese) \booksrc{5.3.1}
+\item Tonogenesis: consonant contrasts → pitch contrasts \booksrc{5.3.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thai: Five Tone Categories}
+\begin{exe}
+\ex khaa (mid) ‘to be lodged in’ \\
+\ex khàa (low) ‘aromatic root’ \\
+\ex khâa (falling) ‘servant’ \\
+\ex kháa (high) ‘to trade’ \\
+\ex khǎa (rising) ‘leg’
+\end{exe}
+\begin{itemize}
+\item Distribution constrained by syllable type \booksrc{5.3.2}
+\item Short vowels resist complex contours \booksrc{5.3.2}
+\item Checked syllables restrict tonal options \booksrc{5.3.2}
+\item No neutral tone (contrast with Mandarin) \booksrc{5.3.2}
+\item % illustration: Thai pitch tracks by syllable type
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Allotones: Mandarin \& Cantonese}
+\begin{itemize}
+\item Mandarin 3rd tone: 214 → 21 before another tone \booksrc{5.3.2}
+\item “Neutral tone” in weak syllables (no inherent tone) \booksrc{5.3.2}
+\item Cantonese “9 tones” vs “6”: checked tones are allotonic \booksrc{5.3.2}
+\item Checked tones = shortened level tones (H/M/L) \booksrc{5.3.2}
+\item Lao dialect: 33 vs 213 in complementary distribution \booksrc{5.3.2}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tone Sandhi: Mandarin}
+\begin{itemize}
+\item 35 after 35/55 → 55 (assimilatory) \booksrc{5.3.3}
+\item 214 + 214 → 35 + 214 (dissimilatory) \booksrc{5.3.3}
+\item Shorthand: 35/55 35 ⇒ 35/55 55; 214 214 ⇒ 35 214 \booksrc{5.3.3}
+\item Many dialects: additional/local sandhi patterns \booksrc{5.3.3}
+\item % illustration: stepwise tone sandhi schematics
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tone Sandhi: Tianjin vs. Cantonese}
+\begin{itemize}
+\item Tianjin (21,45,13,53) rules: \booksrc{5.3.3}
+\item 21+21→13+21; 13+13→45+13; 53+53→21+53; 53+21→45+21 \booksrc{5.3.3}
+\item Cantonese: little/no phonological sandhi \booksrc{5.3.3}
+\item Morphology (e.g., reduplication) can alter tone \booksrc{5.3.3}
+\item Allotones vs. sandhi: keep notions distinct \booksrc{5.3.2–3}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tonal Phonology in Broader Perspective}
+\begin{itemize}
+\item ~1/3 of world’s languages have tone \booksrc{5.3.4}
+\item African/Mesoamerican vs. E/SE Asian tone systems \booksrc{5.3.4}
+\item E/SEA: more contour tones; syllable-level bearing \booksrc{5.3.4}
+\item Autosegmental phonology informed by tone \booksrc{5.3.4}
+\item Feature analyses: contours as level combinations \booksrc{5.3.4}
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 8: Morphophonemics
+% ======================================================
+
+\begin{frame}{Morphophonemics: General Idea}
+\begin{itemize}
+\item Morphemes change shape in context \booksrc{5.4}
+\item Underlying form + context-sensitive rules \booksrc{5.4}
+\item English plural: /-s/, /-z/, /-əz/; voicing + epenthesis \booksrc{5.4}
+\item Rules: assimilation, deletion, insertion, coalescence \booksrc{5.4}
+\item Feature-copying as common mechanism \booksrc{5.4}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Korean: When Vowels Collide}
+\begin{itemize}
+\item Complex vowels often arise in suffixation \booksrc{5.4.1}
+\item Vowel coalescence: o+i→oe; eo+i→e; a+i→ae; u+i→wi \booksrc{5.4.1}
+\item Consonant cluster simplifications in morphology \booksrc{5.4.1}
+\item Stop→nasal before nasal in compounding \booksrc{5.4.1}
+\item Multiple rules can apply sequentially \booksrc{5.4.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Korean: Cluster and Liquid Alternations}
+\begin{itemize}
+\item Second obstruent in cluster becomes tense (e.g., ip-da→iptta) \booksrc{5.4.1}
+\item /r/→/n/ unless following a vowel \booksrc{5.4.1}
+\item Chains: /r/→/n/ then stop→nasal assimilation \booksrc{5.4.1}
+\item Example: baeg-ri→baengni; sueobryo→sueomnyo \booksrc{5.4.1}
+\item Lexical strata: rule application can be stratum-sensitive \booksrc{5.4.1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Austronesian: Nasal Alternation}
+\begin{itemize}
+\item Prefixal N- realizes as homorganic nasal \booksrc{5.4.2}
+\item Interaction with base-initial consonant \booksrc{5.4.2}
+\item Productive in Malay/Tagalog derivation \booksrc{5.4.2}
+\item Reflects phonotactic legality + assimilation \booksrc{5.4.2}
+\item % illustration: table of N- allomorphs by following C
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Japanese: Q and N in Morphology}
+\begin{exe}
+\ex tat-i + -ta → tatta ‘stood’ \\
+\ex tor-i + -ta → totta ‘took’ \\
+\ex kaw-i + -ta → katta ‘bought’ \\
+\ex hati + seN → hasseẽ ‘eight thousand’
+\end{exe}
+\begin{itemize}
+\item Traditional view: Q = underspecified moraic C \booksrc{5.4.3}
+\item Orthography (kana) writes Q and N as letters \booksrc{5.4.3}
+\item Phonological analysis vs. spelling conventions \booksrc{5.4.3}
+\item N assimilation; word-final N ~ uvular nasal in careful speech \booksrc{5.2.2}
+\item % illustration: kana mapping of Q/N sequences
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 9: Pitch-Accent in Japanese
+% ======================================================
+
+\begin{frame}{Pitch-Accent: Core Properties}
+\begin{itemize}
+\item Words have characteristic pitch patterns \booksrc{5.5}
+\item Functional load lower than in tonal languages \booksrc{5.5}
+\item Domain is the word; not per-syllable tones \booksrc{5.5}
+\item Predictable once accent position is known \booksrc{5.5}
+\item Tokyo vs. Kyoto differences in patterns \booksrc{5.5}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Minimal Pairs by Pitch (Tokyo vs. Kyoto)}
+\begin{exe}
+\ex Tokyo: \textit{ame} (LH) ‘candy’ vs. \textit{ame} (HL) ‘rain’ \\
+\ex Kyoto/Tokyo: \textit{hashi} contrasts: ‘edge’, ‘chopsticks’, ‘bridge’
+\end{exe}
+\begin{itemize}
+\item Few minimal pairs overall \booksrc{5.5}
+\item Accent position determines post-accent L plateau \booksrc{5.5}
+\item Pre-accent H with initial L exception rule \booksrc{5.5}
+\item Syllable vs. mora considerations (simplified here) \booksrc{5.5}
+\item % illustration: HL/LH curves over multi-syllabic words
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tokyo Patterns Worked Example}
+\begin{exe}
+\ex No accent: \textit{ame} LH; \textit{sakura} LHH; \textit{shirakaba} LHHH \\
+\ex Accent: \textit{a’me} HL; \textit{za’kuro} HLL; \textit{ka’makiri} HLLL \\
+\ex Pre-accent rule: second syllable H ⇒ initial becomes L
+\end{exe}
+\begin{itemize}
+\item Accented syllable = H; following syllables L \booksrc{5.5}
+\item If 2nd syllable is H, 1st becomes L (initial lowering) \booksrc{5.5}
+\item Otherwise pre-accent syllables are H \booksrc{5.5}
+\item Mora vs. syllable refinements omitted (intro level) \booksrc{5.5}
+\item % illustration: step graph of L/H sequences by accent site
+\end{itemize}
+\end{frame}
+
+% ======================================================
+% Section 10: Wrap-up & Study Aids
+% ======================================================
+
+\begin{frame}{Key Takeaways}
+\begin{itemize}
+\item Insular vs. mainland profiles: size, syllables, tones \booksrc{5.1–5.3}
+\item Sinitic: initials/finals + tones; limited codas \booksrc{5.2–5.3}
+\item Korean: rich morphophonemics; three-way stops \booksrc{5.1.3, 5.4.1}
+\item Japanese: mora-timed, N/Q, pitch-accent \booksrc{5.2.2, 5.4.3, 5.5}
+\item Allotone vs. sandhi: environment vs. tonal change \booksrc{5.3.2–3}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Suggested Illustrations (insert later)}
+\begin{itemize}
+\item Maps: Insular vs. Mainland SE Asia, language families
+\item Spectrograms: [k] vs. [ʔ]; devoiced high vowels (JA/KR)
+\item Pitch plots: Thai 5 tones; Mandarin 3rd-tone allotone
+\item Vowel charts: Tagalog/Malay/Acehnese; Thai; Khmer
+\item Phonotactic schematics: sesquisyllables; JA mora timing
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Practice: Identify Processes (gb4e prompts)}
+\begin{exe}
+\ex Malay: \textit{N-} + base-initials (fill the table) \\
+\ex Korean: derive surface forms across two rules \\
+\ex Mandarin: apply 3rd-tone allotone and sandhi \\
+\ex Thai: assign tones by syllable type constraints \\
+\ex Japanese: predict pitch from accent position
+\end{exe}
+\begin{itemize}
+\item Turn these into short worksheet items
+\item Encourage students to annotate IPA + tone/HL
+\item Use Praat screenshots for F0 evidence
+\item Mix recognition + production tasks
+\item Tie to term project (mini phonology of one language)
+\end{itemize}
+\end{frame}
+
+\frame{\centering \Huge Questions?}
+
+\end{document}

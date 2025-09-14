@@ -3,40 +3,45 @@
 [weeks.intro]
 key = "intro"
 title = "Introduction"
-date = "09-23"
-
-[weeks.tones]
-key = "tones"
-title = "Tone in Asian Languages"
-date = "10-01"
-other = "Guest Lecture: Lian Hee Wee (Hong Kong Baptist)"
+date = "09-24"
 
 [weeks.family]
 key = "family"
 title = "Language families, multilingualism, official languages"
-date = "19-07"
+date = "10-01"
 
 [weeks.words]
 key = "words"
 title = "Vocabulary"
-date = "10-14"
-
+date = "10-08"
 
 [weeks.features]
 key = "features"
 title = "Grammar"
-date = "10-21"
+date = "10-15"
 
-[weeks.holiday]
-key = "holiday"
-title = "Public Holiday"
-date = "10-28"
-other = "Independent Czechoslovak State Day"
+# [weeks.holiday]
+# key = "holiday"
+# title = "Public Holiday"
+# date = "10-28"
+# other = "Independent Czechoslovak State Day"
+
+
+[weeks.sounds]
+key = "sounds"
+title = "Sound structure of Asian languages"
+date = "10-22"
+
 
 [weeks.minority]
 key = "minority"
 title = "Minority languages of Southeast and East Asia"
-date = "11-04"
+date = "10-29"
+
+[weeks.reading]
+key = "📖"
+title = "Reading week"
+date = "11-05"
 
 
 # [weeks.oral]
@@ -50,47 +55,42 @@ date = "11-04"
 # title = "Language contact in SE and V Asia"
 # date = "11-11"
 
-# [weeks.sound]
-# key = "sound"
-# title = "Sound structure of Asian languages"
-# date = "11-05"
-
 [weeks.writing]
 key = "writing"
 title = "Writing, its origin, spread and adaptation"
-date = "11-11"
+date = "11-12"
 
 [weeks.arts]
 key = "arts"
 title = "Communication and Culture"
-date = "11-18"
+date = "11-19"
 
 [weeks.presentation1]
-key = "present1"
+key = "Talk~1"
 title = "Presentation on Minority Languages"
-date = "11-25"
+date = "11-26"
 other = "Presentation! 🗣"
 
 [weeks.metaphor]
 key = "metaphor"
 title = "Metaphors across Languages"
-date = "12-02"
+date = "12-03"
 other = ""
 
 [weeks.english]
 key = "english"
 title = "Asian Englishes"
-date = "12-09"
-
-# [weeks.politeness]
-# key = "politeness"
-# title = "Politeness in Asian languages"
-# date = "12-09"
-# other = ""
-
+date = "12-10"
 
 [weeks.presentation]
-key = "presentation"
+key = "Talk~2"
 title = "Presentation of seminar work"
 date = "12-16"
 other = "Presentation!  🗣"
+
+
+# [weeks.tones]
+# key = "tones"
+# title = "Tone in Asian Languages"
+# date = "2024"
+# other = "Guest Lecture (2024): Lian Hee Wee (Hong Kong Baptist)"

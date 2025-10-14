@@ -27,11 +27,12 @@ date = "10-15"
 # other = "Independent Czechoslovak State Day"
 
 
-[weeks.sounds]
-key = "sounds"
-title = "Sound structure of Asian languages"
-date = "10-22"
 
+[weeks.metaphor]
+key = "metaphor"
+title = "Metaphors across Languages"
+date = "10-22"
+other = ""
 
 [weeks.minority]
 key = "minority"
@@ -71,15 +72,14 @@ title = "Presentation on Minority Languages"
 date = "11-26"
 other = "Presentation! 🗣"
 
-[weeks.metaphor]
-key = "metaphor"
-title = "Metaphors across Languages"
-date = "12-03"
-other = ""
-
 [weeks.english]
 key = "english"
 title = "Asian Englishes"
+date = "12-03"
+
+[weeks.sounds]
+key = "sounds"
+title = "Sound structure of Asian languages"
 date = "12-10"
 
 [weeks.presentation]

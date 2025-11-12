@@ -79,8 +79,9 @@ date = "12-03"
 
 [weeks.sounds]
 key = "sounds"
-title = "Sound structure of Asian languages"
+title = "Sound Structure of Asian languages"
 date = "12-10"
+other =''
 
 [weeks.presentation]
 key = "Talk~2"

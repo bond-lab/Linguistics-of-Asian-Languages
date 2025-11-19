@@ -27,7 +27,9 @@
 
 \newfontfamily{\silipa}{Noto Serif}
 \newcommand{\IPA}[1]{{\silipa\selectfont #1}}
-
+\usepackage{newunicodechar}
+\newunicodechar{⟨}{‹}
+\newunicodechar{⟩}{›}
 % \newfontfamily\fontarabic[Script=Arabic]{Noto Naskh Arabic } 
 % \newfontfamily\textchinese[Script=CJK]{Noto Sans CJK SC}
 % \newfontfamily\textjapanese[Script=CJK]{Noto Sans CJK JP} % Japanese font
@@ -35,11 +37,11 @@
 % \newfontfamily\textthai[Script=Thai]{Noto Sans Thai} % Thai font
 % \newcomand{\textarabic}[1]{\begin{RTL}\fontarabic\selectfont #1\end{RTL}}
 
-\usepackage{mygb4e}
+\usepackage{langsci-gb4e}
 \newcommand{\yueb}[1]{\yuefontsf\selectfont #1}
 \renewcommand{\eachwordone}{\yueb}
 \renewcommand{\eachwordtwo}{\yueb}
-\usepackage[e,f]{mtg2e}
+\usepackage[e]{mtg2e}
 \usepackage{xcolor}
 \renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
 \newcommand{\msa}{\mtciteform}
@@ -48,6 +50,7 @@
 \newcommand{\zh}{\mtciteform}
 \newcommand{\jpn}{\mtciteform}
 \newcommand{\ar}{\mtciteform}
+\newcommand{\vi}{\mtciteform}
 \newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
 
 \title{Writing Systems in East and Southeast Asia}
@@ -313,7 +316,13 @@ Images from Wikipedia (2024)
 \end{itemize}
 
 \end{frame}
-
+\begin{frame}{Cia-cia being used}
+ \begin{center}
+   \includegraphics[width=0.7\textwidth]{pics/ciacia.png}
+ \end{center}
+ From \href{https://languagemuseum.org/language-of-the-month-november-2024-cia-cia/}{Language of the Month November 2024 – Cia-Cia} By L S, 
+The National Museum of Language (online virtual museum)
+\end{frame}
 
 \section{Logographic Systems}
 
@@ -451,9 +460,14 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
 
 \begin{frame}{Syllabaries: Hiragana and Katakana}
 \begin{itemize}
-    \item Hiragana: Used for particles, auxiliary verbs, and suffixes.
+\item Hiragana: Used for particles, auxiliary verbs, and suffixes.
+  \begin{itemize}
+  \item Derived from cursive versions of kanji with suitable pronunciation
+  \end{itemize}
     \item Katakana: Used for loanwords, mimetics, and emphasis.
-    \item Example syllabary table for Hiragana and Katakana.
+  \begin{itemize}
+  \item Derived from components  of kanji with suitable pronunciation
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -471,7 +485,7 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
 \end{center}
 
 \end{frame}
-\begin{frame}{Katkana - a true syllabic alphabet} 
+\begin{frame}{Katakana - a true syllabic alphabet} 
 % Script developed in 10th century from Chinese characters. 52 characters.
 
 % %Hiragana were originally called onnade or 'women's hand' as were used
@@ -580,7 +594,7 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
 \begin{itemize}
     \item Many kanji represented concepts that already had native Japanese words.
     \item To adapt, kanji were assigned \textbf{kun’yomi} (\textjapanese{訓読み}), or native Japanese readings.
-    \item Example: \textjapanese{明} can be read as \textjapanese{あか} in  the native Japanese word  明るい \jpn[bright]{akarui}.
+    \item Example: \textjapanese{明} can be read as \textjapanese{あか} in  the native Japanese word  \textjapanese{明るい} \jpn[bright]{akarui}.
     \item Kun’yomi is often used when kanji stand alone or in names.
     \item This creates another layer of readings that are essential for native vocabulary.
     \item Many characters also have readings normally only used in names \textbf{nanori} (\textjapanese{名乗り})
@@ -654,7 +668,42 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
         \item Typing kanji requires selecting the correct character from multiple homophones.
         \item Many younger people may rely on digital aids, impacting kanji writing skills.
     \end{itemize}
-    \item These factors continue to make Japanese orthography a challenging system to master.
+    \item Japanese orthography is still a challenging system to master.
+\end{itemize}
+\end{frame}
+
+\section{Vietnamese}
+\begin{frame}{Writing in Vietnam}
+
+\begin{itemize}
+\item Vietnamese today uses the Latin script-based Vietnamese alphabet
+  to represent native Vietnamese words (thuần Việt)
+\item From 111 BC up to the 20th century, Vietnamese literature was
+  written in Văn ngôn (Classical Chinese) using chữ Hán (Chinese
+  characters)
+\item From the 13th century to 20th century it could also be written
+  in Nôm (Chinese and original Vietnamese characters adapted for
+  vernacular Vietnamese)
+\item From the 17th century Portuguese missionaries developed a script
+  based on Portuguese, which was mainly used within the Catholic
+  community. During the French administration, the alphabet was
+  further modified and then later made a part of compulsory education
+  in 1910
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thuần Việt}
+
+\begin{itemize}
+\item 29 letters:  7 letters use diacritics: ⟨ă⟩, ⟨â⟩, ⟨ê⟩, ⟨ô⟩, ⟨ơ⟩, ⟨ư⟩, and ⟨đ⟩
+\item An additional 5 diacritics used to designate tone (as in ⟨à⟩,
+  ⟨á⟩, ⟨ả⟩, ⟨ã⟩, and ⟨ạ⟩), level tone is unmarked.
+\item Diacritics stack, e.g. \vi{nhất} ``first''
+\item Sound changes in the spoken language have led to different letters, digraphs and trigraphs now representing the same sounds.
+  \begin{itemize}
+  \item Northern dialect has 6 tones 
+  \item Southern dialect has merged ⟨ả⟩ \vi{hỏi} and ⟨ã⟩ \vi{ngã} to just ⟨ả⟩ \vi{hỏi}.
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -665,7 +714,8 @@ Because of the influence of English, Cantonese tends to use more loan words (as 
     \item Reflects cultural aesthetics and individuality.
     \item Styles include Seal Script, Clerical Script, Standard Script, Running Script, and Grass Script.
     \item Chinese calligraphy emphasizes brush techniques and stroke order.
-\end{itemize}
+    \end{itemize}
+    \vspace{-1ex}
 \begin{center}
     \begin{tabular}{cc}
       \includegraphics[height=0.5\textheight]{pics/This_Letter_written_by_Mi_Fei.jpg} &
@@ -717,6 +767,19 @@ Mehmet Izzet al-Karkuki (1841-1904)
 \href{https://en.wikipedia.org/wiki/Diwani}{Diwani} is a calligraphic variety of Arabic script, developed during the reign of the early Ottoman Turks (16th century - early 17th century).
 \end{frame}
 
+\begin{frame}{Summary}
+
+  \begin{itemize}
+  \item There are many, many different scripts, with adaptations and
+    borrowings
+  \item It is very hard to change a nation's script although it does happen
+    \begin{itemize}
+    \item Most countries have abandoned or limited the use of Chinese Characters
+    \item But having to learn a new script and reprint everything is a massvie undertaking, \ldots
+    \end{itemize}
+  \end{itemize}
+  
+\end{frame}
 
 \begin{frame}{Acknowledgements}
 

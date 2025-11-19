@@ -15,8 +15,8 @@
 % \newfontfamily\arabicfontsf[Script=Arabic]{Noto Naskh Arabic}
 \setotherlanguage{chinese}
 \newfontfamily\chinesefontsf[Script=CJK]{Noto Sans CJK SC}
-\setotherlanguage{yue}
 \newfontfamily\yuefontsf[Script=CJK]{Noto Sans CJK TC}
+\newcommand{\textyue}[1]{{\yuefontsf\selectfont #1}}
 
 \setotherlanguage{japanese}
 \newfontfamily\japanesefontsf[Script=CJK]{Noto Sans CJK JP} % Japanese font
@@ -28,14 +28,27 @@
 \newfontfamily{\silipa}{Noto Serif}
 \newcommand{\IPA}[1]{{\silipa\selectfont #1}}
 
-\usepackage{natbib}
 
-\usepackage{mygb4e}
-\newcommand{\yueb}[1]{\yuefontsf\selectfont #1}
-\renewcommand{\eachwordone}{\yueb}
-\renewcommand{\eachwordtwo}{\yueb}
-\usepackage[e]{mtg2e}
+\usepackage{natbib}
 \usepackage{xcolor}
+\usepackage{langsci-gb4e}
+\makeatletter
+\gdef\getwords(#1,#2)#3 #4\\%
+   {\setbox#1=\vbox{\hbox{#2{\strut#3}{} }%
+                    \unvbox#1%
+                   }%
+    \def\more{#4}%
+    \ifx\more\empty\let\more=\donewords
+    \else\let\more=\getwords
+    \fi
+    \more(#1,#2)#4\\%
+   }
+\makeatother
+% Define a robust version of eachwordone
+\DeclareRobustCommand{\eachwordone}{\textcolor{teal}}
+
+\usepackage[e]{mtg2e}
+
 \renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
 \newcommand{\msa}{\mtciteform}
 \newcommand{\zsm}{\mtciteform}
@@ -94,10 +107,10 @@
 \begin{frame}
 \frametitle{Examples of a Pantun}
 \begin{exe}
-  \ex Pisang emas bawa belayar, \\
+  \ex \textcolor{teal}{Pisang emas bawa belayar, \\
       \hspace*{2em}Masak sebiji di atas peti; \\
       Hutang emas boleh dibayar, \\
-      \hspace*{2em}Hutang budi dibawa mati.
+      \hspace*{2em}Hutang budi dibawa mati.}
 
   \ex The golden plantain carried on a voyage;   \\
       \hspace*{2em}One ripens on top of the chest.   \\
@@ -149,10 +162,12 @@ By Nazima Versay Kudus and Melati Desa (2022)
 \end{frame}     
 
 
-     \begin{frame}{Some Examples of Chengyu}
-       \hfill \includegraphics{pics/shouzhudaitu.jpg}
+\begin{frame}{Some Examples of Chengyu}
+         \hfill \includegraphics{pics/shouzhudaitu.jpg}
        \vspace{-3cm}
        \begin{exe}
+         \DeclareRobustCommand{\eachwordone}{\chinesefontsf}
+         \DeclareRobustCommand{\eachwordtwo}{\textcolor{teal}}
          \ex\label{s:rabbit}
          \glll 守 株 待 兔 \\
          shou zhu dai tu \\
@@ -365,7 +380,7 @@ mati & pejah & die \\
 \end{tabular}
 \end{table}
 
-‘What’ is \msa{apa} in ngoko, \msa{napa} in madya, punapa in \msa{krama}.
+‘What’ is \msa{apa} in ngoko, \msa{napa} in madya, \msa{punapa} in krama.
 
 \end{frame}
 
@@ -603,17 +618,19 @@ receive & \jpn{morau} & \jpn{itadaku} \\
 \begin{frame}
 \frametitle{Honorific Language is Long Winded}
 \begin{exe}
-    \ex \gll 聞いて いい ？ \\
-             Kii te ii ? \\
-             \trans Ok to ask (a question)?
-\gll 聞きかせて いただける と うれしい の です が 。 \\
-      Kikasete itadakeru to ureshii no desu ga . \\
+       \DeclareRobustCommand{\eachwordone}{\japanesefontsf}
+       \DeclareRobustCommand{\eachwordtwo}{\textcolor{teal}}
+       \ex \gll 聞いて いい ？ \\
+       Kii.te ii ? \\
+       \trans Ok to ask (a question)?
+       \ex \gll 聞きかせて いただける と うれしい の です が 。 \\
+       Kikasete itadakeru to ureshii no desu ga . \\
 
       \trans I would, however, be delighted if I may be permitted to ask (a question). 
 \ex \gll ご 協力 下ください 。\\
          Go kyōryoku kudasai. \\
 \trans Your cooperation, please.
-\gll ご 協力 の 程 お 願ねがい 申もうし 上あげます 。 \\
+\ex  \gll ご 協力 の 程 お 願ねがい 申もうし 上あげます 。 \\
      Gok yōryoku no hodo o negai mōshi agemasu . \\
 \trans We respectfully request the favor of a measure of your cooperation.
 \end{exe}

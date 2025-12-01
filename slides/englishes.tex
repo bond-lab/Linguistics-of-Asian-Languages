@@ -3,7 +3,7 @@
 
 \title[Asian Englishes]{Asian Englishes\\ World Englishes}
 \author[Francis Bond]{Francis Bond}
-\date{2024}
+\date{2025}
 
 
 
@@ -18,17 +18,23 @@
 
 \usepackage{mygb4e}
 \renewcommand{\eachwordtwo}{\Libertine}
-\usepackage[e,f]{mtg2e}
+\usepackage[e]{mtg2e}
 \usepackage{xcolor}
 \renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
 \newcommand{\msa}{\mtciteform}
 \newcommand{\lex}[1]{\textbf{\mtcitestyle{#1}}}
+\usepackage[round]{natbib}
 
 \begin{document}
 
 % Title Slide
 \begin{frame}
     \titlepage
+\end{frame}
+
+% (1) Overview / roadmap slide
+\begin{frame}{Overview}
+  \tableofcontents
 \end{frame}
 
 
@@ -40,13 +46,13 @@
 \textbf{Definition:}
 \begin{itemize}
     \item The global varieties of English spoken in diverse cultural, social, and linguistic contexts.
-    \item Includes \textbf{Inner Circle}, \textbf{Outer Circle}, and \textbf{Expanding Circle} Englishes (Kachru, 1985).
+    \item Includes \textbf{Inner Circle}, \textbf{Outer Circle}, and \textbf{Expanding Circle} Englishes \citep{Kachru:1985}.
 \end{itemize}
 
 \textbf{Importance:}
 \begin{itemize}
     \item Reflects the spread of English as a global lingua franca.
-    \item Highlights the adaptability and localization of English in different regions.
+    \item Highlights the adaptability and localization of English in different regions, especially in Asia.
 \end{itemize}
 
 \textbf{Examples:}
@@ -60,11 +66,10 @@
 \begin{frame}{Kachru's Three Circles of English}
 \centering
 \begin{tikzpicture}
- 
 
     % Expanding Circle
     \fill[fill=pink!20] (0,0) circle [radius=4.5];
- 
+
     % Outer Circle
     \fill[fill=pink!50] (-1,0) circle [radius=3];
     \node[align=center] at (.8,-.5) {Outer Circle \\
@@ -77,7 +82,12 @@
 
   \node[align=center] at (3, 2) {Expanding Circle \\ \footnotesize China, Japan,  \\ \footnotesize Indonesia, Brazil, \ldots};
 
-  \end{tikzpicture}
+\end{tikzpicture}
+
+\bigskip
+\begin{center}
+  \small After \citet{Kachru:1985}: Inner, Outer and Expanding Circles of English.
+\end{center}
 \end{frame}
 
 
@@ -94,7 +104,7 @@
 
 \textbf{Key Features:}
 \begin{itemize}
-    \item Historical origin of English.
+    \item  England and former settler colonies where English became dominant (USA, Canada, Australia, New Zealand).
     \item Sets linguistic norms often viewed as "standard" English.
     \item Used as a cultural identifier.
 \end{itemize}
@@ -112,7 +122,7 @@
 \textbf{Examples:}
 \begin{itemize}
 \item India, Nigeria, Singapore, Philippines.
-\item Singapore fits all characteristics of inner circle except origin, \ldots
+\item Singapore fits almost all characteristics of inner circle  except origin, \ldots
 \end{itemize}
 
 \textbf{Key Features:}
@@ -147,6 +157,7 @@
 \end{itemize}
 
 \end{frame}
+
 \begin{frame}{English-speaking populations across various countries.}
   \begin{center}
 \small
@@ -171,25 +182,28 @@ Singapore & 4,044,200 & 3,900,000 & 1,953,348 & 1,946,652
 \end{tabular}
     
 \end{center}
-{\footnotesize Data from  \href{https://en.wikipedia.org/wiki/List_of_countries_by_English-speaking_population}{Wikipedia: List of countries by English-speaking population}}
+{\footnotesize Data from  \href{https://en.wikipedia.org/wiki/List_of_countries_by_English-speaking_population}{Wikipedia: List of countries by English-speaking population}.\\
+\textbf{Takeaway:} There are more English speakers in India than in any single ``Inner Circle'' country.}
 \end{frame}
 
 % Slide 1: General Debate
 \begin{frame}{World Englishes: Quirk vs. Kachru}
-\textbf{Quirk's Perspective (Uniformity View):}
+\textbf{Quirk's Perspective (Uniformity View, \citeyear{Quirk:1985we}):}
 \begin{itemize}
     \item Emphasizes a single, standardized form of English based on Inner Circle norms (e.g., UK, US).
     \item Concerns about intelligibility and global communication.
     \item Argues that legitimizing non-standard varieties risks misunderstanding.
-\end{itemize}
+      \\ \emph{We need one standard English for effective international communication}
+  \end{itemize}
 
-\textbf{Kachru's Perspective (Pluralist View):}
+\textbf{Kachru's Perspective (Pluralist View, \citeyear{Kachru:1985}:}
 \begin{itemize}
     \item Advocates for the legitimacy of Outer Circle varieties (e.g., Indian, Nigerian English).
     \item Emphasizes linguistic and cultural adaptation (nativization).
     \item Critiques the deficit model of "errors" and promotes ownership of English by all its users.
-\end{itemize}
-\end{frame}
+      \emph{English belongs to all its users, not just its historical 'native' speakers.}
+    \end{itemize}
+  \end{frame}
 
 % Slide 2: Key Themes of the Debate
 \begin{frame}{Key Themes of the Debate}
@@ -213,62 +227,66 @@ Singapore & 4,044,200 & 3,900,000 & 1,953,348 & 1,946,652
 \end{frame}
 
 % Slide 3: Kachru's Four False Assumptions
-\begin{frame}{Kachru's Critique: Four False Assumptions}
+\begin{frame}{Four ``False Assumptions'' about English \citep{Kachru:1992}}
 \textbf{1. The Homogeneity Assumption:}
 \begin{itemize}
-    \item Assumes a single, homogeneous standard English.
-    \item Counterpoint: Inner Circle varieties themselves exhibit variation.
+    \item \textbf{Assumption:} There is a single, homogeneous standard English.
+    \item \textbf{Counterpoint:} Inner Circle varieties themselves exhibit variation.
 \end{itemize}
 
 \textbf{2. The Deficit Model of Non-Native Varieties:}
 \begin{itemize}
-    \item Views Outer Circle Englishes as "deviant."
-    \item Counterpoint: Outer Circle varieties are contextually legitimate adaptations.
+    \item \textbf{Assumption:} Outer Circle Englishes are "deviant" or deficient.
+    \item \textbf{Counterpoint:} Outer Circle varieties are contextually legitimate adaptations.
 \end{itemize}
 
 \textbf{3. The Pedagogical Purity Assumption:}
 \begin{itemize}
-    \item Insists on teaching Inner Circle norms exclusively.
-    \item Counterpoint: Teaching should reflect local linguistic realities.
+    \item \textbf{Assumption:} Teaching should focus on Inner Circle norms exclusively.
+    \item \textbf{Counterpoint:} Teaching should reflect local linguistic realities.
 \end{itemize}
 
 \textbf{4. The Intelligibility Assumption:}
 \begin{itemize}
-    \item Claims Inner Circle norms ensure mutual intelligibility.
-    \item Counterpoint: Intelligibility is context-dependent and mutual.
+    \item \textbf{Assumption:} Inner Circle norms guarantee mutual intelligibility.
+    \item \textbf{Counterpoint:} Intelligibility is context-dependent and mutual.
 \end{itemize}
 \end{frame}
 
 
 
 % Slide B4: Innovation – Deviation – Mistake
-\begin{frame}{Innovation – Deviation – Mistake (Kachru, 1992)}
+\begin{frame}{Innovation\ –\  Deviation\ –\  Mistake (Kachru, 1992)}
 \textbf{Key Distinctions:}
 \begin{itemize}
-    \item \textbf{Innovation:} Creativity in language use; often denied to Outer and Expanding Circle speakers.
-    \item \textbf{Deviation:} Comparison with another variety; implies departure from a norm.
-    \item \textbf{Mistake (or error):} Related to acquisitional deficiency.
-    \end{itemize}
+    \item \textbf{Innovation:} Creativity in language use; often denied to Outer and Expanding Circle speakers.\\
+      \emph{Examples:} \eng{timepass}, \eng{skinship}, \eng{add oil}.
+    \item \textbf{Deviation:} Comparison with another variety; implies departure from a norm.\\
+      \emph{Example (vs. Inner Circle norm):} \eng{He is knowing the answer.}
+    \item \textbf{Mistake (or error):} Related to acquisitional deficiency; not accepted in any stable speech community.\\
+      \emph{Example:} \eng{He knowed the answer.}
+\end{itemize}
 
 Different varieties are held to different standards!
     
 \end{frame}
 
+
 % Slide B5: Standards Across Space
 \begin{frame}{Standards Across Space}
-\textbf{Three ``Standard'' Englishes:}
+\textbf{Three often-cited ``standard'' varieties:}
 \begin{itemize}
-    \item Britain, North America, Australia.
+    \item British English (BrE), North American English (especially AmE), and Australian English (AusE).
     \item Similarities and differences:
     \begin{itemize}
         \item Across the three standards.
-        \item Across varieties within each region (e.g., UK, US).
-        \end{itemize}
-      \item Pronunciation
+        \item Across varieties within each region (e.g., different UK or US dialects).
+    \end{itemize}
+    \item Pronunciation
     \item Vocabulary: The Most Noticeable Divergence (NAmE vs. BrE)
     \begin{itemize}
         \item \textbf{Extended meanings:} e.g., \eng{corn, robin}.
-        \item \textbf{New words:} e.g., \eng{buttle}.
+        \item \textbf{New words:} e.g., \eng{buttle} ``to act as a butler''.
         \item \textbf{Borrowings:} e.g., \eng{moccasin, squash, toboggan}.
     \end{itemize}
     \item Since US independence:
@@ -286,14 +304,14 @@ Different varieties are held to different standards!
     \item Borrowings from Aboriginal languages: e.g., \eng{kangaroo, boomerang}.
     \item Unique slang words and phrases.
     \item Common use of abbreviations and clippings.
-      \\ \eng[bbq]{barbie}, \eng[university]{uni}, \eng[sandwich]{sammy}, \eng[relative]{relly}, \eng[U-turn]{chuck a uey}
-      \\ \eng[person with white hair]{Snowy}, \eng[red-head]{Bluey}, \eng[me]{Bondie}
+      \\ \eng[bbq]{barbie}, \eng[university]{uni}, \eng[sandwich]{sanger}, \eng[relative]{relly}, \eng[make a U-turn]{chuck a U-ey}
+      \\ \eng[person with white hair]{Snowy}, \eng[red-head]{Bluey}, \eng[Bond (me)]{Bondie}
 \end{itemize}
 \end{frame}
 
 % Slide B5: Grammar Differences
 \begin{frame}{Quite a lot of Grammar Differences}
-\textbf{USEng vs. EngEng (Trudgill and Hannah, 2002):}
+\textbf{AmE vs. BrE \citep{Trudgill:Hannah:2002}:}
 \begin{itemize}
     \item \textbf{Verbs:} Morphology, auxiliaries.
     \begin{itemize}
@@ -319,36 +337,90 @@ Different varieties are held to different standards!
 \begin{frame}{Native and Non-Native Speakers of English}
 \textbf{Criticisms of NS/NNS Terms:}
 \begin{itemize}
+    \item NS = \textit{native speaker}, NNS = \textit{non-native speaker} (apparently simple labels, but problematic).
     \item Assumes monolingualism is the norm.
     \item Overemphasizes order of acquisition.
     \item Reinforces Anglo speakers as reference points.
     \item Implies unidirectional power relationships.
     \item Encourages simplistic views of "errors."
+    \item What do these labels suggest about \emph{you} as speakers of English?
 \end{itemize}
 \end{frame}
 
 % Slide B6: Alternatives to NS/NNS
 \begin{frame}{Alternatives to NS/NNS Distinction}
-\textbf{Rampton (1990): "Experts" $\rightarrow$ Expertise}
+\textbf{\citet{Rampton:1990}: "Experts" $\rightarrow$ Expertise}
 \begin{itemize}
     \item Advantages:
     \begin{itemize}
         \item Learned, not innate.
         \item Relative, partial, and contestable.
     \end{itemize}
-    \item Disadvantages:
+        \item Disadvantages:
     \begin{itemize}
         \item "Non-expert" implies value judgment.
     \end{itemize}
 \end{itemize}
 
-\textbf{Jenkins (1996, 2000): MES, BES, NBES}
+\textbf{\citet{Jenkins:2000}: MES, BES, NBES}
 \begin{itemize}
     \item MES: Monolingual English Speaker.
     \item BES: Bilingual English Speaker.
     \item NBES: Non-Bilingual English Speaker.
+    \item Emphasizes speakers' bilingual repertoires rather than a simple native vs. non-native divide.
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Naming the Varieties: Labels and Ideology}
+\small
+\textbf{Names are not neutral:} they index attitudes, power, and ownership.
+\medskip
+
+\begin{itemize}
+  \item \textbf{Indian English}: \eng{Hinglish}  \\
+    \eng{Hinglish} highlights code-mixing and youth / pop-culture identities, but can also stereotype.
+
+  \medskip
+  \item \textbf{Singapore \& Malaysian English}: \eng{Singlish} / \eng{Manglish} \\
+    In official discourse we often find \textit{Colloquial Singapore English} (CSE).\\
+    Government campaigns (\emph{Speak Good English}) frame \eng{Singlish} as a problem, while speakers use the name to index solidarity and local identity.
+
+  \medskip
+  \item \textbf{Hong Kong English}:  \eng{Chinglish}  \\
+    Labels like \eng{Chinglish} are common in media but are usually mocking or deficit-oriented, focusing on ``errors'' in signs or speech.
+
+  \medskip
+  \item \textbf{Japanese English, wasei-eigo}: \eng{Japlish}, \eng{Engrish}   \\
+    \textit{Japanese English} and \textit{wasei-eigo} are descriptive terms used in linguistics.\\
+    Informal labels like \eng{Engrish} or \eng{Japlish} are often used from outside Japan and carry racist / mocking connotations.
+\end{itemize}
+\end{frame}
+
+
+% (3) Activity slide for NS/NNS / labels
+\begin{frame}{Activity: How Would You Label Yourselves?}
+\small
+\begin{itemize}
+  \item In small groups, discuss which labels you prefer:
+  \begin{itemize}
+    \item NS / NNS
+    \item MES / BES / NBES
+    \item Something else entirely?
+  \end{itemize}
+  \item How do these labels affect:
+  \begin{itemize}
+    \item how confident you feel when speaking English?
+    \item how you evaluate other people’s English?
+    \end{itemize}
+  \item  Who gets to name a variety (state, teachers, speakers, outsiders)?\\
+    How do different labels affect the \emph{prestige} and \emph{legitimacy} of these Englishes?
+  \end{itemize}
+
+% \medskip
+% \textbf{Would you change the terminology in English teaching at Palacký? Why / why not?}
+\end{frame}
+
+
 
 % Slide B7: Codification of Asian Englishes
 \begin{frame}{En Route to New Standard Englishes}
@@ -397,8 +469,8 @@ Different varieties are held to different standards!
 \begin{itemize}
     \item \textbf{Pronunciation:}
     \begin{itemize}
-        \item Rhotic: Pronouncing /r/ in words like \eng{car} and \eng{farm.}
-        \item Flattened vowels: \eng{bat} may sound like "baet."
+        \item Often rhotic: Pronouncing /r/ in words like \eng{car} and \eng{farm.}
+        \item Vowel quality may differ from US/UK norms (e.g., \eng{bat}, \eng{bad}, \eng{bed}).
     \end{itemize}
     \item \textbf{Vocabulary:}
     \begin{itemize}
@@ -407,6 +479,7 @@ Different varieties are held to different standards!
     \item \textbf{Grammar:}
     \begin{itemize}
         \item Use of the progressive tense: \eng{He is knowing the answer.}
+        \item Use of \eng{doubt} in the sense of ``question'': \eng{He is having a doubt in mathematics.}
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -536,7 +609,7 @@ Different varieties are held to different standards!
     \item \textbf{Pronunciation:}
     \begin{itemize}
         \item Influence of Cantonese tones on stress patterns.
-        \item /r/ and /l/ sounds may overlap (e.g., \eng{rice} pronounced as \eng{lice}).
+        \item Some speakers may neutralize /r/ and /l/, producing similar sounds in words like \eng{rice} and \eng{lice}.
     \end{itemize}
     \item \textbf{Grammar:}
     \begin{itemize}
@@ -561,7 +634,7 @@ Different varieties are held to different standards!
     \item \textbf{Hybrid expressions:}
     \begin{itemize}
         \item \lex{Add oil:} An encouragement or cheer, meaning \eng{keep going} or "good luck."
-        \item \lex{Long time no see:} A literal translation of the Cantonese phrase "好耐冇見" (hou noi mou gin).
+        \item \lex{Long time no see:} Often described as a calque from the Cantonese phrase "好耐冇見" (hou noi mou gin), though the exact origin is debated.
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -595,7 +668,7 @@ Different varieties are held to different standards!
 \end{frame}
 
 
-\section{Japanese English (Japlish/Engrish)}
+\section{Japanese English and Wasei-eigo}
 
 
 
@@ -604,50 +677,41 @@ Different varieties are held to different standards!
 \begin{itemize}
 \item Japanese English refers to the variety of English influenced by the Japanese language.
   \begin{itemize}
-  \item Japlish/Engrish is English used by Japanese speakers
-  \item 和製英語 \eng[Japanese-made English]{wasei eigo} are English-like words used in Japanese
+  \item Informal labels like \eng{Japlish} or \eng{Engrish} are sometimes used for English produced by Japanese speakers, often in a mocking or racist way.
+  \item 和製英語 \eng[Japanese-made English]{wasei eigo} are English-like words used in Japanese.
   \end{itemize}
     \item It often features adaptations of English words and phrases to fit Japanese phonetics and culture.
+    \begin{itemize}
+        \item Inserting vowels: \eng{table} becomes \eng{te-buru.}
+        \item No distinction between /l/ and /r/: \eng{light} and \eng{right} sound similar.
+        \item Fewer consonant clusters
+        \item A tendency to shorten things
+    \end{itemize}
     \item Developed due to English education, international business, and cultural exchange.
     \item Known for unique loanwords, katakana usage, and creative expressions.
     \end{itemize}
 
-    
 \end{frame}
 
-\begin{frame}
-\frametitle{Key Features of Japanese English}
-\begin{itemize}
-    \item \textbf{Phonetic adjustments:}
-    \begin{itemize}
-        \item Inserting vowels: \eng{table} becomes \eng{te-bu-ru.}
-        \item No distinction between /l/ and /r/: \eng{light} and \eng{right} sound similar.
-    \end{itemize}
-    \item \textbf{Vocabulary:}
-    \begin{itemize}
-        \item Loanwords adapted to Japanese: \eng{salaryman} (businessman), \eng{OL} (office lady).
-    \end{itemize}
-\end{itemize}
-\end{frame}
 
 \begin{frame}
 \frametitle{Examples of Wasei Eigo}
 \begin{itemize}
     \item \textbf{Adapted loanwords:}
     \begin{itemize}
-        \item \lex{Salaryman:} Office worker.
-        \item \lex{Hand phone:} Mobile phone (from \eng{handy phone}).
-        \item \lex{Viking:} Buffet (originating from \eng{smorgasbord}).
+    \item \lex{sarariman} (salaryman) ``male office worker''
+    \item \lex{o-eru} (OL: office lady) ``female office worker''
+        \item \lex{hando phon} (hand phone) ``Mobile phone (from \eng{handy phone})''
+        \item \lex{baikingu} (viking) ``buffet'' (because Scandinavians like  \eng{smorgasbord})
     \end{itemize}
-    \item \textbf{Hybrid expressions:}
-    \begin{itemize}
-        \item \lex{My pace:} Going at one's own speed.
-        \item \lex{Skinship:} Physical closeness or bonding.
-    \end{itemize}
-    \item \textbf{Creative coinages:}
-    \begin{itemize}
-        \item \lex{Power harassment:} Workplace bullying.
-        \item \lex{Conveni:} Convenience store.
+  \item \textbf{Creative coinages:}
+      \begin{itemize}
+      \item \lex{mai pe-su} (my pace) ``going at one's own speed''
+      \item \lex{seku-hara}  ``sexual harassment''
+        \item \lex{pauwa-hara} (power harassment) ``workplace bullying''
+        \item \lex{konbini}  ``convenience store''
+        \item \lex{sukinshippu} (skinship) ``physical closeness or bonding''
+        \item \lex{ha-to furu} (heartfull) ``warm-hearted, caring''
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -664,30 +728,6 @@ Different varieties are held to different standards!
 \end{frame}
 
 
-
-
-
-
-
-
-
-% Slide 4: Challenges and Opportunities
-\begin{frame}{Challenges and Opportunities for Asian Englishes}
-\textbf{Challenges:}
-\begin{itemize}
-    \item Perceived legitimacy: Often compared to Inner Circle varieties.
-    \item Codification: Lack of formal standards for some varieties.
-    \item Pedagogy: Balancing local and global intelligibility.
-\end{itemize}
-
-\textbf{Opportunities:}
-\begin{itemize}
-    \item Reflects local identity and culture.
-    \item Encourages creativity and linguistic innovation.
-    \item Promotes multilingualism and cross-cultural communication.
-\end{itemize}
-\end{frame}
-
 % Slide 5: The Future of Asian Englishes
 \begin{frame}{The Future of Asian Englishes}
 \textbf{Trends:}
@@ -703,24 +743,106 @@ Different varieties are held to different standards!
     \item Will codification lead to the emergence of new standards?
     \item How can we balance intelligibility and diversity?
 \end{itemize}
+\end{frame}
 
-\textbf{Conclusion:}
+\begin{frame}{Prestige and ``Non-Standard'' Varieties in the Inner Circle}
+
+\begin{itemize}
+  \item \textbf{Australian English} (\eng{Strine})  
+    Historically stigmatized as ``broad'' or ``lazy'' English; now an accepted national standard.  \citep{Burridge:Mulder:1999}
+
+  \item \textbf{African American Vernacular English (AAVE)} (\eng{ebonics})  
+    A rule-governed, systematic variety with distinctive grammar (e.g.\ copula absence, habitual \eng{be}).  
+    Frequently stigmatized despite high linguistic complexity and cultural prestige (music, media). \citep{Rickford:1999}
+
+  \item \textbf{Appalachian / Southern US English}  
+    Often mischaracterized as ``incorrect''; has unique grammatical systems (e.g.\ a-prefixing: \eng{He’s a-running}, multiple modals \eng{I shoulda coulda done it}).  
+    Example of \textbf{overt vs.\ covert prestige}. \citep{LippiGreen:2012}
+
+  \item \textbf{British regional dialects} (Scouse, Geordie, Glaswegian)  
+    Local prestige but low institutional prestige; hard  for ousiders to understand.
+
+\end{itemize}
+
+\medskip
+\textbf{Takeaway:} The ideology that Inner Circle Englishes are uniform ``standards'' is false: \emph{all Englishes exhibit prestige hierarchies}.
+\end{frame}
+
+
+\begin{frame}{Linking Inner-Circle Variation to Asian Englishes}
+\small
+The same social processes shaping variation in Inner Circle Englishes also affect Asian Englishes.
+
+\begin{itemize}
+  \item \textbf{Covert prestige:}  
+    Speakers may value a stigmatized variety as an identity marker.  
+    \emph{Strine, AAVE, Singlish} all show strong in-group solidarity.
+
+  \item \textbf{Standard language ideology}  
+    The belief that one form of English is inherently ``better''.  
+    Used to delegitimize AAVE, regional UK dialects, and Asian Englishes (e.g.\ Indian English, HK English).
+
+  \item \textbf{Error vs.\ innovation:}  
+    Just as AAVE grammatical rules were long misclassified as errors,  
+    many Asian English features start as ``deviations'' but become recognized innovations.
+
+  \item \textbf{Ownership of English:}  
+    Debates around AAVE in schools parallel arguments about whether  
+    Indian English or Singlish should be taught, legitimized, or standardized.
+
+  \item 
+    Understanding Inner-Circle diversity helps avoid seeing Asian varieties as special cases:   
+    \emph{all Englishes are dialects}. \citep{Milroy:Milroy:1999}
+\end{itemize}
+\end{frame}
+
+
+\section{Conclusion and Activities}
+\begin{frame}{Conclusion}
 \begin{itemize}
     \item Asian Englishes showcase the dynamic evolution of the language.
     \item They are key to understanding the future of global English.
+    \item How established they are depends on their size and prestige.
 \end{itemize}
 \end{frame}
 
 
 
-% References Slide
-\begin{frame}{References}
+% (3) Activity slide for Innovation / Deviation / Mistake
+\begin{frame}{Activity: Innovation, Deviation, or Mistake?}
+\small
+Decide in pairs how to classify each sentence. For each one, ask:
 \begin{itemize}
-    \item Kachru, B. B. (1985). Standards, codification and sociolinguistic realism: The English language in the Outer Circle. In \textit{English in the World: Teaching and Learning the Language and Literatures}, edited by R. Quirk and H. Widdowson, Cambridge University Press, pp. 11–30.
-    \item Quirk, R. (1985). The English language in a global context. In \textit{English in the World: Teaching and Learning the Language and Literatures}, edited by R. Quirk and H. Widdowson, Cambridge University Press, pp. 1–10.
+  \item Is this an \textbf{innovation} (accepted in some community)?
+  \item A \textbf{deviation} (different from a chosen standard)?
+  \item Or a \textbf{mistake} (not accepted anywhere)?
 \end{itemize}
+
+\medskip
+\begin{exe}
+  \ex \eng{Can you prepone the meeting to tomorrow?}
+  \ex \eng{Yesterday I go market, very crowded, lah.}
+  \ex \eng{He is knowing the answer.}
+  \ex \eng{She is 22 years.}
+  \ex \eng{This food is damn shiok!}
+  \ex \eng{They knowed the answer.}
+  \ex \eng{I need to control my homework.}
+  \ex \eng{I beez in the trap.}
+\end{exe}
+
+\medskip
+\textbf{Whose norms are you using when you decide?}
 \end{frame}
 
+
+
+\begin{frame}[allowframebreaks]
+        \frametitle{References}
+        \bibliographystyle{aclnat}
+        \bibliography{abb,mtg,ling,nlp}
+\end{frame}
+
+ 
 \end{document}
 
 
@@ -729,4 +851,4 @@ Different varieties are held to different standards!
 %%% mode: latex
 %%% TeX-PDF-mode: t
 %%% TeX-engine: xetex
-%%% End: 
+%%% End:

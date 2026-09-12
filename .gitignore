@@ -191,3 +191,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+### student grades -- must not be published
+grades
+grades/*

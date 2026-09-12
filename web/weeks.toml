@@ -1,3 +1,13 @@
+# Linguistics of Asian Languages -- 2026 (winter semester 2026/2027)
+# Thursdays 15:45-18:15, Room 2.42, tř. Svobody 26, Olomouc
+# UP Olomouc FF teaching period: 21 September - 18 December 2026
+#
+# Czech public holidays in the teaching period (none fall on a Thursday):
+#   Mon 28 Sep 2026  Den české státnosti / St Wenceslas Day
+#   Wed 28 Oct 2026  Den vzniku samostatného československého státu
+#   Tue 17 Nov 2026  Den boje za svobodu a demokracii
+# (Thu 24 Dec is Štědrý den, but that is a week after the last class.)
+
 [weeks]
 
 [weeks.intro]
@@ -86,7 +96,7 @@ other =''
 [weeks.presentation]
 key = "Talk~2"
 title = "Presentation of seminar work"
-date = "12-16"
+date = "12-17"
 other = "Presentation!  🗣"
 
 

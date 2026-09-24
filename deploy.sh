@@ -1,14 +1,6 @@
 #!/bin/bash
+# Serve the site locally for preview on http://127.0.0.1:5000
+set -euo pipefail
+cd "$(dirname "$0")"
 
-if [ -d ".venv" ]
-then
-    source .venv/bin/activate
-    pip install -r requirements.txt
-    python3 wsgi.py
-else
-    python3 -m venv .venv
-    source .venv/bin/activate
-    python3 -m pip install --upgrade pip
-    pip install -r requirements.txt
-    python3 wsgi.py
-fi
+exec uv run --no-project --with-requirements requirements.txt python wsgi.py

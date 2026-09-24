@@ -195,3 +195,6 @@ dmypy.json
 ### student grades -- must not be published
 grades
 grades/*
+
+### temporary review notes -- not part of the course
+reviews/

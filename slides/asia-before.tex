@@ -201,12 +201,18 @@
   \apic{slide-31}
 \end{frame}
 
-% A wide, dense bar chart with rotated labels, so it gets the whole slide too.
+% The full chart runs to 57 bars across 2089px, which is unreadable on a
+% slide.  slide-32.png is the left-hand half: the y-axis and the 28 most
+% widespread loans, cropped below the centred title (set here instead).  That
+% doubles the label size.  To restore the whole chart, re-crop image47.png
+% from František's pptx.
 \begin{frame}[plain]
   \begin{center}
-    \includegraphics[width=0.97\paperwidth,height=0.90\paperheight,keepaspectratio]%
+    {\small\textbf{Most common Sanskrit loans in languages of SE Asia}}\\[0.8ex]
+    \includegraphics[width=0.97\paperwidth,height=0.80\paperheight,keepaspectratio]%
       {pics/asia-before/slide-32}%
-    \\[0.6ex]{\scriptsize Indic loanwords}
+    \\[0.8ex]{\scriptsize Indic loanwords --- the 28 most widespread; the tail
+      of another 29 is omitted}
   \end{center}
 \end{frame}
 

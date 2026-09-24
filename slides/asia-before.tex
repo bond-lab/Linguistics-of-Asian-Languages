@@ -14,11 +14,12 @@
 \beamertemplatenavigationsymbolsempty
 
 \title[Asia before Colonial Times]{Asia before Colonial Times}
-\author[Bond, after Kratochvíl]{Francis Bond \\[1ex]
-  {\small after the slides of František Kratochvíl}}
+\author[Bond (Kratochvíl)]{Francis Bond \\[1ex]
+  {\small based on slides by František Kratochvíl}}
 \date{2026}
 
 \usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \setCJKmainfont{Noto Sans CJK SC}
@@ -39,23 +40,22 @@
 % already in the image.  This is here for adding a source to a new figure.
 \newcommand{\asrc}[1]{{\par\raggedleft\tiny\textcolor{gray}{#1}\par}}
 
+% Colour key for the Sino-Tibetan map.  The map has no legend of
+% its own; these are the five ColorBrewer Set1 colours it actually uses,
+% sampled from the image.
+\definecolor{stSinitic}{RGB}{228,26,28}
+\definecolor{stTibetic}{RGB}{255,255,51}
+\definecolor{stLoloBurmese}{RGB}{77,175,74}
+\definecolor{stKarenic}{RGB}{166,86,40}
+\definecolor{stOtherTB}{RGB}{255,127,0}
+\newcommand{\ckey}[2]{%
+  \tikz[baseline=-0.4ex]\draw[fill=#1,draw=black!45,line width=0.3pt]
+    (0,0) rectangle (1.6ex,1.6ex);\;#2}
+
 \begin{document}
 
 \frame{\titlepage}
 
-\begin{frame}{Acknowledgement}
-  \begin{itemize}
-  \item These slides are a re-typeset version of \txx{Asia before Colonial
-      Times} by \txx{František Kratochvíl}, given for
-    \textit{Lingvistika asijských jazyků} (DAS/LAS) on 18 February 2021.
-  \item The figures are his, or are reproduced in his slides from the sources
-    named on each slide and listed at the end.
-  \item Rebuilt here in the format of the rest of the course so that it can be
-    maintained and revised alongside the other weeks.  Any errors introduced
-    in the rebuilding are mine.
-  \item Thanks to František for making the material available.
-  \end{itemize}
-\end{frame}
 
 \begin{frame}{Overview}
   \tableofcontents
@@ -79,15 +79,21 @@
   \apic{slide-05.jpg}
 \end{frame}
 
-% NB: the original titles this slide "now a branch of Austronesian".  That is
-% Sagart's hypothesis (Austro-Tai), not a consensus position -- worth either
-% hedging or making the controversy explicit in class.
-\begin{frame}{Tai-Kadai family (now a branch of Austronesian)}
+% NB: the original titles this slide "now a branch of Austronesian".
+% This is Sagart's hypothesis (Austro-Tai), not a consensus position
+\begin{frame}{Tai-Kadai family (probably a branch of Austronesian)}
   \apic{slide-06.jpg}
 \end{frame}
 
 \begin{frame}{Sino-Tibetan family}
-  \apic{slide-07.jpg}
+  \apic[0.78]{slide-07.jpg}
+  \begin{center}\scriptsize
+    \ckey{stSinitic}{Sinitic}\quad
+    \ckey{stTibetic}{Tibetic}\quad
+    \ckey{stLoloBurmese}{Lolo-Burmese}\quad
+    \ckey{stKarenic}{Karenic}\quad
+    \ckey{stOtherTB}{other Tibeto-Burman}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Sinitic branch}
@@ -287,6 +293,19 @@
   \item Fuller, Dorian Q. 2011. Pathways to Asian civilizations: tracing the
     origins and spread of rice and rice cultures. \textit{Rice} 4: 78--92.
     \\ {\scriptsize (the source of the rice maps and phylogenies above)}
+  \end{itemize}
+\end{frame}
+\begin{frame}{Acknowledgement}
+  \begin{itemize}
+  \item These slides are a re-typeset version of \txx{Asia before Colonial
+      Times} by \txx{František Kratochvíl}, given for
+    \textit{Lingvistika asijských jazyků} (DAS/LAS) on 18 February 2021.
+  \item The figures are his, or are reproduced in his slides from the sources
+    named on each slide and listed at the end.
+  \item Rebuilt here in the format of the rest of the course so that it can be
+    maintained and revised alongside the other weeks.  Any errors introduced
+    in the rebuilding are mine.
+  \item Thanks to František for making the material available.
   \end{itemize}
 \end{frame}
 

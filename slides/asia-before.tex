@@ -30,6 +30,11 @@
 \usepackage{xcolor}
 \newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
 
+% Latin Modern has no IPA Extensions or Spacing Modifier Letters, so \ipa{}
+% switches to Andika for them -- the same font sounds.tex uses throughout.
+\newfontfamily\ipafont{Andika}[Renderer=Harfbuzz]
+\newcommand{\ipa}[1]{{\ipafont #1}}
+
 % a full-width figure from the original deck, and its source line
 \newcommand{\apic}[2][0.80]{%
   \begin{center}
@@ -142,9 +147,10 @@
     \end{itemize}
   \item \txx{Munda} speakers predate the Indo-Aryan migration.  Place names in
     the Dravidian Kurukh- and Malto-speaking regions are of Munda origin
-  \item \txx{Dravidian} is likely autochthonous, and Proto-Dravidian may have
-    been the language of the Indus Civilization.  Non-Indo-Aryan toponyms
-    survive in northern India
+  \item \txx{Dravidian} likely is native to the region it is spoken in
+    (autochthonous), and Proto-Dravidian may have been the language of
+    the Indus Civilization.  Non-Indo-Aryan place names (toponyms) survive in
+    northern India
   \item The Khasi and Jaintia Hills languages look like a \emph{later} arrival
     from the east --- their features are MSEA-like, unlike Munda
   \end{itemize}
@@ -207,7 +213,7 @@
     \txx{Zomia}: historically a refuge zone for minorities fleeing corvée
     labour and taxation imposed by the lowland padi states
   \item In MSEA the main booty of a victorious campaign was \emph{manpower}.
-    The Thai expression is \emph{kwàːt mɯːang}, literally `sweep city'
+    The Thai expression is \emph{\ipa{kwàːt mɯːang}}, literally `sweep city'
   \item Whole communities were carried off to Tai and Burmese padi states to
     work the wet rice fields --- and concentrated labour encourages a shift to
     the language of the rulers

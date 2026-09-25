@@ -1,8 +1,25 @@
 \documentclass{beamer}
 \usepackage{fontspec}
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK SC}
+% CJK has no italic, so map it to upright rather than let XeTeX fake-slant it
+% (\mtcitestyle italicises, and \jpn{}/\zh{} put Han characters inside it).
+% The sans family needs declaring too: beamer's body font is sans.
+\setCJKmainfont{Noto Sans CJK SC}[ItalicFont=Noto Sans CJK SC]
+\setCJKsansfont{Noto Sans CJK SC}[ItalicFont=Noto Sans CJK SC]
+\setCJKmonofont{Noto Sans Mono CJK SC}[ItalicFont=Noto Sans Mono CJK SC]
+% The bopomofo tone marks sit in Spacing Modifier Letters, not the Bopomofo
+% block, so xeCJK leaves them to Latin Modern -- which has no ˊ or ˋ.
+\xeCJKDeclareCharClass{CJK}{"02C7, "02C9, "02CA, "02CB, "02D9}
+% Noto Sans CJK SC carries no Hangul at all, so Korean needs the KR face.
+\newCJKfontfamily\korfont{Noto Sans CJK KR}[ItalicFont=Noto Sans CJK KR]
+\newcommand{\hg}[1]{{\korfont #1}}
 \newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
+% Latin Modern Sans has no small caps, so \textsc{sg} in the glosses was
+% silently coming out as lowercase "sg". Biolinum is Libertine's sans
+% companion and does have them.
+\setsansfont{Latin Modern Sans}[
+  SmallCapsFont		= {Linux Biolinum O},
+  SmallCapsFeatures	= {Letters=SmallCaps}]
 \usetheme{Madrid}
 \usecolortheme{crane}
 \usepackage{polyglossia}
@@ -13,6 +30,7 @@
 \newfontfamily\thaifontsf[Script=Thai]{Noto Sans Thai}
 
 \usepackage[e,f,j,k]{mtg2e}
+\usepackage[round]{natbib}
 \usepackage{xcolor}
 \newcommand{\mtplain}[1]{\textcolor{teal}{#1}}
 \renewcommand{\mtcitestyle}[1]{\mtplain{\textit{#1}}}
@@ -23,6 +41,9 @@
 \newcommand{\ind}{\mtciteform}
 \newcommand{\vie}{\mtciteform}
 \newcommand{\thaig}{\mtciteform}
+% Tone number, as used in Wade-Giles. Latin Modern Sans has no ⁴, so set them
+% all as real superscripts rather than relying on precomposed characters.
+\newcommand{\tn}[1]{\textsuperscript{#1}}
 % Set the Thai font for Thai language text
 %\setotherlanguage{thai}
 %\newfontfamily\thaifamily{Noto Sans Thai}[Script=Thai]
@@ -113,8 +134,9 @@ features despite being genetically unrelated.
 
   \medskip
 
-  Much of Mainland Southeast Asia is very mountainous.  The people of the uplands have long resisted  being governed by central states of the lowland basins.
-%\citep{Scott:2009}
+  Much of Mainland Southeast Asia is very mountainous.  The people of the
+  uplands have long resisted being governed by central states of the lowland
+  basins --- what \citet{scott:2009} calls \txx{Zomia}.
 %   James ScoZ's\\
 % 2009 book, \emph{The Art of Not Being Governed: An Anarchist History of
 % Upland Southeast Asia}, discusses the strategies that the people of this
@@ -159,7 +181,9 @@ AA languages are also spoken in China.
 \end{frame}
 
 \begin{frame}
-  \includegraphics[width=0.9\textwidth]{pics/image5.png}
+  \begin{center}
+    \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{pics/image5.png}
+  \end{center}
 \end{frame}
 
 
@@ -168,12 +192,12 @@ AA languages are also spoken in China.
 
 \begin{frame}{Austronesian}
 
-Austronesian is the largest and most widespread family in the
-world, with somewhere around 700 (maybe as many as 1,200) languages
-altogether and 300 million native speakers. Aside from Southeast Asia,
-Austronesian languages are found on numerous islands in the eastern and
-central Paciﬁc Ocean all the way to Easter Island. There is also a western
-outpost language (Malagasy), spoken on the island of Madagascar.
+  Austronesian is the most widespread family in the world, with
+  somewhere around 1,200 languages altogether and 300 million native
+  speakers. Aside from Southeast Asia, Austronesian languages are
+  found on numerous islands in the eastern and central Paciﬁc Ocean
+  all the way to Easter Island. There is also a western outpost
+  language (Malagasy), spoken on the island of Madagascar.
 
 Major languages include:
 \begin{itemize}
@@ -181,7 +205,7 @@ Major languages include:
   \\  Indonesian (Bahasa Indonesia) and Malaysian (Bahasa Melayu)
 \item Javanese (75 million)
 \item Sundanese (30 million)
-\item Pilipino (Tagalog) (50 million, 17 million as a ﬁrst language).
+\item Filipino (Tagalog) (50 million, 30 million as a ﬁrst language).
 \end{itemize}
   
 \end{frame}
@@ -207,7 +231,7 @@ Yunnan and adjacent areas of Burma, Northern Thailand, and NE Laos.
 and Central Thailand.
 
 \item Pearic, spoken by small groups in Western Cambodia and adjacent areas
-of NE Thailand.
+of SE Thailand.
 
 \item A Pakanic branch has recently been proposed for a group of languages
 spoken in northern Vietnam, and in Guangxi and Yunnan, China.
@@ -267,13 +291,13 @@ in mainland China, and Taiwan, and in Southeast Asia.
   \begin{itemize}
   \item Northern
   \item Jiang-Huai/Southeastern (Jiangsu and Anhui)
-  \item Southwest (Hubei, Sichuan, Yunnan, Guizhou, eastern Hunan, western Guangxi)
+  \item Southwest (Hubei, Sichuan, Yunnan, Guizhou, western Hunan, western Guangxi)
   \end{itemize}
 \item Wu (Southern Jiangsu, Zhejiang)
 \item Xiang (Hunan)
 \item Yue (Guangdong, Guangxi, parts of Hainan)  Cantonese
 \item Min (Fujian, Taiwan, parts of Hainan)  Hokkien
-\item Gan (Jiangxi, north-eastern Guangdong)
+\item Gan (Jiangxi, eastern Hunan, SE Hubei)
 \item Hakka (southern Jiangxi, north-eastern Guangdong, western Fujian, part
 of Sichuan, Guangxi, and Taiwan)
 \end{itemize}
@@ -300,7 +324,7 @@ The numbers are approximate and can vary due to factors such as migration and cl
 \end{frame}
 
 \begin{frame}
-  According to Goddard (p55)
+  According to \citet[p.~38]{goddard:2005}
   \begin{itemize}
   \item In the Chinese tradition any variety other than Mandarin is referred to as a ``dialect''. 
   \item This reﬂects the cultural and historical unity of China and the use of a common script
@@ -309,7 +333,7 @@ The numbers are approximate and can vary due to factors such as migration and cl
 \item  Linguists usually refer to the seven language groupings  as ``Sinitic languages''
 \item But  some of these ``languages'' also have many mutually unintelligible varieties
 \item E.g.,  Min has as many as  nine mutually unintelligible varieties in the Fujian province alone
-(Li 1992, cited in Goddard 2005). 
+(Li 1992, cited in \citealt{goddard:2005}). 
 \item There are probably hundreds of mutually unintelligible  Sinitic
 languages in China
 \end{itemize}
@@ -357,17 +381,17 @@ Return the money to me
 
 
 \begin{frame}{Mandarin Romanization Comparison}
-  \begin{tabular}{llll}\small
-
+  \begingroup\small
+  \begin{tabular}{llll}
 Characters & Wade-Giles & Hanyu Pinyin & Notes\\ \hline
-中国/中國 & Chung¹-kuo² & Zhōngguó & China\\ 
-北京 & Pei³-ching¹ & Běijīng & PRC Capital \\
-    台北 & T'ai²-pei³ & Táiběi & RoC Capital \\
+中国/中國 & Chung\tn{1}-kuo\tn{2} & Zhōngguó & China\\ 
+北京 & Pei\tn{3}-ching\tn{1} & Běijīng & PRC Capital \\
+    台北 & T'ai\tn{2}-pei\tn{3} & Táiběi & RoC Capital \\
                                  
-毛泽东/毛澤東 & Mao² Tse²-tung¹ & Máo Zédōng & Mao \\
-蒋介石/蔣介石 & Chiang³ Chieh⁴-shih² & Jiǎng Jièshí & Chiang Kai-shek \\
-孔子 & K'ung³ Tzu³ & Kǒng Zǐ & Confucius \\ 
-  \end{tabular}
+毛泽东/毛澤東 & Mao\tn{2} Tse\tn{2}-tung\tn{1} & Máo Zédōng & Mao \\
+蒋介石/蔣介石 & Chiang\tn{3} Chieh\tn{4}-shih\tn{2} & Jiǎng Jièshí & Chiang Kai-shek \\
+孔子 & K'ung\tn{3} Tzu\tn{3} & Kǒng Zǐ & Confucius \\ 
+  \end{tabular}\endgroup
   \bigskip
   
   There is also a native  transliteration system for Standard Chinese and other Sinitic languages: \textbf{Bopomofo}. It is commonly used in Taiwan. It consists of 37 characters and five tone marks, which together can transcribe all possible sounds in Mandarin Chinese:  ㄓㄨㄥ ㄍㄨㄛˊ , ㄅㄟˇ ㄐㄧㄥ, ㄊㄞˊ ㄅㄟˇ , ㄇㄠˊ ㄗㄜˊ ㄉㄨㄥ,  ㄐㄧㄤˇ ㄐㄧㄝˋ ㄕˊ, ㄎㄨㄥˇ ㄗˇ
@@ -417,7 +441,7 @@ features in common with Indic languages, e.g.
 
 \begin{frame}{Tai-Kadai}
 
-The Tai-Kadai (often simply Tai) family splits into three branches:
+The Tai family splits into three branches:
   \begin{itemize}
 \item Northern
 
@@ -493,19 +517,68 @@ relatively little known in the West.   It is mainly spoken in the hills.
 
 \begin{frame}
   \begin{center}
-    \includegraphics[height=0.9\textheight]{pics/image8.png}
+    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{pics/image8.png}
   \end{center}
 \end{frame}
 
-\begin{frame}{Japanese, Korean, and Ainu}
+\begin{frame}{Japanese, Korean, and Ainu Families}
   \begin{itemize}
-  \item Japanese (125 million speakers)
-  \item Korean (70 million)
-  \item Ainu (isolate, fewer than 300 speakers) 
+  \item Japonic: Japanese (125 million speakers) 
+  \item Koreanic: Korean (70 million) 
+  \item Ainu (isolate, effectively dormant; a handful of elderly speakers, with active revitalisation) 
   \end{itemize}
 
 Japanese and Korean share very similar syntax (agglutinative, case marking, verb final, pre-modification) and both have borrowed much vocabulary from Chinese.
+
+\begin{itemize}
+\item \txx{Sinoxenic vocabulary}: whole strata of Chinese loans, each
+  with regular, predictable local readings.
+  \\ Ainu has no such layer --- its loans come from Japanese.
+\end{itemize}
   
+\end{frame}
+
+\begin{frame}{Sinoxenic vocabulary}
+
+  Chinese words borrowed wholesale into Japanese, Korean and Vietnamese,
+  each language reading the characters in its own regular way.
+
+  \begin{center}
+    \begin{tabular}{lll}
+      \textbf{Language} & \textbf{Script} & \textbf{Transliteration} \\ \hline
+      Mandarin   & 学校 (學校)        & \textit{xuéxiào} \\
+      Japanese   & 学校               & \textit{gakkō} \\
+      Korean     & \hg{학교} (學校)   & \textit{hakgyo} \\
+      Vietnamese & học hiệu (學校)    & \textit{học hiệu} \\ \hline
+    \end{tabular}
+  \end{center}
+
+  All from 學 \textit{learn} + 校 \textit{school}. Vietnamese dropped the
+  characters in the 20th century, so its script \emph{is} the
+  transliteration.
+
+\end{frame}
+
+\begin{frame}{Sinoxenic vocabulary: the correspondences are regular}
+
+  \begin{itemize}
+  \item Vietnamese has the reading, but everyday `school' is
+    \vie{trường học} \mbox{(場學)} --- the stratum is there, the usage
+    differs.
+  \item The same morphemes recur right across the modern vocabulary:
+    \begin{itemize}
+    \item 大學 `university': \textit{dàxué} / \textit{daigaku} /
+      \textit{daehak} / \textit{đại học}
+    \item 電話 `telephone': \textit{diànhuà} / \textit{denwa} /
+      \textit{jeonhwa} / \textit{điện thoại}
+    \end{itemize}
+  \item 學 is consistently \textit{gaku} / \textit{hak} / \textit{học},
+    大 consistently \textit{dai} / \textit{dae} / \textit{đại}: borrowing
+    a writing system means borrowing a whole lexicon with it.
+  \item And the traffic is not one way --- 電話 was coined in Japan and
+    borrowed back into Chinese.
+  \end{itemize}
+
 \end{frame}
 \begin{frame}
   \begin{center}
@@ -857,6 +930,40 @@ Subjects and objects are often omitted when contextually clear.
     \end{itemize}
 \end{frame}
 
+\begin{frame}[allowframebreaks]{Official languages and multilingualism}
+
+  \begin{description}
+  \item[Singapore] Four official languages: English, Malay, Mandarin and
+    Tamil. Malay is the \emph{national} language and the anthem is sung in
+    it, but English is the language of administration and the medium of
+    education; every child also studies an assigned ``mother tongue''.
+  \item[Indonesia] \textit{Bahasa Indonesia} is the sole national language,
+    standardised from Riau Malay and adopted by the Youth Pledge of 1928.
+    It is the first language of only a minority, and that is rather the
+    point --- it belonged to no dominant group. Javanese has far more
+    native speakers (about 80 million) and no official status. Some 700
+    local languages.
+  \item[Philippines] Filipino (based on Tagalog) and English are official;
+    the roughly 180 other languages are ``auxiliary official languages in
+    the regions''. Mother-tongue-based multilingual education was brought
+    into the early grades in 2012 and remains contested.
+  \item[China] The 2000 Law on the Standard Spoken and Written Chinese
+    Language makes Putonghua and simplified characters the standard for
+    government, education and broadcasting. Minority languages have
+    constitutional protection; Sinitic ``dialects'' such as Cantonese and
+    Hokkien have none.
+  \item[Timor-Leste] Tetum and Portuguese are official, Indonesian and
+    English are ``working languages''. Around 30 local languages, mostly
+    Austronesian with a handful of Papuan ones.
+  \end{description}
+
+  \bigskip
+
+  Official status, national identity, and what people actually speak at
+  home are three different things.
+
+\end{frame}
+
 % Slide 16
 \begin{frame}{Conclusion: Linguistic Convergence}
     \begin{itemize}
@@ -890,6 +997,7 @@ Subjects and objects are often omitted when contextually clear.
     \framebreak
 
 \begin{center}
+{\small
 \begin{tabular}{lccccccc}
 
  \textbf{Language}        & \textbf{Tone} & \textbf{Order} & \textbf{Cl} & \textbf{SFP} & \textbf{SV} & \textbf{Zero} & \textbf{Inflect} \\ \hline
@@ -901,7 +1009,7 @@ Tai-Kadai       & +  & SVO & + & + & + & +/- & $-$ \\
 Hmong-Mien      & +  & SVO & + & + & + & +/- & $-$ \\ 
 Korean/Japanese & $-$  & \{SO\}V & + & + & + & + & + \\ 
 
-  \end{tabular}
+  \end{tabular}}
       \end{center}
 We will talk about these in more detail later!
       
@@ -910,7 +1018,8 @@ We will talk about these in more detail later!
   
 
   Vietnamese developed its 6 tones under the influence of Chinese, as
-  demonstrated by the French linguist André Haudricourt. Some
+  demonstrated by the French linguist André Haudricourt
+  \citep{haudricourt:1954}. Some
   Tibeto-Burman languages are currently in the process of developing
   tonal contrasts, particularly those of the Bodic branch. Others are
   losing them, e.g. the Bodo languages of Assam.
@@ -926,13 +1035,14 @@ Features (and vocabulary) can move across language families!
 
 
 \begin{frame}{Summary I}
-There are five major linguistic families found in Mainland SEA.
 
-While there are a great number of languages spoken in the region, the
-linguistic diversity is 
-relatively low, probably due to centuries of language contact and human
-population
-movement.
+  \begin{itemize}
+  \item There are five major linguistic families in Mainland SEA.
+  \item There are many languages spoken in the region
+  \item However, linguistic diversity is  relatively low
+  \item Probably due to centuries of language contact and human
+    population movement.
+  \end{itemize}
 \end{frame}
 
 
@@ -947,7 +1057,7 @@ MSEA languages are characterized by:
 \item classifier systems\\
 \item aspectual and mood systems rather than tense systems\\
 \item sentence final particles\\
-\item rampant zero anaphora\\
+\item extensive zero anaphora\\
 \item serial verb constructions
 \item re-duplication
 \end{itemize}
@@ -955,6 +1065,14 @@ MSEA languages are characterized by:
 Although there are many exceptions
 
 \end{frame}
+
+
+\begin{frame}[allowframebreaks]
+        \frametitle{References}
+        \bibliographystyle{aclnat}
+        \bibliography{local}
+\end{frame}
+
 
 \end{document}
 

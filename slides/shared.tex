@@ -229,6 +229,20 @@
 \newcommand{\kos}[1]{\mtplain{\textkorean{#1}}}
 \newcommand{\ths}[1]{\mtplain{\textthai{#1}}}
 
+%% ---- structure -----------------------------------------------------------
+%% Sections are signposting, so give each one a page of its own showing where
+%% we have got to, with the rest of the deck dimmed.  \overview puts the same
+%% list up front; call it straight after \frame{\titlepage}.
+\AtBeginSection[]{%
+  \begin{frame}{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}}
+
+\newcommand{\overview}{%
+  \begin{frame}{Overview}
+    \tableofcontents
+  \end{frame}}
+
 %% ---- references ----------------------------------------------------------
 \usepackage[round]{natbib}
 

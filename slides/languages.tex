@@ -1,59 +1,15 @@
 \documentclass{beamer}
-\usepackage{fontspec}
-\usepackage{xeCJK}
-% CJK has no italic, so map it to upright rather than let XeTeX fake-slant it
-% (\mtcitestyle italicises, and \jpn{}/\zh{} put Han characters inside it).
-% The sans family needs declaring too: beamer's body font is sans.
-\setCJKmainfont{Noto Sans CJK SC}[ItalicFont=Noto Sans CJK SC]
-\setCJKsansfont{Noto Sans CJK SC}[ItalicFont=Noto Sans CJK SC]
-\setCJKmonofont{Noto Sans Mono CJK SC}[ItalicFont=Noto Sans Mono CJK SC]
-% The bopomofo tone marks sit in Spacing Modifier Letters, not the Bopomofo
-% block, so xeCJK leaves them to Latin Modern -- which has no ˊ or ˋ.
-\xeCJKDeclareCharClass{CJK}{"02C7, "02C9, "02CA, "02CB, "02D9}
-% Noto Sans CJK SC carries no Hangul at all, so Korean needs the KR face.
-\newCJKfontfamily\korfont{Noto Sans CJK KR}[ItalicFont=Noto Sans CJK KR]
-\newcommand{\hg}[1]{{\korfont #1}}
-\newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
-% Latin Modern Sans has no small caps, so \textsc{sg} in the glosses was
-% silently coming out as lowercase "sg". Biolinum is Libertine's sans
-% companion and does have them.
-\setsansfont{Latin Modern Sans}[
-  SmallCapsFont		= {Linux Biolinum O},
-  SmallCapsFeatures	= {Letters=SmallCaps}]
-\usetheme{Madrid}
-\usecolortheme{crane}
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
-\setotherlanguage{thai}
+\input{shared}
 
-\newfontfamily\thaifont[Script=Thai]{Noto Sans Thai}
-\newfontfamily\thaifontsf[Script=Thai]{Noto Sans Thai}
-
-\usepackage[e,f,j,k]{mtg2e}
-\usepackage[round]{natbib}
-\usepackage{xcolor}
-\newcommand{\mtplain}[1]{\textcolor{teal}{#1}}
-\renewcommand{\mtcitestyle}[1]{\mtplain{\textit{#1}}}
-\newcommand{\tha}[1]{\mtplain{\textthai{#1}}}
-\newcommand{\zh}[1]{\mtplain{#1}}
-\newcommand{\msa}{\mtciteform}
-\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
-\newcommand{\ind}{\mtciteform}
-\newcommand{\vie}{\mtciteform}
-\newcommand{\thaig}{\mtciteform}
-% Tone number, as used in Wade-Giles. Latin Modern Sans has no ⁴, so set them
-% all as real superscripts rather than relying on precomposed characters.
+% Tone number, as used in Wade-Giles.  Set as a real superscript in the
+% running font rather than relying on the precomposed characters, which not
+% every font has.
 \newcommand{\tn}[1]{\textsuperscript{#1}}
-% Set the Thai font for Thai language text
-%\setotherlanguage{thai}
-%\newfontfamily\thaifamily{Noto Sans Thai}[Script=Thai]
-
-\usepackage{mygb4e}
-\renewcommand{\eachwordtwo}{\Libertine}
 
 \title{Languages of South East Asia and China}
 \author[Francis Bond]{Francis Bond \\ based on slides by František Kratochvíl}
-\date{2026}\begin{document}
+
+\begin{document}
 
 \frame{\titlepage}
 
@@ -78,7 +34,8 @@ and cultures of MSEA
 \end{frame}
 
 \begin{frame}{Official Languages}
-\includegraphics[width=\textwidth]{pics/image1.png}
+  \centering
+  \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{pics/image1.png}
 \end{frame}
 
 
@@ -195,17 +152,17 @@ AA languages are also spoken in China.
   Austronesian is the most widespread family in the world, with
   somewhere around 1,200 languages altogether and 300 million native
   speakers. Aside from Southeast Asia, Austronesian languages are
-  found on numerous islands in the eastern and central Paciﬁc Ocean
+  found on numerous islands in the eastern and central Pacific Ocean
   all the way to Easter Island. There is also a western outpost
   language (Malagasy), spoken on the island of Madagascar.
 
 Major languages include:
 \begin{itemize}
-\item Malay (200 million speakers, about 40 million as a ﬁrst language)
+\item Malay (200 million speakers, about 40 million as a first language)
   \\  Indonesian (Bahasa Indonesia) and Malaysian (Bahasa Melayu)
 \item Javanese (75 million)
 \item Sundanese (30 million)
-\item Filipino (Tagalog) (50 million, 30 million as a ﬁrst language).
+\item Filipino (Tagalog) (50 million, 30 million as a first language).
 \end{itemize}
   
 \end{frame}
@@ -327,7 +284,7 @@ The numbers are approximate and can vary due to factors such as migration and cl
   According to \citet[p.~38]{goddard:2005}
   \begin{itemize}
   \item In the Chinese tradition any variety other than Mandarin is referred to as a ``dialect''. 
-  \item This reﬂects the cultural and historical unity of China and the use of a common script
+  \item This reflects the cultural and historical unity of China and the use of a common script
     \\ although not all words can be written in Hanzi [FCB]
 \item In normal usage, dialects are mutually intelligible
 \item  Linguists usually refer to the seven language groupings  as ``Sinitic languages''
@@ -348,64 +305,30 @@ languages in China
 
 
 
-\begin{frame}
-
-Return the money to me
-\begin{exe}
-
-\ex
-\glll 把 钱 还 给 我 \\
-     pa³²⁴ tɕʰjæn²⁵ xwan²⁵ kej³²⁴ wɔ³²⁴ \\
-     take money return give 1\textsc{sg} \\ 
-  \hfill     \textit{Mandarin (Putonghua)}
-     
-\ex \glll  畀 返 D 钱 我 \\
- pei³⁵ fæ:n⁵⁵ ti⁵⁵ tɕʰin³⁵ ŋɔ¹³ \\
- give back \textsc{pl.cl} money 1\textsc{sg} \\
-\hfill  \textit{Yue (Hong Kong)}
-
-\ex \glll 铜钱 还 给 我 \\
-      doŋ²²-dʑi⁵⁵ wæj³⁵ paʔ⁵ niʔ⁵ \\
-     money return give 1\textsc{sg} \\
- \hfill  \textit{Wu dialect (Suzhou)}
-
-
-\ex \glll 钱 倒 还 与 我 \\
-  tɕı̃³⁵ tɔ⁵⁵ huan³⁵ ho²² gua⁵³ \\
- money invert return give 1\textsc{sg} \\
- \hfill \textit{Southern Min (Quanzhou)}
-  
-\end{exe}
- 
-\end{frame}
-
 
 \begin{frame}{Mandarin Romanization Comparison}
-  \begingroup\small
-  \begin{tabular}{llll}
-Characters & Wade-Giles & Hanyu Pinyin & Notes\\ \hline
-中国/中國 & Chung\tn{1}-kuo\tn{2} & Zhōngguó & China\\ 
-北京 & Pei\tn{3}-ching\tn{1} & Běijīng & PRC Capital \\
-    台北 & T'ai\tn{2}-pei\tn{3} & Táiběi & RoC Capital \\
-                                 
-毛泽东/毛澤東 & Mao\tn{2} Tse\tn{2}-tung\tn{1} & Máo Zédōng & Mao \\
-蒋介石/蔣介石 & Chiang\tn{3} Chieh\tn{4}-shih\tn{2} & Jiǎng Jièshí & Chiang Kai-shek \\
-孔子 & K'ung\tn{3} Tzu\tn{3} & Kǒng Zǐ & Confucius \\ 
+  \begingroup\footnotesize\setlength{\tabcolsep}{2pt}
+  \begin{tabular}{lllll}
+Characters & Wade-Giles & Hanyu Pinyin & Bopomofo & Notes\\ \hline
+中国/中國 & Chung\tn{1}-kuo\tn{2} & Zhōngguó & ㄓㄨㄥ ㄍㄨㄛˊ & China\\
+北京 & Pei\tn{3}-ching\tn{1} & Běijīng & ㄅㄟˇ ㄐㄧㄥ & PRC Capital \\
+台北 & T'ai\tn{2}-pei\tn{3} & Táiběi & ㄊㄞˊ ㄅㄟˇ & RoC Capital \\
+毛泽东/毛澤東 & Mao\tn{2} Tse\tn{2}-tung\tn{1} & Máo Zédōng & ㄇㄠˊ ㄗㄜˊ ㄉㄨㄥ & Mao Tse-tung \\
+蒋介石/蔣介石 & Chiang\tn{3} Chieh\tn{4}-shih\tn{2} & Jiǎng Jièshí & ㄐㄧㄤˇ ㄐㄧㄝˋ ㄕˊ & Chiang Kai-shek \\
+孔子 & K'ung\tn{3} Tzu\tn{3} & Kǒng Zǐ & ㄎㄨㄥˇ ㄗˇ & Confucius \\
   \end{tabular}\endgroup
   \bigskip
-  
-  There is also a native  transliteration system for Standard Chinese and other Sinitic languages: \textbf{Bopomofo}. It is commonly used in Taiwan. It consists of 37 characters and five tone marks, which together can transcribe all possible sounds in Mandarin Chinese:  ㄓㄨㄥ ㄍㄨㄛˊ , ㄅㄟˇ ㄐㄧㄥ, ㄊㄞˊ ㄅㄟˇ , ㄇㄠˊ ㄗㄜˊ ㄉㄨㄥ,  ㄐㄧㄤˇ ㄐㄧㄝˋ ㄕˊ, ㄎㄨㄥˇ ㄗˇ
 
+
+  \begin{itemize}
+  \item \txx{Wade–Giles} — An older system for romanizing Mandarin Chinese, once widely used in English-language scholarship, still used for names in Taiwan.
+  \item \txx{Hanyu Pinyin} — The official romanization system for Standard Mandarin in China and the international standard, using Latin letters and diacritics or numbers to mark tones.
+  \item \txx{Bopomofo (Zhuyin)} — A phonetic writing system for
+    Mandarin using a dedicated set of symbols (ㄅㄆㄇㄈ etc.),
+    especially widely used in Taiwan for teaching pronunciation.
+  \end{itemize}
   
-  
-% \textbf{Characters} & \textbf{Wade-Giles} & \textbf{Hanyu Pinyin} & \textbf{Bopomofo} \\ \hline
-% 中国/中國 & Chung¹-kuo² & Zhōngguó & ㄓㄨㄥ ㄍㄨㄛˊ \\ \hline
-% 北京 & Pei³-ching¹ & Běijīng & ㄅㄟˇ ㄐㄧㄥ \\ \hline
-% 台北 & T'ai²-pei³ & Táiběi & ㄊㄞˊ ㄅㄟˇ \\ \hline
-% 毛泽东/毛澤東 & Mao² Tse²-tung¹ & Máo Zédōng & ㄇㄠˊ ㄗㄜˊ ㄉㄨㄥ \\ \hline
-% 蒋介石/蔣介石 & Chiang³ Chieh⁴-shih² & Jiǎng Jièshí & ㄐㄧㄤˇ ㄐㄧㄝˋ ㄕˊ \\ \hline
-% 孔子 & K'ung³ Tzu³ & Kǒng Zǐ & ㄎㄨㄥˇ ㄗˇ \\ \hline
-% \end{tabular}
+
 \end{frame}
 
 \begin{frame}{Sinospheric features}
@@ -453,10 +376,11 @@ The Tai family splits into three branches:
 Thai is a member of the South-western branch, members of which can be
 found as far west as Assam in NE India.
 
-The established spelling convention is that `Tai' (pronounced with an
-unaspirated dental stop \emph{t}) is used for the family name, and
-`Thai' (pronounced with an aspirated dental stop \emph{th}) is
-normally used to refer to the national language of Thailand.
+\begin{itemize}
+\item Use  `Tai' (pronounced with an unaspirated dental stop \emph{t}) for the family name
+\item Use `Thai' (pronounced with an aspirated dental stop \emph{th}) for the national language of Thailand.
+\end{itemize}
+
 
 \end{frame}
 
@@ -501,7 +425,7 @@ Over 50 other Tai-Kadai languages.
 
 \begin{frame}{Hmong-Mien}
 
-  Thirty-ﬁve languages spoken mainly in southwestern
+  Thirty-five languages spoken mainly in southwestern
   China, with several spoken in adjacent parts of Southeast Asia.
 
   \begin{itemize}
@@ -530,59 +454,21 @@ relatively little known in the West.   It is mainly spoken in the hills.
 
 Japanese and Korean share very similar syntax (agglutinative, case marking, verb final, pre-modification) and both have borrowed much vocabulary from Chinese.
 
-\begin{itemize}
-\item \txx{Sinoxenic vocabulary}: whole strata of Chinese loans, each
-  with regular, predictable local readings.
-  \\ Ainu has no such layer --- its loans come from Japanese.
-\end{itemize}
-  
-\end{frame}
-
-\begin{frame}{Sinoxenic vocabulary}
-
-  Chinese words borrowed wholesale into Japanese, Korean and Vietnamese,
-  each language reading the characters in its own regular way.
-
-  \begin{center}
+ \begin{center}
     \begin{tabular}{lll}
       \textbf{Language} & \textbf{Script} & \textbf{Transliteration} \\ \hline
       Mandarin   & 学校 (學校)        & \textit{xuéxiào} \\
       Japanese   & 学校               & \textit{gakkō} \\
-      Korean     & \hg{학교} (學校)   & \textit{hakgyo} \\
-      Vietnamese & học hiệu (學校)    & \textit{học hiệu} \\ \hline
+      Korean     & \textkorean{학교} (學校)   & \textit{hakgyo} \\ \hline
+%      Vietnamese & học hiệu (學校)    & \textit{học hiệu} \\
     \end{tabular}
   \end{center}
 
-  All from 學 \textit{learn} + 校 \textit{school}. Vietnamese dropped the
-  characters in the 20th century, so its script \emph{is} the
-  transliteration.
-
 \end{frame}
 
-\begin{frame}{Sinoxenic vocabulary: the correspondences are regular}
-
-  \begin{itemize}
-  \item Vietnamese has the reading, but everyday `school' is
-    \vie{trường học} \mbox{(場學)} --- the stratum is there, the usage
-    differs.
-  \item The same morphemes recur right across the modern vocabulary:
-    \begin{itemize}
-    \item 大學 `university': \textit{dàxué} / \textit{daigaku} /
-      \textit{daehak} / \textit{đại học}
-    \item 電話 `telephone': \textit{diànhuà} / \textit{denwa} /
-      \textit{jeonhwa} / \textit{điện thoại}
-    \end{itemize}
-  \item 學 is consistently \textit{gaku} / \textit{hak} / \textit{học},
-    大 consistently \textit{dai} / \textit{dae} / \textit{đại}: borrowing
-    a writing system means borrowing a whole lexicon with it.
-  \item And the traffic is not one way --- 電話 was coined in Japan and
-    borrowed back into Chinese.
-  \end{itemize}
-
-\end{frame}
 \begin{frame}
   \begin{center}
-    \huge Mainland Southeast Asia as a Linguistic Area
+    \huge Mainland Southeast Asia \\ as a Linguistic Area
   \end{center}
 \end{frame}
 
@@ -669,15 +555,15 @@ Japanese and Korean share very similar syntax (agglutinative, case marking, verb
     \begin{itemize}
         \item \textbf{Mandarin Chinese} classifiers:
             \begin{itemize}
-                \item \zh{一只猫} (yī zhī māo) – "one (zhī) cat"
-                \item \zh{三本书} (sān běn shū) – "three (běn) books"
-                \item \zh{五辆车} (wǔ liàng chē) – "five (liàng) cars"
+                \item \zhs{一只猫} (yī zhī māo) – "one (zhī) cat"
+                \item \zhs{三本书} (sān běn shū) – "three (běn) books"
+                \item \zhs{五辆车} (wǔ liàng chē) – "five (liàng) cars"
             \end{itemize}
         \item \textbf{Thai} classifiers:
             \begin{itemize}
-                \item \tha{เด็กหนึ่งคน} (dèk nùeng khon) – "one (khon) child"
-                \item \tha{บ้านสองหลัง} (bâan sǎawng lǎng) – "two (lǎng) houses"
-                \item \tha{เสื้อผ้าสามตัว} (sûea phâa sǎam tua) – "three (tua) shirts"
+                \item \ths{เด็กหนึ่งคน} (dèk nùeng khon) – "one (khon) child"
+                \item \ths{บ้านสองหลัง} (bâan sǎawng lǎng) – "two (lǎng) houses"
+                \item \ths{เสื้อผ้าสามตัว} (sûea phâa sǎam tua) – "three (tua) shirts"
             \end{itemize}
         \item Classifiers are essential when quantifying nouns.
     \end{itemize}
@@ -700,8 +586,8 @@ Japanese and Korean share very similar syntax (agglutinative, case marking, verb
             \begin{itemize}
                 \item \textbf{Thai}:
                     \begin{itemize}
-                        \item \thaig{khao} (\tha{ข้าว}) – rice in general
-                        \item \thaig{khao niao} (\tha{ข้าวเหนียว}) – sticky rice
+                        \item \tha{khao} (\ths{ข้าว}) – rice in general
+                        \item \tha{khao niao} (\ths{ข้าวเหนียว}) – sticky rice
                     \end{itemize}
                   \item \textbf{Vietnamese}:
                     \begin{itemize}
@@ -733,8 +619,8 @@ Japanese and Korean share very similar syntax (agglutinative, case marking, verb
                     \end{itemize}
                 \item \textbf{Thai}:
                     \begin{itemize}
-                        \item \tha{พี่} (phîi) – older sibling
-                        \item \tha{น้อง} (nóng) – younger sibling
+                        \item \ths{พี่} (phîi) – older sibling
+                        \item \ths{น้อง} (nóng) – younger sibling
                     \end{itemize}
             \end{itemize}
         \item Reflects shared cultural concepts due to prolonged contact.
@@ -794,7 +680,7 @@ Japanese and Korean share very similar syntax (agglutinative, case marking, verb
                  $\phi$ chī le ma? \\
                  \glt"Have (you) eaten?"
          \ex \textbf{Thai}:
-                 \gll  $\phi$ \tha{ไปไ} \tha{หน}? \\
+                 \gll  $\phi$ \ths{ไปไ} \ths{หน}? \\
                  $\phi$ pai năi? \\
                 \glt "(You) go where?"
      \end{exe}
@@ -808,7 +694,7 @@ Subjects and objects are often omitted when contextually clear.
         \item Small expressive words at the end of sentences
         \item Indicate speaker's feelings or attitudes
         \item Also used to mark questions
-        \item Example: Thai particle \tha{นะ} (na) to soften statements
+        \item Example: Thai particle \ths{นะ} (na) to soften statements
         \item Common in many mainland Southeast Asian languages
         \item Enhance nuance and expressiveness in speech
     \end{itemize}
@@ -818,10 +704,10 @@ Subjects and objects are often omitted when contextually clear.
   \begin{itemize}
   \item \textbf{Thai}:
     \begin{itemize}
-    \item \tha{คุณสบายดีไหมคะ}? \\
+    \item \ths{คุณสบายดีไหมคะ}? \\
       (Khun sabai di mai kha?) \\
       "How are you?" (\textit{kha} adds politeness from a female speaker)
-    \item \tha{ไปนะ} \\
+    \item \ths{ไปนะ} \\
       (Pai na) \\
       "I'm leaving now, okay?" (\textit{na} softens the statement)
     \end{itemize}

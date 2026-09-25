@@ -1,0 +1,232 @@
+%% shared.tex -- common preamble for the Linguistics of Asian Languages decks.
+%%
+%% \input this immediately after \documentclass{beamer}.  It fixes the theme,
+%% the fonts for every script the course touches, the colour conventions and
+%% the language shorthands in ONE place, so that a font fix made here reaches
+%% every deck.
+%%
+%% Deliberately NOT here, because the decks genuinely differ:
+%%   * the gb4e flavour -- gb4e, mygb4e and langsci-gb4e are not
+%%     interchangeable, so each deck loads the one its examples are written
+%%     for, straight after \input{shared}
+%%   * \title, and \author where it is not just Francis Bond
+%%   * anything a deck deliberately overrides afterwards -- sounds.tex, for
+%%     instance, sets Andika as the body font because it is a phonetics deck
+%%
+%% Everything here can be overridden by the deck: \input{shared} first, then
+%% deviate, and put a comment saying why.
+
+%% ---- fonts -------------------------------------------------------------
+%%
+%% Two mechanisms, deliberately, because the decks use both:
+%%
+%%   xeCJK      picks the CJK font automatically from the character, so Han,
+%%              kana and Hangul just work in running text.
+%%   polyglossia gives \textchinese{}, \textjapanese{}, \textkorean{},
+%%              \textyue{}, \textthai{} and \textarabic{} for when a specific
+%%              regional face is wanted -- the Japanese and Traditional faces
+%%              draw many shared characters differently from the Simplified
+%%              one, and Arabic needs RTL.
+%%
+%% Han has no italic.  Map the italic shape onto the upright one for every
+%% CJK face, or XeTeX fake-slants it whenever CJK lands inside \textit --
+%% which it constantly does, because \mtcitestyle italicises.
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Body font.  Latin Modern Sans, beamer's default, is the wrong font for this
+% course: it has no small caps (so \textsc{sg} in a gloss came out as
+% lowercase "sg") and it is missing 33 of the characters these decks use --
+% most of the IPA, the modifier letters and the super/subscripts -- which
+% XeTeX then drops silently.
+%
+% Libertinus is the maintained successor to Linux Libertine/Biolinum.  Sans
+% becomes the body font (beamer sets \sffamily), Serif is there for gloss
+% lines, and it brings a real maths font with it.  It lives in TeX Live, so
+% kpathsea finds it on any machine without a fontconfig install.
+% Set the faces directly rather than via libertinus-otf, which also wants a
+% mono font (AnonymousPro) that is not installed here.
+% Ligatures={TeX,NoCommon}: keep ``---'' and friends, but switch OFF the fi/fl
+% output ligatures, so that text copied out of the PDF comes back as plain
+% ASCII.  Those ligatures are how the deck sources picked up "Paciﬁc" and
+% "geneDcally" in the first place.
+\usefonttheme{professionalfonts}
+\setmainfont{LibertinusSerif}[
+  Extension		= .otf,
+  UprightFont		= *-Regular,
+  ItalicFont		= *-Italic,
+  BoldFont		= *-Bold,
+  BoldItalicFont	= *-BoldItalic,
+  Ligatures		= {TeX,NoCommon}]
+% Scale 0.95: Libertinus has a much larger x-height than Latin Modern, so at
+% the nominal size it overflows frames that used to fit.  0.95 restores every
+% deck to the page count it had before the switch.
+\setsansfont{LibertinusSans}[
+  Scale			= 0.95,
+  Extension		= .otf,
+  UprightFont		= *-Regular,
+  ItalicFont		= *-Italic,
+  BoldFont		= *-Bold,
+  % Libertinus Sans ships no bold italic, so slant the bold rather than let
+  % LaTeX silently substitute an upright bold.
+  BoldItalicFont	= *-Bold,
+  BoldItalicFeatures	= {FakeSlant = 0.2},
+  Ligatures		= {TeX,NoCommon}]
+\setmonofont{LibertinusMono-Regular}[Extension = .otf]
+
+% XeTeX always loads face 0 of a TrueType Collection, and
+% NotoSansCJK-Regular.ttc packs JP=0, KR=1, SC=2, TC=3, HK=4.  So asking for
+% "Noto Sans CJK SC" -- as every deck did -- silently handed back the
+% JAPANESE face, and all the Simplified Chinese in this course was being set
+% with Japanese glyph shapes (骨, 直, 关 and many more differ).  FontIndex
+% picks the right face, and the bare filename resolves without a path.
+%
+% Han has no italic.  Point ItalicFont at the same face so that CJK landing
+% inside \textit -- which happens constantly, because \mtcitestyle
+% italicises -- stays upright instead of drawing an "undefined shape".
+\newcommand{\CJKface}[2]{%
+  \newCJKfontfamily#1{NotoSansCJK-Regular.ttc}[%
+    FontIndex = #2, ItalicFont = NotoSansCJK-Regular.ttc,
+    ItalicFeatures = {FontIndex = #2}]}
+
+\IfFontExistsTF{NotoSansCJK-Regular.ttc}{%
+  \setCJKmainfont{NotoSansCJK-Regular.ttc}[%
+    FontIndex = 2, ItalicFont = NotoSansCJK-Regular.ttc,
+    ItalicFeatures = {FontIndex = 2}]
+  \CJKface\chinesefontsf{2}	% Simplified
+  \CJKface\yuefontsf{3}	% Traditional, used for Cantonese
+  \CJKface\japanesefontsf{0}
+  \CJKface\koreanfontsf{1}
+}{%
+  % No collection: fall back to the family names.  Everything still builds,
+  % but the regional faces will all be whichever one fontconfig hands over.
+  \setCJKmainfont{Noto Sans CJK SC}[ItalicFont = Noto Sans CJK SC]
+  \newCJKfontfamily\chinesefontsf{Noto Sans CJK SC}[ItalicFont = Noto Sans CJK SC]
+  \newCJKfontfamily\yuefontsf{Noto Sans CJK TC}[ItalicFont = Noto Sans CJK TC]
+  \newCJKfontfamily\japanesefontsf{Noto Sans CJK JP}[ItalicFont = Noto Sans CJK JP]
+  \newCJKfontfamily\koreanfontsf{Noto Sans CJK KR}[ItalicFont = Noto Sans CJK KR]
+}
+\setCJKsansfont{NotoSansCJK-Regular.ttc}[%
+  FontIndex = 2, ItalicFont = NotoSansCJK-Regular.ttc,
+  ItalicFeatures = {FontIndex = 2}]
+% The mono faces live in the same collection: Mono JP=5, KR=6, SC=7, TC=8.
+\setCJKmonofont{NotoSansCJK-Regular.ttc}[FontIndex = 7]
+
+% The bopomofo tone marks sit in Spacing Modifier Letters, not the Bopomofo
+% block, so xeCJK would leave them to Latin Modern -- which has no ˊ or ˋ.
+\xeCJKDeclareCharClass{CJK}{"02C7, "02C9, "02CA, "02CB, "02D9}
+
+% IPA needs no font of its own any more: Biolinum covers IPA Extensions,
+% Phonetic Extensions and the Spacing Modifier Letters.  The decks had grown
+% four different answers to this (Andika, Noto Serif, Libertine, and nothing
+% at all), so \ipa, \IPA and \silipa are all kept as names but now resolve
+% to the body font.
+\newfontfamily\ipafont{LibertinusSans}[
+  Extension = .otf, UprightFont = *-Regular, ItalicFont = *-Italic,
+  BoldFont = *-Bold, Ligatures = {TeX,NoCommon}]
+\newcommand{\ipa}[1]{{\ipafont #1}}
+\newcommand{\IPA}[1]{{\ipafont #1}}
+\let\silipa\ipafont
+
+% Used for the second line of gb4e glosses, where tone numbers and IPA turn
+% up and Latin Modern runs out of superscripts.
+\newfontfamily\Libertine{LibertinusSerif}[
+  Extension = .otf, UprightFont = *-Regular, ItalicFont = *-Italic,
+  BoldFont = *-Bold, BoldItalicFont = *-BoldItalic,
+  Ligatures = {TeX,NoCommon}]
+
+\usetheme{Madrid}
+\usecolortheme{crane}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{thai}
+\newfontfamily\thaifont[Script=Thai]{Noto Sans Thai}
+\newfontfamily\thaifontsf[Script=Thai]{Noto Sans Thai}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
+\newfontfamily\arabicfontsf[Script=Arabic]{Noto Naskh Arabic}
+
+% polyglossia has no gloss file for these, so define the switches directly
+% against the CJK families declared above.
+\newcommand{\textchinese}[1]{{\chinesefontsf #1}}
+\newcommand{\textjapanese}[1]{{\japanesefontsf #1}}
+\newcommand{\textkorean}[1]{{\koreanfontsf #1}}
+\newcommand{\textyue}[1]{{\yuefontsf #1}}
+
+% Latin Modern has no mathematical angle brackets, which the writing systems
+% deck uses for graphemes.
+\usepackage{newunicodechar}
+\newunicodechar{⟨}{‹}
+\newunicodechar{⟩}{›}
+
+%% ---- colour and emphasis ------------------------------------------------
+\usepackage{xcolor}
+\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
+\let\emp\txx
+\let\zz\txx
+\newcommand{\mtplain}[1]{\textcolor{teal}{#1}}
+\newcommand{\con}[1]{\textsc{#1}}
+
+\usepackage[normalem]{ulem}
+\newcommand{\ul}[1]{\uline{#1}}
+\newcommand{\cll}[1]{\uline{#1}}
+
+%% ---- linguistic examples ------------------------------------------------
+%%
+%% langsci-gb4e everywhere.  Plain gb4e makes _ and ^ active characters,
+%% which breaks hyperref -- that is the one and only reason mygb4e existed, a
+%% local copy of gb4e with exactly that hack commented out.  The Language
+%% Science Press fork drops it, is maintained, and gives the \exfont /
+%% \glossfont / \transfont hooks, so the local fork is no longer needed.
+\usepackage{langsci-gb4e}
+
+% Second gloss line -- transcription and IPA -- in the serif face.
+% writing.tex and verbal-arts.tex override this afterwards.
+\renewcommand{\eachwordtwo}{\Libertine}
+
+%% ---- language shorthands ------------------------------------------------
+%%
+%% Two families, and the distinction matters:
+%%
+%%   ISO-code macros  \cmn{}, \jpn{} ... take a ROMANISATION and set it in
+%%                    teal italic, optionally with a gloss: \cmn[dog]{gou3}.
+%%   \zhs{} and friends take NATIVE SCRIPT and set it in teal upright in the
+%%                    right regional face.  Script is never italicised.
+
+\usepackage[c,e,f,j,k]{mtg2e}
+\renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
+
+% romanisations (mtg2e already gives \chn, \eng, \fra, \jpn, \kjpn and \kor)
+\newcommand{\cmn}{\mtciteform}
+\newcommand{\zh}{\mtciteform}
+\newcommand{\yue}{\mtciteform}
+\newcommand{\ko}{\mtciteform}
+\newcommand{\vie}{\mtciteform}
+\newcommand{\vi}{\mtciteform}
+\newcommand{\tha}{\mtciteform}
+\newcommand{\thaig}{\mtciteform}
+\newcommand{\lao}{\mtciteform}
+\newcommand{\ind}{\mtciteform}
+\newcommand{\msa}{\mtciteform}
+\newcommand{\zsm}{\mtciteform}
+\newcommand{\ar}{\mtciteform}
+\newcommand{\lex}[1]{\textbf{\mtcitestyle{#1}}}
+
+% native script
+\newcommand{\zhs}[1]{\mtplain{\textchinese{#1}}}
+\newcommand{\zht}[1]{\mtplain{\textyue{#1}}}
+\newcommand{\jps}[1]{\mtplain{\textjapanese{#1}}}
+\newcommand{\kos}[1]{\mtplain{\textkorean{#1}}}
+\newcommand{\ths}[1]{\mtplain{\textthai{#1}}}
+
+%% ---- references ----------------------------------------------------------
+\usepackage[round]{natbib}
+
+%% ---- defaults ------------------------------------------------------------
+%% The year lives here so the rollover is a one-line change.
+\author[Francis Bond]{Francis Bond}
+\date{2026}

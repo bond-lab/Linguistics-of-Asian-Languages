@@ -1,37 +1,6 @@
-\documentclass[xetex]{beamer}
+\documentclass{beamer}
+\input{shared}
 
-\usepackage{fontspec}
-%\usepackage{xeCJK}
-%\setCJKmainfont{Noto Sans CJK SC}
-%\newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
-\usetheme{Madrid}
-\usecolortheme{crane}
-\usepackage{graphicx}
-
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
-\newfontfamily\englishfont[Ligatures=NoCommon]{Linux Libertine O}
-% \setotherlanguage{arabic}
-% \newfontfamily\arabicfontsf[Script=Arabic]{Noto Naskh Arabic}
-\setotherlanguage{chinese}
-\newfontfamily\chinesefontsf[Script=CJK]{Noto Sans CJK SC}
-\newfontfamily\yuefontsf[Script=CJK]{Noto Sans CJK TC}
-\newcommand{\textyue}[1]{{\yuefontsf\selectfont #1}}
-
-\setotherlanguage{japanese}
-\newfontfamily\japanesefontsf[Script=CJK]{Noto Sans CJK JP} % Japanese font
-\setotherlanguage{korean}
-\newfontfamily\koreanfontsf[Script=CJK]{Noto Sans CJK KR} 
-\setotherlanguage{thai}
-\newfontfamily\thaifontsf[Script=Thai]{Noto Sans Thai}
-
-\newfontfamily{\silipa}{Noto Serif}
-\newcommand{\IPA}[1]{{\silipa\selectfont #1}}
-
-
-\usepackage{natbib}
-\usepackage{xcolor}
-\usepackage{langsci-gb4e}
 \makeatletter
 \gdef\getwords(#1,#2)#3 #4\\%
    {\setbox#1=\vbox{\hbox{#2{\strut#3}{} }%
@@ -47,21 +16,7 @@
 % Define a robust version of eachwordone
 \DeclareRobustCommand{\eachwordone}{\textcolor{teal}}
 
-\usepackage[e]{mtg2e}
-
-\renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
-\newcommand{\msa}{\mtciteform}
-\newcommand{\zsm}{\mtciteform}
-\newcommand{\ko}{\mtciteform}
-\newcommand{\zh}{\mtciteform}
-\newcommand{\jpn}{\mtciteform}
-\newcommand{\ar}{\mtciteform}
-\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
-
 \title{Communication and Culture}
-\author{Francis Bond}
- 
-\date{2026}
 
 \begin{document}
 

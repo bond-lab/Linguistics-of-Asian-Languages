@@ -11,29 +11,12 @@
 % titles, ordering and sectioning below are plain LaTeX and easy to change.
 
 \documentclass{beamer}
+\input{shared}
 \beamertemplatenavigationsymbolsempty
 
 \title[Asia before Colonial Times]{Asia before Colonial Times}
 \author[Bond (Kratochvíl)]{Francis Bond \\[1ex]
   {\small based on slides by František Kratochvíl}}
-\date{2026}
-
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{fontspec}
-\usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK SC}
-\newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
-\usetheme{Madrid}
-\usecolortheme{crane}
-
-\usepackage{xcolor}
-\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
-
-% Latin Modern has no IPA Extensions or Spacing Modifier Letters, so \ipa{}
-% switches to Andika for them -- the same font sounds.tex uses throughout.
-\newfontfamily\ipafont{Andika}[Renderer=Harfbuzz]
-\newcommand{\ipa}[1]{{\ipafont #1}}
 
 % a full-width figure from the original deck, and its source line
 \newcommand{\apic}[2][0.80]{%

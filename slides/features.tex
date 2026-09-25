@@ -1,32 +1,7 @@
 \documentclass{beamer}
-\usepackage{fontspec}
-\usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK SC}
-\newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
-\usetheme{Madrid}
-\usecolortheme{crane}
-\newfontfamily{\silipa}{Noto Serif}
-
-\usepackage{mygb4e}
-\renewcommand{\eachwordtwo}{\Libertine}
-\usepackage[e,j]{mtg2e}
-\usepackage{xcolor}
-\renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
-\newcommand{\msa}{\mtciteform}
-\newcommand{\cmn}{\mtciteform}
-%\usepackage{expex}
-\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
-\newcommand{\zz}{\txx}
-\usepackage[normalem]{ulem}
-\newcommand{\cll}[1]{\uline{#1}}
-\newcommand{\ul}[1]{\uline{#1}}
-
-\usepackage[round]{natbib}
-
+\input{shared}
 
 \title[Grammar]{Grammatical Features\\ based largely on Goddard (2005) Chapter 4.}
-\author[Francis Bond]{Francis Bond}
-\date{2026}
 \AtBeginSection[]
 {
   \begin{frame}
@@ -34,6 +9,7 @@
     \tableofcontents[currentsection]
   \end{frame}
 }
+
 \begin{document}
 
   \frame{\titlepage}

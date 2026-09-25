@@ -1,61 +1,12 @@
-\documentclass[xetex]{beamer}
+\documentclass{beamer}
+\input{shared}
 
-\usepackage{fontspec}
-%\usepackage{xeCJK}
-%\setCJKmainfont{Noto Sans CJK SC}
-%\newfontfamily\Libertine[Mapping=tex-text]{Linux Libertine O}
-\usetheme{Madrid}
-\usecolortheme{crane}
-\usepackage{graphicx}
-
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
-\newfontfamily\englishfont[Ligatures=NoCommon]{Linux Libertine O}
-\setotherlanguage{arabic}
-\newfontfamily\arabicfontsf[Script=Arabic]{Noto Naskh Arabic}
-\setotherlanguage{chinese}
-\newfontfamily\chinesefontsf[Script=CJK]{Noto Sans CJK SC}
-\setotherlanguage{yue}
-\newfontfamily\yuefontsf[Script=CJK]{Noto Sans CJK TC}
-
-\setotherlanguage{japanese}
-\newfontfamily\japanesefontsf[Script=CJK]{Noto Sans CJK JP} % Japanese font
-\setotherlanguage{korean}
-\newfontfamily\koreanfontsf[Script=CJK]{Noto Sans CJK KR} 
-\setotherlanguage{thai}
-\newfontfamily\thaifontsf[Script=Thai]{Noto Sans Thai}
-
-\newfontfamily{\silipa}{Noto Serif}
-\newcommand{\IPA}[1]{{\silipa\selectfont #1}}
-\usepackage{newunicodechar}
-\newunicodechar{⟨}{‹}
-\newunicodechar{⟩}{›}
-% \newfontfamily\fontarabic[Script=Arabic]{Noto Naskh Arabic } 
-% \newfontfamily\textchinese[Script=CJK]{Noto Sans CJK SC}
-% \newfontfamily\textjapanese[Script=CJK]{Noto Sans CJK JP} % Japanese font
-% \newfontfamily\textkorean[Script=CJK]{Noto Sans CJK KR} 
-% \newfontfamily\textthai[Script=Thai]{Noto Sans Thai} % Thai font
-% \newcomand{\textarabic}[1]{\begin{RTL}\fontarabic\selectfont #1\end{RTL}}
-
-\usepackage{langsci-gb4e}
 \newcommand{\yueb}[1]{\yuefontsf\selectfont #1}
 \renewcommand{\eachwordone}{\yueb}
 \renewcommand{\eachwordtwo}{\yueb}
-\usepackage[e]{mtg2e}
-\usepackage{xcolor}
-\renewcommand{\mtcitestyle}[1]{\textcolor{teal}{\textit{#1}}}
-\newcommand{\msa}{\mtciteform}
-\newcommand{\zsm}{\mtciteform}
-\newcommand{\ko}{\mtciteform}
-\newcommand{\zh}{\mtciteform}
-\newcommand{\jpn}{\mtciteform}
-\newcommand{\ar}{\mtciteform}
-\newcommand{\vi}{\mtciteform}
-\newcommand{\txx}[1]{\textcolor{blue}{\textbf{#1}}}
 
 \title{Writing Systems in East and Southeast Asia}
 \author[Francis Bond]{Francis Bond \\ based on Goddard Chapter 6}
-\date{2026}
 
 \begin{document}
 
@@ -307,7 +258,7 @@ Images from Wikipedia (2024)
     
   \item In 2007  Professor Chun Tai-hyun, a professor of Malay and Indonesian linguistics at Hankuk University of Foreign Studies in Seoul developed a Hangeul orthography
     \begin{itemize}
-    \item For fricative /v/ it uses the obsolete jamo  \textkorean{ᄫ} 
+    \item For fricative /v/ it uses the obsolete jamo \textkorean{ㅸ} \textit{kapyeounpieup} `light pieup' 
     \end{itemize}
   \item It was privately taught since 2009 using a textbook written by Lee Ho-young, a linguistics professor at Seoul National University.
   \item It was abandoned around 2012, and revived around 2022 

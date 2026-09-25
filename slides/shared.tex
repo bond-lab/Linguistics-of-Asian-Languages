@@ -119,6 +119,12 @@
 % block, so xeCJK would leave them to Latin Modern -- which has no ˊ or ˋ.
 \xeCJKDeclareCharClass{CJK}{"02C7, "02C9, "02CA, "02CB, "02D9}
 
+% The reverse problem: xeCJK counts the curly quotes as CJK punctuation, so
+% ' ' " " came out full-width in the CJK font, with CJK spacing around them
+% and a line-break opportunity inside words like "doesn't".  In this course
+% they are always English punctuation.
+\xeCJKDeclareCharClass{Default}{"2018, "2019, "201C, "201D}
+
 % IPA needs no font of its own any more: Biolinum covers IPA Extensions,
 % Phonetic Extensions and the Spacing Modifier Letters.  The decks had grown
 % four different answers to this (Andika, Noto Serif, Libertine, and nothing

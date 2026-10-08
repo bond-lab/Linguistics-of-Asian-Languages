@@ -2,7 +2,8 @@
 \input{shared}
 \beamertemplatenavigationsymbolsempty
 
-\usepackage{longtable}
+\usetikzlibrary{positioning}
+\usepackage{array}
 
 \title[Metaphor]{Metaphors across Languages}
 
@@ -12,149 +13,119 @@
 
 \overview
 
-\begin{frame}{Some ways of organising and understanding concepts}
-
-  \begin{itemize}
-  \item Prototype Theory
-    \begin{itemize}
-    \item Explains internal category structure
-    \item Graded membership
-    \item Central vs peripheral members
-    \end{itemize}
-  \item Metaphor and Metonymy
-    \begin{itemize}
-    \item Explains cross-domain conceptual mapping
-    \item Metaphor maps prototypical structure
-    \item Metaphor creates radial category extensions
-    \item Metaphor can reshape prototypes over time
-    \end{itemize}
-  \item Our question this week: how much of this is \emp{shared} across the
-    languages of East and Southeast Asia, and how much is \emp{language
-      particular}?
-  \end{itemize}
-
+\begin{frame}{Two Ways to Organize Concepts}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    \txx{prototypes} & categories have a centre and edges \\
+    \txx{metaphor} and \txx{metonymy} & extend categories to new domains \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  This week's question: how much of this is \emp{shared} across East and
+  Southeast Asia, and how much is \emp{language particular}?
 \end{frame}
 
 \section{Prototypes and Categories}
 
 \begin{frame}{Prototypes}
-
-\begin{itemize}
-\item Concepts are organized in groups around a \txx{prototype}
-\item These have typical members (remembered as \txx{exemplars})
+  \Large
   \begin{itemize}
-  \item What is typical \con{furniture}?
-  \item What is a typical \con{bird}?
+  \item Categories are organized around a \txx{prototype}
+  \item What is a typical \con{bird}? A typical piece of \con{furniture}?
   \end{itemize}
-\item Prototypes have \txx{characteristic feature}s: \\a \con{bird}
-  \begin{itemize}
-  \item has feathers
-  \item warbles
-  \item flies
-  \item lays eggs
-  \end{itemize}
-\item This work was pioneered by \citet{rosch:1973} and
+  \vfill
+  \begin{tabular}{ll}
+    a typical \con{bird} & has feathers, warbles, flies, lays eggs \\
+    a penguin           & has feathers, lays eggs \ldots \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Pioneered by \citet{rosch:1973} and
   \citet{rosch:mervis:gray:johnson:boyes-braem:1976} (very readable)
-\end{itemize}
-
 \end{frame}
 
 \begin{frame}{Relations between Concepts}
-
-\begin{itemize}
-\item Concepts are linked in many ways
-\item Most common relationship is \txx{hypernymy}: \con{dog} is-a \con{animal}
-\item Typically subordinate terms inherit from superordinate terms
-\item Larger units of knowledge, such as \txx{frames}, are similar
-\item Much recent computational work on these
+  \Large
   \begin{itemize}
-  \item WordNet \citep{_fellbaum:1998}
-   \item FrameNet \citep{framenet:2002}
+  \item The commonest link is \txx{hypernymy}: a \con{dog} is an \con{animal}
+  \item Subordinate concepts \txx{inherit} from superordinate ones
+  \item Larger units of knowledge are \txx{frames}
   \end{itemize}
-\end{itemize}
-
+  \vfill
+  \normalsize
+  Built as resources: WordNet \citep{_fellbaum:1998},
+  FrameNet \citep{framenet:2002}
 \end{frame}
 
-\begin{frame}{Basic Level Categories}
-\begin{itemize}
-\item Some categories (concepts) seem to be more psychologically basic than others
-  \begin{itemize}
-  \item Pictures of objects are categorized faster at the basic level
-  \item Basic level names used more often in free-naming tasks
-  \item Children learn them earlier
-  \item Basic-level names are more common in adult discourse
-  \item Basic-level categories are common in different cultures
-  \item Basic level names tend to be short
-  \item Basic-level names tend to be common in compound nouns
-  \end{itemize}
-\item
-  \begin{tabular}[t]{lll}
-superordinate & basic & subordinate \\  \hline
-\lex{vehicle} & \lex{bus} & \lex{school bus} \\
-\lex{jewelry} & \lex{necklace} & \lex{bib necklace} \\
-\lex{animal} & \lex{dog} & \lex{poodle}
-\end{tabular}
-\end{itemize}
+\begin{frame}{The Basic Level}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    superordinate & \alert{basic} & subordinate \\
+    \midrule
+    \lex{vehicle} & \lex{bus}      & \lex{school bus} \\
+    \lex{jewelry} & \lex{necklace} & \lex{bib necklace} \\
+    \lex{animal}  & \lex{dog}      & \lex{poodle} \\
+    \bottomrule
+  \end{tabular}
 
+  \vfill
+  \normalsize
+  Basic-level names are recognized fastest, used most, learned first,
+  short, and common in compounds
 \end{frame}
 
-\begin{frame}{Basic Level Categories (ctd)}
-\begin{itemize}
-\item Basic level categories are a decomposition of the world into
-  maximally informative categories.
+\begin{frame}{The Most Informative Level}
+  \Large
   \begin{itemize}
-  \item BLCs maximize the number of attributes shared by members of
-    the category
-  \item BLCs minimize the number of attributes shared with
-    other categories
+  \item Members share \txx{many} attributes with each other
+  \item \ldots and \txx{few} with other categories
   \end{itemize}
-\item It can be hard to agree on what is the Basic Level: whereas
-  \lex{dog} is a basic-level category at the species level,
-  \lex{bird} and \lex{fish} sit at a higher level, etc.
-  The levels may be different for different groups of people.
-\item Similarly, the notion of frequency is very closely tied
-  to the basic level, but not exactly the same.
-\end{itemize}
-
+  \vfill
+  \normalsize
+  Where the level sits varies: \lex{dog} is basic at the species level, but
+  \lex{bird} and \lex{fish} are higher --- and it differs between groups of
+  people.  Frequency is closely tied to the basic level, but not the same.
 \end{frame}
 
 \begin{frame}{Linguistic Relativity}
-
-\begin{itemize}
-\item The language we think in makes some concepts easy to express,
-  and some concepts hard
-\item The idea behind \txx{linguistic relativity} is that this will
-  affect how you think
+  \large
   \begin{itemize}
-  \item Korean lexicalizes politeness and has rigid social hierarchies
-  \item English and Chinese speakers differ as to whether they
-    conceptualize things as substances or individuals
-  \item Gendered language speakers have different connotations: \lex{key}
-    \begin{itemize}
-    \item (German: masculine) `hard, heavy, jagged, metal, and useful'
-    \item (Spanish: feminine)  `golden, intricate, little, lovely, shiny, and tiny'
-    \end{itemize}
-  \item It is easier to differentiate colors that you have names for
+  \item Does what is \txx{easy to say} affect how we \txx{think}?
+  \item Colours are easier to tell apart if you have names for them
+  \item English and Chinese speakers differ on substances vs individuals
   \end{itemize}
-\item Most confirmed differences are very, very subtle
-\end{itemize}
-
+  \vfill
+  \begin{tabular}{ll}
+    \toprule
+    \multicolumn{2}{l}{\lex{key} is described as \ldots} \\
+    \midrule
+    German (masculine) & hard, heavy, jagged, metal, useful \\
+    Spanish (feminine) & golden, intricate, little, lovely, shiny, tiny \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Most confirmed differences are very, very subtle
 \end{frame}
 
-\begin{frame}{The Sapir-Whorf Hypothesis}
-
-\begin{description}
-\item[strong]  language determines thought and  linguistic categories limit and determine cognitive categories
-\item[weak]  linguistic categories and usage influence thought and certain kinds of non-linguistic behaviour
-\end{description}
-
-The terms ``Strong/Weak Sapir-Whorf Hypothesis'' are widely used even though Edward
-Sapir and Benjamin Lee Whorf never co-authored anything and never
-stated their ideas in terms of a hypothesis let alone with two versions.
-
+\begin{frame}{The Sapir--Whorf Hypothesis}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \txx{strong} & language \emph{determines} thought \\
+    \txx{weak}   & language \emph{influences} thought and behaviour \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Sapir and Whorf never wrote together, and never stated a hypothesis ---
+  let alone two versions of one
 \end{frame}
 
-\begin{frame}{What Whorf actually said}
+\begin{frame}{What Whorf Actually Said}
 \begin{quotation}
   We dissect nature along lines laid down by our native language. The
   categories and types that we isolate from the world of phenomena we
@@ -175,950 +146,578 @@ stated their ideas in terms of a hypothesis let alone with two versions.
 
 \section{Metaphor}
 
-\begin{frame}{Metaphors and Mechanisms of Interpretation}
-
-A metaphor is an extension of the use of a word beyond its
-primary meaning to describe referents that bear similarities to
-the word's primary referent.
-\begin{itemize}
-\item \lex{eye} ``body part used for vision''
-  \begin{exe}
-  \ex \eng{dull end of a needle (with a hole for the thread)}
-  \raisebox{-2.5ex}{\includegraphics[width=3em]{pics/needle}}
-  \ex \eng{the bud on a potato}
-  \raisebox{-2ex}{\includegraphics[width=3em]{pics/potato}}
-  \ex \eng{the centre of a storm} \raisebox{-4ex}{\includegraphics[width=6em]{pics/eye-of-storm}}
-  \end{exe}
-\item The similarities between these referents and the primary referent of
-the word \lex{eye} are their roundish shape and their more or less central
-location on a larger shape.
-\end{itemize}
-
+\begin{frame}{Metaphor Extends a Word by Similarity}
+  \Large
+  \lex{eye} ``body part used for vision''
+  \vfill
+  \begin{tabular}{ll}
+    \eng{the eye of a needle} & \raisebox{-1.5ex}{\includegraphics[width=3em]{pics/needle}} \\[1ex]
+    \eng{the eye of a potato} & \raisebox{-2ex}{\includegraphics[width=3em]{pics/potato}} \\[1ex]
+    \eng{the eye of a storm}  & \raisebox{-4ex}{\includegraphics[width=6em]{pics/eye-of-storm}} \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Shared: a roundish shape, more or less in the centre of something larger
 \end{frame}
 
-\begin{frame}{The same extension in other languages}
+\begin{frame}{Eyes in Other Languages}
+  \large
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{llll}
+    \toprule
+    & & literally & means \\
+    \midrule
+    Mandarin & \zhs{针眼} \cmn{zhēnyǎn}     & needle-eye  & needle's eye; stye \\
+             & \zhs{针鼻儿} \cmn{zhēnbír}   & needle-\alert{nose} & needle's eye \\
+    Japanese & \jps{台風の目} \jpn{taifū no me} & typhoon's eye & eye of the typhoon \\
+    Malay    & \msa{mata air}      & eye water  & spring, source \\
+             & \msa{mata hari}     & eye day    & sun \\
+             & \msa{mata pelajaran} & eye lesson & school subject \\
+             & \msa{mata uang}     & eye money  & currency \\
+    \bottomrule
+  \end{tabular}
 
-\begin{itemize}
-\item The \con{eye} extensions are not just English:
-  \begin{exe}
-    \ex \cmn{针眼} \emph{zhēnyǎn} ``eye of a needle'' (\cmn{针} ``needle'' + \cmn{眼} ``eye'')
-    \ex \jpn{台風の目} \emph{taifū no me} ``the eye of the typhoon''
-    \ex \msa{mata air} ``spring, source'' (Malay/Indonesian \msa{mata} ``eye'' + \msa{air} ``water'')
-  \end{exe}
-\item Some extensions travel well, others do not
-\item Malay/Indonesian \msa{mata} is especially productive:
-  \msa{mata hari} ``sun'' (eye of the day),
-  \msa{mata pelajaran} ``school subject'',
-  \msa{mata uang} ``currency''
-\item[?] Which \con{eye} extensions work in the languages you know?
-\end{itemize}
-
+  \vfill
+  \normalsize
+  Some extensions travel, some do not. Which ones work in your language?
 \end{frame}
 
-\begin{frame}{Conventionalization}
-\begin{itemize}
-\item Once a metaphor becomes accepted, speakers tend to view the
-metaphorical meaning as separated from its primary meaning
-
-\begin{exe}
-  \ex \eng{booking a flight}
-  \ex \eng{tabling a motion}
-  \ex \eng{seeing the point}
-  \ex \eng{stealing the headlines}
-  \ex \eng{buying time}
-\end{exe}
-\item These are \txx{dead/conventionalized metaphors}: we don't need to specially process them
-\item Over time this is one of the main sources of \txx{polysemy}
-\end{itemize}
-
+\begin{frame}{Dead Metaphors}
+  \Large
+  \begin{tabular}{ll}
+    \eng{\alert{booking} a flight}  & \eng{\alert{tabling} a motion} \\
+    \eng{\alert{seeing} the point}  & \eng{\alert{stealing} the headlines} \\
+    \eng{\alert{buying} time}       & \\
+  \end{tabular}
+  \vfill
+  \begin{itemize}
+  \item Once accepted, the new sense feels \txx{separate}: no special processing
+  \item The main source of \txx{polysemy}
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Metaphors as non-prototypical use}
-
-\begin{itemize}
-\item In a way, metaphors are non-prototypical uses of a word.
-\begin{itemize}
-\item Humans understand words by referring to a prototypical usage,
-and they match a new example against the characteristics of the
-prototype.
-\item  Use of words with broken typicality conditions happens all the
-time.
-\end{itemize}
-\item
-  \begin{exe}
-    \ex \eng{The price of brussel sprouts went up.}
-    \ex \eng{Marigold is coming out of a coma.}
-    \ex \eng{Felix is under age.}
-    \ex \eng{I killed his argument.}
-    \ex \eng{Their love affair is blossoming.}
-    \ex \eng{She has a fertile imagination.}
-  \end{exe}
-\item However, depending on how you count frozen metaphors,
-we may use metaphors more than literal uses!
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Metaphors as central to understanding}
-
-\begin{quote}
-  \Large Our conceptual system
-  \\ is fundamentally metaphorical in nature
-\end{quote}
-\begin{flushright}
-  George Lakoff
-\end{flushright}
-
-\begin{itemize}
-\item Cognitive semantics:
-\\ There is no separation between cognition and
-linguistic knowledge
-\item Features of Metaphor
-\begin{itemize}
-\item \txx{Conventional}: some metaphors are very well established
-\\ (but remain metaphorical)
-\item \txx{Systematic}: understood as part of larger domains
-\item \txx{Asymmetrical}: normally understand the \emp{abstract}
-  in terms of the \emp{concrete}
-\end{itemize}
-
-\end{itemize}
-
+\begin{frame}{Metaphor Is Everywhere}
+  \Large
+  \begin{tabular}{ll}
+    \eng{The price of sprouts went \alert{up}.} & \eng{I \alert{killed} his argument.} \\
+    \eng{She's \alert{coming out of} a coma.}   & \eng{Their love is \alert{blossoming}.} \\
+    \eng{Felix is \alert{under} age.}           & \eng{She has a \alert{fertile} imagination.} \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Metaphors are non-prototypical uses of words.  Counting frozen ones, we may
+  use more metaphor than literal language
 \end{frame}
 
 \begin{frame}{\textit{Metaphors We Live By}}
-
-\begin{itemize}
-\item Metaphor is pervasive in everyday life, not just in
-language but in thought and action.
-\item Our ordinary conceptual system, in terms of which we
-both think and act, is fundamentally metaphorical in
-nature.
-\item If we are right in suggesting that our conceptual system
-is largely metaphorical, then the way we think, what we
-experience, and what we do every day is very much a
-matter of metaphor.
-\end{itemize}
-
-\begin{quote}
-  George Lakoff and Mark Johnson (\citeyear{lakoff:johnson:1980}) \textit{Metaphors we live by}
-  University of Chicago Press.
-\end{quote}
-
+  \begin{quote}
+    \Large Our conceptual system is fundamentally metaphorical in nature
+  \end{quote}
+  \hfill \citet{lakoff:johnson:1980}
+  \vfill
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \txx{conventional} & well established, yet still metaphorical \\
+    \txx{systematic}   & part of larger domains \\
+    \txx{asymmetrical} & the \emp{abstract} in terms of the \emp{concrete} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Cognitive semantics: no separation between cognition and linguistic knowledge
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Prototypical metaphors}
-
-Some metaphors are not as good as others because not all broken typicality
-conditions result in prototypical metaphors. What is a prototypical
-metaphor?
-
-\begin{itemize}
-\item Similarity and dissimilarity have both been stressed.
-\item Items must not be too similar:
-  \begin{exe}
-    \ex \eng{$^\#$Wine is whisky}
-    \ex \eng{$^\#$Cars are trucks}
-    \ex \eng{$^\#$Jam is honey}
-  \end{exe}
-\framebreak
-\item They should not be too dissimilar:
-  \begin{exe}
-    \ex \eng{$^\#$His feet were stars}
-    \ex \eng{$^\#$Her cheeks were typewriters}
-    \ex \eng{$^\#$Her knees were penguins}
-  \end{exe}
-\item In a prototypical metaphor then, items compared are
-likely to come from different lexical fields but they are
-also similar in that they do share some minor
-characteristic. Dissimilarity signals the listener to do
-some active semantic matching.
-\begin{exe}
-  \ex \eng{Life is a subway train}
-  \ex \eng{Men are thistles}
-  \ex \eng{He posted the toast down to his stomach}
-\end{exe}
-\end{itemize}
-
+\begin{frame}{Good Metaphors: Not Too Close, Not Too Far}
+  \normalsize
+  \begin{tabular}{ll>{\raggedright\arraybackslash}p{3.2cm}}
+    \toprule
+    too similar & too different & just right \\
+    \midrule
+    \eng{$^\#$Wine is whisky} & \eng{$^\#$His feet were stars} & \eng{Life is a subway train} \\
+    \eng{$^\#$Cars are trucks} & \eng{$^\#$Her cheeks were typewriters} & \eng{Men are thistles} \\
+    \eng{$^\#$Jam is honey}  & \eng{$^\#$Her knees were penguins} & \eng{He posted the toast down to his stomach} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Different fields, sharing one minor characteristic: the dissimilarity tells
+  the listener to start matching
 \end{frame}
 
-\begin{frame}{Target and Source Domains}
-
-\begin{quote}
- Metaphors enable us to understand one
-  domain of experience in terms of another.
-\hfill \citet{lakoff:turner:1989}
-\end{quote}
-
-\begin{itemize}
-\item We map from a \txx{source domain} to a \txx{target domain}
-\\[1.5ex] often written: \txx{TARGET} is \txx{SOURCE}
-\item The mapping is \emp{systematic}: a whole structure is carried over,
-  not just a single word
-\end{itemize}
-
+\begin{frame}{Source and Target Domains}
+  \begin{quote}
+    Metaphors enable us to understand one domain of experience in terms of
+    another. \hfill \citet{lakoff:turner:1989}
+  \end{quote}
+  \vfill
+  \begin{center}
+    \begin{tikzpicture}
+      \node[draw, rounded corners, minimum width=3cm, minimum height=1cm,
+            font=\Large] (s) at (0,0) {JOURNEY};
+      \node[draw, rounded corners, minimum width=3cm, minimum height=1cm,
+            font=\Large] (t) at (6,0) {LIFE};
+      \draw[->, very thick, teal] (s) -- node[above] {mapping} (t);
+      \node[below=2pt of s] {\txx{source}: concrete};
+      \node[below=2pt of t] {\txx{target}: abstract};
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+  \large
+  Written \txx{TARGET} is \txx{SOURCE}: LIFE is a JOURNEY.  The mapping is
+  \emp{systematic}: a whole structure is carried over, not a single word
 \end{frame}
-
-% \begin{frame}{DESIRE is HUNGER}
-
-% \begin{exe}
-%   \ex \eng{He was drooling over her.}
-%   \ex \eng{He is sex-starved.}
-%   \ex \eng{She thirsts for recognition.}
-%   \ex \eng{His sexual appetite is enormous.}
-%   \ex \eng{She hungers for her touch.}
-% \end{exe}
-% \begin{itemize}
-% \item Target domain: DESIRE (SEX, LUST)
-% \item Source domain: FOOD (HUNGER, EATING)
-% \end{itemize}
-
-% \end{frame}
-
-% \begin{frame}[allowframebreaks]{ARGUMENT is WAR}
-
-% \begin{exe}
-% \ex \eng{Your claims are indefensible.}
-% \ex \eng{He attacked every weak point in my argument.}
-% \ex \eng{His criticisms were right on target.}
-% \ex \eng{I demolished his argument.}
-% \ex \eng{I've never won an argument with him.}
-% \ex \eng{You disagree? Okay shoot!}
-% \ex \eng{If you use that strategy, he'll wipe you out.}
-% \ex \eng{He shot down all my arguments.}
-% \ex \eng{He was defeated by the argument.}
-% \end{exe}
-% \framebreak
-% \begin{itemize}
-% \item We don't just talk about argument in terms of war. We can actually win or
-% lose arguments.
-% \item  Many of the things we do in arguing are partially structured by the concept of war.
-% Though there is no physical battle, there is a verbal battle.
-% \begin{itemize}
-%   \item  We see the person we are arguing with as an opponent.
-%   \item  We attack their positions and defend our own.
-%   \item  We gain and lose ground.
-%   \item  We plan and use strategies.
-%  \end{itemize}
-
-% \item The metaphor is not only in the words we use --- it is in our very concept of argument.  We talk about arguments that way because we conceive of them that way --- and we
-% act according to the way we conceive of things
-% \item But we could think of an argument as a search for truth, \ldots
-% \end{itemize}
-
-% \end{frame}
-
-% \begin{frame}{Argument: When losing is winning}
-
-% \begin{itemize}
-% \item Daniel H.\ Cohen (2013) argues that the ARGUMENT is WAR metaphor is counterproductive
-%   \begin{itemize}
-%   \item Suppose you and I have an argument. You believe a proposition, P, and I don't. I've objected, I've questioned, I've raised all sorts of counter-considerations, and in every case you've responded to my satisfaction. At the end of the day, I say, `You know what? I guess you're right.'
-%   \item So I have a new belief. And it's not just any belief, but it's a well-articulated, examined and battle-tested belief.
-%   \item So who won that argument? Well, the war metaphor seems to force us into saying you won, even though I'm the only one who made any cognitive gain.
-%   \item The war metaphor forces us into thinking that you're the winner and I lost, even though I gained --- there's something wrong with that picture.
-%   \end{itemize}
-% \item \small \url{https://www.ted.com/talks/daniel_h_cohen_for_argument_s_sake}
-% \end{itemize}
-
-% \end{frame}
 
 \section{Spatial and Orientational Metaphors}
 
 \begin{frame}{Spatial Metaphors}
-\begin{itemize}
-\item \txx{Spatial metaphors} have to do with
-spatial orientation: \lex{up-down, in-out, front-back, on-off, deep-shallow,
-central-peripheral}.
-
-\item Spatial metaphors give a concept a spatial orientation, e.g.\
-HAPPY is UP: \eng{I'm feeling up today}
-\item Though polar oppositions \eng{up-down, in-out} are physical in nature, the spatial
-metaphors based on them can vary from culture to culture (e.g.\ in most
-cultures FUTURE is FRONT but in at least one FUTURE is BACK)
-\begin{itemize}
-\item Aymara, who live in the Andes highlands of Bolivia, Peru and
-  Chile, have future behind them
-\end{itemize}
-\end{itemize}
-
+  \Large
+  \begin{itemize}
+  \item Give a concept an orientation: \lex{up--down}, \lex{in--out},
+    \lex{front--back}, \lex{deep--shallow}
+  \item HAPPY is UP: \eng{I'm feeling \alert{up} today}
+  \item Physical, but they can still \txx{vary}
+  \end{itemize}
+  \vfill
+  \normalsize
+  In most cultures the FUTURE is in FRONT; for the Aymara of the Andes
+  (Bolivia, Peru, Chile) it is \emph{behind}
 \end{frame}
 
 \begin{frame}{HAPPY is UP; HEALTHY is UP}
-\begin{columns}[T]
-\column{0.48\textwidth}
-HAPPY is UP
-\begin{exe}
-\ex \eng{I'm feeling up.}
-\ex \eng{That boosted my spirits.}
-\ex \eng{My spirits rose.}
-\ex \eng{You're in high spirits.}
-\ex \eng{I'm feeling down.}
-\ex \eng{I'm depressed.}
-\ex \eng{He is really low these days.}
-\ex \eng{My spirits sank.}
-\end{exe}
-
-\column{0.48\textwidth}
-HEALTHY is UP
-\begin{exe}
-\ex \eng{He's at the peak of health.}
-\ex \eng{Lazarus rose from the dead.}
-\ex \eng{He's in top shape.}
-\ex \eng{He fell ill.}
-\ex \eng{He is sinking fast.}
-\ex \eng{He came down with the flu.}
-\ex \eng{His health is declining.}
-\ex \eng{He dropped dead.}
-\end{exe}
-\end{columns}
-
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    HAPPY is UP & HEALTHY is UP \\
+    \midrule
+    \eng{I'm feeling \alert{up}.}         & \eng{He's at the \alert{peak} of health.} \\
+    \eng{That \alert{boosted} my spirits.} & \eng{Lazarus \alert{rose} from the dead.} \\
+    \eng{You're in \alert{high} spirits.}  & \eng{He's in \alert{top} shape.} \\
+    \eng{I'm feeling \alert{down}.}        & \eng{He \alert{fell} ill.} \\
+    \eng{He is really \alert{low} these days.} & \eng{He came \alert{down} with the flu.} \\
+    \eng{My spirits \alert{sank}.}         & \eng{He \alert{dropped} dead.} \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
 \begin{frame}{CONTROL is UP; AWAKE is UP}
-\begin{columns}[T]
-\column{0.48\textwidth}
-CONTROL is UP
-\begin{exe}
-\ex \eng{I have control over her.}
-\ex \eng{I am on top of the situation.}
-\ex \eng{He's at the height of his power.}
-\ex \eng{He's in high command.}
-\ex \eng{He's in the upper echelon.}
-\ex \eng{He is under my control.}
-\ex \eng{He fell from power.}
-\end{exe}
-
-\column{0.48\textwidth}
-AWAKE is UP
-\begin{exe}
-\ex \eng{Get up.}
-\ex \eng{Wake up.}
-\ex \eng{He rises early in the morning.}
-\ex \eng{He fell asleep.}
-\ex \eng{He dropped off to sleep.}
-\ex \eng{He's under hypnosis.}
-\ex \eng{He sank into a coma.}
-\end{exe}
-\end{columns}
-
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    CONTROL is UP & AWAKE is UP \\
+    \midrule
+    \eng{I am on \alert{top} of the situation.} & \eng{Get \alert{up}.} \\
+    \eng{He's at the \alert{height} of his power.} & \eng{He \alert{rises} early.} \\
+    \eng{He's in the \alert{upper} echelon.}    & \eng{He \alert{fell} asleep.} \\
+    \eng{He is \alert{under} my control.}       & \eng{He \alert{dropped off} to sleep.} \\
+    \eng{He \alert{fell} from power.}           & \eng{He \alert{sank} into a coma.} \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
 \begin{frame}{VIRTUE is UP; MORE is UP}
-\begin{columns}[T]
-\column{0.48\textwidth}
-VIRTUE is UP
-\begin{exe}
-\ex \eng{He is high-minded.}
-\ex \eng{She is upright.}
-\ex \eng{She is an upstanding citizen.}
-\ex \eng{He is underhanded.}
-\ex \eng{I wouldn't stoop to that.}
-\ex \eng{That is beneath me.}
-\ex \eng{That was a low trick.}
-\end{exe}
-
-\column{0.48\textwidth}
-MORE is UP
-\begin{exe}
-\ex \eng{The number of books printed keeps going up.}
-\ex \eng{The number of errors he made is incredibly low.}
-\ex \eng{What is the upper bound?}
-\end{exe}
-\end{columns}
-
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    VIRTUE is UP & MORE is UP \\
+    \midrule
+    \eng{He is \alert{high}-minded.}         & \eng{The number keeps going \alert{up}.} \\
+    \eng{She is \alert{upright}.}            & \eng{His errors are incredibly \alert{low}.} \\
+    \eng{He is \alert{under}handed.}         & \eng{What is the \alert{upper} bound?} \\
+    \eng{I wouldn't \alert{stoop} to that.}  & \\
+    \eng{That is \alert{beneath} me.}        & \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
 \begin{frame}{Why UP?}
-
-\begin{itemize}
-\item Our experience of physical objects and substances provides a
-  further basis for understanding.
-\item UP is positive
-  \begin{itemize}
-  \item if we pile things up, more reach higher
-  \item healthy people stand upright
-  \item when we are awake, we stand up
-  \end{itemize}
-\item Understanding our experiences
-  in terms of objects and  substances allows us to pick out parts
-  of our experience and treat them as discrete entities.
-\item This is why so many of these metaphors recur across unrelated
-  languages: they are grounded in the same bodies
-\end{itemize}
-
+  \Large
+  \begin{tabular}{ll}
+    pile things up       & more reaches higher \\
+    healthy people       & stand upright \\
+    when we are awake    & we stand up \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  These metaphors recur across unrelated languages because they are grounded
+  in the same bodies
 \end{frame}
 
 \begin{frame}{CONTROL is UP in Chinese and Japanese}
+  \large
+  \begin{tabular}{llll}
+    \toprule
+    & Mandarin & Japanese & means \\
+    \midrule
+    \zhs{上级}  & \cmn{shàngjí} &              & superior \\
+    \zhs{下级}  & \cmn{xiàjí}   &              & subordinate \\
+    \jps{上司}  & \cmn{shàngsi} & \jpn{jōshi}  & boss \\
+    \jps{部下}  &               & \jpn{buka}   & subordinate (``under the section'') \\
+    \jps{目上}  &               & \jpn{meue}   & one's senior (``above the eye'') \\
+    \bottomrule
+  \end{tabular}
 
-\begin{itemize}
-\item Mandarin \cmn{上} \emph{shàng} ``up'' and \cmn{下} \emph{xià} ``down''
-  carry the same social orientation:
-  \begin{exe}
-    \ex \cmn{上级} \emph{shàngjí} ``superior, higher authority''
-    \ex \cmn{下级} \emph{xiàjí} ``subordinate''
-    \ex \cmn{上司} \emph{shàngsi} ``one's boss''
-  \end{exe}
-\item Japanese uses the same characters:
-  \begin{exe}
-    \ex \jpn{上司} \emph{jōshi} ``superior, boss''
-    \ex \jpn{部下} \emph{buka} ``subordinate'' (lit.\ ``under the section'')
-    \ex \jpn{目上} \emph{meue} ``one's senior'' (lit.\ ``above the eye'')
-  \end{exe}
-\item Shared vocabulary (Sino-Japanese, Sino-Korean, Sino-Vietnamese) means
-  shared metaphors travel with the loanwords
-\item[?] Is this borrowing, or would the metaphor be there anyway?
-\end{itemize}
-
+  \vfill
+  \normalsize
+  Shared Sino-vocabulary carries shared metaphors.  Borrowing --- or would
+  the metaphor be there anyway?
 \end{frame}
 
-\begin{frame}{Time is vertical in Mandarin}
+\begin{frame}{Mandarin Time Runs Down --- and Forward Is the Past}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    \zhs{上个月} & \cmn{shàng ge yuè} & last month (``up month'') \\
+    \zhs{下个月} & \cmn{xià ge yuè}   & next month (``down month'') \\
+    \zhs{上午}   & \cmn{shàngwǔ}      & morning \\
+    \zhs{下午}   & \cmn{xiàwǔ}        & afternoon \\
+    \midrule
+    \zhs{以前}   & \cmn{yǐqián}       & before (``taking the \alert{front}'') \\
+    \zhs{以后}   & \cmn{yǐhòu}        & after (``taking the back'') \\
+    \bottomrule
+  \end{tabular}
 
-\begin{itemize}
-\item English mostly puts time on a horizontal axis: \eng{the week ahead},
-  \eng{back in 1999}
-\item Mandarin also uses a \emp{vertical} axis, with earlier events UP:
-  \begin{exe}
-    \ex \cmn{上个月} \emph{shàng ge yuè} ``last month'' (lit.\ ``up month'')
-    \ex \cmn{下个月} \emph{xià ge yuè} ``next month'' (lit.\ ``down month'')
-    \ex \cmn{上午} \emph{shàngwǔ} ``morning'' / \cmn{下午} \emph{xiàwǔ} ``afternoon''
-  \end{exe}
-\item And a horizontal one, but with the past in \emp{front}:
-  \begin{exe}
-    \ex \cmn{以前} \emph{yǐqián} ``before'' (lit.\ ``taking the front'')
-    \ex \cmn{以后} \emph{yǐhòu} ``after'' (lit.\ ``taking the back'')
-  \end{exe}
-\item So the Aymara pattern is not as exotic as it first looks
-\item There is experimental work suggesting these differences show up in
-  non-linguistic tasks --- but the effects are small
-\end{itemize}
-
+  \vfill
+  \normalsize
+  English time is horizontal: \eng{the week ahead}, \eng{back in 1999}.
+  So the Aymara pattern is not so exotic; experiments find small effects
+  outside language too
 \end{frame}
 
 \section{Structural and Ontological Metaphors}
 
-\begin{frame}{MENTAL HEALTH is a (FRAGILE) OBJECT}
-\begin{exe}
-\ex \eng{Her mental health is very fragile.}
-\ex \eng{We have to handle him with care since his wife's death.}
-\ex \eng{He broke under cross-examination.}
-\ex \eng{She is easily crushed.}
-\ex \eng{The experience shattered him.}
-\ex \eng{I'm going to pieces.}
-\ex \eng{His mind snapped.}
-\ex \eng{He cracked up.}
-\end{exe}
-
+\begin{frame}{MENTAL HEALTH is a FRAGILE OBJECT}
+  \Large
+  \begin{tabular}{ll}
+    \eng{Her mental health is \alert{fragile}.} & \eng{She is easily \alert{crushed}.} \\
+    \eng{\alert{Handle} him \alert{with care}.} & \eng{The experience \alert{shattered} him.} \\
+    \eng{He \alert{broke} under questioning.}   & \eng{I'm \alert{going to pieces}.} \\
+    \eng{His mind \alert{snapped}.}             & \eng{He \alert{cracked} up.} \\
+  \end{tabular}
 \end{frame}
 
 \begin{frame}{MIND is a MACHINE}
-\begin{exe}
-\ex \eng{We're still trying to grind out the solution to this equation.}
-\ex \eng{My mind just isn't operating today.}
-\ex \eng{Boy, the wheels are turning now!}
-\ex \eng{I'm a little rusty today.}
-\ex \eng{We've been working on this problem all day and now we're running out of steam.}
-\ex \eng{He broke down.}
-\end{exe}
-
-\begin{itemize}
-\item Note that the source domain has to exist: this metaphor is
-  not very old
-\end{itemize}
-
+  \Large
+  \begin{tabular}{l}
+    \eng{We're still trying to \alert{grind out} the solution.} \\
+    \eng{My mind just isn't \alert{operating} today.} \\
+    \eng{Boy, the \alert{wheels are turning} now!} \\
+    \eng{I'm a little \alert{rusty} today.} \\
+    \eng{We're \alert{running out of steam}.} \\
+    \eng{He \alert{broke down}.} \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  The source domain has to exist first: this metaphor is not very old
 \end{frame}
 
-\begin{frame}{LIFE is a JOURNEY}
-\begin{itemize}
-\item The person leading a life is a traveler
-\item Their purposes are destinations
-\item The means for achieving purposes are routes
-\item Difficulties in life are impediments to travel
-\item Counsellors are guides
-\item Progress is the distance traveled
-\item Things you gauge your progress by are landmarks
-\item Material resources and talents are provisions
-\end{itemize}
-
+\begin{frame}{LIFE is a JOURNEY: The Mapping}
+  \Large
+  \begin{tabular}{lcl}
+    \toprule
+    JOURNEY & & LIFE \\
+    \midrule
+    traveller    & $\to$ & person living a life \\
+    destinations & $\to$ & purposes \\
+    routes       & $\to$ & means of achieving them \\
+    impediments  & $\to$ & difficulties \\
+    guides       & $\to$ & counsellors \\
+    distance     & $\to$ & progress \\
+    landmarks    & $\to$ & how you gauge progress \\
+    provisions   & $\to$ & resources and talents \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
 \section{Metonymy}
 
-\begin{frame}{Metonymy}
-
-\begin{itemize}
-  \item \txx{Metonymy} is a shift of reference \emph{within} a single conceptual domain
-  \item One entity provides mental access to another related entity
-  \item Based on \txx{contiguity} (association, connection), not similarity
-\end{itemize}
-
-\vspace{0.5em}
-
-\textbf{Examples}
-\begin{itemize}
-  \item \eng{\ul{The White House} announced new policies.}
-        (building $\rightarrow$ institution/people)
-  \item \eng{She enjoys reading \ul{Shakespeare}.}
-        (author $\rightarrow$ works)
-  \item \eng{The \ul{kettle} is boiling.}
-        (container $\rightarrow$ contents)
-  \item \eng{All \ul{hands} on deck.}
-        (part $\rightarrow$ whole person)
-\end{itemize}
-
-\vspace{0.5em}
-
-\textbf{Key idea:}
-Metonymy navigates structure that is already present.
-
+\begin{frame}{Metonymy: A Stands for B}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \eng{\alert{The White House} announced \ldots} & building $\to$ institution \\
+    \eng{She enjoys reading \alert{Shakespeare}.} & author $\to$ works \\
+    \eng{The \alert{kettle} is boiling.}          & container $\to$ contents \\
+    \eng{All \alert{hands} on deck.}              & part $\to$ whole person \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  A shift of reference \emph{within} one domain, based on \txx{contiguity},
+  not similarity: metonymy navigates structure that is already there
 \end{frame}
 
 \begin{frame}{Metonymy vs.\ Metaphor}
-
-\begin{columns}[T]
-
-\column{0.48\textwidth}
-\textbf{Metonymy}
-\begin{itemize}
-  \item Within-domain shift
-  \item Based on contiguity
-  \item Referential shortcut
-  \item Exploits existing frame structure
-  \item Example:
-        \eng{\ul{Brussels} decided to impose tariffs.}
-\end{itemize}
-
-\column{0.48\textwidth}
-\textbf{Metaphor}
-\begin{itemize}
-  \item Cross-domain mapping
-  \item Based on similarity or analogy
-  \item Structures abstract domains
-  \item Creates new conceptual links
-  \item Example:
-        \eng{He \ul{attacked} my argument.}
-\end{itemize}
-
-\end{columns}
-
-\vspace{0.8em}
-
-\centering
-\textbf{Metonymy:} A stands for B (same frame) \\
-\textbf{Metaphor:} A is understood in terms of B (different domains)
-
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    & metonymy & metaphor \\
+    \midrule
+    domains & within one     & across two \\
+    basis   & contiguity     & similarity \\
+    does    & refers         & structures \\
+    example & \eng{\alert{Brussels} decided \ldots} & \eng{He \alert{attacked} my argument.} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Metonymy: A \emph{stands for} B.  Metaphor: A is \emph{understood in terms
+  of} B
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Kinds of Metonymy}
-
-\begin{itemize}
-\item PART for WHOLE (synecdoche)
-  \begin{exe}
-    \ex \eng{Can you lend a hand?}
-  \end{exe}
-\item WHOLE for PART (synecdoche)
-  \begin{exe}
-    \ex \eng{Palacký won the soccer.}
-  \end{exe}
-\item CONTAINER for CONTENT
-  \begin{exe}
-    \ex \eng{The lunch menu had five dishes.}
-  \end{exe}
-\item MATERIAL for OBJECT
-  \begin{exe}
-    \ex \eng{I won gold.}
-   \end{exe}
-\item PRODUCER for PRODUCT
-  \begin{exe}
-    \ex \eng{I'll get an IBM.}
-  \end{exe}
-  \framebreak
-\item PLACE for INSTITUTION (toponym)
-  \begin{exe}
-    \ex \eng{Downing Street has made no comment.}
-  \end{exe}
- \item INSTITUTION for PEOPLE RESPONSIBLE
-   \begin{exe}
-     \ex \eng{Albert raised its prices.}
-   \end{exe}
-\item PLACE for EVENT
-  \begin{exe}
-    \ex \eng{Hiroshima changed our view of war.}
-  \end{exe}
- \item CONTROLLER for CONTROLLED
-   \begin{exe}
-     \ex \eng{A truck rear-ended me.}
-   \end{exe}
- \item OBJECT for USER
-   \begin{exe}
-     \ex \eng{They are a hired gun.}
-   \end{exe}
-\end{itemize}
-
+\begin{frame}{Kinds of Metonymy}
+  \normalsize
+  \begin{tabular}{ll}
+    \toprule
+    PART for WHOLE (synecdoche)  & \eng{Can you lend a \alert{hand}?} \\
+    WHOLE for PART (synecdoche)  & \eng{\alert{Palacký} won the soccer.} \\
+    CONTAINER for CONTENT        & \eng{The lunch \alert{menu} had five dishes.} \\
+    MATERIAL for OBJECT          & \eng{I won \alert{gold}.} \\
+    PRODUCER for PRODUCT         & \eng{I'll get an \alert{IBM}.} \\
+    PLACE for INSTITUTION        & \eng{\alert{Downing Street} has made no comment.} \\
+    INSTITUTION for PEOPLE       & \eng{\alert{Albert} raised its prices.} \\
+    PLACE for EVENT              & \eng{\alert{Hiroshima} changed our view of war.} \\
+    CONTROLLER for CONTROLLED    & \eng{A \alert{truck} rear-ended me.} \\
+    OBJECT for USER              & \eng{They are a hired \alert{gun}.} \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
-\begin{frame}{Metonymy in Asian languages}
-
-\begin{itemize}
-\item PLACE for INSTITUTION works the same way:
-  \begin{exe}
-    \ex \jpn{永田町} \emph{Nagatachō} ``the Japanese political establishment''
-      (the district where the Diet sits)
-    \ex \jpn{霞が関} \emph{Kasumigaseki} ``the central bureaucracy''
-    \ex \cmn{中南海} \emph{Zhōngnánhǎi} ``the Chinese leadership''
-  \end{exe}
-\item PART for WHOLE with body parts is very widespread:
-  \begin{exe}
-    \ex \cmn{人口} \emph{rénkǒu} ``population'' (lit.\ ``person mouth'')
-    \ex \jpn{手が足りない} \emph{te ga tarinai} ``to be short-handed''
-      (lit.\ ``hands are not enough'')
-  \end{exe}
-\item[?] What are the equivalents in the language you are working on?
-\end{itemize}
-
+\begin{frame}{Metonymy in Asian Languages}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{3}{l}{PLACE for INSTITUTION} \\
+    \midrule
+    \jps{永田町} & \jpn{Nagatachō}    & Japanese politics \\
+    \jps{霞が関} & \jpn{Kasumigaseki} & the central bureaucracy \\
+    \zhs{中南海} & \cmn{Zhōngnánhǎi}  & the Chinese leadership \\
+    \midrule
+    \multicolumn{3}{l}{PART for WHOLE} \\
+    \midrule
+    \zhs{人口}   & \cmn{rénkǒu}       & population (``person mouth'') \\
+    \jps{手が足りない} & \jpn{te ga tarinai} & short-handed (``hands lack'') \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  What are the equivalents in the language you are working on?
 \end{frame}
 
 \section{Case Study: Anger}
 
-\begin{frame}[allowframebreaks]{ANGER}
+\begin{frame}{Anger Has a Physiology}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    body heat          & \eng{hot under the collar}, \eng{a hothead}, \eng{a heated argument} \\
+    internal pressure  & \eng{I almost burst a blood vessel}, \eng{I exploded at them} \\
+    redness            & \eng{scarlet with rage}, \eng{flushed with anger} \\
+    agitation          & \eng{shaking with anger}, \eng{hopping mad}, \eng{all worked up} \\
+    blurred perception & \eng{blind with rage}, \eng{seeing red}, \eng{couldn't see straight} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Emotions are not just feelings: they have conceptual structure, visible
+  in metaphor.  Lakoff and Johnson's cultural model of anger: the effects
+  grow with the anger, up to a limit beyond which we cannot function
+\end{frame}
 
-\begin{itemize}
-\item Emotions are often considered to be feelings alone, and
-as such they are viewed as being devoid of conceptual
-content.
-\item In fact emotions have a fairly complex conceptual
-structure which can be studied through metaphors.
-\item Lakoff and Johnson's cultural model of anger
-\\ Physiological effects of anger:
+\begin{frame}{The Body Is a Container}
+  \Large
+  \begin{tabular}{l}
+    \eng{He was \alert{filled} with anger.} \\
+    \eng{She couldn't \alert{contain} her joy.} \\
+    \eng{She was \alert{brimming} with rage.} \\
+    \eng{Get the anger \alert{out of your system}.} \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Combine it with ANGER is HEAT and you get the central metaphor:
+  ANGER is a \txx{HOT FLUID in a CONTAINER}
+\end{frame}
+
+\begin{frame}{ANGER is a Hot Fluid in a Container}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    cool = calm    & \eng{Keep \alert{cool}.} \eng{Stay calm.} \\
+    heat           & \eng{You make my blood \alert{boil}.} \eng{\alert{Simmer} down!} \eng{She was \alert{seething}.} \\
+    rising         & \eng{His anger \alert{welled up}.} \eng{Pretty soon I was in a \alert{towering} rage.} \\
+    pressure       & \eng{He was \alert{bursting} with anger.} \eng{He kept it \alert{bottled up}.} \\
+    explosion      & \eng{She \alert{blew up} at me.} \eng{She \alert{blew a fuse}.} \eng{He \alert{erupted}.} \\
+    parts fly off  & \eng{I \alert{blew my top}.} \eng{She \alert{flipped her lid}.} \eng{He \alert{hit the ceiling}.} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  \lex{pissed off} is only used for anger: hot liquid under pressure
+\end{frame}
+
+\begin{frame}{The Container Has a Limit}
+  \Large
   \begin{itemize}
-  \item Increased body heat
-  \item Increased internal pressure
-  \item Agitation
-  \item Interference with accurate perception
-  \item As anger increases, the physiological effect increases
-  \item There is a limit beyond which the physiological effects of anger impair normal functioning.
-\end{itemize}
-\end{itemize}
-\framebreak
-\begin{itemize}
-\item Body heat:
-  \begin{exe}
-    \ex \eng{Don't get hot under the collar.}
-    \ex \eng{Billy's a hothead.}
-    \ex \eng{They were having a heated argument.}
-    \ex \eng{She got all hot and bothered.}
-  \end{exe}
-  \item Internal pressure:
-  \begin{exe}
-    \ex \eng{When I found out, I almost burst a blood vessel.}
-    \ex \eng{He almost had a hemorrhage.}
-    \ex \eng{I exploded at them.}
-  \end{exe}
-\framebreak
-\item Redness in the face and neck area:
-  \begin{exe}
-    \ex \eng{She was scarlet with rage.}
-    \ex \eng{He got red with anger.}
-    \ex \eng{He was flushed with anger.}
-  \end{exe}
-\item Agitation:
-\begin{exe}
-  \ex \eng{She was shaking with anger.}
-  \ex \eng{I was hopping mad.}
-  \ex \eng{He was quivering with rage.}
-  \ex \eng{He's all worked up.}
- \ex \eng{She's all wrought up.}
-\end{exe}
-\framebreak
-\item Interference with accurate perception:
-\begin{exe}
-  \ex \eng{She was blind with rage.}
-  \ex \eng{I was beginning to see red.}
-  \ex \eng{I was so mad I couldn't see straight.}
-\end{exe}
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}[allowframebreaks]{ANGER is HEAT}
-
-\begin{itemize}
-\item ANGER is HEAT forms the basis of the most
-  general metaphor for anger
-\item There are two versions to this metaphor,
-  one where the heat is applied to fluid and
-  the other where the heat is applied to
-  solids.
-\item The fluid version is more elaborated
-\end{itemize}
-
-\begin{itemize}
-\item The body is a container for the emotions
-\begin{exe}
-  \ex \eng{He was filled with anger.}
-  \ex \eng{She couldn't contain her joy.}
-  \ex \eng{She was brimming with rage.}
-  \ex \eng{Try to get the anger out of your system.}
-\end{exe}
-\framebreak
-\item
-The ANGER is HEAT metaphor when applied to fluids combines with the
-metaphor the body is a container for the emotions to yield the central
-metaphor of the system:
-\item ANGER is HEAT OF A FLUID in a container.
-\begin{exe}
-  \ex \eng{You make my blood boil.}
-  \ex \eng{Simmer down!}
-  \ex \eng{I had reached the boiling point.}
-  \ex \eng{Let him stew.}
-  \ex \eng{She was seething with rage.}
-\end{exe}
-
-\item Similarly \lex{pissed off} is used only to refer to anger --- ``hot liquid under
-  pressure''
-
- \framebreak
-\item Cool and calm corresponds to the lack of anger.
-\begin{exe}
-  \ex \eng{Keep cool.}
-  \ex \eng{Stay calm.}
-\end{exe}
-
-\item When the intensity of anger increases the fluid rises
-\begin{exe}
-  \ex \eng{His pent-up anger welled up inside him.}
-  \ex \eng{She could feel her gorge rising.}
-  \ex \eng{We got a rise out of him.}
-  \ex \eng{My anger kept building up inside me.}
-  \ex \eng{Pretty soon I was in a towering rage.}
-\end{exe}
-\framebreak
-\item We also know that intense heat produces steam and creates pressure on the
-container. This yields the metaphorical entailments:
-\item Intense anger produces pressure on the container
-  \begin{exe}
-    \ex \eng{He was bursting with anger.}
-    \ex \eng{I could barely contain my rage.}
-    \ex \eng{I could barely keep it in any more.}
-    \ex \eng{He suppressed his anger.}
-    \ex \eng{He turned his anger inward.}
-    \ex \eng{He managed to keep his anger bottled up inside him.}
-    \ex \eng{He was blue in the face.}
-\end{exe}
-\framebreak
-\item  When the pressure on the container becomes too high, the container explodes.
-\item When anger becomes too intense the person explodes
-  \begin{exe}
-    \ex \eng{When I told him, he just exploded.}
-  \ex \eng{She blew up at me.}
-  \ex \eng{We don't like your outbursts.}
-  \ex \eng{She blew a fuse.}
-  \ex \eng{He blew a gasket.}
-  \ex \eng{He erupted.}
-\end{exe}
-\framebreak
-\item When a person explodes, parts of them go up in the air
-  \begin{exe}
-  \ex \eng{I blew my stack.}
-  \ex \eng{I blew my top.}
-  \ex \eng{She flipped her lid.}
-  \ex \eng{He hit the ceiling.}
-  \ex \eng{I went through the roof.}
-\end{exe}
-
-\framebreak
-
-\item The central metaphor of anger as heated fluid in a container indicates
-that the anger scale is not open-ended, it has a limit. Just as hot
-fluid in a closed container can only take so much heat before it
-explodes, so we conceptualise the anger scale as having a limit
-point. We can only bear so much anger before we explode.
-\item The conceptual metaphors are motivated by our own physiology.
-\item There may be cross-cultural differences
-\item And there are many possible metaphors
-
-\begin{itemize}
-\item ANGER is FIRE
-\item ANGER is INSANITY
-\item ANGER is an OPPONENT
-\item ANGER is a DANGEROUS ANIMAL
-\end{itemize}
-
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Anger in Lamaholot}
-
-ANGER is HOT SPICES
-\begin{exe}
-  \ex \gll one=k helo n-o'oN sili lia' \\
-heart=1SG.POSS like 3SG.exist chilli ginger \\
-\trans ``I am furious (lit.\ there exist chilli and ginger in my heart).''
-\end{exe}
-
-Adonara-Lamaholot is a small language spoken on the eastern part of Flores
-Island, Solor Island, and Lembata Island of Eastern Indonesia.   From
-the PhD thesis of Elvis Albertus bin Toni (NTU 2018).
-
-\end{frame}
-
-\begin{frame}{Anger in Chinese: the container holds \cmn{气}}
-
-\begin{itemize}
-\item Mandarin builds anger on \cmn{气} \emph{qì} ``air, breath, vital energy''
-  rather than on a hot liquid:
-  \begin{exe}
-    \ex \cmn{生气} \emph{shēngqì} ``get angry'' (lit.\ ``produce \emph{qi}'')
-    \ex \cmn{我很生气} \emph{wǒ hěn shēngqì} ``I am very angry''
-    \ex \cmn{消气} \emph{xiāoqì} ``calm down'' (lit.\ ``dissipate \emph{qi}'')
-    \ex \cmn{气死我了} \emph{qì sǐ wǒ le} ``I'm furious'' (lit.\ ``\emph{qi} killed me'')
-  \end{exe}
-\item The CONTAINER is the same; what is in it differs
-  \begin{itemize}
-  \item English: hot \emp{fluid} under pressure
-  \item Chinese: excess \emp{qi}, which must be released or dispersed
+  \item A closed container takes only so much heat: the anger scale has a
+    \txx{limit}
+  \item The metaphor is motivated by our \txx{physiology}
+  \item Other metaphors exist too:
   \end{itemize}
-\item The pressure and release structure is shared; the substance is
-  culturally specific --- here to traditional Chinese medicine
-\end{itemize}
-
+  \vfill
+  \large
+  \begin{tabular}{ll}
+    ANGER is FIRE     & ANGER is an OPPONENT \\
+    ANGER is INSANITY & ANGER is a DANGEROUS ANIMAL \\
+  \end{tabular}
+  \vfill
 \end{frame}
 
-\begin{frame}{Anger in Japanese and Korean}
-
-\begin{itemize}
-\item Japanese locates anger in the \jpn{腹} \emph{hara} ``belly'':
+\begin{frame}{Lamaholot: ANGER is HOT SPICES}
   \begin{exe}
-    \ex \jpn{腹が立つ} \emph{hara ga tatsu} ``get angry'' (lit.\ ``the belly stands up'')
-    \ex \jpn{腹を立てる} \emph{hara o tateru} ``get angry'' (transitive)
-    \ex \jpn{頭に来る} \emph{atama ni kuru} ``get angry'' (lit.\ ``it comes to the head'')
+    \ex
+    \gll one=k helo n-o'oN sili lia' \\
+         heart=1\textsc{sg.poss} like 3\textsc{sg}-exist chilli ginger \\
+    \trans ``I am furious'' (lit.\ ``there are chilli and ginger in my heart'') [slp]
   \end{exe}
-\item Korean uses \kor{화} \emph{hwa}, from Sino-Korean \kor{火} ``fire'':
-  \begin{exe}
-    \ex \kor{화가 나다} \emph{hwa-ga nada} ``get angry'' (lit.\ ``anger/fire comes out'')
-    \ex \kor{속이 타다} \emph{sok-i tada} ``be anxious, fret'' (lit.\ ``the insides burn'')
-  \end{exe}
-\item Same broad picture --- a container, heat, and something rising ---
-  but different body parts and different substances
-\item[?] Where does anger live in the language you are working on?
-\end{itemize}
-
+  \vfill
+  \large
+  Adonara-Lamaholot is spoken on eastern Flores, Solor and Lembata, in
+  eastern Indonesia.  From the PhD thesis of Elvis Albertus bin Toni (NTU 2018)
 \end{frame}
 
-\begin{frame}{Universality and variation}
+\begin{frame}{Mandarin: The Container Holds \zhs{气} \cmn{qì}}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    \zhs{生气}     & \cmn{shēngqì}      & get angry (``produce \emph{qi}'') \\
+    \zhs{消气}     & \cmn{xiāoqì}       & calm down (``dissipate \emph{qi}'') \\
+    \zhs{气死我了} & \cmn{qì sǐ wǒ le}  & I'm furious (``\emph{qi} killed me'') \\
+    \bottomrule
+  \end{tabular}
 
-\begin{itemize}
-\item \citet{kovecses2005metaphor} argues that conceptual metaphors show
-  both:
-  \begin{itemize}
-  \item \emp{universal} tendencies, grounded in shared human bodies
-    (the pressurised container for anger)
-  \item \emp{cultural variation} in which source domain is chosen, and
-    how it is elaborated (fluid vs \emph{qi} vs chilli and ginger)
-  \end{itemize}
-\item This is exactly the kind of claim you can test with a small
-  cross-linguistic survey
-\item Beware of two easy mistakes:
-  \begin{itemize}
-  \item Assuming a metaphor is universal because it exists in English
-    and one other language
-  \item Assuming a metaphor is culturally specific because you have not
-    found it elsewhere yet
-  \end{itemize}
-\end{itemize}
+  \vfill
+  \begin{tabular}{ll}
+    English  & hot \emp{fluid} under pressure \\
+    Mandarin & excess \emp{qi}, to be released or dispersed \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  The container and the pressure are shared; the substance comes from
+  traditional Chinese medicine
+\end{frame}
 
+\begin{frame}{Japanese and Korean: Belly, Head and Fire}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    \jps{腹が立つ}   & \jpn{hara ga tatsu}  & get angry (``the belly stands up'') \\
+    \jps{頭に来る}   & \jpn{atama ni kuru}  & get angry (``it comes to the head'') \\
+    \midrule
+    \kos{화가 나다}  & \kor{hwa-ga nada}    & get angry (``fire comes out'') \\
+    \kos{속이 타다}  & \kor{sok-i tada}     & fret (``the insides burn'') \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  Korean \kor{hwa} is Sino-Korean \zht{火} ``fire''.  The same broad
+  picture --- container, heat, something rising --- with different body
+  parts and substances.  Where does anger live in your language?
+\end{frame}
+
+\begin{frame}{Universal and Variable}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \emp{universal} & shared bodies: the pressurized container \\
+    \emp{variable}  & the substance: fluid, \emph{qi}, chilli \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  \citet{kovecses2005metaphor}.  Two easy mistakes: calling a metaphor
+  universal because English and one other language have it, or culturally
+  specific because you haven't found it elsewhere yet
 \end{frame}
 
 \section{Metaphor across Asian Languages}
 
 \begin{frame}{PERSON is ANIMAL}
-
-\begin{itemize}
-\item One of the most productive metaphor families in every language
-  we know of
-\item A human is described through the stereotyped properties of an animal
-  \begin{exe}
-    \ex \eng[dirty, greedy]{He is a pig.}
-    \ex \eng[cunning; or attractive]{She is a fox.}
-    \ex \eng[unthinking follower]{Don't be such a sheep.}
-  \end{exe}
-\item The mapping is built on the \emp{cultural stereotype} of the animal,
-  not its actual behaviour
-\item So the same animal can map very differently across cultures --- which
-  makes it a good testbed for universality vs variation
-\end{itemize}
-
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \eng{He is a \alert{pig}.}             & dirty, greedy \\
+    \eng{She is a \alert{fox}.}            & cunning; or attractive \\
+    \eng{Don't be such a \alert{sheep}.}   & unthinking follower \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Built on the \emp{cultural stereotype} of the animal, not its behaviour ---
+  so the same animal can map differently across cultures: a good test of
+  universality
 \end{frame}
 
-\begin{frame}{Animal metaphors in East Asia}
-
-\begin{itemize}
-\item The fox is deceptive in Chinese, Japanese and English, but the
-  details differ:
-  \begin{exe}
-    \ex \jpn{狐} \emph{kitsune} ``fox; a sly, deceptive person''
-    \ex \cmn{狐狸精} \emph{húlijīng} ``fox spirit; a seductive woman''
-  \end{exe}
-\item Some are much more language specific:
-  \begin{exe}
-    \ex \jpn{犬} \emph{inu} ``dog; a snitch, informer, spy''
-    \ex \kor{청개구리} \emph{cheong-gaeguri} ``green tree frog; a contrary,
-      disobedient person''
-  \end{exe}
-\item English \eng{dog} does not mean ``informer''; Czech \emph{pes} does not either
-\item[?] Does your language have a metaphor for ``informer''? What animal?
-\end{itemize}
-
+\begin{frame}{Animal Metaphors in East Asia}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    \jps{狐}     & \jpn{kitsune}        & fox; a sly, deceptive person \\
+    \zhs{狐狸精} & \cmn{húlijīng}       & fox spirit; a seductive woman \\
+    \midrule
+    \jps{犬}     & \jpn{inu}            & dog; a snitch, spy \\
+    \kos{청개구리} & \kor{cheong-gaeguri} & tree frog; a contrary person \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  English \eng{dog} and Czech \mtciteform{pes} do not mean ``informer''.
+  Does your language have an animal for ``informer''?
 \end{frame}
 
-\begin{frame}{This week's task: PERSON is ANIMAL}
-
-\begin{itemize}
-\item Please look at some examples of PERSON is ANIMAL metaphors for
-  your language \emp{before next week}. You can work in pairs (or triples).
-\item Choose one of the languages in the shared sheet (or add one)
-\item For each metaphor in English, see if it can be used in your language
+\begin{frame}{This Week's Task: PERSON is ANIMAL}
+  \large
   \begin{itemize}
-  \item If it can: write the translation and mark it \emp{Y}
-  \item If it cannot: mark it \emp{N}
-  \item If the same animal has another metaphorical sense, add it in a new
-    row with a definition
-  \item If you know other animal metaphors, add them at the end, with both
-    the literal and the metaphorical meaning
+  \item In pairs or triples, \emp{before next week}: pick a language from the
+    shared sheet (or add one)
+  \item For each English metaphor: can your language say it?
   \end{itemize}
-\item We will then discuss the similarities and differences in class
-\item \small The data sheet is linked from the course page for this week
-\end{itemize}
-
+  \vfill
+  \begin{tabular}{ll}
+    \toprule
+    it works                     & give the translation, mark \emp{Y} \\
+    it doesn't                   & mark \emp{N} \\
+    a different sense & add a row with a definition \\
+    other animal metaphors       & add them, with both meanings \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  We compare in class.  The data sheet is linked from this week's course page
 \end{frame}
 
 \section{Conclusions}
 
 \begin{frame}{Conclusions}
-
-\begin{itemize}
-\item We can combine words in non-compositional ways
-\item But still there are shared conventions
-\item Some things we have to learn (\txx{idioms}), some things we work out
-  on the fly (\txx{metaphors})
-\item The distinction is somewhat fuzzy
-\item Metaphor is not decoration: it structures how we reason about
-  argument, time, emotion and people
-\item Across the languages of East and Southeast Asia we find the same
-  broad mappings, realised with different bodies, substances and animals
-\item \citet{saeed:2015} talks about Metaphor in Section~11.4 and Metonymy
-  in Section~11.5
-\end{itemize}
-
+  \Large
+  \begin{itemize}
+  \item Categories have \txx{prototypes}; metaphor and metonymy extend them
+  \item Metaphor is not decoration: it structures \txx{argument, time,
+      emotion} and \txx{people}
+  \item East and Southeast Asia share the broad mappings, realized with
+    different \txx{bodies, substances} and \txx{animals}
+  \end{itemize}
+  \vfill
+  \normalsize
+  Idioms we learn; metaphors we work out on the fly --- the line is fuzzy.
+  \citet{saeed:2015}: Metaphor 11.4, Metonymy 11.5
 \end{frame}
 
-\begin{frame}{Further reading}
-
+\begin{frame}{Further Reading}
 \begin{itemize}
 \item Ning Yu (1998) \textit{The Contemporary Theory of Metaphor: A
     Perspective from Chinese}. John Benjamins. --- book length treatment
-  of Chinese metaphor, including \cmn{气}
+  of Chinese metaphor, including \zhs{气}
 \item Andrew Goatly (2006) Humans, Animals, and Metaphors.
   \textit{Society \& Animals} 14:1, pp.\ 15--37
 \item Shelley Ching-yu Hsieh (2006) A corpus-based study on animal
@@ -1127,57 +726,38 @@ the PhD thesis of Elvis Albertus bin Toni (NTU 2018).
 \item \citet{kovecses2005metaphor} --- the standard reference on
   universality and cultural variation
 \end{itemize}
-
 \end{frame}
 
 \subsection*{Glossary}
 
-\begin{frame}[allowframebreaks]{Glossary of Key Terms (English--Czech)}
-
-\begin{flushleft}
-\begin{longtable}{ll}
-  English & Čeština \\\hline \endhead
-  Basic Level Category & základní úroveň kategorizace \\
-  conceptual metaphor & konceptuální metafora \\
-constraint-based & založený na omezeních \\
-construction-based, constructionist & konstruktivistický \\
-conventional & konvenční \\
-dead metaphor & mrtvá metafora \\
-decomposable & rozložitelný \\
-embodied & vtělený \\
-empirical & empirický \\
-formal(ized) & formální, formalizovaný \\
-idiom & idiom \\
-lexicalist & lexikalistický \\
-linguistic relativity & jazykový relativismus \\
-metaphor & metafora \\
-metonymy & metonymie \\
-mono-stratal & monostratální \\
-non-decomposable & nerozložitelný \\
-nurturant parent & pečující rodič \\
-ontological metaphor & ontologická metafora \\
-orientational metaphor & orientační metafora \\
-polysemy & polysémie \\
-prototype & prototyp \\
-radial category & radiální kategorie \\
-sign & znak \\
-source domain & zdrojová doména \\
-spatial metaphor & prostorová metafora \\
-strict father & přísný otec \\
-symmetrical & symetrický \\
-synecdoche & synekdocha \\
-systematic & systematický \\
-target domain & cílová doména \\
-\end{longtable}
-\end{flushleft}
-
+\begin{frame}{Glossary of Key Terms (English--Czech)}
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \makebox[\textwidth][c]{%
+  \begin{tabular}{llll}
+    \toprule
+    English & Čeština & English & Čeština \\
+    \midrule
+    basic level category & základní úroveň kategorizace & orientational metaphor & orientační metafora \\
+    conceptual metaphor & konceptuální metafora & polysemy & polysémie \\
+    conventional & konvenční & prototype & prototyp \\
+    dead metaphor & mrtvá metafora & radial category & radiální kategorie \\
+    embodied & vtělený & source domain & zdrojová doména \\
+    idiom & idiom & spatial metaphor & prostorová metafora \\
+    linguistic relativity & jazykový relativismus & synecdoche & synekdocha \\
+    metaphor & metafora & systematic & systematický \\
+    metonymy & metonymie & target domain & cílová doména \\
+    ontological metaphor & ontologická metafora & & \\
+    \bottomrule
+  \end{tabular}}
 \end{frame}
 
 \begin{frame}[allowframebreaks]
   \frametitle{References}
         \bibliographystyle{aclnat}
-        \bibliography{abb,mtg,ling,nlp}
+        \bibliography{local}
 \end{frame}
+
 
 \end{document}
 

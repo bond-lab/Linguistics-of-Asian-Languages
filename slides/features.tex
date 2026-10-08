@@ -1,6 +1,12 @@
 \documentclass{beamer}
 \input{shared}
 
+% Examples are the content of this deck, so set them larger than gb4e's default
+\renewcommand{\exfont}{\large}
+\renewcommand{\exnrfont}{\large}
+\renewcommand{\glossfont}{\large}
+\renewcommand{\transfont}{\large}
+
 \title[Grammar]{Grammatical Features\\ based largely on Goddard (2005) Chapter 4.}
 
 \begin{document}
@@ -9,990 +15,802 @@
 
 \overview
 
+\section{Word order}
+
+\begin{frame}{Two Word-Order Types Meet in East Asia}
+  \large
+  \begin{tabular}{llll}
+    \toprule
+    & Japanese, Korean & Mandarin & Thai, Malay, Viet. \\
+    \midrule
+    verb, object    & OV           & VO          & VO \\
+    adposition      & postposition & preposition & preposition \\
+    relative clause & Rel N        & \alert{Rel N} & N Rel \\
+    possessor       & Poss N       & Poss N      & N Poss \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  \begin{itemize}
+  \item The features \txx{line up}: OV languages put modifiers before the
+    noun, VO languages after it
+  \item Mandarin is the odd one out: VO, but relative clauses come first
+  \end{itemize}
+\end{frame}
+
 \section{Classifiers}
 
+\begin{frame}{Counting Needs a Classifier}
+  \large
+  \begin{tabular}{llll}
+    \toprule
+    & & & order \\
+    \midrule
+    Thai       & \tha{mǎa sǎam \alert{tua}}  & dog three \textsc{clf} & N Num Clf \\
+    Malay      & \msa{tiga \alert{ekor} anjing} & three \textsc{clf} dog & Num Clf N \\
+    Vietnamese & \vie{ba \alert{con} chó}     & three \textsc{clf} dog & Num Clf N \\
+    Mandarin   & \cmn{sān \alert{zhī} gǒu}    & three \textsc{clf} dog & Num Clf N \\
+    Japanese   & \jpn{san-\alert{biki} no inu} & three-\textsc{clf} of dog & Num Clf N \\
+    \bottomrule
+  \end{tabular}
 
-\begin{frame}{What Are Classifiers?}
-\begin{itemize}
-    \item Classifiers categorize nouns based on salient properties.
-    \item Found in noun phrases (NPs) with modifiers like quantifiers.
-    \item Essential for grammaticality when quantifiers (e.g., numerals) are present.
-    \item Classifiers categorize by physical, social, or functional traits.
-    \item Used with numerals, vague quantifiers like ``some'', or even alone.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{The Role of Classifiers in NPs}
-\begin{itemize}
-    \item Classifier slot required for quantifier NPs.
-    \item Used with vague quantifiers like ``many'' and ``some.''
-    \item Classifiers can appear with or without a noun.
-    \item Classifier systems categorize referents based on properties like shape or function.
-    \item In certain NPs, the classifier is mandatory for grammaticality.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Classifier Phrases}
-\begin{itemize}
-    \item Classifier and quantifier form a grammatical sub-phrase.
-    \item Quantifier and classifier appear adjacent to each other.
-    \item Can sometimes occur alone without a noun.
-    \item These classifier phrases are common across East and Southeast Asian languages.
-    \item Example languages include Thai, Malaysian, and Mandarin.
-\end{itemize}
-\end{frame}
-
-
-
-
-
-\begin{frame}{Examples: Thai and Malaysian}
-\begin{itemize}
-    \item Thai and Malaysian demonstrate similar classifier behaviors.
-    \item Classifiers are used next to quantifiers.
-    \item Classifier-quantifier pairs can occur without a noun in responses.
-    \item Questions often require classifiers in these languages.
-\end{itemize}
-\begin{exe}
-  \ex
-\gll Mǎa kìi tua? \\
- dog how.many CL:animal \\
-\trans ‘How many dogs?’ 
-
-\ex
-\gll (Mǎa) sǎam tua. \\
-    dog three CL:animal \\
-\trans ‘Three (dogs).’ 
-\end{exe}
-\end{frame}
-
-\begin{frame}{Examples: Malaysian}
-\begin{itemize}
-    \item Similar behavior with quantifiers and classifiers in Malaysian.
-    \item Classifiers appear adjacent to quantifiers.
-    \item Noun can be omitted in responses.
-\end{itemize}
-\begin{exe}
-\ex
-\gll Berapa ekor anjing? \\
-    how.many CL:animal dog \\
-\trans ‘How many dogs?’ 
-\end{exe}
-\begin{exe}
-\ex
-\gll Tiga ekor (anjing). \\
-    three CL:animal (dog) \\
-\trans ‘Three (dogs).’ 
-\end{exe}
-\end{frame}
-
-
-\begin{frame}{Sortal Classifiers}
-
-\begin{itemize}
-\item \zz{sortal} classifiers are the prototypical numeral classifiers
-\item they pick out salient features of the noun they
-  classify\\ 
-  \zz{kinds}, that is, semantic classes\\
-  \zz{shape} (or size) 
-\item \zz{general} classifiers are used as follows:
+  \vfill
+  \normalsize
   \begin{itemize}
-  \item   for the residue of nouns\\
-    \jpn[I saw a dream]{yume-o 1-\cll{tu} mita}
-  \item   as a default when no particular feature is salient \\
-    \jpn[I bought exactly one book]{hon-o ch\=odo  1-\cll{tu} katta}
-  \item   for underspecified referents\\
-    \jpn[I want one thingamajig]{nantoka-ga 1-\cll{tu} hoshii}
+  \item Required with numerals and with vague quantifiers like ``many'', ``some''
+  \item Number and classifier form a \txx{phrase}, which can stand alone
   \end{itemize}
-
-\end{itemize}
-
-\citep{Bond:Paik:2011}
-
 \end{frame}
 
-
-\begin{frame}{Measure (Mensural) vs. Sortal Classifier Constructions}
-\begin{itemize}
-    \item Measure constructions quantify ``mass'' substances (e.g., water, butter).
-    \item Sortal constructions categorize countable items.
-    \item Measure constructions refer to shape-based or container units.
-    \item Sortal categorize objects based on properties like function or shape.
-    \item Sortal systems apply broadly, while measure constructions are limited.
-\end{itemize}
+\begin{frame}{Why Have Classifiers?}
+  \Large
+  \begin{itemize}
+  \item Nouns name \txx{kinds}, like English \eng{rice} or \eng{water}:
+    to count, you need a \txx{unit}
+  \item The classifier \txx{individuates}: \eng{three \alert{head} of cattle},
+    \eng{two \alert{sheets} of paper}
+  \item Classifier languages rarely have \txx{obligatory plural} marking
+  \end{itemize}
+  \vfill
+  \normalsize
+  Inventories are shrinking: younger speakers lean on the general
+  classifier (Mandarin \cmn{gè}, Japanese \jpn{-tsu})
 \end{frame}
 
-\begin{frame}{Examples of Measure Constructions}
-\begin{itemize}
-    \item Measure constructions often use shape-based units.
-    \item Examples: ``two cups of water,'' ``two grains of sand.''
-    \item Unit counter constructions group items (e.g., ``two pairs of shoes'').
-    \item Measure constructions differ from classifiers structurally.
-\end{itemize}
-\begin{exe}
-\ex
-\glll 二 杯 の 水 \\
-    ni hai no mizu \\
-    two CL.cup of water \\
-\trans two cups of water \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Unit Counter (Group) Constructions}
-\begin{itemize}
-    \item Used for collective or group items (e.g., ``two pairs of shoes'').
-    \item Unit counters single out items from a larger set.
-    \item Structurally similar to classifiers but serve different purposes.
-    \item Examples include: ``two sets of furniture,'' ``two bunches of bananas.''
-    \item Not so common in Japanese
-    \item Very common in English and Thai
-      \begin{exe}      
-      \ex \eng{a flock of birds}
-      \ex \eng{a herd of cows}
-      \ex \eng{a mob of protestors}
-      \end{exe}
-\end{itemize}
-\end{frame}
-
-% \begin{frame}{Common Classifier Examples}
-% \begin{table}
-% \begin{tabular}{|l|l|}
-% \hline
-% \textbf{Language} & \textbf{Classifier} \\
-% \hline
-% Thai & \textit{tua} (animals) \\
-% Mandarin & \textit{gè} (general) \\
-% Vietnamese & \textit{cái} (general) \\
-% Malay & \textit{orang} (people) \\
-% \hline
-% \end{tabular}
-% \caption{Common Classifiers in Asian Languages}
-% \end{table}
-% \begin{itemize}
-%     \item Some classifiers are specialized, while others are general (used for many objects).
-%     \item General classifiers are used when object specifics are unknown.
-% \end{itemize}
-% \end{frame}
-
-
-\begin{frame}{Repeater Constructions}
-\begin{itemize}
-    \item Nouns can act as their own classifier in repeater constructions.
-    \item Common when no specific classifier exists.
-    \item Often seen in languages like Thai and Lao.
-    \item Repeater constructions fill the classifier slot with the noun itself.
-\end{itemize}
-\begin{exe}
-\ex
-\gll Mii taw dòòk-maj cak taw? \\
-    there.is vase flower how.many vase \\
-\trans ‘How many vases are there?’ \\
-\end{exe}
-\end{frame}
-
-% \begin{frame}{General Classifiers}
-% \begin{itemize}
-%     \item General classifiers are used across many objects.
-%     \item Example: Mandarin \textit{gè}, Cantonese \textit{go}, Vietnamese \textit{cái}.
-%     \item Often replace specific classifiers in casual speech.
-%     \item Used when the object’s nature is irrelevant or unknown.
-% \end{itemize}
-% \end{frame}
-
-\begin{frame}{Specialized Classifiers}
-\begin{itemize}
-    \item Some languages, like Korean and Khmer, have specialized classifiers.
-    \item These may be used for royalty, teachers, or monks.
-    \item Classifiers categorize people by social status in some languages.
-    \end{itemize}
-\begin{exe}
-\ex
-\glll 何 名 様 です か \\
-    nan mei sama desu ka \\
- what CL.people.HON HON is Q \\
-\trans How many people? \\
-\end{exe}
-\begin{exe}
-\ex
-\glll 三 人 です \\
-    san nin desu \\
- three CL.people is \\
-\trans Three \\
-\end{exe}
-    
-\end{frame}
-
-\begin{frame}{Prototype and Extensions in Classifiers}
-\begin{itemize}
-    \item Classifiers often exhibit polysemy (multiple related meanings).
-    \item A central, or ``prototype,'' meaning extends to other related uses.
-    \item Example: Thai \textit{tua} applies to animals but extends to furniture and clothing.
-\end{itemize}
- \begin{center}
-\noindent\includegraphics[height=0.6\textheight]{pics/Radial-category-structure-for-Thai-classifier-tua-Source-Adapted-from-Deepadung_W640.jpg}
- \end{center}
- %https:\\www.researchgate.net/publication/284094276_Slavic_aspectual_prefixes_and_numeral_classifiers_Two_kinds_of_lexico-grammatical_unitizers/figures
-\end{frame}
-\begin{frame}{Classifiers can indirectly count}
+\begin{frame}{Thai: The Classifier Phrase Stands Alone}
   \begin{exe}
     \ex
-   \glll 2-\cll{ts\=u}-no denshim\=eru (Japanese)\\
-      2-\cll{tong}-ui imayl (Korean) \\
-       2-CL.message-of email \\
-  \trans 2 \cll{pieces} of email\\
-   
-  \ex
-  \glll 3-\cll{ts\=u}-no tegami (Japanese)\\
-      3-\cll{tong}-ui phyenci (Korean)\\
-       3-CL.message-of letter\\
- \trans 3 letters           \\%  \com{direct}
- \ex
- \glll  3-\cll{mai}-no tegami \\
-       3-\cll{chang}-ui phyenci (Korean)\\
-      3-CL.flat-of letter \\
-\trans \{a 3 \cll{page} letter/$^*$3 letters\}  \\%\com{indirect}
-    \end{exe}
-\citep{Bond:1997b}
+    \gll Mǎa kìi \ul{tua}? \\
+         dog how.many \textsc{clf}:animal \\
+    \trans ``How many dogs?'' [tha]
+    \ex
+    \gll (Mǎa) sǎam \ul{tua}. \\
+         (dog) three \textsc{clf}:animal \\
+    \trans ``Three (dogs).'' [tha]
+  \end{exe}
 \end{frame}
 
-\begin{frame}{Conclusion}
-\begin{itemize}
-    \item Classifiers categorize nouns based on physical, social, or functional traits.
-    \item Found widely in East and Southeast Asian languages.
-    \item Classifier systems vary from general to highly specialized.
-    \item Classifiers are essential to noun phrase structure in these languages.
-\end{itemize}
+\begin{frame}{Malay: The Same, in a Different Order}
+  \begin{exe}
+    \ex
+    \gll Berapa \ul{ekor} anjing? \\
+         how.many \textsc{clf}:animal dog \\
+    \trans ``How many dogs?'' [zsm]
+    \ex
+    \gll Tiga \ul{ekor} (anjing). \\
+         three \textsc{clf}:animal (dog) \\
+    \trans ``Three (dogs).'' [zsm]
+  \end{exe}
+\end{frame}
+
+\begin{frame}{Four Kinds of Counting Word}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    kind & counts & example \\
+    \midrule
+    \txx{sortal}   & individuals    & \jpn{san-\alert{satsu} no hon} ``three books'' \\
+    \txx{mensural} & amounts        & \jpn{ni-\alert{hai} no mizu} ``two cups of water'' \\
+    \txx{group}    & collections    & \eng{two \alert{pairs} of shoes} \\
+    \txx{repeater} & by the noun itself & Thai \tha{taw} ``vase'' \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  Sortal classifiers apply across the whole lexicon; the others are limited
+\end{frame}
+
+\begin{frame}{Japanese \jpn{-tsu}: The General Classifier}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    used & example \\
+    \midrule
+    for the residue        & \jpn{yume-o hito-\ul{tsu} mita} \\
+                           & ``I had a dream'' \\
+    as a default           & \jpn{hon-o chōdo hito-\ul{tsu} katta} \\
+                           & ``I bought exactly one book'' \\
+    when the thing is vague & \jpn{nantoka-ga hito-\ul{tsu} hoshii} \\
+                           & ``I want one thingamajig'' \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  Sortal classifiers pick out \txx{kind} or \txx{shape};
+  the general one is used when nothing is salient \citep{Bond:Paik:2011}
+\end{frame}
+
+\begin{frame}{Measure and Group Words}
+  \begin{exe}
+    \let\eachwordone=\glossja
+    \ex
+    \glll 二 杯 の 水 \\
+          ni hai no mizu \\
+          two \textsc{clf}.cup of water \\
+    \trans ``two cups of water'' [jpn]
+  \end{exe}
+
+  \vfill
+  \Large
+  \begin{tabular}{ll}
+    \eng{a \alert{flock} of birds} & \eng{a \alert{herd} of cows} \\
+    \eng{a \alert{mob} of protestors} & \eng{two \alert{bunches} of bananas} \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Group words are common in English and Thai, rarer in Japanese
+\end{frame}
+
+\begin{frame}{Repeaters: The Noun Is Its Own Classifier}
+  \begin{exe}
+    \ex
+    \gll Mii \ul{taw} dòòk-maj cak \ul{taw}? \\
+         there.is vase flower how.many vase \\
+    \trans ``How many vases are there?'' [tha]
+  \end{exe}
+  \vfill
+  \large
+  Common in Thai and Lao, especially when no classifier exists for the noun
+\end{frame}
+
+\begin{frame}{Classifiers Can Show Respect}
+  \Large
+  \begin{tabular}{llll}
+    \toprule
+    ``three people'' & plain & honorific \\
+    \midrule
+    Japanese & \jps{三人} \jpn{san-\alert{nin}} & \jps{三名様} \jpn{san-\alert{mei-sama}} \\
+    Korean   & \kos{세}~\kos{명} \kor{se \alert{myeong}} & \kos{세}~\kos{분} \kor{se \alert{bun}} \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \begin{exe}
+    \let\eachwordone=\glossja
+    \ex
+    \glll 何 名 様 です か \\
+          nan mei sama desu ka \\
+          what \textsc{clf}.person \textsc{hon} is \textsc{q} \\
+    \trans ``How many in your party?'' [jpn]
+  \end{exe}
+  \normalsize
+  Khmer has special classifiers for royalty and monks
+\end{frame}
+
+\begin{frame}{A Classifier Is a Radial Category}
+  \begin{columns}
+    \column{0.4\textwidth}
+    Thai \tha{tua}: animals at the centre, extended to furniture
+    and clothing (things with legs or a body)
+    \column{0.6\textwidth}
+    \includegraphics[width=\textwidth]{pics/Radial-category-structure-for-Thai-classifier-tua-Source-Adapted-from-Deepadung_W640.jpg}
+  \end{columns}
+ %https:\\www.researchgate.net/publication/284094276_Slavic_aspectual_prefixes_and_numeral_classifiers_Two_kinds_of_lexico-grammatical_unitizers/figures
+\end{frame}
+
+\begin{frame}{Classifiers Can Count Indirectly}
+  \begin{exe}
+    \ex
+    \glll 2-\cll{tsū}-no denshimēru \\
+          2-\cll{tong}-ui imeil \\
+          2-\textsc{clf}.message-of email \\
+    \trans ``2 emails'' [jpn, kor]
+    \ex
+    \glll 3-\cll{mai}-no tegami \\
+          3-\cll{chang}-ui pyeonji \\
+          3-\textsc{clf}.flat-of letter \\
+    \trans ``a 3-\cll{page} letter'', not ``3 letters'' [jpn, kor]
+  \end{exe}
+  \citep{Bond:1997b}
 \end{frame}
 
 \section{Aspect}
 
-\begin{frame}{Aspect in East and Southeast Asian Languages}
-\begin{itemize}
-    \item Many East and Southeast Asian languages lack tense marking.
-    \item Verbs are often marked for aspect instead of tense.
-    \item Aspect marking can occur through suffixes, auxiliary verbs, or particles.
-    \item Aspect focuses on the time structure of an event, not its time reference.
-    \item Aspect can indicate whether an action is ongoing, completed, or habitual.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{What is Aspect?}
-\begin{itemize}
-    \item Aspect refers to the temporal structure of events.
-    \item Different from tense, which indicates time reference (past, present, future).
-    \item Example: English progressive aspect shows ongoing action (e.g. ``is talking'').
-    \item Many East and Southeast Asian languages mark aspect using various strategies.
-    \item Common aspect categories include perfective, imperfective, progressive, and habitual.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Perfective vs. Imperfective Aspect}
-\begin{itemize}
-    \item Perfective aspect presents an event in its entirety.
-    \item Imperfective aspect highlights the internal structure of an event.
-    \item Imperfective can indicate ongoing (progressive), repeated (iterative), or habitual actions.
-    \item Example: English progressive \eng{You are talking} is imperfective.
-    \item Perfective focuses on completion, while imperfective focuses on duration or repetition.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Types of Imperfective Aspect}
-
-  \begin{center}
-\begin{tabular}{lll}
-\txx{Progressive} & Ongoing action & \eng{She is running} \\
-\txx{Iterative} & Repeated actions & \eng{The light is flashing} \\
-\txx{Durative} & Actions that take time & \eng{He was sitting} \\
-\txx{Habitual} & Regularly occurring actions & \eng{She runs every morning} \\
-\end{tabular}
-\end{center}
-
-Imperfective aspects provide detailed temporal structure.
-\end{frame}
-
-\begin{frame}{Aspect in Sinitic Languages: Overview}
-\begin{itemize}
-    \item Aspect in Mandarin and Cantonese is marked using suffixes and particles.
-    \item Different markers for perfective, progressive, continuous, and experiential aspects.
-    \item Aspect marking is independent of tense (past, present, future).
-    \end{itemize}
-    \begin{table}
-\begin{tabular}{lllll}
-
-\textbf{Aspect Type} & \textbf{Mandarin} &  & \textbf{Cantonese} & \\
-\hline
-Perfective   & V-le   & 了   & V-jo2   & 咗 \\
-Progressive  & zai-V  & 在   & V-gan2  & 緊 \\
-Continuous   & V-zhe  & 着   & V-jyuh6 & 住 \\
-  Experiential & V-guo  & 过   & V-gwo3  & 過 \\
-  Delimitative	& V-yī-V &一 & V-haa5  & 吓 \\
- Habitual	& & & V-hoi1 & 開 \\
-\hline
-\end{tabular}
-\caption{Aspect markers in Mandarin and Cantonese}
-\end{table}
-\end{frame}
-
-\begin{frame}{Perfective Aspect in Mandarin}
-\begin{itemize}
-    \item Perfective \cmn{le} indicates a completed action.
-    \item Used in various contexts: past, future, or conditional events.
-    \item Example: Conditional use of \cmn{le} in a future event.
-\end{itemize}
-\begin{exe}
-\ex
-\gll Tā kāi-\ul{le} mén, nǐ jiu jìn-qu. \\
-    3sg open-perf door 2sg then enter-go \\
-\trans (Once) she opens the door, you go in. \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Perfective Aspect in Mandarin (continued)}
-\begin{itemize}
-    \item Perfective \cmn{le} can mark completion in different contexts.
-    \item Can occur with specific objects, durations, or numbers of actions.
-    \item Example: Perfective aspect with a stative verb (tall) and quantifier (a little).
-\end{itemize}
-\begin{exe}
-\ex
-\gll Nǐ gǎo-\ul{le} yīdiǎn. \\
-    2sg tall-perf a.little \\
-\trans You've got taller (a little). \\
-\end{exe}
-\end{frame}
-
-% \begin{frame}{Imperfective Aspects in Mandarin}
-% \begin{itemize}
-%     \item **Progressive zai**: Indicates ongoing action (e.g., ``She is speaking'').
-%     \item **Continuous -zhe**: Marks continuous state (e.g., ``The clouds are blocking'').
-%     \item **Experiential -guo**: Marks completed past experience, implying the action is over.
-%     \item Usage of -guo contrasts with English perfect tense, implying the event is finished.
-% \end{itemize}
-% \end{frame}
-
-\begin{frame}{Examples of Imperfective Aspects}
-\begin{exe}
-\ex
-\gll Wòhng síujé góng-\ul{gán} dihnwá. \\
-    Wong miss talk-prog telephone \\
-\trans Miss Wong is talking on the phone.\\
-\end{exe}
-\begin{exe}
-\ex
-\gll Léih hái Hēunggóng jyuh-\ul{gwo} géi loih a? \\
-    you in Hong Kong live-exp how long prt \\
-\trans How long did you live in Hong Kong? \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Cantonese: Habitual Aspect}
-\begin{itemize}
-    \item Habitual aspect \cmn{hōi} marks regular or customary actions.
-    \item Example: Habitual actions in present or past tense.
-\end{itemize}
-\begin{exe}
-\ex
-\gll Kéuih jouh-\ul{hōi} jūngdím ge. \\
-    she work-hab part.time prt \\
-\trans ‘She normally works part-time.’ \\
-\end{exe}
-\begin{exe}
-\ex
-\gll Kéuih yíhchìhn jā-\ul{hōi} Bēnsí ge. \\
-    she before drive-hab Benz prt \\
-\trans ‘She used to drive a Mercedes.’ \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Delimitative Aspect in Cantonese}
-\begin{itemize}
-    \item Delimitative \cmn{háh} indicates doing something ``for a while.''
-    \item Often rendered as ``have a V'' in English.
-    \item Example: ``Have a look'' or ``have a walk.''
-\end{itemize}
-\begin{exe}
-\ex
-\gll Tái-\ul{háh}. \\
-    look-del \\
-\trans Have a look. \\
-\end{exe}
-\begin{exe}
-\ex
-\gll Yāusīk-\ul{háh}. \\
-    rest-del \\
-\trans Have a rest. \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Aspect Marking in Malaysian}
-\begin{itemize}
-    \item Aspect in Malaysian is marked by separate words before the verb.
-    \item \msa[perfective]{Sudah} and \msa[progressive]{sedang} are common markers.
-    \item Perfective \msa{sudah} indicates completion, used for past or future events.
-    \item \msa{Sedang} marks ongoing action, similar to the progressive in other languages.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Examples of Malaysian Aspect}
-\begin{exe}
-\ex
-\gll Saya pun \ul{sudah} beritahu juga semalam. \\
-    I focus perf tell also yesterday \\
-\trans I already told (you) yesterday. \\
-\end{exe}
-\begin{exe}
-\ex
-\gll Bila saya masuk, dia \ul{sedang} membaca. \\
-    when I enter he prog read \\
-\trans When I came in, he was reading. \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Use in Singlish}
+\begin{frame}{Aspect, Not Tense}
+  \Large
+  \begin{tabular}{ll}
+    \txx{tense}  & \emph{when} did it happen? \\
+    \txx{aspect} & \emph{how} does it unfold? \\
+  \end{tabular}
+  \vfill
   \begin{itemize}
-  \item This is carried over into Singapore Colloquial English (Singlish)
-    \begin{itemize}
-    \item \txx{habitual}: \eng{always}
-    \item \txx{perfect}: \eng{already}
-    \item \txx{progressive}: \eng{still}
-    \end{itemize}
+  \item Many East and Southeast Asian languages have no tense
+  \item They mark aspect instead: suffixes, auxiliaries, particles
   \end{itemize}
-  \begin{exe}
-  \ex   Eat \ul{already}?  ``Have you eaten''
-
-  \ex  Eat before class ``I ate before class''
-
-  \ex  He \ul{always} late one. ``He is habitually late''
-
-   \ex  Your phone \ul{still} spoil ah? ``Your phone is still broken?'' 
-   \end{exe}
+  \vfill
 \end{frame}
 
+\begin{frame}{Kinds of Aspect}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    \txx{perfective}   & the whole event   & \eng{She ran home} \\
+    \midrule
+    \multicolumn{3}{l}{\txx{imperfective}: the inside of the event} \\
+    \quad progressive  & ongoing           & \eng{She is running} \\
+    \quad iterative    & repeated          & \eng{The light is flashing} \\
+    \quad durative     & taking time       & \eng{He was sitting} \\
+    \quad habitual     & regular           & \eng{She runs every morning} \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
 
-\begin{frame}{Conclusion on Aspect in East and Southeast Asian Languages}
-\begin{itemize}
-    \item Aspect marking is diverse across languages, with a variety of methods.
-    \item Suffixes, particles, and separate words are used to indicate aspect.
-    \item Common aspect categories include perfective, progressive, habitual, and delimitative.
-    \item Each language has unique strategies for expressing temporal structure.
-\end{itemize}
+\begin{frame}{Aspect Markers in Mandarin and Cantonese}
+  \Large
+  \begin{tabular}{lllll}
+    \toprule
+    & \multicolumn{2}{l}{Mandarin} & \multicolumn{2}{l}{Cantonese} \\
+    \midrule
+    perfective   & V-\cmn{le}   & \zhs{了} & V-\yue{jó}   & \zht{咗} \\
+    progressive  & \cmn{zài}-V  & \zhs{在} & V-\yue{gán}  & \zht{緊} \\
+    continuous   & V-\cmn{zhe}  & \zhs{着} & V-\yue{jyuh} & \zht{住} \\
+    experiential & V-\cmn{guo}  & \zhs{过} & V-\yue{gwo}  & \zht{過} \\
+    delimitative & V-\cmn{yi}-V & \zhs{一} & V-\yue{háh}  & \zht{吓} \\
+    habitual     &              &          & V-\yue{hōi}  & \zht{開} \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  Aspect marking is independent of time reference
+\end{frame}
+
+\begin{frame}{Mandarin \cmn{-le}: Completion, Not Past}
+  \begin{exe}
+    \ex
+    \gll Tā kāi-\ul{le} mén, nǐ jiù jìn-qu. \\
+         3\textsc{sg} open-\textsc{pfv} door 2\textsc{sg} then enter-go \\
+    \trans ``(Once) she opens the door, you go in.'' [cmn]
+    \ex
+    \gll Nǐ gāo-\ul{le} yìdiǎn. \\
+         2\textsc{sg} tall-\textsc{pfv} a.little \\
+    \trans ``You've got (a little) taller.'' [cmn]
+  \end{exe}
+  \vfill
+  \large
+  \cmn{-le} works for future and conditional events, and with stative verbs
+\end{frame}
+
+\begin{frame}{Cantonese: Progressive and Experiential}
+  \begin{exe}
+    \ex
+    \gll Wòhng síujé góng-\ul{gán} dihnwá. \\
+         Wong miss talk-\textsc{prog} telephone \\
+    \trans ``Miss Wong is talking on the phone.'' [yue]
+    \ex
+    \gll Léih hái Hēunggóng jyuh-\ul{gwo} géi noih a? \\
+         2\textsc{sg} in Hong.Kong live-\textsc{exp} how.long \textsc{sfp} \\
+    \trans ``How long did you live in Hong Kong?'' [yue]
+  \end{exe}
+\end{frame}
+
+\begin{frame}{Cantonese: Habitual \yue{-hōi}}
+  \begin{exe}
+    \ex
+    \gll Kéuih jouh-\ul{hōi} jūngdím ge. \\
+         3\textsc{sg} work-\textsc{hab} part.time \textsc{sfp} \\
+    \trans ``She normally works part-time.'' [yue]
+    \ex
+    \gll Kéuih yíhchìhn jā-\ul{hōi} Bēnsí ge. \\
+         3\textsc{sg} before drive-\textsc{hab} Benz \textsc{sfp} \\
+    \trans ``She used to drive a Mercedes.'' [yue]
+  \end{exe}
+  \vfill
+  \large
+  Regular or customary actions, present or past
+\end{frame}
+
+\begin{frame}{Cantonese: Delimitative \yue{-háh} ``for a while''}
+  \begin{exe}
+    \ex
+    \gll Tái-\ul{háh}. \\
+         look-\textsc{del} \\
+    \trans ``Have a look.'' [yue]
+    \ex
+    \gll Yāusīk-\ul{háh}. \\
+         rest-\textsc{del} \\
+    \trans ``Have a rest.'' [yue]
+  \end{exe}
+  \vfill
+  \large
+  English uses \eng{have a} V: \eng{have a look}, \eng{have a walk}
+\end{frame}
+
+\begin{frame}{Malay: Aspect Words Before the Verb}
+  \begin{exe}
+    \ex
+    \gll Saya pun \ul{sudah} beritahu juga semalam. \\
+         1\textsc{sg} \textsc{foc} \textsc{pfv} tell also yesterday \\
+    \trans ``I already told (you) yesterday.'' [zsm]
+    \ex
+    \gll Bila saya masuk, dia \ul{sedang} membaca. \\
+         when 1\textsc{sg} enter 3\textsc{sg} \textsc{prog} read \\
+    \trans ``When I came in, they were reading.'' [zsm]
+  \end{exe}
+  \vfill
+  \large
+  \msa{sudah} marks completion, for past \emph{or} future events;
+  \msa{sedang} marks ongoing action
+\end{frame}
+
+\begin{frame}{Singlish Carries the Pattern into English}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    perfect      & \eng{Eat \alert{already}?}           & ``Have you eaten?'' \\
+    experiential & \eng{I eat durian \alert{before}.}   & ``I've had durian before.'' \\
+    habitual     & \eng{He \alert{always} late one.}    & ``He's always late.'' \\
+    continuative & \eng{Your phone \alert{still} spoil ah?} & ``Still broken?'' \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Singapore Colloquial English uses English words as aspect markers
+\end{frame}
+
+\begin{frame}{Summary: Aspect}
+  \Large
+  \begin{itemize}
+  \item Aspect, not tense, is the core time category
+  \item Marked by \txx{suffixes} (Sinitic) or \txx{words before the verb} (Malay)
+  \item Perfective, progressive, experiential, habitual, delimitative
+  \end{itemize}
 \end{frame}
 
 \section{Serial Verbs}
 
-\begin{frame}{Introduction to Serial Verb Constructions}
-\begin{itemize}
-    \item Serial verb constructions (SVCs) involve two or more verbs in a single clause.
-    \item No conjunctions are used between the verbs.
-    \item All verbs share the same grammatical subject.
-    \item Common in East and Southeast Asian languages.
-    \item Serial verb constructions serve various grammatical functions.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Loose vs. Tight Serialization}
-\begin{itemize}
-    \item \txx{Loose serialization}: Verbs are loosely connected, depicting sequences of events.
-    \item \txx{Tight serialization}: Verbs are tightly connected, representing a single event.
-    \item In loose serialization, verbs may have independent arguments.
-    \item Tight serialization often involves motion or posture verbs.
-    \item Cultural factors can affect acceptability of tight serialization.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Example of Loose Serialization (Lao)}
-\begin{itemize}
-    \item Loose serialization in Lao:
-\end{itemize}
-\begin{exe}
-\ex
-\gll Dèèng paj$^3$ talaat$^5$ sùù$^4$ khùang$^1$ maa$^2$ hùan$^2$ lèèw$^4$. \\
-    Deng go market buy stuff come house perf \\
-\trans Deng went to the market, bought some stuff, (and) came home. \\
-\end{exe}
-\begin{itemize}
-    \item Verbs describe sequential actions.
-    \item Perfective aspect marker applies to the entire sequence.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Example of Tight Serialization (Thai)}
-\begin{itemize}
-    \item Tight serialization in Thai:
-\end{itemize}
-\begin{exe}
-\ex
-\gll Dèk wîng pay síi khanǒm. \\
-    child run go buy candy \\
-\trans The child ran (and) bought candy. \\
-\end{exe}
-\begin{itemize}
-    \item Verbs depict a single unitary event.
-    \item Verbs share the same subject and object.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Cultural Factors in Tight Serialization}
-\begin{itemize}
-    \item Cultural norms influence acceptability of verb combinations.
-    \item Example: Playing musical instruments in Lao.
-\end{itemize}
-\begin{exe}
-\ex
-\gll nang$^1$ tii$^3$ lanaat$^4$. \\
-    sit beat lanaat \\
-\trans Play the lanaat sitting. \\
-\end{exe}
-\begin{exe}
-\ex
-\gll nòòn$^2$ tii$^3$ lanaat$^4$. \\
-    lie beat lanaat \\
-\trans Play the lanaat lying down. \\
-\end{exe}
-\begin{itemize}
-    \item Playing the lanaat lying down is culturally unexpected.
-    \item Context can make such constructions acceptable.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Serial Verbs and Directional Verbs (Thai)}
-\begin{itemize}
-    \item Verbs like ‘go’ and ‘come’ often indicate direction in serial verb constructions.
-    \item These directional verbs function similarly to adverbs.
-    \item Example from Thai:
-\end{itemize}
-\begin{exe}
-\ex
-\gll Khǎw klàp maa {\silipa lɛέw}. \\
-    3sg return hither(come) perf \\
-\trans ‘She came back already.’ \\
-\end{exe}
-\begin{exe}
-\ex
-\gll Khǎw klàp pay  {\silipa lɛέw}. \\
-    3sg return away(go) perf \\
-\trans ‘She went back already.’ \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Three-Verb Serialization in Lao}
-\begin{itemize}
-    \item Serial verb constructions can include three verbs.
-    \item First verb: manner of motion.
-    \item Second verb: absolute direction (e.g., ‘up’, ‘down’).
-    \item Third verb: direction relative to the speaker (e.g., ‘come’, ‘go’).
-\end{itemize}
-\begin{exe}
-\ex
-\gll Laaw2 ñaang1 khùn5 maa2. \\
-    3sg walk go.up come \\
-\trans ‘She walked up here.’ \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Verb-Prepositions in Serial Constructions}
-\begin{itemize}
-    \item Certain verbs take on grammatical functions similar to prepositions.
-    \item Verbs like ‘give’, ‘use’, ‘go’ mark arguments such as beneficiaries or instruments.
-    \item Example from Lao: haj5 ‘give’ functions as ‘for’.
-\end{itemize}
-\begin{exe}
-\ex
-\gll Laaw2 nùng1 khaw5 haj5 khòòj5. \\
-    3sg steam rice give(=for) 1sg \\
-\trans He steamed some rice for me. \\
-\end{exe}
-\end{frame}
-
-\begin{frame}{Comitative Use of Serial Verbs (Lao)}
-\begin{itemize}
-    \item Comitative ‘with’ often expressed using a serial verb construction.
-    \item Example from Lao:
-\end{itemize}
-\begin{exe}
-\ex
-\gll Khan2 haw2 juu1 nam2 mèè1-thaw5. \\
-    if we live accompany(=with) mother-old \\
-\trans If we live with your mother.’\\
-\end{exe}
-\begin{itemize}
-    \item Verb ‘accompany’ acts like a preposition meaning ‘with’.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Serial Verbs in Vietnamese and Hmong}
-\begin{itemize}
-    \item Verb serialization marks locutionary topics in some languages.
-    \item Example from Vietnamese: ‘arrive’ used for topics.
-\end{itemize}
-\begin{exe}
-\ex
-\gll Chúng tôi nhắc đến anh luôn. \\
-    pl 1(excl.) recall arrive(=about) brother often \\
-\trans ‘We often speak about you.’ \\
-\end{exe}
-\end{frame}
-\begin{frame}{Serial Verbs form a cline in Japanese}
-  
-\begin{itemize}
-\item Some serial verbs are completely lexicalized
+\begin{frame}{Serial Verbs: Several Verbs, One Clause}
+  \Large
   \begin{itemize}
-  \item 取り締まる \jpn[manage (lit: take-squeeze)]{torishimaru}
+  \item Two or more verbs, \txx{no conjunction}, one subject
   \end{itemize}
-\item Some serial verbs are almost aspectual (like English particle verbs)
-  \begin{itemize}
-  \item 食べあげる \jpn[eat up (lit: eat rise)]{tabe-ageru}
-  \item 歩きだす  \jpn[begin to walk/walk out (lit: walk leave)]{aruki-dasu}
-  \end{itemize}
-\item Some serial verbs are completely syntactic
-  \begin{itemize}
-  \item 食べおわる \jpn[finish eating (lit: eat finish)]{tabe-owaru}
-  \item 歩きはじめる \jpn[start walking (lit: walk start)]{aruki-hajimeru}
-  \end{itemize}
-\item [!] Arguments can be transferred (in certain cases)
-  \begin{itemize}
-  \item 大阪を食べ歩く \jpn[stroll around Osaka eating (lit: Osaka walk eat)]{osaka-wo tabe-aruku}
-  \item 寿司を食べ歩く \jpn[stroll around eating sushi (lit:  sushi walk eat)]{sushi-wo tabe-aruku}
-  \end{itemize}
-\end{itemize}
-\citep{Hashimoto:Bond:2005}
+  \vfill
+  \begin{tabular}{lll}
+    \toprule
+    \txx{loose} & a sequence of events & own arguments \\
+    \txx{tight} & a single event       & motion, posture \\
+    \bottomrule
+  \end{tabular}
+  \vfill
 \end{frame}
 
+\begin{frame}{Loose Serialization: A Sequence of Events}
+  \begin{exe}
+    \ex
+    \gll Dèèng paj³ talaat⁵ sùù⁴ khùang¹ maa² hùan² lèèw⁴. \\
+         Deng go market buy stuff come house \textsc{pfv} \\
+    \trans ``Deng went to the market, bought some stuff, (and) came home.'' [lao]
+  \end{exe}
+  \vfill
+  \large
+  One perfective marker covers the whole sequence
+\end{frame}
 
-\begin{frame}{Summary of Serial Verb Constructions}
-\begin{itemize}
-    \item Serial verb constructions involve multiple verbs sharing a subject.
-    \item They are common in East and Southeast Asian languages.
-    \item They can express sequences, direction, beneficiary roles, and more.
-    \item Loose serialization refers to sequences of events.
-    \item Tight serialization depicts a single, unified event.
-\end{itemize}
+\begin{frame}{Tight Serialization: One Event}
+  \begin{exe}
+    \ex
+    \gll Dèk wîng pay síi khanǒm. \\
+         child run go buy candy \\
+    \trans ``The child ran (and) bought candy.'' [tha]
+  \end{exe}
+  \vfill
+  \large
+  The verbs share their subject and describe a single unitary event
+\end{frame}
+
+\begin{frame}{Culture Decides What Counts as One Event}
+  \begin{exe}
+    \ex
+    \gll nang¹ tii³ lanaat⁴. \\
+         sit beat lanaat \\
+    \trans ``Play the lanaat sitting.'' [lao]
+    \ex[?]{
+    \gll nòòn² tii³ lanaat⁴. \\
+         lie beat lanaat \\
+    \trans ``Play the lanaat lying down.'' [lao]}
+  \end{exe}
+  \vfill
+  \large
+  Nobody plays the lanaat lying down --- unless the context makes it sensible
+\end{frame}
+
+\begin{frame}{Come and Go Give the Direction}
+  \begin{exe}
+    \ex
+    \gll Khǎw klàp \ul{maa} lɛ́ɛw. \\
+         3\textsc{sg} return come \textsc{pfv} \\
+    \trans ``She came back already.'' [tha]
+    \ex
+    \gll Khǎw klàp \ul{pay} lɛ́ɛw. \\
+         3\textsc{sg} return go \textsc{pfv} \\
+    \trans ``She went back already.'' [tha]
+  \end{exe}
+  \vfill
+  \large
+  Directional verbs work like adverbs: ``hither'', ``away''
+\end{frame}
+
+\begin{frame}{Three Verbs: Manner, Path, Deixis}
+  \begin{exe}
+    \ex
+    \gll Laaw² ñaang¹ khùn⁵ maa². \\
+         3\textsc{sg} walk go.up come \\
+    \trans ``She walked up here.'' [lao]
+  \end{exe}
+  \vfill
+  \Large
+  \begin{tabular}{lll}
+    \tha{ñaang¹} & walk  & manner of motion \\
+    \tha{khùn⁵}  & go up & absolute direction \\
+    \tha{maa²}   & come  & towards the speaker \\
+  \end{tabular}
+  \vfill
+\end{frame}
+
+\begin{frame}{Verbs That Work as Prepositions}
+  \begin{exe}
+    \ex
+    \gll Laaw² nùng¹ khaw⁵ \ul{haj⁵} khòòj⁵. \\
+         3\textsc{sg} steam rice give(=for) 1\textsc{sg} \\
+    \trans ``He steamed some rice for me.'' [lao]
+    \ex
+    \gll Khan² haw² juu¹ \ul{nam²} mèè¹-thaw⁵. \\
+         if 1\textsc{pl} live accompany(=with) mother-old \\
+    \trans ``If we live with your mother.'' [lao]
+  \end{exe}
+  \vfill
+  \large
+  ``give'' marks the beneficiary, ``accompany'' the companion
+\end{frame}
+
+\begin{frame}{Vietnamese: ``Arrive'' Means ``About''}
+  \begin{exe}
+    \ex
+    \gll Chúng tôi nhắc \ul{đến} anh luôn. \\
+         \textsc{pl} 1\textsc{excl} recall arrive(=about) brother often \\
+    \trans ``We often speak about you.'' [vie]
+  \end{exe}
+  \vfill
+  \large
+  Serial verbs can mark what is being talked about
+\end{frame}
+
+\begin{frame}{Japanese Compound Verbs Form a Cline}
+  \large
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{llll}
+    \toprule
+    & & literally & means \\
+    \midrule
+    lexical     & \jps{取り締まる} \jpn{tori-shimaru}  & take-squeeze & manage \\
+    \midrule
+    aspectual   & \jps{書き上げる} \jpn{kaki-ageru}    & write-raise  & write up \\
+                & \jps{歩き出す} \jpn{aruki-dasu}      & walk-out     & start walking \\
+    \midrule
+    syntactic   & \jps{食べ終わる} \jpn{tabe-owaru}    & eat-finish   & finish eating \\
+                & \jps{歩き始める} \jpn{aruki-hajimeru} & walk-begin  & start walking \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  The aspectual ones are like English particle verbs \citep{Hashimoto:Bond:2005}
+\end{frame}
+
+\begin{frame}{Arguments Can Transfer}
+  \Large
+  \begin{tabular}{l}
+    \jps{大阪を食べ歩く} \jpn{Ōsaka-o tabe-aruku} \\
+    \quad Osaka-\textsc{acc} eat-walk \\
+    \quad ``stroll around Osaka eating'' \\[2ex]
+    \jps{寿司を食べ歩く} \jpn{sushi-o tabe-aruku} \\
+    \quad sushi-\textsc{acc} eat-walk \\
+    \quad ``stroll around eating sushi'' \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  The object can belong to either verb
+\end{frame}
+
+\begin{frame}{Summary: Serial Verbs}
+  \Large
+  \begin{itemize}
+  \item Several verbs, one subject, no conjunction
+  \item \txx{Loose}: a sequence; \txx{tight}: one event
+  \item They express direction, beneficiaries, companions --- the work
+    prepositions do in English
+  \end{itemize}
 \end{frame}
 
 \section{Subject and Topic}
 
-\begin{frame}{What is a Subject?}
+\begin{frame}{What Makes an English Subject?}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    before the verb  & \eng{\ul{She} seems happy.} \\
+    its own case     & \eng{I} vs \eng{me}, \eng{they} vs \eng{them} \\
+    verb agreement   & \eng{he go\alert{es}} \\
+    passive promotes & \eng{\ul{Maxine} was elected.} \\
+    any role         & agent, patient, experiencer \\
+    \bottomrule
+  \end{tabular}
+
+  \vfill
+  \normalsize
+  European languages add case and person-number agreement;
+  the traditional view is that every language has subjects
+\end{frame}
+
+\begin{frame}{Topic: What the Sentence Is About}
+  \Large
   \begin{itemize}
-    \item NP preceding the verb holds a privileged position.
-    \item English examples:
-    \begin{exe}
+  \item In English, topic and subject usually coincide:
+    \eng{\ul{Cats} eat mice.}
+  \item In many Asian languages they \txx{diverge}
+  \item There, \txx{topic} may matter more than subject
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Thai: Topic First}
+  \begin{exe}
     \ex
-\ul{I} go
-\ex
-\ul{He} goes.
-\ex
-\ul{She} seems happy.
-\end{exe}
-    \item Distinction of pronouns: \eng{I} vs.\ \eng{me}, \eng{they} vs.\ \eng{them}.
-    \item Subject impacts verb agreement, e.g., -s in present tense.
-    \item Subjects can be agents, patients, experiencers, etc.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Subject in Other Languages}
-  \begin{itemize}
-    \item Subject agreement in European languages.
-    \item Case marking systems indicate subject (nominative).
-    \item Verbs agree with subjects in person and number.
-    \item Passive constructions highlight subjects:
-       \begin{exe}
-    \ex
-      Maxine was elected.
-    \end{exe}
-    \item Traditional view: Subjects are universal in human languages.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Introduction to Topic}
-  \begin{itemize}
-    \item Topics define what the sentence is ``about.''
-    \item Topics often overlap with subjects in English.
-        \begin{exe}
-      \ex
-      Cats eat mice (topic = cats).
-      \end{exe}
-    \item In many Asian languages, topic and subject diverge.
-    \item Topic prominence is perhaps more important than subject prominence in East Asian languages.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Topic Prominence: Thai}
-  \begin{itemize}
-    \item Flexible word order: OSV, SOV common in Thai.
-    \item Example of OSV:
-    \begin{exe}
-\ex 
     \gll Pàakphanang khâaw raw kin ngâay. \\
-         Pakphanang rice we eat simple \\
-    \trans (In) Pakphanang, we ate simply.
-    \end{exe}
-    \item Thai is typically SVO but informal sentences deviate.
-    \item Widespread subject ellipsis in informal contexts.
-    \item Pragmatic ordering of sentences.
+         Pakphanang rice 1\textsc{pl} eat simple \\
+    \trans ``(In) Pakphanang, we ate simply.'' [tha]
+  \end{exe}
+  \vfill
+  \large
+  \begin{itemize}
+  \item Typically SVO, but OSV and SOV are common in informal speech
+  \item Subjects are often left out; order follows the discourse
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Topic Prominence: Mandarin}
-  \begin{itemize}
-    \item Topics always appear sentence-initially.
-    \item Example of topicalized object:
-    \begin{exe}
-\ex 
+\begin{frame}{Mandarin: Topic First}
+  \begin{exe}
+    \ex
     \gll Zhāngsān wǒ yǐjīng jiàn-guo le. \\
-         Zhangsan I already see-exp crs \\
-    \trans Zhangsan, I've already seen (him).
-    \end{exe}
-    \item Subject ellipsis possible when context is clear.
-    \item Time and locative phrases often function as topics.
-    \item Example: \eng{In Taipei, one can eat well.}
+         Zhangsan 1\textsc{sg} already see-\textsc{exp} \textsc{crs} \\
+    \trans ``Zhangsan, I've already seen (him).'' [cmn]
+  \end{exe}
+  \vfill
+  \large
+  \begin{itemize}
+  \item Topics always come first; times and places are often topics:
+    \eng{In Taipei, one can eat well}
+  \item Subjects are left out when context is clear
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Topic vs. Subject in Mandarin}
-  \begin{itemize}
-    \item Flexible topic-comment structure.
-    \item Double-subject construction in Mandarin.
-    \item Example:
-    \begin{exe}
-\ex 
-    \gll Xiàng bízi cháng. \\
+\begin{frame}{Mandarin: Topic \emph{and} Subject}
+  \begin{exe}
+    \ex
+    \gll \ul{Xiàng} bízi cháng. \\
          elephant nose long \\
-    \trans ‘Elephants, (their) noses are long.’
-    \end{exe}
-    \item Topic sets the frame for comment on the subject.
-    \item The topic-comment structure is common and unmarked.
-  \end{itemize}
+    \trans ``Elephants, (their) noses are long.'' [cmn]
+  \end{exe}
+  \vfill
+  \large
+  The topic sets the frame; the comment has its own subject.
+  This is ordinary, not marked
 \end{frame}
 
-\begin{frame}{Topic and Subject in Japanese}
-  \begin{itemize}
-    \item \jpn{wa} marks topics, \jpn{ga} marks subjects.
-    \item Example of \jpn{wa/ga} distinction:
-      \begin{exe}
-      \ex
-
-    \gll hi wa nobor-u. \\
-          sun top rise-pres \\
-    \trans The sun rises (general) \\
-     \ex
-    \gll hi ga nobor-u. \\
-             sun top rise-pres \\
-     \trans The sun is rising (specific) \\
-         \end{exe}
-
-    
-    \item \jpn{wa} used in contrastive and generic statements.
-    \item \jpn{ga} indicates a focus on the event as a whole.
-    \item Adverbial topics: time/place phrases marked by \jpn{wa} (or unmarked)
-  \end{itemize}
+\begin{frame}{Japanese: \jpn{wa} Marks Topic, \jpn{ga} Subject}
+  \begin{exe}
+    \ex
+    \gll Hi \ul{wa} nobor-u. \\
+         sun \textsc{top} rise-\textsc{prs} \\
+    \trans ``The sun rises.'' (general) [jpn]
+    \ex
+    \gll Hi \ul{ga} nobor-u. \\
+         sun \textsc{nom} rise-\textsc{prs} \\
+    \trans ``The sun is rising.'' (this one) [jpn]
+  \end{exe}
+  \vfill
+  \large
+  \jpn{wa}: generic or contrastive, and for times and places;
+  \jpn{ga}: the event as a whole
 \end{frame}
 
-\begin{frame}{Tagalog Trigger System}
-  \begin{itemize}
-    \item Tagalog has a flexible trigger system.
-    \item Trigger denotes definiteness and is marked on verbs.
-    \item Example of Actor Trigger (AT):
-    \begin{exe}
-\ex 
+\begin{frame}{Tagalog: A Trigger System}
+  \begin{exe}
+    \ex
     \gll Mag-aalis ang bata ng laruan sa kahon. \\
-         at-will.take.out trig child pat toy dir box \\
-    \trans ‘The child will take a toy out of the box.’
-    \end{exe}
-    \item Verb affixes indicate the role of the trigger NP.
-    \item The system challenges traditional subject/topic definitions.
-  \end{itemize}
+         \textsc{at}-will.take.out \textsc{trig} child \textsc{pat} toy \textsc{dir} box \\
+    \trans ``The child will take a toy out of the box.'' [tgl]
+  \end{exe}
+  \vfill
+  \large
+  The verb's affix says which role the \txx{trigger} (\msa{ang}) NP has;
+  the trigger is definite --- neither subject nor topic quite fits
 \end{frame}
 
-\begin{frame}{Actor vs. Undergoer in Acehnese}
-  \begin{itemize}
-    \item Acehnese verbs take person-marking prefixes or suffixes.
-    \item Prefixes for actors, suffixes for undergoers.
-    \item Example of Actor:
-    \begin{exe}
-\ex 
-    \gll Geu-jak. \\
+\begin{frame}{Acehnese: Actor and Undergoer}
+  \begin{exe}
+    \ex
+    \gll \ul{Geu}-jak. \\
          3-go \\
-    \trans ‘He/she goes.’
-    \end{exe}
-    \item Example of Undergoer:
-    \begin{exe}
-\ex 
-    \gll Lôn rhët-lôn. \\
-         1sg fall-1sg \\
-    \trans ‘I fall.’
-    \end{exe}
-    \item Acehnese highlights actor/undergoer, not subject/object.
-  \end{itemize}
+    \trans ``(S)he goes.'' [ace]
+    \ex
+    \gll Lôn rhët-\ul{lôn}. \\
+         1\textsc{sg} fall-1\textsc{sg} \\
+    \trans ``I fall.'' [ace]
+  \end{exe}
+  \vfill
+  \large
+  Prefixes mark \txx{actors}, suffixes mark \txx{undergoers} --- not
+  subject and object
 \end{frame}
 
 \begin{frame}{Summary: Subject and Topic}
+  \Large
   \begin{itemize}
-    \item Subject prominence is common in European languages.
-    \item Topic prominence is more evident in East Asian languages.
-    \item Topic and subject do not always align.
-    \item Languages like Tagalog and Acehnese challenge traditional subject concepts.
-    \item Ongoing debates in linguistics about the universality of subjects.
+  \item European languages are \txx{subject}-prominent;
+    East Asian languages \txx{topic}-prominent
+  \item Topic and subject need not coincide
+  \item Tagalog and Acehnese question whether subjects are universal
   \end{itemize}
 \end{frame}
-
 
 \section{Sentence Final Particles (SFP)}
 
-\begin{frame}{Illocutionary Particles Overview}
+\begin{frame}{Particles Carry the Speaker's Attitude}
+  \Large
   \begin{itemize}
-    \item Express speaker's immediate emotions, thoughts, desires.
-    \item Common in Southeast Asian languages.
-    \item Often sentence-final.
-    \item Speech acts: requesting, questioning, persuading.
-    \item Express emotional responses: surprise, doubt, hesitation.
+  \item At the \txx{end} of the sentence
+  \item Speech acts: asking, requesting, persuading
+  \item Feelings: surprise, doubt, hesitation
   \end{itemize}
+  \vfill
+  \begin{tabular}{lll}
+    \toprule
+    & one every & particles \\
+    \midrule
+    Cantonese & \alert{1.5} seconds & 30+, in 100+ combinations \\
+    Mandarin  & \alert{6} seconds   & about 7 common ones \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Like English intonation, but explicit. Common in Thai, Lao and
+  Vietnamese too; rarer in formal and written language
 \end{frame}
 
-\begin{frame}{Cantonese Sentence-Final Particles}
-  \begin{itemize}
-    \item Cantonese has over 30 basic particles.
-    \item More than 100 particle combinations.
-    \item Particles add subtle nuances to meaning.
-    \item Function like English intonation but more explicit.
-    \item Rich particle usage typical of Southeast Asian languages.
-  \end{itemize}
- \end{frame}
-
-\begin{frame}{Examples of Cantonese Particles}
-  \begin{table}[h]
-    \centering
-\begin{tabular}{lll}
-  \hline
-   \multicolumn{2}{c}{Particle} & \textbf{Meaning} \\
-  \hline
-  呀 & ā & lively statement, question \\ 
-  呀 & áh & seeking confirmation \\ 
-  噏 & ak & abrupt disagreement \\ 
-  啦 & lā & requesting, seeking agreement \\ 
-  囉 & lo & emphasizing current situation \\ 
-  咩 & mē & expressing surprise \\
-  喎 & wo & informative, noteworthy \\ 
-  噃 & bo & exclamatory \\ 
-  喇 & la & current relevance, advice \\ 
-  咋 & ja & cheeky, intimate \\ 
-  \hline
-\end{tabular}
-  \end{table}
+\begin{frame}{Some Cantonese Particles}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    \zht{呀} & \yue{ā}  & lively statement, question \\
+    \zht{呀} & \yue{áh} & seeking confirmation \\
+    \zht{噏} & \yue{ak} & abrupt disagreement \\
+    \zht{啦} & \yue{lā} & requesting, seeking agreement \\
+    \zht{囉} & \yue{lo} & emphasizing the current situation \\
+    \zht{咩} & \yue{mē} & surprise \\
+    \zht{喎} & \yue{wo} & informative, noteworthy \\
+    \zht{噃} & \yue{bo} & exclamatory \\
+    \zht{喇} & \yue{la} & current relevance, advice \\
+    \zht{咋} & \yue{ja} & cheeky, intimate \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
-\begin{frame}{Examples of Cantonese Particles in Questions}
-  \begin{itemize}
-    \item \cmn{áh}: surprise or disapproval.
-    \item \cmn{há}: presupposing agreement.
-    \item \cmn{mē}: surprise, often in rhetorical questions.
-  \end{itemize}
+\begin{frame}{Cantonese: Particles in Questions}
   \begin{exe}
-\ex 
-    \gll Léih gú gam yúhngyih áh? \\
-         you guess so easy prt \\
-    \trans ‘You think it's that easy, do you?’
+    \ex
+    \gll Léih gú gam yùhngyih \ul{áh}? \\
+         2\textsc{sg} guess so easy \textsc{sfp} \\
+    \trans ``You think it's that easy, do you?'' [yue]
+  \end{exe}
+  \vfill
+  \Large
+  \begin{tabular}{ll}
+    \yue{áh} & surprise or disapproval \\
+    \yue{há} & presupposing agreement \\
+    \yue{mē} & surprise, often rhetorical \\
+  \end{tabular}
+  \vfill
+\end{frame}
+
+\begin{frame}{Cantonese: Directive Particles}
+  \begin{exe}
+    \ex
+    \gll Taai chòuh \ul{la}, ngóh fan m̀h dóu. \\
+         too noisy \textsc{sfp} 1\textsc{sg} sleep not able \\
+    \trans ``It's too noisy, I can't sleep.'' [yue]
+    \ex
+    \gll Gám jauh dāk \ul{lo}. \\
+         so then okay \textsc{sfp} \\
+    \trans ``That'll be all right, won't it?'' [yue]
+  \end{exe}
+  \vfill
+  \large
+  \yue{la}: current relevance; \yue{lo}: invites agreement
+\end{frame}
+
+\begin{frame}{Mandarin Particles}
+  \begin{exe}
+    \ex
+    \gll Nǐ xǐhuan chī \ul{ma}? \\
+         2\textsc{sg} like eat \textsc{q} \\
+    \trans ``Do you like to eat (it)?'' [cmn]
+    \ex
+    \gll Wǒmen qù \ul{ba}. \\
+         1\textsc{pl} go \textsc{sfp} \\
+    \trans ``Let's go.'' [cmn]
+    \ex
+    \gll Tā \ul{ne}? \\
+         3\textsc{sg} \textsc{sfp} \\
+    \trans ``What about him?'' [cmn]
   \end{exe}
 \end{frame}
 
-\begin{frame}{Directive Particles}
-  \begin{itemize}
-    \item \cmn{la}: emphasizes a point of current relevance.
-    \item \cmn{lo}: invites agreement or cooperation.
-    \item Example sentences:
-  \end{itemize}
-  \begin{exe}
-\ex 
-    \gll Taai chóuh la, ngóh fan m̀h dóu. \\
-         too noisy prt I sleep not prt \\
-    \trans I can't sleep, it's too noisy.
-  \end{exe}
-  \begin{exe}
-\ex 
-    \gll Gám jauh dāk lo. \\
-         so then okay prt \\
-    \trans ‘That'll be all right, won't it?’
-  \end{exe}
+\begin{frame}{Singlish Particles (1)}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \eng{You must go \alert{lah}.}       & ``You must go, okay?'' \\
+    \eng{I already said \alert{lor}.}    & ``I already told you, see?'' \\
+    \eng{This one easy \alert{mah}.}     & ``This one is easy, you know?'' \\
+    \eng{You sure can do it \alert{meh}?} & ``Are you really sure?'' \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  \citet{chow-etal-2024-word}
 \end{frame}
 
-\begin{frame}{Particles in Everyday Use}
-  \begin{itemize}
-    \item Particles appear very frequently in Cantonese speech.
-    \item Average occurrence: every 1.5 seconds in conversation.
-    \item Similar usage in Thai, Lao, and Vietnamese.
-    \item Less frequent in formal settings or written texts.
-    \item Frequency decreases in scientific or historical writing.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Mandarin Sentence-Final Particles}
-  \begin{itemize}
-    \item Mandarin has a smaller set of particles than Cantonese.
-    \item Seven common particles in Mandarin.
-    \item Example: \cmn[question]{ma}, \cmn[suggestion]{ba}, \cmn[emphasis]{ne}.
-    \item Particles are typical of informal, conversational settings.
-    \item Estimated frequency: every six seconds in speech.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Examples of Mandarin Particles}
-  \begin{exe}
-\ex 
-    \gll Nǐ xǐhuan chī ma? \\
-         you like eat prt \\
-    \trans ‘Do you like to eat?’
-  \end{exe}
-  \begin{exe}
-\ex 
-    \gll Wǒmen qù ba. \\
-         we go prt \\
-    \trans ‘Let's go.’
-  \end{exe}
-  \begin{exe}
-\ex 
-    \gll Tā ne? \\
-         he prt \\
-    \trans ‘What about him?’
-  \end{exe}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{These are also common in Singlish}
-\begin{exe}
-  \ex You must go \ul{lah}. ``You must go, okay?''
-
-\ex I already said \ul{lor}. ``I already told you, see?''
-
-\ex  We're about to go already. Your friend  leh$^1$? \\ ``We're about to go already. What about your friend'' (question)
-
-\ex
-Eh, don't like that leh$^3$. We need you here to play mahjong. \\ ``Don't be like that. We need you here to play mahjong.'' (persuasive)
-
-\ex This one easy \ul{mah}. ``This one is easy, you know?''
-
-\ex You sure can do it \ul{meh}? ``Are you really sure you can do it?''
-
-\ex Don't blame me \ul{what}. ``It's not my fault, you know?''
-
-\ex She always like that \ul{one}. ``She's always like that, you know?''
-\end{exe}
-
-\citep{chow-etal-2024-word}
-\end{frame}
-
-\begin{frame}{Conclusion: Importance of Particles}
-  \begin{itemize}
-    \item Particles convey subtle shades of meaning in speech.
-    \item Express emotions, intentions, and social cues.
-    \item Different languages utilize particles with varying frequencies.
-    \item Illocutionary particles are an areal feature of Southeast Asia.
-    \item Essential in mastering conversational fluency in these languages.
-  \end{itemize}
+\begin{frame}{Singlish Particles (2)}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    \eng{Don't blame me \alert{what}.} & ``It's not my fault, you know?'' \\
+    \eng{She always like that \alert{one}.} & ``She's always like that, you know?'' \\
+    \eng{Your friend \alert{leh¹}?}    & ``What about your friend?'' (question) \\
+    \eng{Eh, don't like that \alert{leh³}.} & ``Don't be like that.'' (persuasive) \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  The tone of \eng{leh} changes its meaning
 \end{frame}
 
 \begin{frame}{Conclusions}
+  \Large
   \begin{itemize}
-  \item SEA languages have many features not found in Indo-European languages
-  \item They package up meaning in different ways
+  \item \txx{Classifiers} are needed to count, and sort nouns by kind,
+    shape and status
+  \item \txx{Aspect}, not tense, organizes time
+  \item \txx{Serial verbs} do the work of prepositions and adverbs
+  \item \txx{Topic} can matter more than subject
+  \item \txx{Particles} carry the speaker's attitude
   \end{itemize}
+  \vfill
+  \normalsize
+  Southeast Asian languages package meaning differently from European ones
 \end{frame}
 
 % \section{Some of my work}

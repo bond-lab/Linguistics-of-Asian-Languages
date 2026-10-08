@@ -270,7 +270,9 @@
 \newcommand{\zhs}[1]{\mtplain{\textchinese{#1}}}
 \newcommand{\zht}[1]{\mtplain{\textyue{#1}}}
 \newcommand{\jps}[1]{\mtplain{\textjapanese{#1}}}
-\newcommand{\kos}[1]{\mtplain{\textkorean{#1}}}
+% Korean separates words with spaces, which xeCJK would otherwise drop
+% between Hangul (비가 온다 came out as 비가온다)
+\newcommand{\kos}[1]{\mtplain{\textkorean{\xeCJKsetup{CJKspace=true}#1}}}
 \newcommand{\ths}[1]{\mtplain{\textthai{#1}}}
 
 %% ---- structure -----------------------------------------------------------

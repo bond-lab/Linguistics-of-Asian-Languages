@@ -13,8 +13,6 @@
     \more(#1,#2)#4\\%
    }
 \makeatother
-% Define a robust version of eachwordone
-\DeclareRobustCommand{\eachwordone}{\textcolor{teal}}
 
 \title{Communication and Culture}
 
@@ -121,7 +119,7 @@ By Nazima Versay Kudus and Melati Desa (2022)
          \hfill \includegraphics{pics/shouzhudaitu.jpg}
        \vspace{-3cm}
        \begin{exe}
-         \DeclareRobustCommand{\eachwordone}{\chinesefontsf}
+         \let\eachwordone=\glosszh
          \DeclareRobustCommand{\eachwordtwo}{\textcolor{teal}}
          \ex\label{s:rabbit}
          \glll 守 株 待 兔 \\
@@ -573,7 +571,7 @@ receive & \jpn{morau} & \jpn{itadaku} \\
 \begin{frame}
 \frametitle{Honorific Language is Long Winded}
 \begin{exe}
-       \DeclareRobustCommand{\eachwordone}{\japanesefontsf}
+       \let\eachwordone=\glossja
        \DeclareRobustCommand{\eachwordtwo}{\textcolor{teal}}
        \ex \gll 聞いて いい ？ \\
        Kii.te ii ? \\

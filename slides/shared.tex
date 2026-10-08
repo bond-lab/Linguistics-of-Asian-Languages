@@ -194,6 +194,50 @@
 % writing.tex and verbal-arts.tex override this afterwards.
 \renewcommand{\eachwordtwo}{\Libertine}
 
+% Source line: upright teal, not italic -- an interlinear example is already
+% set apart.  The colour has to live in the FONT: \color inside gb4e's
+% per-word hooks sends its word-measuring loop round until TeX runs out of
+% memory.  So there is a teal copy of the Latin face and of each CJK face.
+% The default is Latin + Simplified; a deck whose source lines are Japanese,
+% Cantonese or Korean says \let\eachwordone=\glossja (or \glossyue, \glossko),
+% and can do so inside a single {exe}.
+\newfontfamily\glosstealfont{LibertinusSans}[
+  Scale = 0.95, Extension = .otf, UprightFont = *-Regular,
+  ItalicFont = *-Italic, BoldFont = *-Bold, Color = 008080,
+  Ligatures = {TeX,NoCommon}]
+\newcommand{\CJKtealface}[2]{%
+  \IfFontExistsTF{NotoSansCJK-Regular.ttc}{%
+    \newCJKfontfamily#1{NotoSansCJK-Regular.ttc}[%
+      FontIndex = #2, Color = 008080, ItalicFont = NotoSansCJK-Regular.ttc,
+      ItalicFeatures = {FontIndex = #2}]}{%
+    \newCJKfontfamily#1{Noto Sans CJK SC}[Color = 008080,
+      ItalicFont = Noto Sans CJK SC]}}
+\CJKtealface\glosstealsc{2}
+\CJKtealface\glosstealtc{3}
+\CJKtealface\glosstealjp{0}
+\CJKtealface\glosstealkr{1}
+\newcommand{\glosszh}{\glosstealfont\glosstealsc}
+\newcommand{\glossyue}{\glosstealfont\glosstealtc}
+\newcommand{\glossja}{\glosstealfont\glosstealjp}
+\newcommand{\glossko}{\glosstealfont\glosstealkr}
+\let\eachwordone=\glosszh
+
+%% ---- tables and explications --------------------------------------------
+%% Examples go in booktabs tables: languages as columns, meanings as rows,
+%% a shared word spanning rows with \multirow.
+\usepackage{booktabs}
+\usepackage{multirow}
+
+% NSM explications are scripts, not lists: keep the indentation, drop the
+% bullets, and box them.  Write the lines as an ordinary nested itemize.
+\newenvironment{nsm}
+  {\setbeamertemplate{itemize items}{}%
+   \setbeamertemplate{itemize subitem}{}%
+   \setbeamerfont{itemize/enumerate body}{size=\large}%
+   \setbeamerfont{itemize/enumerate subbody}{size=\large}%
+   \begin{block}{}}
+  {\end{block}}
+
 %% ---- language shorthands ------------------------------------------------
 %%
 %% Two families, and the distinction matters:

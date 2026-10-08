@@ -134,6 +134,10 @@
   Extension = .otf, UprightFont = *-Regular, ItalicFont = *-Italic,
   BoldFont = *-Bold, Ligatures = {TeX,NoCommon}]
 \newcommand{\ipa}[1]{{\ipafont #1}}
+% Chao tone letters (˥ ˦ ˧ ˨ ˩) are the one IPA block Libertinus lacks;
+% Andika, SIL's phonetics face, has them.  \tl{˧˥}
+\newfontfamily\tonefont{Andika}
+\newcommand{\tl}[1]{{\tonefont #1}}
 \newcommand{\IPA}[1]{{\ipafont #1}}
 \let\silipa\ipafont
 

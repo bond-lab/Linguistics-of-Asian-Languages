@@ -1,927 +1,783 @@
 \documentclass{beamer}
 \input{shared}
 
-\makeatletter
-\gdef\getwords(#1,#2)#3 #4\\%
-   {\setbox#1=\vbox{\hbox{#2{\strut#3}{} }%
-                    \unvbox#1%
-                   }%
-    \def\more{#4}%
-    \ifx\more\empty\let\more=\donewords
-    \else\let\more=\getwords
-    \fi
-    \more(#1,#2)#4\\%
-   }
-\makeatother
-
 \title{Communication and Culture}
 
 \begin{document}
 
 \frame{\titlepage}
 
-% Introduction Slide
-\begin{frame}
-\frametitle{Introduction to Communicative Competence}
-\begin{itemize}
-    \item Speaking well goes beyond grammar: it includes situational language choices.
-    \item Distinction between linguistic competence and communicative competence.
-    \item Focus on East and Southeast Asian languages.
-    \item Topics covered: proverbs, speech styles, honorific systems, communicative style.
-\end{itemize}
-\end{frame}
-
-% Word Skills Slide Series
-\section{Word Skills in East and Southeast Asian Languages}
-\begin{frame}
-\frametitle{Proverbs and Sayings}
-\begin{itemize}
-    \item Proverbs are central to communication, especially in Malay.
-    \item Express social norms and values with cultural references.
-    \item Examples encapsulate lessons or advice.
-    \item Often used to depersonalize comments, presenting them as traditional wisdom.
-    \item Culturally rich and expressive forms such as \textit{pantun} quatrains.
-      \\ Pantun is a Malay poem with two parts, connected indirectly
-
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Examples of Malay Proverbs}
-\begin{exe}
-    \ex \gll Ada hujan, ada panas, ada hari boleh balas. \\
-        There rain, there {hot weather}, there day can repay.\\
-        \trans `Every action, good or bad, will be repaid in kind.'
-    \ex \gll {Sedikit-sedikit lama-lama} jadi bukit. \\
-        {Little by little}, become mountain.\\
-        \trans `Small, patient actions bring big results.'
-\end{exe}
-\end{frame}
-\begin{frame}
-\frametitle{Examples of a Pantun}
-\begin{exe}
-  \ex \textcolor{teal}{Pisang emas bawa belayar, \\
-      \hspace*{2em}Masak sebiji di atas peti; \\
-      Hutang emas boleh dibayar, \\
-      \hspace*{2em}Hutang budi dibawa mati.}
-
-  \ex The golden plantain carried on a voyage;   \\
-      \hspace*{2em}One ripens on top of the chest.   \\
-      A debt of gold can be repaid;   \\
-      \hspace*{2em}A debt of kindness lasts until death.
-    \end{exe}
-
-See \href{https://ir.uitm.edu.my/id/eprint/63499/1/63499.pdf}{\textit{Connecting the dots: The case of foreshadow and meaning in pantun}}
-By Nazima Versay Kudus and Melati Desa (2022)
-    
-\end{frame}
-
-% Elaborate Expressions Slide Series
-\begin{frame}
-\frametitle{Elaborate Expressions}
-\begin{itemize}
-    \item Common in Southeast Asia, with four-syllable compounds (ABAC, ABCB).
-    \item Thai, Lao, Vietnamese, and Chinese use these expressions for fluency.
-    \item Used to convey deeper cultural meanings and imagery.
-    \item Chinese examples (chéng yǔ) reflect historical, literary roots.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Examples of Thai Elaborate Expressions}
-\begin{table}[]
-\centering
-\begin{tabular}{lll}
-    \textbf{Expression} & \textbf{Literal} & \textbf{Meaning} \\
-    \hline
-    hǔu-pàa-taa-thì & ear-forest-eye-forest & to be ignorant \\
-    phûut-yàang-tham-yàang & speak-kind-do-kind & say one thing, do another \\
-\end{tabular}
-\end{table}
-\end{frame}
-
-\begin{frame}{What are Chengyu (\textchinese{成语})?}
-  \begin{itemize}
-  \item Chengyu are prototypically four-character, non-compositional
-    phrases derived from historical lore or classical literature.
-  \item Some are partly compositional
-  \item Many are completely non-compositional
-  \item They function as lexemes in sentences
-  \item They are  more vivid than normal lexemes
-  \item There is no definitive list --- different lexicons range
-    from samples of a few hundred up to 50,000 or more
-  \item Many excellent (paper) dictionaries exist
-  \end{itemize}
-\end{frame}     
-
-
-\begin{frame}{Some Examples of Chengyu}
-         \hfill \includegraphics{pics/shouzhudaitu.jpg}
-       \vspace{-3cm}
-       \begin{exe}
-         \let\eachwordone=\glosszh
-         \DeclareRobustCommand{\eachwordtwo}{\textcolor{teal}}
-         \ex\label{s:rabbit}
-         \glll 守 株 待 兔 \\
-         shǒu zhū dài tù \\
-         guard {tree stump} wait rabbit \\
-         \trans Lit: waiting by a tree stump for a rabbit
-         \trans to expect fortune without putting in any effort
-         \ex\label{s:divide}
-         \glll 分 崩 离 析 \\
-         fēn bēng lí xī \\
-         divide rupture leave {split apart} \\
-         \trans to completely fall apart
-       \end{exe}
-
-Image from \href{https://www.dimsumwarriors.com/chengyu/守株待兔-shouzhudaitu/}{Yumcha Studios}
-     \end{frame}
-     \begin{frame}{Many come from stories}
-
-     
-  During the Spring and Autumn period, there was a farmer (\textchinese{农民} Nóngmín) who had a tree in his field. He would frequently rest under a tree after a long day of working.
-
-One day, he was working in the field and saw a scared rabbit come running past him, crash into that tree, and die suddenly. The farmer was overjoyed! He had just gotten a free dinner without having to put in any work.
-
-While eating rabbit stew that night, the farmer had a thought. “Why even bother farming, when I have a tree that rabbits just ran into?” The farmer really liked this thought and from that day forth, he abandoned his plow to simply sit by the tree and wait for another rabbit to run into it and die.
-
-However, to the farmer’s surprise, no more rabbits crashed into the tree again ever again. Overtime, the farmer ended up with barren fields, impoverished, and the laughing stock of the village.
-
-
-\url{https://www.tutormandarin.net/en/holding-a-tree-and-waiting-for-a-rabbit/}
-\end{frame}
-
-\begin{frame}{Distribution of Chengyu in different Genres}
-
-  We looked at how many chengyu could be found in translations from English to Chinese in four different genres.
-
-  \begin{center}
-      \begin{tabular}{lrrrr}
-        \textbf{Genre} & \textbf{Sents} &
-        \multicolumn{3}{c}{\textbf{Chengyu}} \\
-        &  &
-        \textbf{Types} &  
-        \textbf{Tokens} &  \textbf{Tokens/100 Sents} \\
-        \hline
-        Story   &  1,226  &    79  &     90  & 7.3 \\
-        News    &  2,138  &   108  &    161  & 7.5 \\
-        Essay   &    816  &   103  &    127  & 15.6 \\
-        Tourism &  3,280  &   187  &    388  & 11.8 \\
-        \hline
-        Total   &  7,460  &   427  &    766  & 10.3 \\
-      \end{tabular}
-    \end{center}
-    \begin{itemize}
-    \item The essay \textit{The Cathedral and the Bazaar} has the most,
-      which fits well with its intellectual tone.
-    \end{itemize}
-
-    From \citet{Ho:Kng:Wang:Bond:2014}.
-
-    Used more in Chinese, then Korean, then Japanese.
-  \end{frame}
-  
-  
-\begin{frame}{Comparison with the West}
-  \begin{itemize}
-  \item These are not so different from Western proverbs (IMHO)
-    \begin{itemize}
-    \item Many of which come from classic works
-      \\ Aesop's fables, the Bible, Homer, ...
-    \item Using them correctly is a sign of erudition
-    \end{itemize}
-  \item Chéngyǔ often require a degree of interpretation, as their
-    literal meaning may differ from the figurative message they
-    convey. For example, the chéngyǔ \textchinese{画蛇添足} \zh{huà shé tiān zú},
-    ``to draw legs on a snake'', means ``to add something
-    superfluous'', warning against unnecessary embellishments.  But this is also true for the English expression ``like lipstick on a pig'' or an expression like ``sour grapes'', \ldots
-  \item Because of their semi-fixed form (normally 4, sometimes 5 characters) they are more distinct from normal text.
-  \end{itemize}
-\end{frame}
-
-
-\begin{frame}{Auspicious and Inauspicious Words in Cantonese}
-
-\begin{tabular}{lll}
-%\hline
-% \textbf{Word} & \textbf{Pronunciation} & \textbf{Meaning / Association} \\
-% \hline
-\multicolumn{3}{l}{\textbf{Auspicious Words}} \\
-\hline
-\textyue{八} (eight) & \textyue{baat} & $\approx$ \textyue{發} (faat) ``prosperity'' \\
-\textyue{橙} (tangerine) & \textyue{daaih gāt} & $\approx$ \textyue{大吉} (daaih gāt), ``great fortune'' \\
-\textyue{魚} (fish) & \textyue{yú} & $\approx$ \textyue{餘} (yùh), ``abundance'' \\
-\textyue{金} (gold) & \textyue{gām} & Symbolizes wealth and prosperity \\
-\textyue{生菜} (lettuce) & \textyue{sāang chòih} & $\approx$ \textyue{生財} (sāang chòih), ``making money'' \\[1ex]
-
-\multicolumn{3}{l}{\textbf{Inauspicious Words}} \\
-\hline
-\textyue{四} (four) & \textyue{sei} & $\approx$ \textyue{死} (séi), ``death'' \\
-\textyue{書} (book) & \textyue{syū} &$\approx$ \textyue{輸} (syū), ``to lose'' \\
-\textyue{空} (empty) & \textyue{hūng} & Associated with emptiness or misfortune \\
-\textyue{鞋} (shoe) & \textyue{hái} & $\approx$ \textyue{孩} (hái), associated with failure \\
-\textyue{舌} (tongue) & \textyue{siht} & $\approx$ \textyue{失} (siht), ``to lose'' \\
-\hline
-\end{tabular}
-
-\medskip
-
-So we give and receive tangerines on New Year's Day!
-
-\end{frame}
-\begin{frame}{Auspicious and Inauspicious Words in Japanese}
-
-\begin{tabular}{lll}
-\multicolumn{3}{l}{\textbf{Auspicious Words ( \textjapanese{縁起の良いことば})}} \\
-\hline
-\textjapanese{松} (pine) & \textjapanese{まつ} & Longevity; evergreen resilience \\
-\textjapanese{竹} (bamboo) & \textjapanese{たけ} & Strength, uprightness \\
-\textjapanese{梅} (plum) & \textjapanese{うめ} & Renewal; the first flower of spring \\
-\textjapanese{鯛} (sea bream) & \textjapanese{たい} & $\approx$ \textjapanese{めでたい}, “auspicious, happy” \\
-\textjapanese{福} (fortune) & \textjapanese{ふく} & Good luck, prosperity  \\[1ex]
-
-\multicolumn{3}{l}{\textbf{Inauspicious Words (\textjapanese{縁起の悪いことば})}} \\
-\hline
-\textjapanese{四} (four) & \textjapanese{し} &  $\approx$ \textjapanese{死} (death)\\
-\textjapanese{櫛} (comb) & \textjapanese{く(し)} &  $\approx$ \textjapanese{苦} (suffering) \\
-\textjapanese{切る} (to cut) & \textjapanese{きる} & Not at weddings: “to sever a relationship” \\
-\textjapanese{別れる} (to part) & \textjapanese{わかれる} &  Not at weddings,  in gifts and speeches \\
-\textjapanese{落ちる} (to fall) & \textjapanese{おちる} & Avoided around exams (implies “to fail”) \\
-\hline
-\end{tabular}
-
-\medskip
-
-So at weddings and New Year, we prefer \textjapanese{松竹梅} (pine, bamboo, plum) and avoid “cutting” or “separation” words or gifts of combs or knives!
-\end{frame}
-% Slide 1
-\begin{frame}
-\frametitle{Introduction to Speech Styles}
-\begin{itemize}
-    \item Many East and Southeast Asian languages use different speech styles (registers).
-    \item Speech styles convey respect, social distance, and familiarity.
-    \item Marked by pronunciation, vocabulary, particles, morphology, and syntax.
-    \item Styles are often culturally codified, such as in Javanese and Korean.
-    \item Speakers are mindful of using appropriate styles in various social situations.
-\end{itemize}
-\end{frame}
-
-% Slide 2
-\begin{frame}
-\frametitle{Speech Styles in Thai}
-\begin{itemize}
-    \item Thai has styles like public, consultative, and personal (informal).
-    \item Consultative style uses particles \textit{khráp} (male) and \textit{khâ} (female).
-    \item Particles show respect and are used at sentence ends or alone.
-    \item Requires careful pronunciation and elevated vocabulary.
-    \item Politeness demands avoiding abrupt or negative expressions.
-\end{itemize}
-\end{frame}
-
-% Slide 3
-\begin{frame}
-\frametitle{Thai Greeting Styles}
-\begin{itemize}
-    \item Physical greetings also reflect social hierarchy.
-    \item The traditional Thai \textit{wai} has variations based on social rank.
-    \item Higher-ranked individuals may have more relaxed gestures.
-    \item Verbal and non-verbal etiquette combine to convey respect.
-\end{itemize}
-\begin{center}
-\includegraphics[width=0.23\textwidth]{pics/wai-1.png}
-\includegraphics[width=0.23\textwidth]{pics/wai-2.png}
-\includegraphics[width=0.23\textwidth]{pics/wai-3.png}
-\includegraphics[width=0.23\textwidth]{pics/wai-4.png}
-\end{center}
-\end{frame}
-
-% Slide 4
-\begin{frame}
-\frametitle{Speech Styles in Javanese}
-\begin{itemize}
-    \item Javanese features highly developed vocabulary levels.
-    \item Primary styles: \textit{ngoko} (informal) and \textit{krama} (formal, respectful).
-      \begin{itemize}
-      \item  \textit{Ngoko} is personal and direct, typically for close relations.
-      \item[] used for thinking to oneself
-         \item  \textit{Madya} is a compromise between conflicting criteria of
-           age, social standing, and familiarity.
-           \item[] it uses abbreviated krama words with ngoko affixes
-    \item \textit{Krama} includes set phrases, indirect expressions, and formal tone.
-    \item[] used to address superiors or strangers, aiming for social smoothness.
-
-      
-      \end{itemize}
-\end{itemize}
-\end{frame}
-
-% Slide 5
-\begin{frame}
-\frametitle{Javanese Speech Style Examples}
-\begin{table}[]
-\centering
-\begin{tabular}{lll}
-
-\textbf{Ngoko} & \textbf{Krama} & \textbf{Meaning} \\
-\hline
-omah & griya & house \\
-wong & tiyang & person \\
-lunga & késah & go \\
-sapi & lembu & cow \\
-mati & pejah & die \\
-
-\end{tabular}
-\end{table}
-
-‘What’ is \msa{apa} in ngoko, \msa{napa} in madya, \msa{punapa} in krama.
-
-\end{frame}
-
-
-% Slide 7
-\begin{frame}
-\frametitle{Speech Styles in Sasak (Lombok)}
-\begin{itemize}
-    \item Sasak has three main speech levels: low, mid, and high.
-    \item High-level vocabulary reserved for addressing higher-status individuals.
-    \item Style level choice depends on the addressee's social rank.
-    \item Limited to around 180 words compared to Javanese's extensive system.
-    \item Example phrase for “Have you eaten?” changes across levels.
-      \begin{tabular}{ll}
-      \textbf{Low} & Wah-m mangan kamu? \\
-      \textbf{Mid} & Wah-m medaran side? \\
-      \textbf{High}&  Sampun-m majengan pelinggih?  \\
-    \end{tabular}
-  \end{itemize}
-\end{frame}
-
-% Slide 9
-\begin{frame}
-\frametitle{Speech Styles in Korean}
-\begin{itemize}
-    \item Korean speech styles, known as \textit{che}, differ by verb endings.
-    \item Five primary styles: plain, banmal, familiar, polite, and formal.
-    \item Style choice depends on age, social rank, and relationship.
-    \item Example: \ko[polite]{haeyo-che} for general politeness.
-    \item \ko[formal]{Hapsyo-che} for respectful or professional contexts.
-\end{itemize}
-\end{frame}
-
-% Slide 10
-\begin{frame}
-\frametitle{Korean Speech Style Examples}
-\begin{table}[]
-\centering
-\begin{tabular}{lll}
-\textbf{Speech Style} & \textbf{Example} & \textbf{Meaning} \\ \hline
-Plain    & \ko{bi ga o-nda} & It is raining \\
-Banmal   & \ko{bi ga o-a} & It is raining \\
-Familiar & \ko{bi ga o-ne} & It is raining \\
-Polite   & \ko{bi ga o-ayo} & It is raining \\
-Formal   & \ko{bi ga o-bnita} & It is raining \\
-\end{tabular}
-\end{table}
-\end{frame}
-
-% Slide 11
-\begin{frame}
-\frametitle{Changing Speech Styles in Korean}
-\begin{itemize}
-    \item Moving to banmal signals closeness and familiarity.
-    \item Expressed as ``putting down the language.''
-    \item Verb endings change based on relationship status.
-    \item Politeness levels can shift with changes in relationships.
-    \item People are very aware of the levels
-      \begin{exe}
-        \ex \ko{Uri neun seoro hage-haneun sai.}
-        \trans We have a hage-speaking relationship with each other.
-        \ex \ko{Nugu hante banmal eul haneun geo ya?}
-        \trans Who do you think you’re speaking banmal to?
-      \end{exe}
-      
-\end{itemize}
-\end{frame}
-
-% Slide 12
-\begin{frame}
-\frametitle{Comparison of Speech Styles across Languages}
-\begin{itemize}
-    \item Javanese, Sasak, and Korean show structured speech level systems.
-    \item Each system reflects social values (hierarchy, respect, and formality).
-    \item Vocabulary adjustments often indicate respect or familiarity.
-    \item Linguistic choices have deep cultural and social implications.
-    \item Systems express respect for age, rank, and social distance.
-    \item Politeness often involves elevated or indirect language.
-    \item Common in stratified societies with established social roles.
-    \item Reflects Confucian, Buddhist, and local cultural values.
-\end{itemize}
-\end{frame}
-
-% Slide 15
-\begin{frame}
-\frametitle{Conclusion}
-\begin{itemize}
-    \item Speech styles are essential to communicative competence in Asia.
-    \item Differences in language choice reflect respect and social dynamics.
-    \item Knowing speech styles enhances understanding of cultural norms.
-    \item Key for effective communication in diverse social contexts.
-\end{itemize}
-\end{frame}
-
-
-% Slide 1
-\begin{frame}
-\frametitle{Introduction to Japanese Honorifics}
-\begin{itemize}
-    \item Japanese honorifics are a highly structured part of the language.
-    \item Used to show respect, social distance, and group membership.
-    \item Three main types: \textit{teinei-go}, \textit{sonkei-go}, and \textit{kenjoo-go}.
-    \item Teinei-go is addressee-related (politeness).
-    \item Sonkei-go and kenjoo-go are referent-related (honoring and humbling).
-\end{itemize}
-\end{frame}
-
-% Slide 2
-\begin{frame}
-\frametitle{Types of Honorifics}
-\begin{itemize}
-    \item \textit{Teinei-go} (polite): verbs marked with polite suffixes (e.g., -\textit{masu}).
-    \item \textit{Sonkei-go} (honoring): respectful forms for the addressee.
-    \item \textit{Kenjoo-go} (humbling): modest forms used for oneself or in-group.
-    \item These categories reflect social dynamics and cultural values.
-    \item Honorifics are essential in everyday Japanese.
-\end{itemize}
-\end{frame}
-
-% Slide 3
-\begin{frame}
-\frametitle{Illustration of Honorific Levels}
-\begin{itemize}
-    \item Plain vs Sonkei vs Kenjoo
-
-      \begin{tabular}{llll}
-
-\textbf{Meaning} & \textbf{Neutral} & \textbf{Honoring} & \textbf{Humbling} \\
-\hline
-say & \jpn{iu} & \jpn{ossharu} & \jpn{moosu} \\
-go & \jpn{iku} & \jpn{irassharu} & \jpn{mairu} \\
-do & \jpn{suru} & \jpn{nasaru} & \jpn{itasu} \\
-        eat & \jpn{taberu} & \jpn{meshiagaru} & \jpn{itadaku} \\
- stay & \jpn{tomaru} &  \jpn{o-tomaru-ni naru} &  \jpn{o-tomari suru} \\
-\end{tabular}
-\item Osaka-dialect also has a slightly weaker honorific
-  \\ \jpn{V-haru} (e.g. \jpn{tabe-haru})
-\item Teinei-go is shown by the verb ending:  \jpn{iu} vs \jpn{iimasu}
-\end{itemize}
-\end{frame}
-
-% Slide 5
-\begin{frame}
-\frametitle{In-Group vs. Out-Group Distinction}
-\begin{itemize}
-    \item The concept of \textit{uchi} (in-group) vs. \textit{soto} (out-group) is central.
-    \item Honorific language reflects whether someone is inside or outside one’s social group.
-    \item Family members are usually in-group; outsiders are out-group.
-    \item Modest language is used for in-group members, respectful for out-group.
-    \item Used extensively in school, workplace, and social settings.
-\end{itemize}
-\end{frame}
-
-% Slide 6
-\begin{frame}
-\frametitle{Examples of In-Group Language}
-\begin{exe}
-    \ex \gll \jpn{Chichi} \jpn{wa} \jpn{genkide} \jpn{ori-mas-u.} \\
-        father topic healthy be:hum-pol-nonpast \\
-        \trans ‘(My) father is healthy.’
-    \ex \gll \jpn{O-too-san} \jpn{wa} \jpn{o-genki} \jpn{des-u} \jpn{ka.} \\
-        resp-father-hon topic resp-health be:pol-nonpast ques \\
-        \trans ‘Is (your) father healthy?’
-\end{exe}
-\end{frame}
-
-% Slide 7
-\begin{frame}
-\frametitle{Gender and Honorific Use}
-\begin{itemize}
-    \item Women are expected to use more elaborate honorifics.
-    \item Men’s speech is typically less formal to convey the same level of respect.
-    \item Gender differences decrease at higher levels of politeness.
-    \item Cultural expectations shape these linguistic choices.
-\end{itemize}
-\end{frame}
-
-% Slide 8
-\begin{frame}
-\frametitle{Examples of Humble Speech}
-\begin{exe}
-    \ex \gll \jpn{Sakai-san} \jpn{ga} \jpn{Suzuki-san} \jpn{ni} \jpn{chizu-o} \jpn{o-kak}i \jpn{shi-mashi-ta.} \\
-        Sakai-hon subj Suzuki-hon for map-obj resp-draw do-past \\
-        \trans ‘Mr Sakai drew a map for Mr Suzuki (with humility).’
-\end{exe}
-\end{frame}
-
-% Slide 9
-\begin{frame}
-\frametitle{Mechanics of Honorifics}
-\begin{itemize}
-    \item Lexical differentiation: verbs change form depending on honorific level.
-    \item Morphosyntactic patterns: \jpn[honoring]{o-verb ni naru} and \jpn[humbling]{o-verb suru}.
-    \item Auxiliary verbs (e.g., “give” and “receive”) express additional respect.
-    \item Many forms reflect Japanese cultural values around humility.
-\end{itemize}
-\end{frame}
-
-% Slide 10
-\begin{frame}
-\frametitle{Giving and Receiving Verbs}
-
-\begin{itemize}
-\item These are auxiliaries used for requests and to describe doing something for someone.
-
-
-\begin{tabular}{lll}
-\textbf{Meaning} & \textbf{Plain} & \textbf{Honorific} \\
-\hline
-give to me & \jpn{kureru} & \jpn{kudasaru} \\
-give to someone & \jpn{ageru} & \jpn{sashiageru} \\
-receive & \jpn{morau} & \jpn{itadaku} \\
-
-\end{tabular}
-\end{itemize}
-\begin{exe}
-    \ex \gll \jpn{Tanaka-san} \jpn{ga} \jpn{imooto} \jpn{ni} \jpn{o-kashi} \jpn{o} \jpn{tsukut-te} \jpn{kure-ta.} \\
-        Tanaka-hon subj younger.sister dat hon.sweets acc make:ger give.to.me-past \\
-        \trans ‘Mr Tanaka made some sweets for my younger sister.’
-\end{exe}
-\end{frame}
-
-% Slide 12
-\begin{frame}
-\frametitle{Social Situations and Language Choice}
-\begin{itemize}
-    \item Honorifics vary based on power dynamics in social situations.
-    \item Customer–salesperson and doctor–patient exchanges show clear asymmetry.
-    \item High-status individuals use casual forms; lower-status remain polite.
-    \item Language changes reflect respect and courtesy.
-\end{itemize}
-\end{frame}
-
-% Slide 13
-\begin{frame}
-\frametitle{Honorific Language is Long Winded}
-\begin{exe}
-       \let\eachwordone=\glossja
-       \DeclareRobustCommand{\eachwordtwo}{\textcolor{teal}}
-       \ex \gll 聞いて いい ？ \\
-       Kii.te ii ? \\
-       \trans Ok to ask (a question)?
-       \ex \gll 聞きかせて いただける と うれしい の です が 。 \\
-       Kikasete itadakeru to ureshii no desu ga . \\
-
-      \trans I would, however, be delighted if I may be permitted to ask (a question). 
-\ex \gll ご 協力 下ください 。\\
-         Go kyōryoku kudasai. \\
-\trans Your cooperation, please.
-\ex  \gll ご 協力 の 程 お 願ねがい 申もうし 上あげます 。 \\
-     Gok yōryoku no hodo o negai mōshi agemasu . \\
-\trans We respectfully request the favor of a measure of your cooperation.
-\end{exe}
-\end{frame}
-
-\begin{frame}{Japanese Honorifics and Their Uses}
-  \begin{tabular}{lll}
-\textbf{Honorific} & \textbf{$\approx$} & \textbf{Used For} \\
-\hline
-San (\textjapanese{さん}) & Mr. / Ms. & Adults of equal status, \\
-
-    Sama (\textjapanese{様}) & Sir / Ma'am & People of higher status \\
-     & & including deities, guests, customers \\
-
-Kun (\textjapanese{君}) & Boy, bro & Junior status, boys, among male friends \\
-
-Chan (\textjapanese{ちゃん}) & Little... & Small children, cute things,  close friends \\
-
-Tan (\textjapanese{たん}) & Widdle... & Babies, moe anthropomorphisms \\
-
-Senpai (\textjapanese{先輩}) & – & Senior colleague or classmate \\
-
-    Sensei (\textjapanese{先生}) & Mr./Dr./Prof & Authority figures \\
-
-                    & & teachers, doctors, lawyers, authors, ... \\
-Gyou  (\textjapanese{行}) &  & your own name\\
+\overview
+
+\begin{frame}{Speaking Well Is More Than Grammar}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    \txx{linguistic competence}    & saying it grammatically \\
+    \txx{communicative competence} & saying the right thing, to the right \\
+                                   & person, in the right way \\
+    \bottomrule
   \end{tabular}
-
-  Often you will use someone's role (like engineer, director, \ldots)
-
- You use \jpn{gyou}, for example, when posting tax documents and expecting stamped documents in return. The office will send the documents in the provided envelope, likely after crossing out \jpn{gyou} and replacing it with \jpn{sama}.
-
-
-  
+  \vfill
+  \normalsize
+  This week, across East and Southeast Asia: proverbs and set phrases,
+  lucky and unlucky words, speech styles and honorifics, and cultural scripts
+  for how to talk
 \end{frame}
 
-% Slide 14
-\begin{frame}
-\frametitle{Educational and Social Importance}
-\begin{itemize}
-    \item Honorifics are seen as a mark of good education and upbringing.
-    \item Mastery of honorifics is encouraged through language guides and training.
-      \begin{itemize}
-      \item In my three-week induction training at NTT, we had about 8
-        hours devoted to honorific language, and another 8 or so about
-        who should sit where (in a room, in a taxi, in a train,
-        \ldots), how to pass business cards, and more
-      \end{itemize}
-    \item Many Japanese wish to improve their honorific command.
-\end{itemize}
+\section{Proverbs and Elaborate Expressions}
+
+\begin{frame}{Proverbs Speak for You}
+  \Large
+  \begin{itemize}
+  \item Central to communication, especially in \txx{Malay}
+  \item Express social norms and values
+  \item \txx{Depersonalize} advice: not my opinion, traditional wisdom
+  \end{itemize}
 \end{frame}
 
-
-% Slide 2
-\begin{frame}
-\frametitle{What are Cultural Scripts?}
-\begin{itemize}
-    \item Concept developed by Anna Wierzbicka and colleagues.
-    \item Describes cultural norms in simple, universal terms.
-    \item Uses semantic primes (basic meanings) like ``people,'' ``good,'' ``bad.''
-    \item Avoids language-specific concepts, allowing cross-cultural understanding.
-    \item Example: expressing regret without implying guilt.
-\end{itemize}
+\begin{frame}{Malay Proverbs}
+  \begin{exe}
+    \ex
+    \gll Ada hujan, ada panas, ada hari boleh balas. \\
+         exist rain exist heat exist day can repay \\
+    \trans ``Every deed, good or bad, will be repaid in kind.'' [zsm]
+    \ex
+    \gll Sedikit-sedikit, lama-lama jadi bukit. \\
+         little-little long-long become hill \\
+    \trans ``Little by little, over time, it becomes a hill.'' [zsm]
+  \end{exe}
+  \vfill
+  \large
+  Small, patient actions bring big results
 \end{frame}
 
-% Slide 3
-\begin{frame}
-\frametitle{Example of a Japanese Cultural Script}
-\begin{exe}
-    \ex {}[people think like this:] \\
-    if something bad happens to someone because of me, \\
-    I have to say something like this to this person: \\
-    ‘I feel something bad because of this’
-\end{exe}
-\begin{itemize}
-    \item Expresses common Japanese cultural practice of frequent apologies.
-    \item Avoids direct responsibility but shows empathy.
-\end{itemize}
+\begin{frame}{The Pantun: A Quatrain in Two Halves}
+  \normalsize
+  \begin{tabular}{l}
+    \mtplain{Pisang emas bawa belayar,} \\
+    \mtplain{\quad Masak sebiji di atas peti;} \\
+    \mtplain{Hutang emas boleh dibayar,} \\
+    \mtplain{\quad Hutang budi dibawa mati.} \\
+  \end{tabular}
+  \hfill
+  \begin{tabular}{l}
+    The golden plantain carried on a voyage; \\
+    \quad One ripens on top of the chest. \\
+    A debt of gold can be repaid; \\
+    \quad A debt of kindness lasts until death. \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  The first two lines set an image; the last two carry the meaning, linked
+  by rhyme and indirect association.  See
+  \href{https://ir.uitm.edu.my/id/eprint/63499/1/63499.pdf}{\textit{Connecting
+  the dots: The case of foreshadow and meaning in pantun}}, Nazima Versay
+  Kudus and Melati Desa (2022)
 \end{frame}
 
-% Slide 4
-\begin{frame}
-\frametitle{High-Level Cultural Scripts of Malay}
-\begin{itemize}
-    \item Influenced by Islam and \textit{adat} (custom).
-    \item Emphasis on knowing the ``proper'' behavior.
-    \item Script: ``It is good if a person knows what is good to do at all times.''
-    \item Values include patience, respect, and politeness.
-    \item Encourages social harmony and moral behavior.
-\end{itemize}
+\begin{frame}{Elaborate Expressions: Four Syllables, ABAC}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    & literally & means \\
+    \midrule
+    \ths{หูป่าตาเถื่อน} & ear-forest-eye-wild & ignorant \\
+    \quad\tha{hǔu-pàa-taa-thɯ̀an} & & \\[1ex]
+    \ths{พูดอย่างทำอย่าง} & speak-kind-do-kind & say one thing, \\
+    \quad\tha{phûut-yàaŋ-tham-yàaŋ} & & do another \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Four-syllable compounds (ABAC, ABCB) are common across Thai, Lao,
+  Vietnamese and Chinese, and a mark of fluent, vivid speech
 \end{frame}
 
-% Slide 5
-\begin{frame}
-\frametitle{Concept of \textit{Balasan} (Reciprocal Action)}
-\begin{itemize}
-    \item \textit{Balasan}: idea of return in kind for deeds.
-    \item Good deeds bring good, bad deeds bring bad.
-    \item Found in proverbs: ``Every deed, good or wrong, has its \textit{balasan}.''
-    \item Encourages people to act with consideration of consequences.
-\end{itemize}
+\section{Chengyu}
+
+\begin{frame}{Chengyu \zhs{成语}: Set Phrases from the Classics}
+  \Large
+  \begin{itemize}
+  \item Typically \txx{four characters}, from history or classical literature
+  \item Partly or wholly \txx{non-compositional}
+  \item Work as single words, but more vivid
+  \end{itemize}
+  \vfill
+  \normalsize
+  There is no definitive list: lexicons range from a few hundred to 50,000
+  or more, and there are many excellent (paper) dictionaries
 \end{frame}
 
-% Slide 6
-\begin{frame}
-\frametitle{Script for Reflecting on Actions (Malay)}
-\begin{exe}
-    \ex {}[people think like this:] \\
-    when I want to do something \\
-    it is good if I think about it for some time before I do it
-\end{exe}
-\begin{itemize}
-    \item Emphasizes careful consideration of actions.
-    \item Supports the value of patience and mindfulness.
-    \item Encourages people to avoid impulsive behavior.
-\end{itemize}
+\begin{frame}{Some Chengyu}
+  \hfill \includegraphics{pics/shouzhudaitu.jpg}
+  \vspace{-3cm}
+  \begin{exe}
+    \ex\label{s:rabbit}
+    \glll 守 株 待 兔 \\
+          shǒu zhū dài tù \\
+          guard {tree stump} wait rabbit \\
+    \trans ``to expect fortune without any effort'' [cmn]
+    \ex\label{s:divide}
+    \glll 分 崩 离 析 \\
+          fēn bēng lí xī \\
+          divide rupture leave {split apart} \\
+    \trans ``to completely fall apart'' [cmn]
+  \end{exe}
+  \small Image from \href{https://www.dimsumwarriors.com/chengyu/守株待兔-shouzhudaitu/}{Yumcha Studios}
 \end{frame}
 
-% Slide 7
-\begin{frame}
-\frametitle{Avoiding Harm Through Speech}
-\begin{itemize}
-    \item Malays value careful and sensitive speech.
-    \item Proverbs encourage “minding one’s mouth.”
-    \item Script: ``It is good to think about what to say before speaking.''
-    \item Goal: prevent others from feeling hurt or embarrassed.
-\end{itemize}
+\begin{frame}{Many Come from Stories}
+  \large
+  \begin{tabular}{rl}
+    1 & A farmer of Song rests under a tree in his field \\
+    2 & A rabbit runs into the tree and dies: a free dinner \\
+    3 & He leaves his plough, and waits by the tree for the next one \\
+    4 & None comes; his fields go to ruin, and the village laughs \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Told in the \textit{Han Feizi} (3rd century BCE).
+  \url{https://www.tutormandarin.net/en/holding-a-tree-and-waiting-for-a-rabbit/}
 \end{frame}
 
-% Slide 8
-\begin{frame}
-\frametitle{Sensitivity to Others' Feelings}
-\begin{itemize}
-    \item Sensitivity and empathy are highly valued.
-    \item Expected to avoid blunt or critical speech.
-    \item Western directness may clash with Malay indirectness.
-    \item Example: Malaysian leaders advise avoiding hurtful comments.
-\end{itemize}
+\begin{frame}{Where Chengyu Are Used}
+  \Large
+  \begin{tabular}{lrrrr}
+    \toprule
+    genre   & sentences & types & tokens & per 100 sents \\
+    \midrule
+    story   & 1,226 &  79 &  90 &  7.3 \\
+    news    & 2,138 & 108 & 161 &  7.5 \\
+    essay   &   816 & 103 & 127 & \alert{15.6} \\
+    tourism & 3,280 & 187 & 388 & 11.8 \\
+    \midrule
+    total   & 7,460 & 427 & 766 & 10.3 \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Chengyu in Chinese translations of English texts \citep{Ho:Kng:Wang:Bond:2014}.
+  The essay, \textit{The Cathedral and the Bazaar}, has the most, fitting its
+  intellectual tone
 \end{frame}
 
-% Slide 9
-\begin{frame}
-\frametitle{Malay Cultural Scripts for Wanting}
-\begin{itemize}
-    \item Direct expression of self-interest is discouraged.
-    \item Script: Avoid saying, “I want you to do this” for personal benefit.
-    \item Emphasizes consideration for others’ autonomy.
-    \item Malay interactions often avoid direct requests.
-\end{itemize}
+\begin{frame}{Chengyu Travel: Japanese and Korean}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    Mandarin & \zhs{四面楚歌} & \cmn{sìmiàn chǔgē} \\
+    Japanese & \jps{四面楚歌} & \jpn{shimen soka} \\
+    Korean   & \kos{사면초가}  & \kor{samyeon choga} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  \zhs{四面楚歌} ``songs of Chu on four sides'': surrounded by enemies.
+  Used most in Chinese, then Korean, then Japanese.  Not all are Chinese:
+  Japanese \jps{一石二鳥} \jpn{isseki nichō} ``one stone, two birds'' is said
+  to translate the English proverb
 \end{frame}
 
-% Slide 10
-\begin{frame}
-\frametitle{Example of an Indirect Request}
-\begin{exe}
-    \ex Malay indirect request for dinner: \\
-    ``Are you hungry?'' instead of ``Can you make dinner?''
-    \\ Contrasts with ``What would you like for dinner?''
-\end{exe}
-\begin{itemize}
-    \item Shows the indirect approach common in Malay culture.
-    \item Reflects understanding that listener will infer the request.
-\end{itemize}
+\begin{frame}{Not So Different from Western Proverbs}
+  \Large
+  \begin{tabular}{ll}
+    \zhs{画蛇添足} \cmn{huà shé tiān zú} & ``draw legs on a snake'' \\
+    & = add something superfluous \\[1ex]
+    \eng{sour grapes}, \eng{lipstick on a pig} & also need interpreting \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Western proverbs also come from classic works (Aesop, the Bible, Homer),
+  and using them well is a sign of erudition.  The fixed four-character form
+  makes chengyu stand out more from ordinary text
 \end{frame}
 
-% Slide 11
-\begin{frame}
-\frametitle{Respect for Elders and Authority}
-\begin{itemize}
-    \item Concept of \textit{menghormati} means ``showing respect.''
-    \item Applied to parents, elders, and authority figures.
-    \item Signs of respect include polite language, tone, and behavior.
-    \item Importance of avoiding behaviors seen as arrogant or disrespectful.
-\end{itemize}
+\section{Auspicious and Inauspicious Words}
+
+\begin{frame}{Cantonese: Lucky and Unlucky Sounds}
+  \large
+  \begin{tabular}{llll}
+    \toprule
+    \multicolumn{4}{l}{\txx{auspicious}} \\
+    \midrule
+    \zht{八} eight       & \yue{baat}       & $\approx$ \zht{發} \yue{faat}       & prosper \\
+    \zht{桔} tangerine   & \yue{gāt}        & $\approx$ \zht{吉} \yue{gāt}        & luck \\
+    \zht{魚} fish        & \yue{yùh}        & $=$ \zht{餘} \yue{yùh}             & surplus \\
+    \zht{生菜} lettuce   & \yue{sāang choi} & $\approx$ \zht{生財} \yue{sāang chòih} & make money \\
+    \midrule
+    \multicolumn{4}{l}{\txx{inauspicious}} \\
+    \midrule
+    \zht{四} four        & \yue{sei}        & $\approx$ \zht{死} \yue{séi}        & death \\
+    \zht{書} book        & \yue{syū}        & $=$ \zht{輸} \yue{syū}             & lose \\
+    \zht{鞋} shoe        & \yue{hàaih}      & $\approx$ \zht{唉} \yue{āai}        & a sigh \\
+    \zht{舌} tongue      & \yue{siht}       & $=$ \zht{蝕} \yue{siht}            & lose money \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  So a pig's tongue is \zht{豬脷} \yue{jyū leih}, as \zht{利} \yue{leih} is
+  ``profit''; and tangerines are given in pairs at New Year: \zht{大吉} ``great luck''
 \end{frame}
 
-% Slide 12
-\begin{frame}
-\frametitle{Semantic Explication of \textit{Menghormati}}
-\begin{exe}
-    \ex {}[X \msa{menghormati} Y:] \\
-    X thinks good things about Y\\
-    X thinks things like this about Y:\\
-    ~~~~ Y is someone above me\\
-    ~~~~ I don’t want Y to think anything bad about me\\
-    X wants Y to know this\\
-    because of this, when X is with Y\\
-    ~~~~ X does some things, X doesn’t do some other things\\
-    ~~~~ X says some things, X doesn’t say some other things\\
-    ~~~~ X says some words, X doesn’t say some other words
-\end{exe}
-\begin{itemize}
-    \item Reflects hierarchical respect in Malay culture.
-\end{itemize}
+\begin{frame}{Japanese: Lucky and Unlucky Words}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{3}{l}{\txx{auspicious} \jps{縁起の良いことば}} \\
+    \midrule
+    \jps{松} \jpn{matsu} pine   & longevity, evergreen \\
+    \jps{竹} \jpn{take} bamboo  & strength, uprightness \\
+    \jps{梅} \jpn{ume} plum     & renewal: the first flower of spring \\
+    \jps{鯛} \jpn{tai} sea bream & $\approx$ \jps{めでたい} \jpn{medetai} ``happy, auspicious'' \\
+    \midrule
+    \multicolumn{3}{l}{\txx{inauspicious} \jps{縁起の悪いことば}} \\
+    \midrule
+    \jps{四} \jpn{shi} four     & $\approx$ \jps{死} \jpn{shi} ``death'' \\
+    \jps{櫛} \jpn{kushi} comb   & $\approx$ \jps{苦死} ``suffering, death'' \\
+    \jps{切る} \jpn{kiru} cut   & not at weddings: ``sever a relationship'' \\
+    \jps{落ちる} \jpn{ochiru} fall & not before exams: ``fail'' \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  At weddings and New Year: \jps{松竹梅}, and no knives or combs as gifts
 \end{frame}
 
-% Slide 13
-\begin{frame}
-\frametitle{Interpersonal Relations and Humility}
-\begin{itemize}
-    \item Malay culture encourages humility (\textit{merendah diri}).
-    \item Avoids appearing arrogant (\textit{sombong}).
-    \item Encourages people to respect each other in public settings.
-    \item Modernization has affected these traditional norms.
-\end{itemize}
+\section{Politeness and Speech Styles}
+
+\begin{frame}{Politeness Protects Face}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    \txx{positive face} & the wish to be liked and approved of \\
+    \txx{negative face} & the wish not to be imposed on \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  Requests, refusals and criticism are \txx{face-threatening acts}; speakers
+  soften them:
+  \vfill
+  \begin{tabular}{ll}
+    \toprule
+    positive politeness & build closeness: Korean \kor{banmal}, nicknames \\
+    negative politeness & show deference: honorifics, Javanese \mtciteform{krama} \\
+    off record          & hint: Malay ``Are you hungry?'' \\
+    don't do the act    & settle it first: Japanese \jpn{nemawashi} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \small \citet{brown:levinson:1987}
 \end{frame}
 
-% Slide 14
-\begin{frame}
-\frametitle{Implications of Malay Communicative Style}
-\begin{itemize}
-    \item Westerners often see Malay discourse as charming and respectful.
-    \item Values like harmony, patience, and deference shape interactions.
-    \item Despite similarities to Japanese culture, Malay norms rooted in Islam.
-\end{itemize}
+\begin{frame}{Speech Styles}
+  \Large
+  \begin{itemize}
+  \item Many languages here have distinct \txx{speech styles} (registers)
+  \item They signal respect, distance and familiarity
+  \item Marked in pronunciation, vocabulary, particles, morphology, syntax
+  \end{itemize}
+  \vfill
+  \normalsize
+  Most elaborate and codified in Javanese and Korean
 \end{frame}
 
-% Slide 15
-\begin{frame}
-\frametitle{Conclusion on Cultural Scripts}
-\begin{itemize}
-    \item Cultural scripts frame cultural behaviors without enforcing them.
-    \item They offer insight into shared social norms and expectations.
-    \item Help decode behaviors in intercultural settings.
-    \item Awareness of scripts aids respectful and informed communication.
-\end{itemize}
+\begin{frame}{Thai: Polite Particles and Styles}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    male speaker   & \ths{ครับ} \tha{khráp} & \\
+    female speaker & \ths{ค่ะ} \tha{khâ}    & \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  \begin{itemize}
+  \item Styles: public, consultative, personal (informal)
+  \item Particles end a sentence or stand alone; consultative style also
+    wants careful pronunciation, elevated words, and no abrupt or negative
+    expressions
+  \end{itemize}
 \end{frame}
 
-
-
-
-% Slide 1
-\begin{frame}
-\frametitle{Indirect Communication in Japanese Culture}
-\begin{itemize}
-    \item Japanese people generally communicate indirectly to maintain harmony.
-    \item Responses may be intentionally ambiguous to avoid confrontation or politeness.
-    \item Non-verbal cues (body language, posture, tone) are important for drawing meaning.
-    \item Disagreements are often discussed privately and at a later time.
-    \item It is common practice to try to reach consensus by talking to everyone ahead of time, before even proposing something: \\ \textjapanese{根回し} \jpn[preparing the roots]{nemawashi}.
-    \item Avoids putting people in a position where they may lose face.
-    \item My boss would ask me to do something by saying \jpn[It would be good if this is done]{kore-wo yaru to ii desu ne}.  In effect, he was conveying the message ``you do this''.
-\end{itemize}
+\begin{frame}{Thai: The Wai Shows Rank}
+  \begin{center}
+    \includegraphics[width=0.23\textwidth]{pics/wai-1.png}
+    \includegraphics[width=0.23\textwidth]{pics/wai-2.png}
+    \includegraphics[width=0.23\textwidth]{pics/wai-3.png}
+    \includegraphics[width=0.23\textwidth]{pics/wai-4.png}
+  \end{center}
+  \vfill
+  \large
+  The higher the other person's rank, the higher the hands and the deeper
+  the bow; higher-ranked people may answer with a more relaxed gesture
 \end{frame}
 
-% Slide 2
-\begin{frame}
-\frametitle{Refusals in Japanese Communication}
-\begin{itemize}
-    \item Japanese people avoid direct refusals and negative responses.
-    \item Example: \jpn[I will consider it]{kento-shimasu} often implies rejection.
-      \\ In fact in business,   \jpn[I will consider it with a positive frame of mind]{maemuki-ni kento-shimasu} means ``I will do nothing''
-    \item Refusals are often conveyed with hesitation or ambiguous language.
-
-    \item Indirect language allows for subtlety in declining requests.
-    \item Helps maintain social harmony and politeness.
-\end{itemize}
+\begin{frame}{Thai Royal Vocabulary \ths{ราชาศัพท์}}
+  \large
+  \begin{tabular}{llll}
+    \toprule
+    & common & polite & royal \\
+    \midrule
+    eat   & \ths{กิน} \tha{kin} & \ths{รับประทาน} \tha{rápprathaan} & \ths{เสวย} \tha{sawə̌əi} \\
+    sleep & \ths{นอน} \tha{nɔɔn} &                                   & \ths{บรรทม} \tha{banthom} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  A whole vocabulary for the royal family, much of it from Khmer, Pali and
+  Sanskrit; \ths{ทรง} \tha{song} turns an ordinary verb into a royal one
 \end{frame}
 
-% Slide 3
-\begin{frame}
-\frametitle{The Role of Silence}
-\begin{itemize}
-    \item Silence is valued and reflects politeness and respect.
-    \item Interrupting others is considered impolite.
-    \item People may remain silent to allow others time to think.
-    \item Silence gives space for reflection during conversations.
-    \item Silence is an intentional tool for politeness in Japanese communication.
-\end{itemize}
+\begin{frame}{Javanese: Three Levels}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    \mtciteform{ngoko} & informal: close relations, thinking to oneself \\
+    \mtciteform{madya} & in between: shortened krama words, ngoko affixes \\
+    \mtciteform{krama} & formal: superiors and strangers \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Choosing a level means weighing age, social standing and familiarity
 \end{frame}
 
-% Slide 4
-\begin{frame}
-\frametitle{Interjections (\textit{Aizuchi})}
-\begin{itemize}
-    \item Aizuchi are common interjections in Japanese conversations.
-    \item Indicate active listening without being seen as interruptions.
-    \item Used when non-verbal cues are unavailable, such as on the phone.
-    \item Types of aizuchi:
+\begin{frame}{Javanese: Different Words for Everything}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    & \mtciteform{ngoko} & \mtciteform{krama} \\
+    \midrule
+    house  & \mtciteform{omah}  & \mtciteform{griya} \\
+    person & \mtciteform{wong}  & \mtciteform{tiyang} \\
+    go     & \mtciteform{lunga} & \mtciteform{késah} \\
+    cow    & \mtciteform{sapi}  & \mtciteform{lembu} \\
+    die    & \mtciteform{mati}  & \mtciteform{pejah} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  ``What'': \mtciteform{apa} (ngoko), \mtciteform{napa} (madya),
+  \mtciteform{punapa} (krama)
+\end{frame}
+
+\begin{frame}{Sasak (Lombok): Three Levels, Fewer Words}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \multicolumn{2}{l}{``Have you eaten?''} \\
+    \midrule
+    low  & \mtciteform{Wah-m mangan kamu?} \\
+    mid  & \mtciteform{Wah-m medaran side?} \\
+    high & \mtciteform{Sampun-m majengan pelinggih?} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  The level depends on the addressee's rank; high-level vocabulary is only
+  about 180 words, far fewer than in Javanese
+\end{frame}
+
+\begin{frame}{Korean: Speech Levels in the Verb Ending}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{3}{l}{``It is raining''} \\
+    \midrule
+    plain    & \kos{비가 온다}   & \kor{bi-ga onda} \\
+    banmal   & \kos{비가 와}     & \kor{bi-ga wa} \\
+    familiar & \kos{비가 오네}   & \kor{bi-ga one} \\
+    polite   & \kos{비가 와요}   & \kor{bi-ga wayo} \\
+    formal   & \kos{비가 옵니다} & \kor{bi-ga omnida} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  The speech style (\kor{che}) depends on age, rank and relationship:
+  \kor{haeyo-che} is polite, \kor{hapsyo-che} formal
+\end{frame}
+
+\begin{frame}{Korean: Everyone Notices the Level}
+  \Large
+  \begin{tabular}{l}
+    \kor{Uri-neun seoro hage-haneun sai.} \\
+    \quad ``We are on \kor{hage} terms with each other.'' \\[2ex]
+    \kor{Nugu-hante banmal-eul haneun geo-ya?} \\
+    \quad ``Who do you think you're speaking \kor{banmal} to?'' \\
+  \end{tabular}
+  \vfill
+  \normalsize
+  Moving to \kor{banmal} ``putting down the language'' signals closeness;
+  levels shift as relationships change
+\end{frame}
+
+\begin{frame}{Korean: Honouring the Person Talked About}
+  \Large
+  \begin{tabular}{llll}
+    \toprule
+    & plain & & honorific \\
+    \midrule
+    go        & \kos{가다} \kor{gada}   & subject \kos{-시-} & \kos{가시다} \kor{gasida} \\
+    eat       & \kos{먹다} \kor{meokda} & subject          & \kos{드시다} \kor{deusida} \\
+    give      & \kos{주다} \kor{juda}   & humble           & \kos{드리다} \kor{deurida} \\
+    see, meet & \kos{보다} \kor{boda}   & humble           & \kos{뵙다} \kor{boepda} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Speech levels honour the \txx{addressee}; these honour the \txx{referent}
+  --- just like Japanese \jpn{sonkeigo} and \jpn{kenjōgo}, next
+\end{frame}
+
+\begin{frame}{Speech Styles Compared}
+  \Large
+  \begin{itemize}
+  \item Javanese, Sasak, Korean: \txx{structured levels}; Thai: royal vocabulary
+  \item They encode \txx{hierarchy}: age, rank, social distance
+  \item Common in stratified societies with fixed roles
+  \end{itemize}
+  \vfill
+  \normalsize
+  Shaped by Confucian, Buddhist and local values.  Knowing the styles is part
+  of communicative competence
+\end{frame}
+
+\section{Japanese Honorifics}
+
+\begin{frame}{Three Kinds of Japanese Honorific}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    \jpn{teineigo} & polite   & towards the \txx{addressee}: \jpn{-masu} \\
+    \jpn{sonkeigo} & honouring & raises the \txx{referent} (usually the subject) \\
+    \jpn{kenjōgo}  & humbling & lowers oneself or one's in-group \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  They show respect, social distance and group membership, and are part of
+  everyday Japanese
+\end{frame}
+
+\begin{frame}{Honouring and Humbling Verbs}
+  \Large
+  \begin{tabular}{llll}
+    \toprule
+    & neutral & honouring & humbling \\
+    \midrule
+    say  & \jpn{iu}     & \jpn{ossharu}         & \jpn{mōsu} \\
+    go   & \jpn{iku}    & \jpn{irassharu}       & \jpn{mairu} \\
+    do   & \jpn{suru}   & \jpn{nasaru}          & \jpn{itasu} \\
+    eat  & \jpn{taberu} & \jpn{meshiagaru}      & \jpn{itadaku} \\
+    stay & \jpn{tomaru} & \jpn{o-tomari ni naru} & \jpn{o-tomari suru} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Regular verbs: honouring \jpn{o-}stem \jpn{ni naru}, humbling \jpn{o-}stem
+  \jpn{suru}.  Politeness is separate: \jpn{iu} vs \jpn{iimasu}.  Kansai
+  (especially Kyoto) has a lighter honorific \jpn{V-haru}: \jpn{tabe-haru}
+\end{frame}
+
+\begin{frame}{In-Group and Out-Group: \jpn{uchi} and \jpn{soto}}
+  \begin{exe}
+    \ex
+    \gll Chichi wa genki de ori-mas-u. \\
+         father \textsc{top} healthy \textsc{cop} be.\textsc{hum}-\textsc{pol}-\textsc{npst} \\
+    \trans ``(My) father is well.'' [jpn]
+    \ex
+    \gll O-tō-san wa o-genki des-u ka. \\
+         \textsc{hon}-father-\textsc{hon} \textsc{top} \textsc{hon}-health \textsc{cop}.\textsc{pol}-\textsc{npst} \textsc{q} \\
+    \trans ``Is (your) father well?'' [jpn]
+  \end{exe}
+  \vfill
+  \large
+  Humble for your own family, school or company; honouring for outsiders
+\end{frame}
+
+\begin{frame}{Humbling: Doing Something for Someone Higher}
+  \begin{exe}
+    \ex
+    \gll Sakai-san ga Suzuki-san ni chizu o \ul{o-kaki} \ul{shi}-mashi-ta. \\
+         Sakai-\textsc{hon} \textsc{nom} Suzuki-\textsc{hon} \textsc{dat} map \textsc{acc} \textsc{hon}-draw do-\textsc{pol}-\textsc{pst} \\
+    \trans ``Mr Sakai drew a map for Mr Suzuki (humbly).'' [jpn]
+  \end{exe}
+  \vfill
+  \large
+  Women are expected to use more elaborate honorifics than men; the
+  difference shrinks at the highest levels
+\end{frame}
+
+\begin{frame}{Giving and Receiving}
+  \Large
+  \begin{tabular}{lll}
+    \toprule
+    & plain & honorific \\
+    \midrule
+    give to me / us   & \jpn{kureru} & \jpn{kudasaru} \\
+    give to someone   & \jpn{ageru}  & \jpn{sashiageru} \\
+    receive           & \jpn{morau}  & \jpn{itadaku} \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \begin{exe}
+    \ex
+    \gll Tanaka-san ga imōto ni o-kashi o tsukut-te kure-ta. \\
+         Tanaka-\textsc{hon} \textsc{nom} younger.sister \textsc{dat} \textsc{hon}-sweets \textsc{acc} make-\textsc{conj} give.me-\textsc{pst} \\
+    \trans ``Mr Tanaka made sweets for my younger sister.'' [jpn]
+  \end{exe}
+\end{frame}
+
+\begin{frame}{Politer Means Longer}
+  \let\eachwordone=\glossja
+  \begin{exe}
+    \ex
+    \gll 聞いて いい？ \\
+         Kii-te ii? \\
+    \trans ``OK to ask?'' [jpn]
+    \ex
+    \gll 聞かせて いただける と うれしい の です が。 \\
+         Kika-se-te itadakeru to ureshii no desu ga. \\
+    \trans ``I would be delighted if I might be permitted to ask.'' [jpn]
+    \ex
+    \gll ご協力 ください。 \\
+         Go-kyōryoku kudasai. \\
+    \trans ``Your cooperation, please.'' [jpn]
+    \ex
+    \gll ご協力 の 程 お願い 申し上げます。 \\
+         Go-kyōryoku no hodo o-negai mōshiagemasu. \\
+    \trans ``We respectfully request the favour of your cooperation.'' [jpn]
+  \end{exe}
+\end{frame}
+
+\begin{frame}{Who Talks Down, Who Talks Up}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    customer      & salesperson \\
+    doctor        & patient \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Power is asymmetric: the higher-status speaker may be casual; the
+  lower-status one stays polite
+\end{frame}
+
+\begin{frame}{Names and Titles}
+  \large
+  \begin{tabular}{lll}
+    \toprule
+    \jps{さん} \jpn{san}     & Mr / Ms        & adults of equal status \\
+    \jps{様} \jpn{sama}      & Sir / Madam    & higher status: guests, customers, deities \\
+    \jps{君} \jpn{kun}       & ---            & juniors, boys, male friends \\
+    \jps{ちゃん} \jpn{chan}  & little \ldots  & small children, cute things, close friends \\
+    \jps{たん} \jpn{tan}     & widdle \ldots  & babies, moe characters \\
+    \jps{先輩} \jpn{senpai}  & ---            & a senior colleague or classmate \\
+    \jps{先生} \jpn{sensei}  & Dr / Prof      & teachers, doctors, lawyers, authors \\
+    \jps{行} \jpn{yuki}      & ---            & your own name, on a reply envelope \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Often you use the role itself: engineer, director \ldots.
+  On a return envelope you write \jps{行} after your own name; the office
+  crosses it out and writes \jps{様}
+\end{frame}
+
+\begin{frame}{Honorifics Are Taught}
+  \Large
+  \begin{itemize}
+  \item A mark of \txx{education} and upbringing
+  \item Many Japanese want to improve theirs: guides and training abound
+  \end{itemize}
+  \vfill
+  \normalsize
+  In my three-week induction at NTT: about 8 hours on honorific language,
+  and another 8 or so on who sits where (in a room, a taxi, a train),
+  how to pass business cards, and more
+\end{frame}
+
+\section{Cultural Scripts}
+
+\begin{frame}{Cultural Scripts}
+  \Large
+  \begin{itemize}
+  \item Norms of communication, written in \txx{semantic primes}:
+    \textsc{people}, \textsc{good}, \textsc{bad}, \textsc{say}, \textsc{think}
+  \item No culture-specific words, so they compare across cultures
+  \end{itemize}
+  \vfill
+  \normalsize
+  Developed by Anna Wierzbicka and colleagues
+\end{frame}
+
+\begin{frame}{A Japanese Script: Apologize}
+  \begin{nsm}
+  \begin{itemize}
+  \item {}[people think like this:]
+  \item if something bad happens to someone because of me,
+  \item I have to say something like this to this person:
     \begin{itemize}
-        \item Agreement: \jpn[yes]{Hai}, \jpn[so it is]{Sou desu ne}, \jpn[wow]{Sugoi}
-        \item Surprise: \jpn[really?]{Eeee?}, \jpn[is that true?]{Honto desu ka?}
-          \item Back-channel grunts: \jpn[neutral]{un, nnn}, \jpn[new information]{oo, hoh, ooun}, \jpn[agreement]{ee, ne, he}, \jpn[stalling]{aa, sa, ma}
-          \end{itemize}
-        \item It is polite to make some sounds when you are listening
-\end{itemize}
-
-\bigskip
-
-I notice that Siri's back channel grunts are better than Google Assistant.  Siri goes \eng{aha} when you say something, so you know it has heard you, ... (2024)
-
+    \item ``I feel something bad because of this''
+    \end{itemize}
+  \end{itemize}
+  \end{nsm}
+  \vfill
+  \large
+  Frequent apologies: they show empathy without accepting blame
 \end{frame}
 
-
-
-% Slide 6
-\begin{frame}
-\frametitle{Handling Compliments}
-\begin{itemize}
-    \item Humility is a common value in Japanese culture.
-    \item People often politely deflect compliments rather than accepting them directly.
-    \item Excessive compliments can cause embarrassment.
-    \item Deflecting compliments is a polite way to express humility.
-    \item Reflects the cultural emphasis on modesty and avoiding arrogance.
-\end{itemize}
+\begin{frame}{Malay: Know the Proper Thing to Do}
+  \normalsize
+  \begin{tabular}{ll}
+    \toprule
+    \txx{balasan}     & every deed, good or bad, is repaid in kind \\
+    think first       & when I want to do something \\
+                      & \quad it is good if I think about it for some time \\
+    mind your mouth   & think before speaking, so no one is hurt or shamed \\
+    \txx{sensitivity} & avoid blunt or critical speech \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Shaped by Islam and \msa{adat} (custom): ``It is good if a person knows
+  what is good to do at all times''.  Western directness can clash with this
 \end{frame}
 
+\begin{frame}{Malay: Don't Say ``I Want''}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    instead of & ``Can you make dinner?'' \\
+    say        & ``Are you hungry?'' \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Saying ``I want you to do this'' for your own benefit is discouraged.  The
+  listener infers the request, and their autonomy is respected
+\end{frame}
+
+\begin{frame}{Malay \msa{menghormati} ``Show Respect''}
+  \begin{nsm}
+  \begin{itemize}
+  \item {}[X \msa{menghormati} Y:]
+  \item X thinks good things about Y
+  \item X thinks things like this about Y:
+    \begin{itemize}
+    \item Y is someone above me
+    \item I don't want Y to think anything bad about me
+    \end{itemize}
+  \item X wants Y to know this
+  \item because of this, when X is with Y
+    \begin{itemize}
+    \item X does some things, X doesn't do some other things
+    \item X says some things, X doesn't say some other things
+    \end{itemize}
+  \end{itemize}
+  \end{nsm}
+\end{frame}
+
+\begin{frame}{Malay: Humility}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    good & \msa{merendah diri} ``lowering oneself'', humility \\
+    bad  & \msa{sombong} ``arrogant'' \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Westerners often find Malay discourse charming and respectful.  Like
+  Japanese, it values harmony, patience and deference --- but its roots are
+  in Islam.  Modernization is changing these norms
+\end{frame}
+
+\section{Indirectness in Japanese}
+
+\begin{frame}{Japanese: Say It Indirectly}
+  \large
+  \begin{itemize}
+  \item Ambiguity avoids confrontation; posture, tone and body language
+    carry meaning
+  \item Disagreement happens privately, later
+  \item \jps{根回し} \jpn[preparing the roots]{nemawashi}: reach consensus
+    one by one, before proposing anything
+  \end{itemize}
+  \vfill
+  \Large
+  \jpn{Kore-o yaru to ii desu ne.}
+  \\ \quad ``It would be good if this were done.''
+  \\ \normalsize \quad = my boss telling me ``Do this''
+\end{frame}
+
+\begin{frame}{Refusing Without Saying No}
+  \Large
+  \begin{tabular}{ll}
+    \toprule
+    \jpn{kentō-shimasu}               & ``I will consider it'' \\
+                                      & = probably not \\[1ex]
+    \jpn{maemuki-ni kentō-shimasu}    & ``I will consider it positively'' \\
+                                      & = I will do nothing \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Refusals come as hesitation and vague language, keeping the peace
+\end{frame}
+
+\begin{frame}{Silence and Back-Channelling}
+  \large
+  \begin{tabular}{ll}
+    \toprule
+    \multicolumn{2}{l}{\jpn{aizuchi}: show you are listening} \\
+    \midrule
+    agreement & \jpn{hai} ``yes'', \jpn{sō desu ne} ``so it is'', \jpn{sugoi} ``wow'' \\
+    surprise  & \jpn{eeee?} ``really?'', \jpn{hontō desu ka?} ``is that true?'' \\
+    grunts    & \jpn{un}, \jpn{nnn} (neutral); \jpn{oo}, \jpn{hoh} (news); \jpn{aa}, \jpn{sa}, \jpn{ma} (stalling) \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \normalsize
+  Silence is polite: it gives others time to think, and interrupting is rude.
+  But a listener should make some sounds, especially on the phone.  I notice
+  Siri says \eng{aha} when you speak, so you know it heard you
+\end{frame}
+
+\begin{frame}{Deflect the Compliment}
+  \Large
+  \begin{itemize}
+  \item Humility: compliments are \txx{deflected}, not accepted
+  \item Too much praise is embarrassing
+  \end{itemize}
+\end{frame}
 
 \begin{frame}{Culturally Appropriate Communication}
+  \Large
   \begin{itemize}
-  \item Part of speaking a language well is being able to use the
-    appropriate language, not just convey the exact meaning
-  \item We are normally not clearly aware of how different our own
-    culture's way of communicating is from another culture's
-  \item When you are a poor speaker, it does not matter
-  \item The more fluent you get, the more people will expect you to also master the cultural arts, \ldots
-  \item How do you think Czech communicative culture is different from
-    \begin{itemize}
-    \item its neighbours
-    \item Asian cultures
-    \end{itemize}
-   \end{itemize}
-  
-\end{frame}
-
-\begin{frame}{Acknowledgments}
-
-  \begin{itemize}
-  \item Heavily based on \citet[Chapter 7]{Goddard:2005}
-  \item Thai Wai illustrations from \href{https://www.bananathaischool.com/}{BananaThai!}
+  \item Speaking well means the \txx{appropriate} words, not just the
+    right meaning
+  \item We rarely notice how our own culture communicates
+  \item The more fluent you are, the more people expect the cultural arts too
   \end{itemize}
-  
+  \vfill
+  \normalsize
+  How is Czech communicative culture different from its neighbours'? From
+  Asian cultures?
 \end{frame}
 
-\begin{frame}{References}
-\bibliographystyle{aclnat}
-\bibliography{local}
+\begin{frame}{Acknowledgements and References}
+  \large
+  Heavily based on \citet[Chapter 7]{goddard:2005}.  Thai wai illustrations
+  from \href{https://www.bananathaischool.com/}{BananaThai!}
+  \vfill
+  \small
+  \bibliographystyle{aclnat}
+  \bibliography{local}
 \end{frame}
+
 
 \end{document}
 %%% Local Variables: 

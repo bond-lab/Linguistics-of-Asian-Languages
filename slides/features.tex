@@ -19,6 +19,7 @@
 
 \begin{frame}{Two Word-Order Types Meet in East Asia}
   \large
+  \begin{center}
   \begin{tabular}{llll}
     \toprule
     & Japanese, Korean & Mandarin & Thai, Malay, Viet. \\
@@ -29,6 +30,7 @@
     possessor       & Poss N       & Poss N      & N Poss \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
@@ -43,6 +45,7 @@
 
 \begin{frame}{Counting Needs a Classifier}
   \large
+  \begin{center}
   \begin{tabular}{llll}
     \toprule
     & & & order \\
@@ -55,6 +58,7 @@
                & \jpn{inu san-\alert{biki}} & dog three-\textsc{clf}  & N Num Clf  \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
@@ -107,6 +111,7 @@
 
 \begin{frame}{Four Kinds of Counting Word}
   \large
+  \begin{center}
   \begin{tabular}{lll}
     \toprule
     kind & counts & example \\
@@ -117,14 +122,40 @@
     \txx{repeater} & by the noun itself & Thai \tha{taw} ``vase'' \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
   Sortal classifiers apply across the whole lexicon; the others are limited
 \end{frame}
 
+\begin{frame}{What Gets Classified?}
+  \Large
+  \begin{center}
+  \begin{tabular}{ll}
+    \toprule
+    basis & example \\
+    \midrule
+    \txx{kind}        & human, animal, tree \\
+    \txx{function}    & cutting, writing, eating and drinking \\
+    \txx{shape}       & long (1D), flat (2D), round (3D) \\
+    \txx{consistency} & rigid, flexible \\
+    \txx{size}        & finger-sized, hand-sized, person-sized \\
+    \txx{location}    & towns, buildings \\
+    \txx{arrangement} & row, coil, heap \\
+    \txx{quanta}      & head, pack, flock \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \vfill
+  \normalsize
+  Shape and kind are the most common bases across languages \citep{allan:1977}
+\end{frame}
+
 \begin{frame}{Japanese \jpn{-tsu}: The General Classifier}
   \Large
+  \begin{center}
   \begin{tabular}{ll}
     \toprule
     used & example \\
@@ -137,6 +168,7 @@
                            & ``I want one thingamajig'' \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
@@ -156,10 +188,12 @@
 
   \vfill
   \Large
+  \begin{center}
   \begin{tabular}{ll}
     \eng{a \alert{flock} of birds} & \eng{a \alert{herd} of cows} \\
     \eng{a \alert{mob} of protestors} & \eng{two \alert{bunches} of bananas} \\
   \end{tabular}
+  \end{center}
   \vfill
   \normalsize
   Group words are common in English and Thai, rarer in Japanese
@@ -179,6 +213,7 @@
 
 \begin{frame}{Classifiers Can Show Respect}
   \Large
+  \begin{center}
   \begin{tabular}{llll}
     \toprule
     ``three people'' & plain & honorific \\
@@ -187,6 +222,7 @@
     Korean   & \kos{세}~\kos{명} \kor{se \alert{myeong}} & \kos{세}~\kos{분} \kor{se \alert{bun}} \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \begin{exe}
@@ -212,6 +248,39 @@
  %https:\\www.researchgate.net/publication/284094276_Slavic_aspectual_prefixes_and_numeral_classifiers_Two_kinds_of_lexico-grammatical_unitizers/figures
 \end{frame}
 
+\begin{frame}{Japanese and Chinese Sort Nouns Differently}
+  \small
+  {\centering
+  \begin{tabular}{lllrllr}
+    \toprule
+    referents & \multicolumn{3}{l}{Japanese} & \multicolumn{3}{l}{Mandarin} \\
+    \midrule
+    uncountable       & --- &                  & 29\% & --- &                    & 28\% \\
+    events            & \jps{回} & \jpn{-kai}  & 26\% & \zhs{次} & \cmn{cì}      & 26\% \\
+    general           & \jps{つ} & \jpn{-tsu}  & 21\% & \zhs{个} & \cmn{gè}      & 24\% \\
+    people            & \jps{人} & \jpn{-nin}  & 11\% & \zhs{位} & \cmn{wèi} (\textsc{hon}) & 3\% \\
+    concrete objects  & \jps{個} & \jpn{-ko}   & 5\%  & \zhs{块} & \cmn{kuài} (lumps) & 2\% \\
+    long thin         & \jps{本} & \jpn{-hon}  & 2\%  & \zhs{条} & \cmn{tiáo}    & 1\% \\
+    flat              & \jps{枚} & \jpn{-mai}  & 1\%  & \zhs{张} & \cmn{zhāng}   & 1\% \\
+    drops of liquid   & \jps{滴} & \jpn{-teki} & 1\%  & \zhs{滴} & \cmn{dī}      & 1\% \\
+    \midrule
+    classifiers used  & \multicolumn{3}{l}{47} & \multicolumn{3}{l}{81} \\
+    \bottomrule
+  \end{tabular}
+  \par}
+
+  \vfill
+  \normalsize
+  \begin{itemize}
+  \item Default classifiers for 2,710 semantic classes in an ontology
+    (Goi-Taikei), assigned by hand
+  \item Mandarin has more, and more specific, classifiers;
+    Japanese leans on \jpn{-tsu} and \jpn{-ko}
+  \item 20\% of classes take more than one: weapons are
+    \jpn{-chō} (knives), \jpn{-hon} (long), \jpn{-furi} (swords), \jpn{-ki} (machines)
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Classifiers Can Count Indirectly}
   \begin{exe}
     \ex
@@ -228,14 +297,76 @@
   \citep{Bond:1997b}
 \end{frame}
 
+\begin{frame}{Noun Classes Are Not Classifiers}
+  \large
+  \begin{center}
+  \begin{tabular}{lll}
+    \toprule
+    & noun classes & numeral classifiers \\
+    \midrule
+    number      & 2--20, closed  & 30--80 in use \\
+    realization & inflection     & separate word \\
+    marked      & on many words  & in the noun phrase \\
+    examples    & German, Bantu  & Mandarin, Thai, Malay \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \vfill
+  \normalsize
+  Gender is a noun class system: \eng{\alert{der} Hund} ``the (\textsc{m}) dog'',
+  \eng{\alert{das} Mädchen} ``the (\textsc{n}) girl'' \citep{dixon:1986}
+\end{frame}
+
+\begin{frame}{Swahili: The Noun Class Marks the Whole Sentence}
+  \begin{exe}
+    \renewcommand{\exfont}{\normalsize}
+    \renewcommand{\glossfont}{\normalsize}
+    \renewcommand{\transfont}{\normalsize}
+    \ex
+    \gll \ul{Vi}-su \ul{vi}-dogo \ul{vi}-wili hi-\ul{vi} amba-\ul{vy}-o ni-li-\ul{vi}-nunua ni \ul{vi}-kali. \\
+         8-knife 8-small 8-two this-8 which-8-\textsc{rel} 1\textsc{sg}-\textsc{pst}-8-buy be 8-sharp \\
+    \trans ``These two small knives which I bought are sharp.'' [swh]
+  \end{exe}
+  \vfill
+  \large
+  Class 8 (plural objects) is marked on adjectives, numerals,
+  demonstratives, relatives and the verb --- a classifier appears only
+  once, next to the number
+  \vfill
+  \normalsize
+  Adapted from \citet[181]{saeed:2009}, citing \citet[310]{allan:2001}
+\end{frame}
+
+\begin{frame}{Your Turn: How Would You Count These?}
+  \Large
+  \begin{itemize}
+  \item Does a language you speak classify nouns? On what basis?
+  \item Which classifier (or gender) would you use for:
+    \begin{itemize}
+    \item a \eng{watermelon}
+    \item a \eng{grain} of rice
+    \item a \eng{person}, a \eng{teacher}, a \eng{guest}
+    \item a \eng{robot}
+    \end{itemize}
+  \end{itemize}
+  \pause
+  \vfill
+  \normalsize
+  New things get classified by \txx{shape}, by \txx{function}, or
+  fall back to the \txx{general} classifier
+\end{frame}
+
 \section{Aspect}
 
 \begin{frame}{Aspect, Not Tense}
   \Large
+  \begin{center}
   \begin{tabular}{ll}
     \txx{tense}  & \emph{when} did it happen? \\
     \txx{aspect} & \emph{how} does it unfold? \\
   \end{tabular}
+  \end{center}
   \vfill
   \begin{itemize}
   \item Many East and Southeast Asian languages have no tense
@@ -246,6 +377,7 @@
 
 \begin{frame}{Kinds of Aspect}
   \Large
+  \begin{center}
   \begin{tabular}{lll}
     \toprule
     \txx{perfective}   & the whole event   & \eng{She ran home} \\
@@ -257,10 +389,12 @@
     \quad habitual     & regular           & \eng{She runs every morning} \\
     \bottomrule
   \end{tabular}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Aspect Markers in Mandarin and Cantonese}
   \Large
+  \begin{center}
   \begin{tabular}{lllll}
     \toprule
     & \multicolumn{2}{l}{Mandarin} & \multicolumn{2}{l}{Cantonese} \\
@@ -273,6 +407,7 @@
     habitual     &              &          & V-\yue{hoi1}  & \zht{開} \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
@@ -359,6 +494,7 @@
 
 \begin{frame}{Singlish Carries the Pattern into English}
   \large
+  \begin{center}
   \begin{tabular}{lll}
     \toprule
     perfect      & \eng{Eat \alert{already}?}           & ``Have you eaten?'' \\
@@ -367,6 +503,7 @@
     continuative & \eng{Your phone \alert{still} spoil ah?} & ``Still broken?'' \\
     \bottomrule
   \end{tabular}
+  \end{center}
   \vfill
   \normalsize
   Singapore Colloquial English uses English words as aspect markers
@@ -389,12 +526,14 @@
   \item Two or more verbs, \txx{no conjunction}, one subject
   \end{itemize}
   \vfill
+  \begin{center}
   \begin{tabular}{lll}
     \toprule
     \txx{loose} & a sequence of events & own arguments \\
     \txx{tight} & a single event       & motion, posture \\
     \bottomrule
   \end{tabular}
+  \end{center}
   \vfill
 \end{frame}
 
@@ -463,11 +602,13 @@
   \end{exe}
   \vfill
   \Large
+  \begin{center}
   \begin{tabular}{lll}
     \tha{ñaang¹} & walk  & manner of motion \\
     \tha{khùn⁵}  & go up & absolute direction \\
     \tha{maa²}   & come  & towards the speaker \\
   \end{tabular}
+  \end{center}
   \vfill
 \end{frame}
 
@@ -502,6 +643,7 @@
 \begin{frame}{Japanese Compound Verbs Form a Cline}
   \large
   \setlength{\tabcolsep}{4pt}
+  \begin{center}
   \begin{tabular}{llll}
     \toprule
     & & literally & means \\
@@ -515,6 +657,7 @@
                 & \jps{歩き始める} \jpn{aruki-hajimeru} & walk-begin  & start walking \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
@@ -523,6 +666,7 @@
 
 \begin{frame}{Arguments Can Transfer}
   \Large
+  \begin{center}
   \begin{tabular}{l}
     \jps{大阪を食べ歩く} \jpn{Ōsaka-o tabe-aruku} \\
     \quad Osaka-\textsc{acc} eat-walk \\
@@ -531,6 +675,7 @@
     \quad sushi-\textsc{acc} eat-walk \\
     \quad ``stroll around eating sushi'' \\
   \end{tabular}
+  \end{center}
   \vfill
   \normalsize
   The object can belong to either verb
@@ -550,6 +695,7 @@
 
 \begin{frame}{What Makes an English Subject?}
   \Large
+  \begin{center}
   \begin{tabular}{ll}
     \toprule
     before the verb  & \eng{\ul{She} seems happy.} \\
@@ -559,6 +705,7 @@
     any role         & agent, patient, experiencer \\
     \bottomrule
   \end{tabular}
+  \end{center}
 
   \vfill
   \normalsize
@@ -637,17 +784,52 @@
   \jpn{ga}: the event as a whole
 \end{frame}
 
-\begin{frame}{Tagalog: A Trigger System}
+\begin{frame}{Tagalog: The Verb Says Which Role the Trigger Has}
   \begin{exe}
     \ex
-    \gll Mag-aalis ang bata ng laruan sa kahon. \\
-         \textsc{at}-will.take.out \textsc{trig} child \textsc{pat} toy \textsc{dir} box \\
-    \trans ``The child will take a toy out of the box.'' [tgl]
+    \gll B<\ul{um}>ili \ul{ang} \ul{lalaki} ng isda sa tindahan. \\
+         <\textsc{at}>buy \textsc{trig} man \textsc{gen} fish \textsc{loc} store \\
+    \trans ``\ul{The man} bought (some) fish at the store.'' [tgl]
+    \ex
+    \gll B<\ul{in}>ili ng lalaki \ul{ang} \ul{isda} sa tindahan. \\
+         <\textsc{pt}>buy \textsc{gen} man \textsc{trig} fish \textsc{loc} store \\
+    \trans ``The man bought \ul{the fish} at the store.'' [tgl]
   \end{exe}
   \vfill
   \large
-  The verb's affix says which role the \txx{trigger} (\msa{ang}) NP has;
-  the trigger is definite --- neither subject nor topic quite fits
+  Same event, same roles: the affix (\msa{-um-} actor, \msa{-in-} patient)
+  says which role the \txx{trigger} (\msa{ang}) NP plays
+  \citep{schachter:1976}
+\end{frame}
+
+\begin{frame}{Tagalog: Any Role Can Be the Trigger}
+  \begin{center}
+  \begin{tabular}{ll}
+    \toprule
+    trigger & sentence \\
+    \midrule
+    actor & \msa{B\alert{um}ili \ul{ang lalaki} ng isda sa tindahan.} \\
+    & ``\ul{The man} bought fish at the store'' \\[0.5ex]
+    patient & \msa{B\alert{in}ili ng lalaki \ul{ang isda} sa tindahan.} \\
+    & ``The man bought \ul{the fish} at the store'' \\[0.5ex]
+    location & \msa{B\alert{in}ilh\alert{an} ng lalaki ng isda \ul{ang tindahan}.} \\
+    & ``The man bought fish at \ul{the store}'' \\[0.5ex]
+    beneficiary & \msa{\alert{I}b\alert{in}ili ng lalaki ng isda \ul{ang bata}.} \\
+    & ``The man bought fish for \ul{the child}'' \\[0.5ex]
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \vfill
+  \small
+  \begin{itemize}
+  \item The trigger is definite: \msa{ng isda} ``(some) fish'' vs
+    \msa{ang isda} ``the fish''
+  \item Only the trigger can be relativized:
+    \msa{ang isda-ng binili ng lalaki} ``the fish that the man bought''
+  \item It acts like a subject, but any role can fill it ---
+    neither subject nor topic quite fits
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Acehnese: Actor and Undergoer}
@@ -687,6 +869,7 @@
   \item Feelings: surprise, doubt, hesitation
   \end{itemize}
   \vfill
+  \begin{center}
   \begin{tabular}{lll}
     \toprule
     & one every & particles \\
@@ -695,6 +878,7 @@
     Mandarin  & \alert{6} seconds   & about 7 common ones \\
     \bottomrule
   \end{tabular}
+  \end{center}
   \vfill
   \normalsize
   Like English intonation, but explicit. Common in Thai, Lao and
@@ -704,7 +888,6 @@
 \begin{frame}{Some Cantonese Particles}
   \large
   \begin{center}
-    
   \begin{tabular}{lll}
     \toprule
     \zht{呀} & \yue{aa1} & lively statement, question \\
@@ -731,11 +914,13 @@
   \end{exe}
   \vfill
   \Large
+  \begin{center}
   \begin{tabular}{ll}
     \yue{aa2} & surprise or disapproval \\
     \yue{haa2} & presupposing agreement \\
     \yue{me1} & surprise, often rhetorical \\
   \end{tabular}
+  \end{center}
   \vfill
 \end{frame}
 
@@ -774,6 +959,7 @@
 
 \begin{frame}{Singlish Particles (1)}
   \Large
+  \begin{center}
   \begin{tabular}{ll}
     \toprule
     \eng{You must go \alert{lah}.}       & ``You must go, okay?'' \\
@@ -782,6 +968,7 @@
     \eng{You sure can do it \alert{meh}?} & ``Are you really sure?'' \\
     \bottomrule
   \end{tabular}
+  \end{center}
   \vfill
   \normalsize
   \citet{chow-etal-2024-word}
@@ -789,6 +976,7 @@
 
 \begin{frame}{Singlish Particles (2)}
   \large
+  \begin{center}
   \begin{tabular}{ll}
     \toprule
     \eng{Don't blame me \alert{what}.} & ``It's not my fault, you know?'' \\
@@ -797,6 +985,7 @@
     \eng{Eh, don't like that \alert{leh³}.} & ``Don't be like that.'' (persuasive) \\
     \bottomrule
   \end{tabular}
+  \end{center}
   \vfill
   \normalsize
   The tone of \eng{leh} changes its meaning

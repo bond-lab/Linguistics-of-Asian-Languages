@@ -38,16 +38,16 @@ date = "10-15"
 
 
 
-[weeks.metaphor]
-key = "metaphor"
-title = "Metaphors across Languages"
-date = "10-22"
-other = ""
-
 [weeks.minority]
 key = "minority"
 title = "Minority languages of Southeast and East Asia"
+date = "10-22"
+
+[weeks.metaphor]
+key = "metaphor"
+title = "Metaphors across Languages"
 date = "10-29"
+other = ""
 
 [weeks.reading]
 key = "📖"

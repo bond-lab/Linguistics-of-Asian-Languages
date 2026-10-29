@@ -1,69 +1,257 @@
-\documentclass[aspectratio=169]{beamer}
-\usetheme{metropolis} % if unavailable, fall back to default
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{hyperref}
+\documentclass{beamer}
+\input{shared}
+
+% Glossing follows Klamer & Kratochvíl (2018); the role labels on the
+% prefixes (pat, loc, rec, ben, goal) are theirs.
+
 \title{The Abui Language}
-\author{Francis Bond}
-\date{\today}
+\subtitle{Marking the patient on the verb}
+\author[Francis Bond]{Francis Bond \\ with thanks to George Saad}
+
 \begin{document}
-\maketitle
-\begin{frame}
-  \frametitle{Abui}
- \begin{columns}[T,onlytextwidth] % [T] aligns columns at the top
-  \begin{column}{0.6\textwidth}  % left column for text
-    \begin{itemize}
-    \item Spoken on Alor Island
-    \item 41,000 speakers
-    \item Timor-Alor-Pantar family (Kratochvil, 2007)
-    \item Endangered
-    \item In contact with lingua franca Alor Malay
-    \item APV word order (agent-patient-verb $\approx$ SOV)
-    \item Lots of verbal morphology
-    \end{itemize}
-  \end{column}
 
-  \begin{column}{0.35\textwidth}  % right column for images
-    \vspace{-11mm}
-\includegraphics[width=\linewidth]{pics/abui-location.jpg}
-\includegraphics[width=\linewidth]{pics/abui-detail.png}
+\frame{\titlepage}
 
-  \end{column}
-\end{columns} 
+\overview
 
+\section{The Abui Language}
+
+\begin{frame}{Abui}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+      \item Spoken on Alor Island, eastern Indonesia
+      \item About 41,000 speakers
+      \item Timor-Alor-Pantar family: \txx{Papuan}, not Austronesian
+        \citep{kratochvil:2007}
+      \item Endangered: in contact with the lingua franca Alor Malay
+      \item Word order agent--patient--verb ($\approx$ SOV)
+      \item Lots of verbal morphology, as we will see
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \vspace{-11mm}
+      \includegraphics[width=\linewidth]{pics/abui-location.jpg}
+      \includegraphics[width=\linewidth]{pics/abui-detail.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{abui}
-\begin{itemize}
-\item P-indexing is differential and complex!
-\item Abui transitive verbs can index P with a prefix (not A)
-\item Indexing can be conditioned by various factors
-\begin{itemize}
-\item Lexical verb
-\item Animacy
-\item Affectedness, Volition, Definiteness, Specificity
-\end{itemize}
-\begin{itemize}
+\section{Marking the Patient on the Verb}
 
-\item Some verbs alternate; others do not
-\end{itemize}
-\item There are 8 prefix/proclitic paradigms or zero-indexing
-\item Focus on 5 most frequent 3rd person forms
-\end{itemize}
-
-\begin{flushright}
-(Klamer \& Kratochvíl, 2018)  
-\end{flushright}
-
-
-\end{frame}
-
-\begin{frame}{Acknowledgements}
+\begin{frame}{Who Did What to Whom?}
+  Every language has to show who is the doer and who it is done to
   \begin{itemize}
-  \item Thanks to George Saad for sharing slides
+  \item \txx{A} (agent): the one who acts
+  \item \txx{P} (patient): the one acted upon
+  \item English and Indonesian use word order: \eng{the dog bit the man}
+  \item Abui puts a prefix on the verb that points to the patient
   \end{itemize}
-  
+  \begin{exe}
+    \ex
+    \gll Na \ul{a-}ruidi. \\
+         1\textsc{sg.agt} 2\textsc{sg.pat}-wake.up.\textsc{pfv} \\
+    \trans ``I woke you up.'' [abz]
+  \end{exe}
+  \begin{itemize}
+  \item The agent \txx{na} ``I'' is a separate word
+  \item The patient \txx{a-} ``you'' is glued to the verb
+  \end{itemize}
+  \vfill
+  \footnotesize
+  Examples from \citet{klamer:kratochvil:2018}, who cite \citet{kratochvil:2007,kratochvil:2014}
+  and the Abui corpus.
+  \textsc{agt} agent pronoun, \textsc{pat} patient prefix, \textsc{pfv} perfective
+\end{frame}
+
+\begin{frame}{Not One Set of Prefixes but Five}
+  \begin{center}
+    \begin{tabular}{lccccc}
+      \toprule
+      & \textsc{pat} & \textsc{loc} & \textsc{rec} & \textsc{ben} & \textsc{goal} \\
+      \midrule
+      I (1\textsc{sg})   & na- & ne- & no- & nee- & noo- \\
+      you (2\textsc{sg}) & a-  & e-  & o-  & ee-  & oo-  \\
+      he, she, it (3)    & ha- & he- & ho- & hee- & hoo- \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vfill
+  The vowel tells you, roughly, what role the patient plays
+  \begin{itemize}
+  \item \textsc{pat} \emph{a}: directly affected (``I woke \ul{you} up'')
+  \item \textsc{loc} \emph{e}: the location of the action
+  \item \textsc{rec} \emph{o}: a recipient (``laughed at \ul{me}'')
+  \item \textsc{ben} \emph{ee}: a beneficiary (``hit it for \ul{you}'')
+  \item \textsc{goal} \emph{oo}: a goal (``poking \ul{me}'')
+  \end{itemize}
+  \vfill
+  \footnotesize
+  Table after \citet[Table 5]{klamer:kratochvil:2018}; distributive and plural rows omitted.
+\end{frame}
+
+\begin{frame}{The Prefix Hints at the Role}
+  \begin{exe}
+    \ex
+    \gll Ma na \ul{ee-}bol. \\
+         be.\textsc{prox} 1\textsc{sg.agt} 2\textsc{sg.ben}-hit \\
+    \trans ``Let me hit [it] for you.'' [abz]
+    \ex
+    \gll Simon di \ul{noo-}dik. \\
+         Simon 3\textsc{agt} 1\textsc{sg.goal}-prick \\
+    \trans ``Simon is poking me.'' [abz]
+  \end{exe}
+  \vfill
+  \large
+  But this is only the easy part: most of the time the choice of prefix is
+  not predictable from the meaning alone
+\end{frame}
+
+\begin{frame}{Differential: Sometimes There Is No Prefix at All}
+  \txx{Differential object marking}: the patient is marked only some of the
+  time, depending on what kind of thing it is
+  \begin{itemize}
+  \item Compare Spanish: \emph{veo la casa} ``I see the house'' but
+    \emph{veo \ul{a} Juan} ``I see Juan''
+  \end{itemize}
+  \begin{exe}
+    \ex
+    \gll Di kanai do bol took. \\
+         3\textsc{agt} pili.nut \textsc{prox} hit drop \\
+    \trans ``He was hitting pili nuts (and) dropping [them].'' [abz]
+    \ex
+    \gll Baloka ne-toku \ul{he-}bol \ul{he-}balasi ba \ldots \\
+         k.o.grass 1\textsc{sg.poss}-leg 3.\textsc{loc}-hit 3.\textsc{loc}-beat.\textsc{pfv} \textsc{sim} \\
+    \trans ``The baloka grass hit my legs, slashing them \ldots'' [abz]
+  \end{exe}
+  \begin{itemize}
+  \item Nuts (inanimate): no prefix on \emph{bol} ``hit''
+  \item My legs (part of a living being): prefix \emph{he-}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Same Verb, Different Prefix: Living or Not}
+  \begin{exe}
+    \ex
+    \gll Maama, na mahiting \ul{he-}puna yo! \\
+         father 1\textsc{sg.agt} meat 3.\textsc{loc}-hold.\textsc{ipfv} \textsc{md.ad} \\
+    \trans ``Father, I will hold the meat (while you slice it)!'' [abz]
+    \ex
+    \gll Di \ul{noo-}puna! \\
+         3.\textsc{agt} 1\textsc{sg.goal}-hold.\textsc{ipfv} \\
+    \trans ``He is grabbing (groping) me!'' [abz]
+  \end{exe}
+  \vfill
+  \begin{itemize}
+  \item Holding meat: \textsc{loc} prefix
+  \item Holding a person: \textsc{goal} prefix
+  \item Both are marked, but differently: a \txx{symmetric} alternation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Same Verb, Different Prefix: How Much Does It Change?}
+  \begin{exe}
+    \ex
+    \gll Di kawen \ul{ha-}komangdii. \\
+         3.\textsc{agt} machete 3.\textsc{pat}-make.blunt.\textsc{pfv} \\
+    \trans ``He made the knife blunt.'' [abz]
+    \ex
+    \gll Di kawen \ul{he-}komangdii. \\
+         3.\textsc{agt} machete 3.\textsc{loc}-make.blunt.\textsc{pfv} \\
+    \trans ``He made the knife blunter.'' [abz]
+  \end{exe}
+  \vfill
+  A test: can you add ``\ldots\ but it is still sharp''?
+  \begin{itemize}
+  \item After \textsc{pat} \emph{ha-}: no, the knife is completely blunt
+  \item After \textsc{loc} \emph{he-}: yes, it only changed a bit
+  \end{itemize}
+  \textsc{pat} marks a patient that is \txx{fully affected}; \textsc{loc} one
+  that is affected less \citep{kratochvil:delpada:2015}
+\end{frame}
+
+\begin{frame}{A Whole Family of Pairs}
+  \begin{center}
+    \begin{tabular}{lll}
+      \toprule
+      verb & \textsc{pat} \emph{ha-}: fully affected & \textsc{loc} \emph{he-}: less affected \\
+      \midrule
+      \emph{-kol}   & \emph{ha-kol}   ``tie it up''    & \emph{he-kol}   ``tie it'' \\
+      \emph{-kuya}  & \emph{ha-kuya}  ``expose it''    & \emph{he-kuya}  ``peel it'' \\
+      \emph{-lilri} & \emph{ha-lilri} ``boil it''      & \emph{he-lilri} ``warm it up'' \\
+      \emph{-dik}   & \emph{ha-dik}   ``pierce it''    & \emph{he-dik}   ``stab at it'' \\
+      \emph{-taang} & \emph{ha-taang} ``give it away'' & \emph{he-taang} ``pass it along'' \\
+      \emph{-bel}   & \emph{ha-bel}   ``pull it out''  & \emph{he-bel}   ``pluck it'' \\
+      \emph{-lak}   & \emph{ha-lak}   ``destroy it''   & \emph{he-lak}   ``demolish it'' \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vfill
+  \begin{itemize}
+  \item One Abui verb, two prefixes, often two English verbs
+  \item The pattern holds for verbs of change: cooking, cutting, moving, destroying
+  \end{itemize}
+  \vfill
+  \footnotesize
+  From \citet[222--228]{kratochvil:delpada:2015}, as cited in \citet{klamer:kratochvil:2018}
+\end{frame}
+
+\begin{frame}{Some Verbs Never Alternate}
+  About one verb in ten always takes \textsc{pat} \emph{ha-}, whatever the meaning
+  \begin{center}
+    \begin{tabular}{ll}
+      \toprule
+      \emph{ha-weel}  & ``wash him, bathe him'' \\
+      \emph{ha-fik}   & ``pull it, pull him'' \\
+      \emph{ha-balak} & ``punch him'' \\
+      \emph{ha-al}    & ``burn it'' \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vfill
+  \begin{itemize}
+  \item The prefix is fixed by the verb's \txx{inflectional class}, not by
+    the event \citep{fedden:etal:2014}
+  \item Like gender in French or German: you learn it with the word
+  \item Possibly an older layer of the language, from before the
+    \emph{ha-}/\emph{he-} contrast became systematic
+  \end{itemize}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}{P-Indexing in Abui Is Differential and Complex}
+  \begin{itemize}
+  \item Abui transitive verbs can index the patient with a prefix, but not the agent
+  \item Whether a prefix appears, and which one, depends on
+    \begin{itemize}
+    \item the verb itself (some verbs never alternate)
+    \item animacy: is the patient a thing, an animal, a person?
+    \item affectedness: is the patient fully or only partly changed?
+    \item also volition, definiteness and specificity \citep{kratochvil:2011,kratochvil:2014}
+    \end{itemize}
+  \item Five main prefix paradigms, plus zero marking; the full system has more
+  \item Here we focused on the most frequent 3rd person forms
+  \end{itemize}
+  \vfill
+  \large
+  To describe this you need thousands of recorded examples, which is why
+  the Abui corpus matters
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Acknowledgements and References}
+  Thanks to George Saad for sharing his slides, on which this summary is based
+  \vfill
+  \small
+  \bibliographystyle{acl_natbib}
+  \bibliography{local}
 \end{frame}
 
 \end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-engine: xetex
+%%% End:

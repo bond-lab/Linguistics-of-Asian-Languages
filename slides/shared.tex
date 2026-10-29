@@ -151,6 +151,14 @@
 \usetheme{Madrid}
 \usecolortheme{crane}
 
+%% ---- references ----------------------------------------------------------
+%% natbib has to come BEFORE polyglossia: setting up Arabic loads bidi, and
+%% bidi raises an error if natbib is loaded after it.
+\usepackage[round]{natbib}
+%% The same goes for array (metaphor.tex uses it for column types): bidi
+%% wants it loaded first, so load it here for everyone.
+\usepackage{array}
+
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguage{thai}
@@ -293,8 +301,6 @@
     \tableofcontents
   \end{frame}}
 
-%% ---- references ----------------------------------------------------------
-\usepackage[round]{natbib}
 
 %% ---- defaults ------------------------------------------------------------
 %% The year lives here so the rollover is a one-line change.

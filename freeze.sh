@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 # drafts and test builds (test.pdf, politeness1.pdf, metaphor-guided.pdf, ...)
 # never get published.  Add a deck here when a week page starts linking it.
 decks=(
+    abui-summary
     asia-before
     englishes
     features

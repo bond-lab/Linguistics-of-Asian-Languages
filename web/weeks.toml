@@ -78,7 +78,7 @@ date = "11-19"
 
 [weeks.presentation1]
 key = "Talk~1"
-title = "Presentation on Minority Languages"
+title = "Presentation on a Minority Language or Metaphors"
 date = "11-26"
 other = "Presentation! 🗣"
 
@@ -105,3 +105,70 @@ other = "Presentation!  🗣"
 # title = "Tone in Asian Languages"
 # date = "2024"
 # other = "Guest Lecture (2024): Lian Hee Wee (Hong Kong Baptist)"
+
+
+# Assessment milestones, shown on /assessment/ and in the "Other" column of
+# the course table.  `week` is the row of the table the milestone belongs
+# to; `link` (optional) is a week page to link the text to.
+
+[[milestones]]
+date = "11-05"
+week = "reading"
+component = "Random notes"
+text = "At least 3 random notes posted"
+
+[[milestones]]
+date = "11-12"
+week = "writing"
+component = "Metaphor data"
+text = "Metaphor sheet: at least 30 rows checked in your language's tab"
+
+[[milestones]]
+date = "11-12"
+week = "writing"
+component = "Talk 1"
+text = "Tell me which minority language (or metaphor topic) you will present on"
+
+[[milestones]]
+date = "11-19"
+week = "arts"
+component = "Seminar paper"
+text = "Seminar topic proposed: one paragraph and two or three references, by email or in Moodle; say who is in the group"
+
+[[milestones]]
+date = "11-25"
+week = "presentation1"
+component = "Talk 1"
+text = "Slides for the minority language or metaphor talk uploaded to Moodle (the day before the presentation)"
+
+[[milestones]]
+date = "11-26"
+week = "presentation1"
+component = "Talk 1"
+text = "Presentations on minority languages or metaphors"
+link = "presentation1"
+
+[[milestones]]
+date = "12-03"
+week = "english"
+component = "Seminar paper"
+text = "Seminar topic approved (I will reply to every proposal by this date)"
+
+[[milestones]]
+date = "12-10"
+week = "sounds"
+component = "Seminar paper"
+text = "Outline: section headings, main references, and who writes what"
+
+[[milestones]]
+date = "12-16"
+week = "presentation"
+component = "Talk 2"
+text = "Seminar work slides uploaded to Moodle (the day before the presentation)"
+
+[[milestones]]
+date = "12-17"
+week = "presentation"
+component = "Talk 2, Random notes"
+text = "Presentations of seminar work; all 6 random notes posted"
+link = "presentation"

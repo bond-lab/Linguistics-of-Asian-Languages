@@ -9,12 +9,22 @@ from datetime import datetime, timedelta
 # Load the weeks data from the TOML file
 toml_path = os.path.join(app.root_path, 'weeks.toml')
 with open(toml_path, 'r') as f:
-    weeks_data = toml.load(f)['weeks']
+    course_data = toml.load(f)
+weeks_data = course_data['weeks']
+milestones_data = course_data.get('milestones', [])
+PAPER_DUE = '2027-01-31'
+
 
 @app.before_request
 def before_request():
-    # Make weeks_data available in all templates
+    # Make the weeks and milestones available in all templates
     g.weeks = weeks_data
+    g.milestones = milestones_data
+
+
+@app.context_processor
+def inject_course_data():
+    return dict(milestones=g.milestones, due=PAPER_DUE)
 
 
     
@@ -25,16 +35,12 @@ def index():
                            week='index',
                            weeks=g.weeks)
 
-PAPER_DUE = '2027-01-31'
-
-
 @app.route('/assessment/')
 def assessment():
     # Stand-alone assessment page with the milestones for each component
     return render_template('assessment.html',
                            week='assessment',
-                           weeks=g.weeks,
-                           due=PAPER_DUE)
+                           weeks=g.weeks)
 
 @app.route('/week/<week_key>/')
 def week(week_key):

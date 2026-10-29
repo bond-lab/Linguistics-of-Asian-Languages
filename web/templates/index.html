@@ -34,6 +34,9 @@
 
 
 <h3 class="text-center">Course Table of Contents</h3>
+
+<p>Assessment milestones are shown in the last column; see
+  the <a href="{{ url_for('assessment') }}">assessment page</a> for details.
 <table class="table table-striped table-hover">
     <thead class="thead-light">
         <tr>
@@ -49,7 +52,11 @@
             <td>{{ loop.index }}</td>
             <td>{{ week.date }}</td>
             <td><a href="{{ url_for('week', week_key=key) }}">{{ week.title }}</a></td>
-            <td>{{ week.other if week.other else '' }}</td>
+            <td>{{ week.other if week.other else '' }}
+	      {% for m in milestones if m.week == key and not m.link %}
+	      <br><small>{% if m.date != week.date %}by {{ m.date }}: {% endif %}{{ m.text }}</small>
+	      {% endfor %}
+	    </td>
         </tr>
         {% endfor %}
 	<tr>
@@ -103,7 +110,7 @@ ISBN: 9780199248605
   <li> Regular attendance and active participation in class
   <li> Random notes (6 observations of things related to the course topic that surprised you in the discussion forum)
   <li> Checking at least 30 rows of the class metaphor data (not graded)
-  <li> Presentation on a minority language (week 10)
+  <li> Presentation on a minority language or metaphors (week 10)
   <li> Presentation on the chosen topic (final week)
   <li> Seminar paper on the chosen topic (range 5-10 pages)
 </ul>

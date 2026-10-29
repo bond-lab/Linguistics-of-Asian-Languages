@@ -25,6 +25,17 @@ def index():
                            week='index',
                            weeks=g.weeks)
 
+PAPER_DUE = '2027-01-31'
+
+
+@app.route('/assessment/')
+def assessment():
+    # Stand-alone assessment page with the milestones for each component
+    return render_template('assessment.html',
+                           week='assessment',
+                           weeks=g.weeks,
+                           due=PAPER_DUE)
+
 @app.route('/week/<week_key>/')
 def week(week_key):
     if week_key in g.weeks:

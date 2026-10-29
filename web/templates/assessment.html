@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Assessment</h2>
+
+<p>To pass the course you need to complete all of the following. The
+  two presentations and the seminar paper are graded; the other three
+  are must-complete requirements that are not graded.
+
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Component</th>
+      <th scope="col">What</th>
+      <th scope="col">Graded?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#attendance">Attendance and participation</a></td>
+      <td>Come to class and take part in the discussion</td>
+      <td>must complete</td>
+    </tr>
+    <tr>
+      <td><a href="#notes">Random notes</a></td>
+      <td>6 observations in the Moodle discussion forum</td>
+      <td>must complete</td>
+    </tr>
+    <tr>
+      <td><a href="#metaphor">Metaphor data</a></td>
+      <td>Check at least 30 rows of the PERSON is ANIMAL sheet</td>
+      <td>must complete</td>
+    </tr>
+    <tr>
+      <td><a href="#minority">Presentation on a minority language</a></td>
+      <td>Up to 10 slides, <a href="{{ url_for('week', week_key='presentation1') }}">week 10</a></td>
+      <td>graded</td>
+    </tr>
+    <tr>
+      <td><a href="#talk">Presentation of seminar work</a></td>
+      <td>7 minutes plus 3 minutes of questions, <a href="{{ url_for('week', week_key='presentation') }}">week 13</a></td>
+      <td>graded</td>
+    </tr>
+    <tr>
+      <td><a href="#paper">Seminar paper</a></td>
+      <td>5-10 pages, due {{ due }}</td>
+      <td>graded</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Milestones</h3>
+
+<p>The dates below are when each step should be done. The seminar
+  paper is the biggest piece of work, so it is broken into steps that
+  spread the work over the semester rather than the last week of
+  January.
+
+<table class="table table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Milestone</th>
+      <th scope="col">Component</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ weeks.reading.date }}</td>
+      <td>At least 3 random notes posted</td>
+      <td>Random notes</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.writing.date }}</td>
+      <td>Metaphor sheet: at least 30 rows checked in your language's tab</td>
+      <td>Metaphor data</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.writing.date }}</td>
+      <td>Tell me which minority language you will present on</td>
+      <td>Minority language</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.arts.date }}</td>
+      <td>Seminar topic proposed: one paragraph and two or three
+	references, by email or in Moodle; say who is in the group</td>
+      <td>Seminar paper</td>
+    </tr>
+    <tr>
+      <td>11-25</td>
+      <td>Minority language slides uploaded to Moodle (the day before the presentation)</td>
+      <td>Minority language</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.presentation1.date }}</td>
+      <td><a href="{{ url_for('week', week_key='presentation1') }}">Presentations on minority languages</a></td>
+      <td>Minority language</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.english.date }}</td>
+      <td>Seminar topic approved (I will reply to every proposal by this date)</td>
+      <td>Seminar paper</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.sounds.date }}</td>
+      <td>Outline: section headings, main references, and who writes what</td>
+      <td>Seminar paper</td>
+    </tr>
+    <tr>
+      <td>12-16</td>
+      <td>Seminar work slides uploaded to Moodle (the day before the presentation)</td>
+      <td>Seminar talk</td>
+    </tr>
+    <tr>
+      <td>{{ weeks.presentation.date }}</td>
+      <td><a href="{{ url_for('week', week_key='presentation') }}">Presentations of seminar work</a>; all 6 random notes posted</td>
+      <td>Seminar talk, Random notes</td>
+    </tr>
+    <tr>
+      <td>2027-01-10</td>
+      <td>Optional: send a draft and I will give feedback within a week</td>
+      <td>Seminar paper</td>
+    </tr>
+    <tr class="table-warning">
+      <td>{{ due }}</td>
+      <td>Seminar paper submitted as PDF in Moodle (end of day, anywhere in the world)</td>
+      <td>Seminar paper</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="attendance">Attendance and participation</h3>
+
+<p>Regular attendance and active participation in class. If you have
+  to miss a class, let me know beforehand.
+
+<h3 id="notes">Random notes</h3>
+
+<p>Post six observations of things related to the course topic that
+  surprised you in the Moodle discussion forum. A few sentences each
+  is enough: what you noticed, where, and why it surprised you. Spread
+  them over the semester (at least three by reading week) so that we
+  can discuss them in class.
+
+<h3 id="metaphor">Metaphor data</h3>
+
+<p>In the <a href="{{ url_for('week', week_key='metaphor') }}">metaphor
+  week</a> we collect PERSON is ANIMAL metaphors across languages in a
+  shared sheet. Each student must check at least 30 rows in the tab
+  for their language: fill in or correct the translation and mark the
+  row Y or N (or leave it blank with a comment if you are unsure). You
+  can work in pairs, in which case check at least 30 rows each. This
+  is not graded, but it must be done, and the data feeds into the
+  class discussion and into a research project.
+
+<h3 id="minority">Presentation on a minority language</h3>
+
+<p>Choose one minority language (or dialect of a major language) in
+  the study area and prepare a short presentation of at most 10
+  slides. Suggested content and a list of possible languages are on
+  the <a href="{{ url_for('week', week_key='presentation1') }}">week
+  10 page</a>. Upload your slides to Moodle the day before.
+
+<h3 id="talk">Presentation of seminar work</h3>
+
+<ul>
+  <li>Presentations can be done in a group of at most 3 students or individually.
+  <li>The topic is free, but it must be approved before week 11 (see the milestones).
+  <li>You have 10 minutes: 7 for the presentation, 3 for questions.
+  <li><span class='bg-warning'>Upload your slides to Moodle one day before the presentation.</span>
+  <li><b>Formatting</b>
+    <ul>
+      <li>Make sure your names are on the slides.
+      <li>Add page numbers to each slide (except optionally the first one).
+    </ul>
+</ul>
+
+<h3 id="paper">Seminar paper</h3>
+
+<ul>
+  <li>Seminar papers can be written in a group of at most 3 students
+    (normally the same group as the presentation) or individually.
+  <li>Normally the paper is on the same topic as your presentation; if
+    you really want to do something else, email me.
+  <li>Each student studies one grammatical or linguistic phenomenon in
+    a language or languages of the area and writes about it, showing
+    both knowledge of the specialist literature and the ability to
+    analyse and describe the phenomenon. The paper can be an overview
+    (research), original research, creative, etc.
+  <li>An individual paper should be at least 5 pages long. Group work
+    should be proportionally more extensive: 5-6 pages for one
+    student, 7-8 pages for two, 9-10 pages for three, not including
+    references.
+  <li><span class='bg-warning'>The submission deadline is {{ due }}
+    (end of day, anywhere in the world).</span> Submit a PDF via Moodle.
+  <li><b>Formatting</b>
+    <ul>
+      <li>5-10 A4 pages, single spaced, with the title, date and your
+	name(s) on the first page (no separate title page).
+      <li>Include a <b>Contributions</b> section at the end (after the
+	conclusion, before the references) that says which author
+	contributed what.
+      <li>If you want to make it even more beautiful, as I am sure you
+	do, take a look at my <a href="https://fcbond.github.io/static/img/ling-style.pdf">(Computational)
+	Linguistic Style Guidelines</a>: a guide for the flummoxed.
+    </ul>
+</ul>
+
+{% endblock %}
